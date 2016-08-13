@@ -1,0 +1,13 @@
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\bin\Debug\iChing.exe.config
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\bin\Debug\iChing.exe
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\bin\Debug\iChing.pdb
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\MainWindow.baml
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\MainWindow.g.cs
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\App.g.cs
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing_MarkupCompile.cache
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.g.resources
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.Properties.Resources.resources
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csproj.GenerateResource.Cache
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.exe
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.pdb
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache
