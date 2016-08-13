@@ -33,8 +33,8 @@ namespace iChing
 
         private void updateApplication()
         {
-            TitleBox.Content = iChing[currentlyShowing].Title;
-            AboveBelowBox.Text = iChing[currentlyShowing].Above + "\n" + iChing[currentlyShowing].Below;
+            TitleBox.Content = iChing[currentlyShowing].ChiTitle + " ~ " +iChing[currentlyShowing].EngTitle;
+            AboveBelowBox.Text = "above "+iChing[currentlyShowing].Above + "\nbelow " + iChing[currentlyShowing].Below;
             AboveBelowSymbolsBox.Text = iChing[currentlyShowing].AboveSymbol + "\n" + iChing[currentlyShowing].BelowSymbol;
             Intro1Box.Text = iChing[currentlyShowing].Intro1;
             TheJudgmentBox.Text = iChing[currentlyShowing].TheJudgment;
@@ -47,12 +47,12 @@ namespace iChing
             Line4Box.Text = iChing[currentlyShowing].Read4;
             Line5Box.Text = iChing[currentlyShowing].Read5;
             Line6Box.Text = iChing[currentlyShowing].Read6;
-            Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[currentlyShowing].Place2ChangesToTitle;
-            Changes3Box.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[currentlyShowing].Place3ChangesToTitle;
-            Changes4Box.Text = iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[currentlyShowing].Place4ChangesToTitle;
-            Changes5Box.Text = iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[currentlyShowing].Place5ChangesToTitle;
-            Changes6Box.Text = iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[currentlyShowing].Place6ChangesToTitle;
-            Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[currentlyShowing].Place1ChangesToTitle;
+            Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].Hex;
+            Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].Hex;
+            Changes3Box.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].Hex;
+            Changes4Box.Text = iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].Hex;
+            Changes5Box.Text = iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].Hex;
+            Changes6Box.Text = iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].Hex;
             Line1BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle1;
             Line2BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle2;
             Line3BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle3;
@@ -131,7 +131,9 @@ namespace iChing
 
 
             Hexagram = 1;
-            iChing[Hexagram].Title = "1. Ch'ien / The Creative";
+            iChing[Hexagram].EngTitle = "The Creative (Heaven)";
+            iChing[Hexagram].ChiTitle = "Ch'ien";
+            iChing[Hexagram].Hex = "䷀";
             iChing[Hexagram].Code = new int[] {1,1,1,1,1,1};
             iChing[Hexagram].Above = "CH'IEN / THE CREATIVE, HEAVEN";
             iChing[Hexagram].Below = "CH'IEN / THE CREATIVE, HEAVEN";
@@ -192,7 +194,9 @@ namespace iChing
             iChing[Hexagram].SquareCircle6 = "";
 
             Hexagram = 2;
-            iChing[Hexagram].Title = "2. K'un / The Receptive";
+            iChing[Hexagram].EngTitle = "The Receptive (Earth)";
+            iChing[Hexagram].ChiTitle = "K'un";
+            iChing[Hexagram].Hex = "䷁";
             iChing[Hexagram].Code = new int[] { 0, 0, 0, 0, 0, 0 };
             iChing[Hexagram].Above = "K’UN  /  THE RECEPTIVE, EARTH";
             iChing[Hexagram].Below = "K’UN  /  THE RECEPTIVE, EARTH";
@@ -255,7 +259,9 @@ namespace iChing
             iChing[Hexagram].SquareCircle6 = "";
 
             Hexagram = 3;
-            iChing[Hexagram].Title = "3.  Chun / Difficulty at the Beginning";
+            iChing[Hexagram].EngTitle = "Difficulty at the Beginning";
+            iChing[Hexagram].ChiTitle = "Chun";
+            iChing[Hexagram].Hex = "䷂";
             iChing[Hexagram].Code = new int[] { 1, 0, 0, 0, 1, 0 };
             iChing[Hexagram].Above = "K’AN  /  THE ABYSMAL, WATER";
             iChing[Hexagram].Below = "CHÊN  /  THE AROUSING, THUNDER";
@@ -322,7 +328,9 @@ namespace iChing
             iChing[Hexagram].SquareCircle6 = "";
 
             Hexagram = 4;
-            iChing[Hexagram].Title = "4.  Mêng / Youthful Folly";
+            iChing[Hexagram].EngTitle = "Youthful Folly";
+            iChing[Hexagram].ChiTitle = "Mêng";
+            iChing[Hexagram].Hex = "䷃";
             iChing[Hexagram].Code = new int[] { 0, 1, 0, 0, 0, 1 };
             iChing[Hexagram].Above = "KÊN  /  KEEPING STILL, MOUNTAIN";
             iChing[Hexagram].Below = "K’AN  /  THE ABYSMAL, WATER";
@@ -389,7 +397,9 @@ namespace iChing
 
             
             Hexagram = 5;
-            iChing[Hexagram].Title = "5.  Hsü / Waiting (Nourishment)";
+            iChing[Hexagram].EngTitle = "Waiting (Nourishment)";
+            iChing[Hexagram].ChiTitle = "Hsü";
+            iChing[Hexagram].Hex = "䷄";
             iChing[Hexagram].Code = new int[] { 1, 1, 1, 0, 1, 0 };
             iChing[Hexagram].Above = "K’AN  /  THE ABYSMAL, WATER ";
             iChing[Hexagram].Below = "CH’IEN  /  THE CREATIVE, HEAVEN";
@@ -450,7 +460,9 @@ namespace iChing
             iChing[Hexagram].Place6ChangesToTitle = "The Taming Power of the Small ䷈";
 
             Hexagram = 6;
-            iChing[Hexagram].Title = "6.  Sung / Conflict";
+            iChing[Hexagram].EngTitle = "Conflict";
+            iChing[Hexagram].ChiTitle = "Sung";
+            iChing[Hexagram].Hex = "䷅";
             iChing[Hexagram].Code = new int[] { 0, 1, 0, 1, 1, 1 };
             iChing[Hexagram].Above = "CH’IEN  /  THE CREATIVE, HEAVEN ";
             iChing[Hexagram].Below = "K’AN  /  THE ABYSMAL, WATER";
@@ -521,7 +533,9 @@ namespace iChing
 
             
             Hexagram = 7;
-            iChing[Hexagram].Title = "	7.  Shih / The Army	";
+            iChing[Hexagram].EngTitle = "The Army";
+            iChing[Hexagram].ChiTitle = "Shih";
+            iChing[Hexagram].Hex = "䷆";
             iChing[Hexagram].Code = new int[]{0,1,0,0,0,0};
             iChing[Hexagram].Above = "K’UN  /  THE RECEPTIVE, EARTH";
             iChing[Hexagram].Below = "K’AN  /  THE ABYSMAL, WATER";
@@ -581,7 +595,9 @@ namespace iChing
             iChing[Hexagram].Place6ChangesToTitle = "Youthful Folly ䷃";
 
             Hexagram = 8;
-            iChing[Hexagram].Title = "8.  Pi / Holding Together (Union)";
+            iChing[Hexagram].EngTitle = "Holding Together (Union)";
+            iChing[Hexagram].ChiTitle = "Pi";
+            iChing[Hexagram].Hex = "䷇";
             iChing[Hexagram].Code = new int[]{0,0,0,0,1,0};
             iChing[Hexagram].Above = "K’AN  /  THE ABYSMAL, WATER ";
             iChing[Hexagram].Below = "K’UN  /  THE RECEPTIVE, EARTH";
@@ -651,7 +667,9 @@ namespace iChing
             iChing[Hexagram].Place6ChangesToTitle = "Contemplation (View) ䷓";
 
             Hexagram = 9;
-            iChing[Hexagram].Title = "9.  Hsiao Ch’u / The Taming Power of the Small";
+            iChing[Hexagram].EngTitle = "The Taming Power of the Small";
+            iChing[Hexagram].ChiTitle = "Hsiao Ch’u";
+            iChing[Hexagram].Hex = "䷈";
             iChing[Hexagram].Code = new int[]{1,1,1,0,1,1};
             iChing[Hexagram].Above = "SUN  /  THE GENTLE, WIND";
             iChing[Hexagram].Below = "CH’IEN  /  THE CREATIVE, HEAVEN";
@@ -711,7 +729,9 @@ namespace iChing
 
             
             Hexagram = 10;
-            iChing[Hexagram].Title = "10.  Lü / Treading [Conduct]";
+            iChing[Hexagram].EngTitle = "Treading (Conduct)";
+            iChing[Hexagram].ChiTitle = "Lü";
+            iChing[Hexagram].Hex = "䷉";
             iChing[Hexagram].Code = new int[]{1,1,0,1,1,1};
             iChing[Hexagram].Above = "CH’IEN  /  THE CREATIVE, HEAVEN ";
             iChing[Hexagram].Below = "TUI  /  THE JOYOUS, LAKE";
@@ -770,7 +790,9 @@ namespace iChing
             iChing[Hexagram].Place6ChangesToTitle = "The Joyous (Lake) ䷹";
 
             Hexagram = 11;
-            iChing[Hexagram].Title = "11.  T’ai / Peace";
+            iChing[Hexagram].EngTitle = "Peace";
+            iChing[Hexagram].ChiTitle = "T’ai";
+            iChing[Hexagram].Hex = "䷊";
             iChing[Hexagram].Code = new int[]{1,1,1,0,0,0};
             iChing[Hexagram].Above = "K’UN  /  THE RECEPTIVE, EARTH ";
             iChing[Hexagram].Below = "CH’IEN  /  THE CREATIVE, HEAVEN";
@@ -839,9 +861,66 @@ namespace iChing
             iChing[Hexagram].Place6ChangesToNumber = 26;
             iChing[Hexagram].Place6ChangesToTitle = "The Taming Power of the Great ䷙";
             
+            Hexagram = 12;
+            iChing[Hexagram].EngTitle = "Standstill (Stagnation)";
+            iChing[Hexagram].ChiTitle = "P’i";
+            iChing[Hexagram].Hex = "䷋";
+            iChing[Hexagram].Code = new int[]{0,0,0,1,1,1};
+            iChing[Hexagram].Above = "CH’IEN  /  THE CREATIVE, HEAVEN";
+            iChing[Hexagram].Below = "K’UN  /  THE RECEPTIVE, EARTH";
+            iChing[Hexagram].AboveSymbol = "☰";
+            iChing[Hexagram].BelowSymbol = "☷";
+            iChing[Hexagram].Intro1 = "This hexagram is the opposite of the preceding one.  Heaven is above, drawing farther and farther away, while the earth below sinks farther into the depths.  The creative powers are not in relation.  It is a time of standstill and decline.  This hexagram is linked with the seventh month (August–September), when the year has passed its zenith and autumnal decay is setting in.";
+            iChing[Hexagram].TheJudgment = "STANDSTILL.  Evil people do not further"+ Environment.NewLine +
+                "The perseverance of the superior man."+ Environment.NewLine +
+                "The great departs; the small approaches.";
+            iChing[Hexagram].Intro2 = "Heaven and earth are out of communion and all things are benumbed.  What is above has no relation to what is below, and on earth confusion and disorder prevail.  The dark power is within, the light power is without.  Weakness is within, harshness without.  Within are the inferior, and without are the superior.  The way of inferior people is in ascent; the way of superior people is one the decline.  But the superior people do not allow themselves to be turned from their principles.  If the possibility of exerting influence is closed to them, they nevertheless remain faithful to their principles and withdraw into seclusion.";
+            iChing[Hexagram].TheImage = "Heaven and earth do not unite:"+ Environment.NewLine +
+                "The image of STANDSTILL."+ Environment.NewLine +
+                "Thus the superior man falls back upon his inner worth"+ Environment.NewLine +
+                "In order to escape the difficulties."+ Environment.NewLine +
+                "He does not permit himself to be honored with revenue.";
+            iChing[Hexagram].Intro3 = "When, owing to the influence of inferior men, mutual mistrust prevails in public life, fruitful activity is rendered impossible, because the fundaments are wrong.  Therefore the superior man knows what he must do under such circumstances; he does not allow himself to be tempted by dazzling offers to take part in public activities.  This would only expose him to danger, since he cannot assent to the meanness of the others.  He therefore hides his worth and withdraws into seclusion.";
+            iChing[Hexagram].Read1 = "Six at the beginning means:"+ Environment.NewLine +
+                "When ribbon grass is pulled up, the sod comes with it."+ Environment.NewLine +
+                "Each according to his kind."+ Environment.NewLine +
+                "Perseverance brings good fortune and success.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "They bear and endure;"+ Environment.NewLine +
+                "This means good fortune for inferior people."+ Environment.NewLine +
+                "The standstill serves to help the great man to attain success.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "They bear shame.";
+            iChing[Hexagram].Read4 = "Nine in the fourth place means:"+ Environment.NewLine +
+                "He who acts at the command of the highest"+ Environment.NewLine +
+                "Remains without blame." + Environment.NewLine +
+                "Those of like mind partake of the blessing.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:"+ Environment.NewLine +
+                "Standstill is giving way."+ Environment.NewLine +
+                "Good fortune for the great man."+ Environment.NewLine +
+                "“What if it should fail, what if it should fail?”"+ Environment.NewLine +
+                "In this way he ties it to a cluster of mulberry shoots.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"+ Environment.NewLine +
+                "The standstill comes to an end."+ Environment.NewLine +
+                "First standstill, then good fortune.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "□";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 25;
+            iChing[Hexagram].Place2ChangesToNumber = 6;
+            iChing[Hexagram].Place3ChangesToNumber = 33;
+            iChing[Hexagram].Place4ChangesToNumber = 20;
+            iChing[Hexagram].Place5ChangesToNumber = 35;
+            iChing[Hexagram].Place6ChangesToNumber = 45;
+            
             /*
             Hexagram = 2;
-            iChing[Hexagram].Title = "";
+            iChing[Hexagram].EngTitle = "";
+            iChing[Hexagram].ChiTitle = "";
+            iChing[Hexagram].Hex = "";
             iChing[Hexagram].Code = new int[]{};
             iChing[Hexagram].Above = "";
             iChing[Hexagram].Below = "";
@@ -880,7 +959,9 @@ namespace iChing
 
 
             Hexagram = 43;
-            iChing[Hexagram].Title = "43. Kuai / Break-Through (Resoluteness)";
+            iChing[Hexagram].EngTitle = "Break-Through (Resoluteness)";
+            iChing[Hexagram].ChiTitle = "Kuai";
+            iChing[Hexagram].Hex = "䷪";
             iChing[Hexagram].Code = new int[] { 1, 1, 1, 1, 1, 0 };
             iChing[Hexagram].Above = "TUI  /  THE JOYOUS, LAKE";
             iChing[Hexagram].Below = "CH'IEN / THE CREATIVE, HEAVEN";
@@ -969,7 +1050,7 @@ namespace iChing
     {
         public iChingNumber() { }
 
-        public iChingNumber(string title, string above, string below,
+        public iChingNumber(string engTitle, string chiTitle, string hex, string above, string below,
             string aboveSymbol, string belowSymbol, string intro1, string theJudgment,
             string intro2, string theImage, string intro3, string read1, string read2,
             string read3, string read4, string read5, string read6, int place1ChangesToNumber,
@@ -980,7 +1061,9 @@ namespace iChing
             string squareCircle2, string squareCircle3, string squareCircle4, string squareCircle5,
             string squareCircle6, int[] code ) 
         {
-            Title = title;
+            EngTitle = engTitle;
+            ChiTitle = chiTitle;
+            Hex = hex;
             Above = above;
             Below = below;
             AboveSymbol = aboveSymbol;
@@ -1018,7 +1101,9 @@ namespace iChing
         }
 
 
-        public string Title { get; set; }
+        public string EngTitle { get; set; }
+        public string ChiTitle { get; set; }
+        public string Hex { get; set; }
         public string Above { get; set; }
         public string Below { get; set; }
         public string AboveSymbol { get; set; }
