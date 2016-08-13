@@ -311,56 +311,293 @@ namespace iChing
             iChing[Hexagram].SquareCircle4 = "";
             iChing[Hexagram].SquareCircle5 = "○";// ○ □
             iChing[Hexagram].SquareCircle6 = "";
+
+            Hexagram = 4;
+            iChing[Hexagram].Title = "4.  Mêng / Youthful Folly";
+            iChing[Hexagram].Above = "KÊN  /  KEEPING STILL, MOUNTAIN";
+            iChing[Hexagram].Below = "K’AN  /  THE ABYSMAL, WATER";
+            iChing[Hexagram].AboveSymbol = "☶";
+            iChing[Hexagram].BelowSymbol = "☵";
+            iChing[Hexagram].Intro1 = "In this hexagram we are reminded of youth and folly in two different ways.  The image of the upper trigram, Kên, is the mountain, that of the lower, K’an, is water; the spring rising at the foot of the mountain is the image of inexperienced youth.  Keeping still is the attribute of the upper trigram; that of the lower is the abyss, danger.  Stopping in perplexity on the brink of a dangerous abyss is a symbol of the folly of youth.  However, the two trigrams also show the way of overcoming the follies of youth.  Water is something that of necessity flows on.  When the spring gushes forth, it does not know at first where it will go.  But its steady flow fills up the deep place blocking its progress, and success is attained.";
+            iChing[Hexagram].TheJudgment = "YOUTHFUL FOLLY has success." + Environment.NewLine + 
+            "It is not I who seek the young fool;"+ Environment.NewLine + 
+            "The young fool seeks me."+ Environment.NewLine + 
+            "At the first oracle I inform him."+ Environment.NewLine + 
+            "If he asks two or three times, it is importunity."+ Environment.NewLine + 
+            "If he importunes, I give him no information."+ Environment.NewLine + 
+            "Perseverance furthers.";
+            iChing[Hexagram].Intro2 = "In the time of youth, folly is not an evil.  One may succeed in spite of it, provided one finds an experienced teacher and has the right attitude toward him.  This means, first of all, that the youth himself must be conscious of his lack of experience and must seek out the teacher.  Without this modesty and this interest there is no guarantee that he has the necessary receptivity, which should express itself in respectful acceptance of the teacher.  This is the reason why the teacher must wait to be sought out instead of offering himself.  Only thus can the instruction take place at the right time and in the right way." + Environment.NewLine + Environment.NewLine +
+            "A teacher’s answer to the question of a pupil ought to be clear and definite like that expected from an oracle; thereupon it ought to be accepted as a key for resolution of doubts and a basis for decision.  If mistrustful or unintelligent questioning is kept up, it serves only to annoy the teacher.  He does well to ignore it in silence, just as the oracle gives one answer only and refuses to be tempted by questions implying doubt."+ Environment.NewLine + Environment.NewLine +
+            "Given addition a perseverance that never slackens until the points are mastered one by one, real success is sure to follow.  Thus the hexagram counsels the teacher as well as the pupil.";
+            iChing[Hexagram].TheImage = "A spring wells up at the foot of the mountain:"+ Environment.NewLine + 
+            "The image of YOUTH."+ Environment.NewLine +
+            "Thus the superior man fosters his character"+ Environment.NewLine +
+            "By thoroughness in all that he does.";
+            iChing[Hexagram].Intro3 = "A spring succeeds in flowing on and escapes stagnation by filling up all the hollow places in its path.  In the same way character is developed by thoroughness that skips nothing but, like water, gradually and steadily fills up all gaps and so flows onward.";
+            iChing[Hexagram].Read1 = "Six at the beginning means:"+ Environment.NewLine + 
+            "To make a fool develop"+ Environment.NewLine +
+            "It furthers one to apply discipline."+ Environment.NewLine +
+            "The fetters should be removed."+ Environment.NewLine +
+            "To go on in this way brings humiliation.";
+            iChing[Hexagram].Read2 = "Nine in the second place means:"+ Environment.NewLine + 
+            "To bear with fools in kindliness brings good fortune."+ Environment.NewLine +
+            "To know how to take women"+ Environment.NewLine +
+            "Brings good fortune."+ Environment.NewLine +
+            "The son is capable of taking charge of the household.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine + 
+            "Take not a maiden who, when she sees a man of bronze,"+ Environment.NewLine +
+            "Loses possession of herself."+ Environment.NewLine +
+            "Nothing furthers.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:" + Environment.NewLine + 
+            "Entangled folly brings humiliation.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:" + Environment.NewLine + 
+            "Childlike folly brings good fortune.";
+            iChing[Hexagram].Read6 = "Nine at the top means:" + Environment.NewLine + 
+            "In punishing folly"+ Environment.NewLine +
+            "It does not further one"
+            + Environment.NewLine + "To commit transgressions."
+            + Environment.NewLine + "The only thing that furthers"
+            + Environment.NewLine + "Is to prevent transgressions.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "○";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 41;
+            iChing[Hexagram].Place1ChangesToTitle = "Decrease ䷨";
+            iChing[Hexagram].Place2ChangesToNumber = 23;
+            iChing[Hexagram].Place2ChangesToTitle = "Splitting Apart ䷖";
+            iChing[Hexagram].Place3ChangesToNumber = 18;
+            iChing[Hexagram].Place3ChangesToTitle = "Work on what has been Spoiled (Decay) ䷑";
+            iChing[Hexagram].Place4ChangesToNumber = 29;
+            iChing[Hexagram].Place4ChangesToTitle = "The Abysmal (Water) ䷜";
+            iChing[Hexagram].Place5ChangesToNumber = 59;
+            iChing[Hexagram].Place5ChangesToTitle = "Dispersion (Dissolution) ䷺";
+            iChing[Hexagram].Place6ChangesToNumber = 7;
+            iChing[Hexagram].Place6ChangesToTitle = "The Army ䷆";
+
             
+            Hexagram = 5;
+            iChing[Hexagram].Title = "5.  Hsü / Waiting (Nourishment)";
+            iChing[Hexagram].Above = "K’AN  /  THE ABYSMAL, WATER ";
+            iChing[Hexagram].Below = "CH’IEN  /  THE CREATIVE, HEAVEN";
+            iChing[Hexagram].AboveSymbol = "☵";
+            iChing[Hexagram].BelowSymbol = "☰";
+            iChing[Hexagram].Intro1 = "All beings have need of nourishment from above.  But the gift of food comes in its own time, and for this one must wait.  This hexagram shows the clouds in the heavens, giving rain to refresh all that grows and to provide mankind with food and drink.  The rain will come in its own time.  We cannot make it come; we have to wait for it.  The idea of waiting is further suggested by the attributes of the two trigrams—strength within, danger in front.  Strength in the face of danger does not plunge ahead but bides its time, whereas weakness in the face of danger grows agitated and has not the patience to wait.";
+            iChing[Hexagram].TheJudgment = "WAITING.  If you are sincere,"
+            + Environment.NewLine + "You have light and success."
+            + Environment.NewLine + "Perseverance brings good fortune."
+            + Environment.NewLine + "It furthers one to cross the great water.";
+            iChing[Hexagram].Intro2 = "Waiting is not mere empty hoping.  It has the inner certainty of reaching the goal.  Such certainty alone gives that light which leads to success.  This leads to the perseverance that brings good fortune and bestows power to cross the great water."
+            + Environment.NewLine + Environment.NewLine + "One is faced with a danger that has to be overcome.  Weakness and impatience can do nothing.  Only a strong man can stand up to his fate, for his inner security enables him to endure to the end.  This strength shows itself in uncompromising truthfulness [with himself].  It is only when we have the courage to face things exactly as they are, without any sort of self–deception or illusion, that a light will develop out of events, by which the path to success may be recognized.  This recognition must be followed by resolute and persevering action.  For only the man who goes to meet his fate resolutely is equipped to deal with it adequately.  Then he will be able to cross the great water—that is to say, he will be capable of making the necessary decision and of surmounting the danger.";
+            iChing[Hexagram].TheImage = "Clouds rise up to heaven:" 
+            + Environment.NewLine + "The image of WAITING."
+            + Environment.NewLine + "Thus the superior man eats and drinks,"
+            + Environment.NewLine + "Is joyous and of good cheer.";
+            iChing[Hexagram].Intro3 = "When clouds rise in the sky, it is a sign that it will rain.  There is nothing to do but to wait until after the rain falls.  It is the same in life when destiny is at work.  We should not worry and seek to shape the future by interfering in things before the time is ripe.  We should quietly fortify the body with food and drink and the mind with gladness and good cheer.  Fate comes when it will, and thus we are ready.";
+            iChing[Hexagram].Read1 =  "Nine at the beginning means:"
+            + Environment.NewLine + "Waiting in the meadow."
+            + Environment.NewLine + "It furthers one to abide in what endures."
+            + Environment.NewLine + "No blame.";
+            iChing[Hexagram].Read2 = "Nine in the second place means:"
+            + Environment.NewLine + "Waiting on the sand."
+            + Environment.NewLine + "There is some gossip."
+            + Environment.NewLine + "The end brings good fortune.";
+            iChing[Hexagram].Read3 ="Nine in the third place means:"
+            + Environment.NewLine + "Waiting in the mud"
+            + Environment.NewLine + "Brings about the arrival of the enemy.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"
+            + Environment.NewLine + "Waiting in blood."
+            + Environment.NewLine + "Get out of the pit.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:"
+            + Environment.NewLine + "Waiting at meat and drink."
+            + Environment.NewLine + "Perseverance brings good fortune."
+            + Environment.NewLine 
+            + Environment.NewLine +"This line references   Chien  /  OBSTRUCTION  (39)";
+            iChing[Hexagram].Read6 = "Six at the top means:" 
+            + Environment.NewLine + "One falls into the pit."
+            + Environment.NewLine + "Three uninvited guests arrive."
+            + Environment.NewLine + "Honor them, and in the end there will be good fortune.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 48;
+            iChing[Hexagram].Place1ChangesToTitle = "The Well ䷯";
+            iChing[Hexagram].Place2ChangesToNumber = 63;
+            iChing[Hexagram].Place2ChangesToTitle = "After Completion ䷾";
+            iChing[Hexagram].Place3ChangesToNumber = 60;
+            iChing[Hexagram].Place3ChangesToTitle = "Limitation ䷻";
+            iChing[Hexagram].Place4ChangesToNumber = 43;
+            iChing[Hexagram].Place4ChangesToTitle = "Break-Through (Resoluteness) ䷪";
+            iChing[Hexagram].Place5ChangesToNumber = 11;
+            iChing[Hexagram].Place5ChangesToTitle = "Peace ䷊";
+            iChing[Hexagram].Place6ChangesToNumber = 9;
+            iChing[Hexagram].Place6ChangesToTitle = "The Taming Power of the Small ䷈";
+
+            Hexagram = 6;
+            iChing[Hexagram].Title = "6.  Sung / Conflict";
+            iChing[Hexagram].Above = "CH’IEN  /  THE CREATIVE, HEAVEN ";
+            iChing[Hexagram].Below = "K’AN  /  THE ABYSMAL, WATER";
+            iChing[Hexagram].AboveSymbol = "☰";
+            iChing[Hexagram].BelowSymbol = "☵";
+            iChing[Hexagram].Intro1 = "The upper trigram, whose image is heaven, has an upward movement; the lower trigram, water, in accordance with its nature, tends downward.  Thus the two halves move away from each other, giving rise to the idea of conflict."
+            + Environment.NewLine + Environment.NewLine +"The attribute of the Creative is strength, that of the Abysmal is danger, guile.  Where cunning has force before it, there is conflict."
+            + Environment.NewLine + Environment.NewLine +"A third indication of conflict, in terms of character, is presented by the combination of deep cunning within and fixed determination outwardly.  A person of this character will certainly be quarrelsome.";
+            iChing[Hexagram].TheJudgment = "CONFLICT.  You are sincere"
+            + Environment.NewLine + "And are being obstructed."
+            + Environment.NewLine + "A cautious halt halfway brings good fortune."
+            + Environment.NewLine + "Going through to the end brings misfortune."
+            + Environment.NewLine + "It furthers one to see the great man."
+            + Environment.NewLine + "It does not further one to cross the great water.";
+            iChing[Hexagram].Intro2 = "Conflict develops when one feels himself to be in the right and runs into opposition.  If one is not convinced of being in the right, opposition leads to craftiness or high–handed encroachment but not to open conflict."
+            + Environment.NewLine + Environment.NewLine + "If a man is entangled in a conflict, his only salvation lies in being so clear–headed and inwardly strong that he is always ready to come to terms by meeting the opponent halfway.  To carry one the conflict to the bitter end has evil effects even when one is the right, because the enmity is then perpetuated.  It is important to see the great man, that is, an impartial man whose authority is great enough to terminate the conflict amicably or assure a just decision.  In times of strife, crossing the great water is to be avoided, that is, dangerous enterprises are not to be begun, because in order to be successful they require concerted unity of forces.  Conflict within weakens the power to conquer danger without.";
+            iChing[Hexagram].TheImage = "Heaven and water go their opposite ways:"
+            + Environment.NewLine + "The image of CONFLICT."
+            + Environment.NewLine + "Thus in all his transactions the superior man"
+            + Environment.NewLine + "Carefully considers the beginning.";
+            iChing[Hexagram].Intro3 = "The image indicates that the causes of conflict are latent in the opposing tendencies of the two trigrams.  Once these opposing tendencies appear, conflict is inevitable.  To avoid it, therefore, everything must be taken carefully into consideration in the very beginning.  If rights and duties are exactly defined, or if, in a group, the spiritual trends of the individuals harmonize, the cause of conflict is removed in advance.";
+            iChing[Hexagram].Read1 = "Six at at the beginning means:"
+            + Environment.NewLine + "If one does not perpetuate the affair,"
+            + Environment.NewLine + "There is a little gossip."
+            + Environment.NewLine + "In the end, good fortune comes.";
+            iChing[Hexagram].Read2 = "Nine in the second place means:"
+            + Environment.NewLine + "One cannot engage in conflict;"
+            + Environment.NewLine + "One returns home, gives way."
+            + Environment.NewLine + "The people of his town,"
+            + Environment.NewLine + "Three hundred households,"
+            + Environment.NewLine + "Remain free of guilt.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"
+            + Environment.NewLine + "To nourish oneself on ancient virtue induces perseverance."
+            + Environment.NewLine + "Danger.  In the end, good fortune comes."
+            + Environment.NewLine + "If by chance you are in the service of a king,"
+            + Environment.NewLine + "Seek not works.";
+            iChing[Hexagram].Read4 = "Nine in the fourth place means:"
+            + Environment.NewLine + "One cannot engage in conflict."
+            + Environment.NewLine + "One turns back and submits to fate,"
+            + Environment.NewLine + "Changes one’s attitude,"
+            + Environment.NewLine + "And finds peace in perseverance."
+            + Environment.NewLine + "Good fortune.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:" 
+            + Environment.NewLine + "To contend before him"
+            + Environment.NewLine + "Brings supreme good fortune.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"
+            + Environment.NewLine + "Even if by chance a leather belt is bestowed on one,"
+            + Environment.NewLine + "By the end of a morning"
+            + Environment.NewLine + "It will have been snatched away three times.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 10;
+            iChing[Hexagram].Place1ChangesToTitle = "Treading (Conduct) ䷉";
+            iChing[Hexagram].Place2ChangesToNumber = 12;
+            iChing[Hexagram].Place2ChangesToTitle = "Standstill (Stagnation) ䷋";
+            iChing[Hexagram].Place3ChangesToNumber = 44;
+            iChing[Hexagram].Place3ChangesToTitle = "Coming to Meet ䷫";
+            iChing[Hexagram].Place4ChangesToNumber = 59;
+            iChing[Hexagram].Place4ChangesToTitle = "Dispersion (Dissolution) ䷺";
+            iChing[Hexagram].Place5ChangesToNumber = 64;
+            iChing[Hexagram].Place5ChangesToTitle = "Before Completion ䷿";
+            iChing[Hexagram].Place6ChangesToNumber = 47;
+            iChing[Hexagram].Place6ChangesToTitle = "Oppression (Exhaustion) ䷮";
+
+
             /*
             Hexagram = 2;
-            iChing[Hexagram].Title = ;
-            iChing[Hexagram].Above = ;
-            iChing[Hexagram].Below = ;
-            iChing[Hexagram].AboveSymbol = ;
-            iChing[Hexagram].BelowSymbol = ;
+            iChing[Hexagram].Title = "";
+            iChing[Hexagram].Above = "";
+            iChing[Hexagram].Below = "";
+            iChing[Hexagram].AboveSymbol = "";
+            iChing[Hexagram].BelowSymbol = "";
             iChing[Hexagram].Intro1 =
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
-            iChing[Hexagram].TheJudgment = + Environment.NewLine + 
+            iChing[Hexagram].TheJudgment = 
+            + Environment.NewLine + 
+            + Environment.NewLine + 
+            + Environment.NewLine + 
+            + Environment.NewLine + 
+            + Environment.NewLine + 
             iChing[Hexagram].Intro2 = 
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
-            iChing[Hexagram].TheImage = + Environment.NewLine + 
+            iChing[Hexagram].TheImage = 
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
             iChing[Hexagram].Intro3 =
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
             + Environment.NewLine + Environment.NewLine +
-            iChing[Hexagram].Read1 = + Environment.NewLine + 
-            iChing[Hexagram].Read2 = + Environment.NewLine + 
-            iChing[Hexagram].Read3 = + Environment.NewLine + 
-            iChing[Hexagram].Read4 = + Environment.NewLine + 
-            iChing[Hexagram].Read5 = + Environment.NewLine + 
-            iChing[Hexagram].Read6 = + Environment.NewLine + 
-            iChing[Hexagram].Place1ChangesToNumber = ;
-            iChing[Hexagram].Place1ChangesToTitle = ;
-            iChing[Hexagram].Place2ChangesToNumber = ;
-            iChing[Hexagram].Place2ChangesToTitle = ;
-            iChing[Hexagram].Place3ChangesToNumber = ;
-            iChing[Hexagram].Place3ChangesToTitle = ;
-            iChing[Hexagram].Place4ChangesToNumber = ;
-            iChing[Hexagram].Place4ChangesToTitle = ;
-            iChing[Hexagram].Place5ChangesToNumber = ;
-            iChing[Hexagram].Place5ChangesToTitle = ;
-            iChing[Hexagram].Place6ChangesToNumber = ;
-            iChing[Hexagram].Place6ChangesToTitle = ;
+            iChing[Hexagram].Read1 = 
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            iChing[Hexagram].Read2 = 
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            iChing[Hexagram].Read3 =
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            iChing[Hexagram].Read4 = 
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            iChing[Hexagram].Read5 = 
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            iChing[Hexagram].Read6 = 
+            + Environment.NewLine + 
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
+            + Environment.NewLine +
             iChing[Hexagram].SquareCircle1 = "";
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
             iChing[Hexagram].SquareCircle5 = "";// ○ □
             iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = ;
+            iChing[Hexagram].Place1ChangesToTitle = "";
+            iChing[Hexagram].Place2ChangesToNumber = ;
+            iChing[Hexagram].Place2ChangesToTitle = "";
+            iChing[Hexagram].Place3ChangesToNumber = ;
+            iChing[Hexagram].Place3ChangesToTitle = "";
+            iChing[Hexagram].Place4ChangesToNumber = ;
+            iChing[Hexagram].Place4ChangesToTitle = "";
+            iChing[Hexagram].Place5ChangesToNumber = ;
+            iChing[Hexagram].Place5ChangesToTitle = "";
+            iChing[Hexagram].Place6ChangesToNumber = ;
+            iChing[Hexagram].Place6ChangesToTitle = "";
             */
+
 
             Hexagram = 43;
             iChing[Hexagram].Title = "43. Kuai / Break-Through (Resoluteness)";
@@ -433,7 +670,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle6 = "□";
 
 
-            currentlyShowing = 3;
+            currentlyShowing = 5;
             updateApplication();
  
         }
