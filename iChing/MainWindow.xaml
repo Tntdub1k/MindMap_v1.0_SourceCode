@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="iChing.MainWindow"
-        Title="i Ching" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="730" Width="1000" HorizontalAlignment="Left" VerticalAlignment="Center" KeyUp="Window_KeyUp">
+        Title="i Ching" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="730" Width="1200" HorizontalAlignment="Left" VerticalAlignment="Center">
     <Window.Resources>
         <LinearGradientBrush x:Key="Yin" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <LinearGradientBrush.RelativeTransform>
@@ -32,7 +32,7 @@
             <GradientStop Color="White" Offset="0"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
-        <Thickness x:Key="SmallNamesMargin">0,0,-10,10</Thickness>
+        <Thickness x:Key="SmallNamesMargin">0,0,-10,12</Thickness>
         <System:Double x:Key="SizeOfLines">25</System:Double>
         <SolidColorBrush x:Key="YellowBrush" Color="#FFECEC3B"/>
         <Thickness x:Key="PlacesThicknesss">0,0,-55,10</Thickness>
@@ -45,7 +45,7 @@
             <GradientStop Color="#FF313131" Offset="0.783"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid HorizontalAlignment="Left" Height="696" Margin="10,0,0,0" VerticalAlignment="Top" Width="980">
+    <Grid HorizontalAlignment="Left" Height="696" Margin="10,0,0,0" VerticalAlignment="Top" Width="1143">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60*"/>
             <ColumnDefinition Width="87*"/>
@@ -58,7 +58,7 @@
             <RowDefinition Height="166*"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="Comments" Margin="10,10,10,-5" TextWrapping="Wrap" Text="TextBox" Grid.Row="3" Grid.ColumnSpan="3" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
-        <ScrollViewer Margin="10,10,395,10" RenderTransformOrigin="0.5,0.5" Grid.Row="2" IsTabStop="True" Grid.ColumnSpan="2">
+        <ScrollViewer Margin="40,10,375,10" RenderTransformOrigin="0.5,0.5" Grid.Row="2" IsTabStop="True" Grid.ColumnSpan="2">
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="330">
                 <Grid Margin="{DynamicResource PlacesThicknesss}">
                     <Grid.ColumnDefinitions>
@@ -111,24 +111,24 @@
             </StackPanel>
         </ScrollViewer>
         <StackPanel x:Name="PlacesPanel" Margin="205,10,0,10" Grid.Row="2" Grid.Column="1">
-            <Rectangle x:Name="Place6" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Yin_PreviewMouseUp" Height="{DynamicResource SizeOfLines}"/>
-            <Rectangle x:Name="Place5" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}"/>
-            <Rectangle x:Name="Place4" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}"/>
-            <Rectangle x:Name="Place3" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}"/>
-            <Rectangle x:Name="Place2" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}"/>
-            <Rectangle x:Name="Place1" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}"/>
+            <Rectangle x:Name="Place6" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Place6_PreviewMouseUp" Height="{DynamicResource SizeOfLines}"/>
+            <Rectangle x:Name="Place5" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Place5_PreviewMouseUp"/>
+            <Rectangle x:Name="Place4" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Place4_PreviewMouseUp"/>
+            <Rectangle x:Name="Place3" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Place3_PreviewMouseUp"/>
+            <Rectangle x:Name="Place2" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Place2_PreviewMouseUp"/>
+            <Rectangle x:Name="Place1" Height="{DynamicResource SizeOfLines}" Margin="0,0,0,4" Fill="{DynamicResource Yang}" PreviewMouseUp="Place1_PreviewMouseUp"/>
         </StackPanel>
         <StackPanel Grid.Column="2" Height="200" Margin="5,10,10,0" Grid.Row="2" VerticalAlignment="Top" Grid.RowSpan="2">
-            <TextBox x:Name="Changes6Box" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Splitting Apart ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="Segoe UI Semibold" IsReadOnly="True" IsUndoEnabled="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
-            <TextBox x:Name="Changes5Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="Segoe UI Semibold" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
-            <TextBox x:Name="Changes4Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="Segoe UI Semibold" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
-            <TextBox x:Name="Changes3Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="Segoe UI Semibold" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
-            <TextBox x:Name="Changes2Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="Segoe UI Semibold" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
-            <TextBox x:Name="Changes1Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="Segoe UI Semibold" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+            <TextBox x:Name="Changes6Box" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Splitting Apart ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" IsReadOnly="True" IsUndoEnabled="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+            <TextBox x:Name="Changes5Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+            <TextBox x:Name="Changes4Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+            <TextBox x:Name="Changes3Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+            <TextBox x:Name="Changes2Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+            <TextBox x:Name="Changes1Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
         </StackPanel>
         <Label x:Name="TitleBox" Content="6. Sung / Conflict" Foreground="White" Margin="0,0,10,214" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" RenderTransformOrigin="0.544,0.196" Grid.Row="1" FontFamily="Meiryo" Width="970" Grid.ColumnSpan="3" HorizontalContentAlignment="Center"/>
-        <ScrollViewer Grid.ColumnSpan="3" Margin="0,45,10,10" Grid.Row="1" IsTabStop="True">
-            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.523,0.392" Width="950">
+        <ScrollViewer Grid.ColumnSpan="3" Margin="10,45,10,10" Grid.Row="1" IsTabStop="True">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.523,0.392" Width="1095">
                 <Grid Height="50">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10*"/>
