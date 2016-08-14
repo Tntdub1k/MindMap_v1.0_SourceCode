@@ -33,7 +33,7 @@ namespace iChing
 
         private void updateApplication()
         {
-            TitleBox.Content = iChing[currentlyShowing].ChiTitle + " ~ " +iChing[currentlyShowing].EngTitle;
+            TitleBox.Content = currentlyShowing+". "+iChing[currentlyShowing].ChiTitle + " ~ " +iChing[currentlyShowing].EngTitle;
             AboveBelowBox.Text = "above "+iChing[currentlyShowing].Above + "\nbelow " + iChing[currentlyShowing].Below;
             AboveBelowSymbolsBox.Text = iChing[currentlyShowing].AboveSymbol + "\n" + iChing[currentlyShowing].BelowSymbol;
             Intro1Box.Text = iChing[currentlyShowing].Intro1;
@@ -76,12 +76,14 @@ namespace iChing
                 else { Place6.Fill = (Brush)FindResource("Yin"); };
             }
             else { MessageBox.Show("Not yet defined"); }
+            LinesViewer.ScrollToTop();
+            MainTextViewer.ScrollToTop();
 
         }
 
         private void TextBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            Comments.Text = "Comments Text Add";
+            
         }
 
         private void Place1_PreviewMouseUp(object sender, MouseButtonEventArgs e)
