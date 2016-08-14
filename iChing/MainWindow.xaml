@@ -127,7 +127,7 @@
             <TextBox x:Name="Changes1Box" HorizontalAlignment="Left" Margin="{DynamicResource SmallNamesMargin}" TextWrapping="Wrap" Text="13. Inner Truth ䷼" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="14" TextAlignment="Justify" FontFamily="{DynamicResource SystemFont}" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
         </StackPanel>
         <Label x:Name="TitleBox" Content="6. Sung / Conflict" Foreground="White" Margin="0,0,10,214" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" RenderTransformOrigin="0.544,0.196" Grid.Row="1" FontFamily="Meiryo" Width="970" Grid.ColumnSpan="3" HorizontalContentAlignment="Center"/>
-        <ScrollViewer Grid.ColumnSpan="3" Margin="10,45,10,10" Grid.Row="1" IsTabStop="True">
+        <ScrollViewer Grid.ColumnSpan="3" Margin="10,45,-14,10" Grid.Row="1" IsTabStop="True">
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.523,0.392" Width="1095">
                 <Grid Height="50">
                     <Grid.ColumnDefinitions>
