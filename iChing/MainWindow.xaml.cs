@@ -1369,6 +1369,635 @@ namespace iChing
             iChing[Hexagram].Place5ChangesToNumber = 23;
             iChing[Hexagram].Place6ChangesToNumber = 8;
             
+            Hexagram = 21;
+            iChing[Hexagram].EngTitle = "Biting Through";
+            iChing[Hexagram].ChiTitle = "Shih Ho";
+            iChing[Hexagram].Hex = "䷔";
+            iChing[Hexagram].Code = new int[]{1,0,0,1,0,1};
+            iChing[Hexagram].Above = "LI  /  THE CLINGING, FIRE";
+            iChing[Hexagram].Below = "CHÊN  /  THE AROUSING, THUNDER";
+            iChing[Hexagram].AboveSymbol = "☲";
+            iChing[Hexagram].BelowSymbol = "☳";
+            iChing[Hexagram].Intro1 = "This hexagram represents an open mouth (cf. hexagram 27) with an obstruction (in the fourth place) between the teeth.  As a result the lips cannot meet.  To bring them together one must bite energetically through the obstacle.  Since the hexagram is made up of the trigrams for thunder and for lightning, it indicates how obstacles are forcibly removed in nature.  Energetic biting through overcomes the obstacle that prevents joining of the lips; the storm with its thunder and lightning overcomes the disturbing tension in nature.  Recourse to law and penalties overcomes the disturbances of harmonious social life caused by criminals and slanderers.  The theme of this hexagram is a criminal lawsuit, in contradistinction to that of Sung, CONFLICT (6), which refers to civil suits.";
+            iChing[Hexagram].TheJudgment = "BITING THROUGH has success."+ Environment.NewLine +
+                "It is favorable to let justice be administered.";
+            iChing[Hexagram].Intro2 = "When an obstacle to union arises, energetic biting through brings success.  This is true in all situations.  Whenever unity cannot be established, the obstruction is due to a talebearer and traitor who is interfering and blocking the way.  To prevent permanent injury, vigorous measures must be taken at once.  Deliberate obstruction of this sort does not vanish of its own accord.  Judgment and punishment are required to deter or obviate it."+ Environment.NewLine +Environment.NewLine +
+                "However, it is important to proceed in the right way.  The hexagram combines Li, clarity, and Chên, excitement.  Li is yielding, Chên is hard.  Unqualified hardness and excitement would be too violent in meting out punishment; unqualified clarity and gentleness would be too weak.  The two together create the just measure.  It is of moment that the man who makes the decisions (represented by the fifth line) is gentle by nature, while he commands respect by his conduct in his position.";
+            iChing[Hexagram].TheImage = "Thunder and lighting:"+ Environment.NewLine +
+                "The image of BITING THROUGH."+ Environment.NewLine +
+                "Thus the kings of former times made firm the laws"+ Environment.NewLine +
+                "Through clearly defined penalties.";
+            iChing[Hexagram].Intro3 = "Penalties are the individual applications of the law.  The laws specify the penalties.  Clarity prevails when mild and severe penalties are differentiated, according to the nature of the crimes.  This is symbolized by the clarity of lightning.  The law is strengthened by a just application of penalties.  This is symbolized by the terror of thunder.  This clarity and severity have the effect of instilling respect; it is not that the penalties are ends in themselves.  The obstructions in the social life of man increase when there is a lack of clarity in the penal codes and slackness in executing them.  The only way to strengthen the law is to make it clear and to make penalties certain and swift.";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "His feet are fastened in the stocks,"+ Environment.NewLine +
+                "So that his toes disappear."+ Environment.NewLine +
+                "No blame.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "Bites through tender meat,"+ Environment.NewLine +
+                "So that his nose disappears"+ Environment.NewLine +
+                "No blame.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "Bites on old dried meat"+ Environment.NewLine +
+                "And strikes on something poisonous."+ Environment.NewLine +
+                "Slight humiliation.  No blame.";
+            iChing[Hexagram].Read4 = "Nine in the fourth place means:"+ Environment.NewLine +
+                "Bites on dried gristly meat."+ Environment.NewLine +
+                "Receives metal arrows."+ Environment.NewLine +
+                "It furthers one to be mindful of difficulties"+ Environment.NewLine +
+                "And to be persevering."+ Environment.NewLine +
+                "Good fortune.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "Bites on dried lean meat."+ Environment.NewLine +
+                "Receives yellow gold."+ Environment.NewLine +
+                "Perseveringly aware of danger."+ Environment.NewLine +
+                "No blame.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"+ Environment.NewLine +
+                "His neck is fastened in the wooden cangue,"+ Environment.NewLine +
+                "So that his ears disappear."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 35;
+            iChing[Hexagram].Place2ChangesToNumber = 38;
+            iChing[Hexagram].Place3ChangesToNumber = 30;
+            iChing[Hexagram].Place4ChangesToNumber = 27;
+            iChing[Hexagram].Place5ChangesToNumber = 25;
+            iChing[Hexagram].Place6ChangesToNumber = 51;
+            
+            
+            Hexagram = 22;
+            iChing[Hexagram].EngTitle = "Grace";
+            iChing[Hexagram].ChiTitle = "Pi";
+            iChing[Hexagram].Hex = "䷕";
+            iChing[Hexagram].Code = new int[]{1,0,1,0,0,1};
+            iChing[Hexagram].Above = "KÊN  /  KEEPING STILL, MOUNTAIN";
+            iChing[Hexagram].Below = "LI  /  THE CLINGING, FIRE";
+            iChing[Hexagram].AboveSymbol = "☶";
+            iChing[Hexagram].BelowSymbol = "☲";
+            iChing[Hexagram].Intro1 = "This hexagram shows a fire that breaks out of the secret depths of the earth and, blazing up, illuminates and beautifies the mountain, the heavenly heights.  Grace—beauty of form—is necessary in any union if it is to be well ordered and pleasing rather than disordered and chaotic.";
+            iChing[Hexagram].TheJudgment = "GRACE has success."+ Environment.NewLine +
+                "In small matters"+ Environment.NewLine +
+                "It is favorable to undertake something.";
+            iChing[Hexagram].Intro2 = "Grace brings success.  However, it is not the essential or fundamental thing; it is only the ornament and therefore be used sparingly and only in little things.  In the lower trigram of fire a yielding line comes between two strong lines and makes them beautiful, but the strong lines are the essential content and the weak line is the beautifying form.  In the upper trigram of the mountain, the strong line takes the lead, so that here again the strong element must be regarded as the decisive factor.  In nature we see in the sky the strong light of the sun; the life of the world depends on it.  But this strong, essential thing is changed and given pleasing variety by the moon and the stars.  In human affairs, aesthetic form comes into being when traditions exist that, strong and abiding like mountains, are made pleasing by a lucid beauty.  By contemplating the forms existing in the heavens we come to understand time and its changing demands.  Through contemplation of the forms existing in human society it becomes possible to shape the world.";
+            iChing[Hexagram].TheImage = "Fire at the foot of the mountain:"+ Environment.NewLine +
+                "The image of GRACE."+ Environment.NewLine +
+                "Thus does the superior man proceed"+ Environment.NewLine +
+                "When clearing up current affairs."+ Environment.NewLine +
+                "But he dare not decide controversial issues in this way.";
+            iChing[Hexagram].Intro3 = "The fire, whose light illuminates the mountain and makes it pleasing, does not shine far; in the same way, beautiful form suffices to brighten and to throw light upon matters of lesser moment, but important questions cannot be decided in this way.  They require greater earnestness.";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "He lends grace to his toes, leaves the carriage, and walks.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "Lends grace to the beard on his chin.";
+            iChing[Hexagram].Read3 = "Nine in the third place means:"+ Environment.NewLine +
+                "Graceful and moist."+ Environment.NewLine +
+                "Constant perseverance brings good fortune.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"+ Environment.NewLine +
+                "Grace or simplicity?"+ Environment.NewLine +
+                "A white horse comes as if on wings."+ Environment.NewLine +
+                "He is not a robber,"+ Environment.NewLine +
+                "He will woo at the right time.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "Grace in hills and gardens."+ Environment.NewLine +
+                "The roll of silk is meager and small."+ Environment.NewLine +
+                "Humiliation, but in the end good fortune.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"+ Environment.NewLine +
+                "Simple grace.  No blame.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "○";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle6 = "○";
+            iChing[Hexagram].Place1ChangesToNumber = 52;
+            iChing[Hexagram].Place2ChangesToNumber = 26;
+            iChing[Hexagram].Place3ChangesToNumber = 27;
+            iChing[Hexagram].Place4ChangesToNumber = 30;
+            iChing[Hexagram].Place5ChangesToNumber = 37;
+            iChing[Hexagram].Place6ChangesToNumber = 36;
+            
+            
+            Hexagram = 23;
+            iChing[Hexagram].EngTitle = "Splitting Apart";
+            iChing[Hexagram].ChiTitle = "Po";
+            iChing[Hexagram].Hex = "䷖";
+            iChing[Hexagram].Code = new int[]{0,0,0,0,0,1};
+            iChing[Hexagram].Above = "KÊN  /  KEEPING STILL, MOUNTAIN";
+            iChing[Hexagram].Below = "K’UN  /  THE RECEPTIVE, EARTH";
+            iChing[Hexagram].AboveSymbol = "☶";
+            iChing[Hexagram].BelowSymbol = "☷";
+            iChing[Hexagram].Intro1 = "The dark lines are about to mount upward and overthrow the last firm, light line by exerting a disintegrating influence on it.  The inferior, dark forces overcome what is superior and strong, not by direct means, but by undermining it gradually and imperceptibly, so that it finally collapses."+ Environment.NewLine +Environment.NewLine +
+                "The lines of the hexagram present the image of a house, the top line being the roof, and because the roof is being shattered the house collapses.  The hexagram belongs to the ninth month (October–November).  The yin power pushes up ever more powerfully and is about to supplant the yang power altogether.";
+            iChing[Hexagram].TheJudgment = "SPLITTING APART.  It does not further one"+ Environment.NewLine +
+                "To go anywhere.";
+            iChing[Hexagram].Intro2 = "This pictures a time when inferior people are pushing forward and are about to crowd out the few remaining strong and superior men.  Under these circumstances, which are due to the time, it is not favorable for the superior man to undertake anything."+ Environment.NewLine +Environment.NewLine +
+                "The right behavior in such adverse times is to be deduced from the images and their attributes.  The lower trigram stands for the earth, whose attributes are docility and devotion.  The upper trigram stands for the mountain, whose attribute is stillness.  This suggests that one should submit to the bad time and remain quiet.  For it is a question not of man’s doing but of time conditions, which, according to the laws of heaven, show an alternation of increase and decrease, fullness and emptiness.  It is impossible to counteract these conditions of the time.  Hence it is not cowardice but wisdom to submit and avoid action.";
+            iChing[Hexagram].TheImage = "The mountain rests on the earth:"+ Environment.NewLine +
+                "The image of SPLITTING APART."+ Environment.NewLine +
+                "Thus those above can ensure their position"+ Environment.NewLine +
+                "Only by giving generously to those below.";
+            iChing[Hexagram].Intro3 = "The mountain rests on the earth.  When it is steep and narrow, lacking a broad base, it must topple over.  Its position is strong only when it rises out of the earth broad and great, not proud and steep.  So likewise those who rule rest on the broad foundation of the people.  They too should be generous and benevolent, like the earth that carries all.  Then they will make their position as secure as a mountain is in its tranquillity.";
+            iChing[Hexagram].Read1 = "Six at the beginning means:"+ Environment.NewLine +
+                "The leg of the bed is split."+ Environment.NewLine +
+                "Those who persevere are destroyed."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "The bed is split at the edge."+ Environment.NewLine +
+                "Those who persevere are destroyed."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "He splits with them.  No blame.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"+ Environment.NewLine +
+                "The bed is split up to the skin."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "A shoal of fishes.  Favor comes through the court ladies."+ Environment.NewLine +
+                "Everything acts to further.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"+ Environment.NewLine +
+                "There is a large fruit still uneaten."+ Environment.NewLine +
+                "The superior man receives a carriage."+ Environment.NewLine +
+                "The house of the inferior man is split apart.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle6 = "○";
+            iChing[Hexagram].Place1ChangesToNumber = 27;
+            iChing[Hexagram].Place2ChangesToNumber = 4;
+            iChing[Hexagram].Place3ChangesToNumber = 52;
+            iChing[Hexagram].Place4ChangesToNumber = 35;
+            iChing[Hexagram].Place5ChangesToNumber = 20;
+            iChing[Hexagram].Place6ChangesToNumber = 2;
+            
+            Hexagram = 24;
+            iChing[Hexagram].EngTitle = "Return (The Turning Point)";
+            iChing[Hexagram].ChiTitle = "Fu";
+            iChing[Hexagram].Hex = "䷗";
+            iChing[Hexagram].Code = new int[]{1,0,0,0,0,0};
+            iChing[Hexagram].Above = "K’UN  /  THE RECEPTIVE, EARTH";
+            iChing[Hexagram].Below = "CHÊN  /  THE AROUSING, THUNDER";
+            iChing[Hexagram].AboveSymbol = "☷";
+            iChing[Hexagram].BelowSymbol = "☳";
+            iChing[Hexagram].Intro1 = "The idea of a turning point arises from the fact that after the dark lines have pushed all of the light lines upward and out of the hexagram, another light line enters the hexagram from below.  The time of darkness is past.  The winter solstice brings the victory of light.  This hexagram is linked with the eleventh month, the month of the solstice (December–January).";
+            iChing[Hexagram].TheJudgment = "RETURN.  Success."+ Environment.NewLine +
+                "Going out and coming in without error."+ Environment.NewLine +
+                "Friends come without blame."+ Environment.NewLine +
+                "To and fro goes the way."+ Environment.NewLine +
+                "On the seventh day comes return."+ Environment.NewLine +
+                "It furthers one to have somewhere to go.";
+            iChing[Hexagram].Intro2 = "After a time of decay comes the turning point.  The powerful light that has been banished returns.  There is movement, but it is not brought about by force.  The upper trigram K’un is characterized by devotion; thus the movement is natural, arising spontaneously.  For this reason the transformation of the old becomes easy.  The old is discarded and the new is introduced.  Both measures accord with the time; therefore no harm results.  Societies of people sharing the same views are formed.  But since these groups come together in full public knowledge and are in harmony with the time, all selfish separatist tendencies are excluded, and no mistake is made.  The idea of RETURN is based on the course of nature.  The movement is cyclic, and the course completes itself.  Therefore it is not necessary to hasten anything artificially.  Everything comes of itself at the appointed time.  This is the meaning of heaven and earth."+ Environment.NewLine +Environment.NewLine +
+                "All movements are accomplished in six stages, and the seventh brings return.  Thus the winter solstice, with which the decline of the year begins, comes in the seventh month after the summer solstice; so too sunrise comes in the seventh double hour after sunset.  Therefore seven is the number of the young light, and it arises when six, the number of the great darkness, is increased by one.  In this way the state of rest gives place to movement.";
+            iChing[Hexagram].TheImage = "Thunder within the earth:"+ Environment.NewLine +
+                "The image of THE TURNING POINT."+ Environment.NewLine +
+                "Thus the kings of antiquity closed the passes"+ Environment.NewLine +
+                "At the time of solstice."+ Environment.NewLine +
+                "Merchants and strangers did not go about,"+ Environment.NewLine +
+                "And the ruler"+ Environment.NewLine +
+                "Did not travel through the provinces.";
+            iChing[Hexagram].Intro3 ="The winter solstice has always been celebrated in China as the resting time of the year—a custom that survives in the time of rest observed at the new year.  In winter the life energy, symbolized by thunder, the Arousing, is still underground.  Movement is just at its beginning; therefore it must be strengthened by rest so that it will not be dissipated by being used prematurely.  This principle, i.e., of allowing energy that is renewing itself to be reinforced by rest, applies to all similar situations.  The return of health after illness, the return of understanding after an estrangement: everything must be treated tenderly and with care at the beginning, so that the return may lead to a flowering.";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "Return from a short distance."+ Environment.NewLine +
+                "No need for remorse."+ Environment.NewLine +
+                "Great good fortune.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "Quiet return.  Good fortune.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "Repeated return.  Danger.  No blame.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"+ Environment.NewLine +
+                "Walking in the midst of others,"+ Environment.NewLine +
+                "One returns alone.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "Noblehearted return.  No remorse.";
+            iChing[Hexagram].Read6 = "Six at the top means:"+ Environment.NewLine +
+                "Missing the return.  Misfortune."+ Environment.NewLine +
+                "Misfortune from within and without."+ Environment.NewLine +
+                "If armies are set marching in this way,"+ Environment.NewLine +
+                "One will in the end suffer a great defeat,"+ Environment.NewLine +
+                "Disastrous for the ruler of the country."+ Environment.NewLine +
+                "For ten years"+ Environment.NewLine +
+                "It will not be possible to attack again.";
+            iChing[Hexagram].SquareCircle1 = "○";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 2;
+            iChing[Hexagram].Place2ChangesToNumber = 19;
+            iChing[Hexagram].Place3ChangesToNumber = 36;
+            iChing[Hexagram].Place4ChangesToNumber = 51;
+            iChing[Hexagram].Place5ChangesToNumber = 3;
+            iChing[Hexagram].Place6ChangesToNumber = 27;
+            
+            Hexagram = 25;
+            iChing[Hexagram].EngTitle = "Innocence (The Unexpected)";
+            iChing[Hexagram].ChiTitle = "Wu Wang";
+            iChing[Hexagram].Hex = "䷘";
+            iChing[Hexagram].Code = new int[]{1,0,0,1,1,1};
+            iChing[Hexagram].Above = "CH’IEN  /  THE CREATIVE, HEAVEN";
+            iChing[Hexagram].Below = "CHÊN  /  THE AROUSING, THUNDER";
+            iChing[Hexagram].AboveSymbol = "☰";
+            iChing[Hexagram].BelowSymbol = "☳";
+            iChing[Hexagram].Intro1 = "Ch’ien, heaven is above; Chên, movement, is below.  The lower trigram Chên is under the influence of the strong line it has received from above, from heaven.  When, in accord with this, movement follows the law of heaven, man is innocent and without guile.  His mind is natural and true, unshadowed by reflection or ulterior designs.  For wherever conscious purpose is to be seen, there the truth and innocence of nature have been lost.  Nature that is not directed by the spirit is not true but degenerate nature.  Starting out with the idea of the natural, the train of thought in part goes somewhat further and thus the hexagram includes also the idea of the unintentional or unexpected.";
+            iChing[Hexagram].TheJudgment = "INNOCENCE.  Supreme success."+ Environment.NewLine +
+                "Perseverance furthers."+ Environment.NewLine +
+                "If someone is not as he should be,"+ Environment.NewLine +
+                "He has misfortune,"+ Environment.NewLine +
+                "And it does not further him"+ Environment.NewLine +
+                "To undertake anything.";
+            iChing[Hexagram].Intro2 = "Man has received from heaven a nature innately good, to guide him in all his movements.  By devotion to this divine spirit within himself, he attains an unsullied innocence that leads him to do right with instinctive sureness and without any ulterior thought of reward and personal advantage.  This instinctive certainty brings about supreme success and “furthers through perseverance.”  However, not everything instinctive is nature in this higher sense of the word, but only that which is right and in accord with the will of heaven.  Without this quality of rightness, an unreflecting, instinctive way of acting brings only misfortune.  Confucius says about this: “He who departs from innocence, what does he come to? Heaven’s will and blessing do not go with his deeds.”";
+            iChing[Hexagram].TheImage = "Under heaven thunder rolls:"+ Environment.NewLine +
+                "All things attain the natural state of innocence."+ Environment.NewLine +
+                "Thus the kings of old,"+ Environment.NewLine +
+                "Rich in virtue, and in harmony with the time,"+ Environment.NewLine +
+                "Fostered and nourished all beings.";
+            iChing[Hexagram].Intro3 = "In springtime when thunder, life energy, begins to move again under the heavens, everything sprouts and grows, and all beings receive from the creative activity of nature the childlike innocence of their original state.  So it is with the good rulers of mankind: drawing on the spiritual wealth at their command, they take care of all forms of life and all forms of culture and do everything to further them, and at the proper time";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "Innocent behavior brings good fortune.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "If one does not count on the harvest while plowing,"+ Environment.NewLine +
+                "Nor on the use of the ground while clearing it,"+ Environment.NewLine +
+                "It furthers one to undertake something.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "Undeserved misfortune."+ Environment.NewLine +
+                "The cow that was tethered by someone"+ Environment.NewLine +
+                "Is the wanderer’s gain, the citizen’s loss";
+            iChing[Hexagram].Read4 = "Nine in the fourth place means:"+ Environment.NewLine +
+                "He who can be persevering"+ Environment.NewLine +
+                "Remains without blame.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:"+ Environment.NewLine +
+                "Use no medicine in an illness"+ Environment.NewLine +
+                "Incurred through no fault of your own."+ Environment.NewLine +
+                "It will pass of itself.";
+            iChing[Hexagram].Read6 = "Nine at the top means"+ Environment.NewLine +
+                "Innocent action brings misfortune."+ Environment.NewLine +
+                "Nothing furthers.";
+            iChing[Hexagram].SquareCircle1 = "○";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 12;
+            iChing[Hexagram].Place2ChangesToNumber = 10;
+            iChing[Hexagram].Place3ChangesToNumber = 13;
+            iChing[Hexagram].Place4ChangesToNumber = 42;
+            iChing[Hexagram].Place5ChangesToNumber = 21;
+            iChing[Hexagram].Place6ChangesToNumber = 17;
+            
+             
+            Hexagram = 26;
+            iChing[Hexagram].EngTitle = "The Taming Power of the Great";
+            iChing[Hexagram].ChiTitle = "Ta Ch’u";
+            iChing[Hexagram].Hex = "䷙";
+            iChing[Hexagram].Code = new int[]{1,1,1,0,0,1};
+            iChing[Hexagram].Above = "KÊN  /  KEEPING STILL, MOUNTAIN";
+            iChing[Hexagram].Below = "CH’IEN  /  THE CREATIVE, HEAVEN";
+            iChing[Hexagram].AboveSymbol = "☶";
+            iChing[Hexagram].BelowSymbol = "☰";
+            iChing[Hexagram].Intro1 = "The Creative is tamed by Kên, Keeping Still.  This produces great power, a situation in contrast to that of the ninth hexagram, Hsiao Ch’u, THE TAMING POWER OF THE SMALL, in which the Creative is tamed by the Gentle alone.  There one weak line must tame five strong lines, but here four strong lines are restrained by two weak lines; in addition to a minister, there is a prince, and the restraining power therefore is far stronger."+ Environment.NewLine + Environment.NewLine +
+                "The hexagram has a threefold meaning, expressing different aspects of the concept “holding firm.”  Heaven within the mountain gives the idea of holding firm in the sense of holding together; the trigram Kên which holds the trigram Ch’ien still, gives the idea of holding firm in the sense of holding back; the third idea is that of holding firm in the sense of caring for and nourishing.  This last is suggested by the fact that a strong line at the top, which is the ruler of the hexagram, is honored and tended as a sage.  The third of these meanings also attaches specifically to this strong line at the top, which represents the sage.";
+            iChing[Hexagram].TheJudgment = "THE TAMING POWER OF THE GREAT."+ Environment.NewLine +
+                "Perseverance furthers."+ Environment.NewLine +
+                "Not eating at home brings good fortune."+ Environment.NewLine +
+                "It furthers one to cross the great water.";
+            iChing[Hexagram].Intro2 = "To hold firmly to great creative powers and store them up, as set forth in this hexagram, there is need of a strong, clear–headed man who is honored by the ruler.  The trigram Ch’ien points to strong creative power; Kên indicates firmness and truth.  Both point to light and clarity and to the daily renewal of character.  Only through such daily self–renewal can a man continue at the height of his powers.  Force of habit helps to keep order in quiet times; but in periods when there is a great storing up of energy, everything depends on the power of the personality.  However, since the worthy are honored, as in the case of the strong personality entrusted with leadership by the ruler, it is an advantage not to eat at home but rather to earn one’s bread by entering upon public office.  Such a man is in harmony with heaven; therefore even great and difficult undertakings, such as crossing the great water, succeed.";
+            iChing[Hexagram].TheImage = "Heaven within the mountain:"+ Environment.NewLine +
+                "The image of THE TAMING POWER OF THE GREAT."+ Environment.NewLine +
+                "Thus the superior man acquaints himself with many sayings of antiquity"+ Environment.NewLine +
+                "And many deeds of the past,"+ Environment.NewLine +
+                "In order to strengthen his character thereby.";
+            iChing[Hexagram].Intro3 = "Heaven within the mountain points to hidden treasures.  In the words and deeds of the past there lies hidden a treasure that men may use to strengthen and elevate their own characters.  The way to study the past is not to confine oneself to mere knowledge of history but, through application of this knowledge, to give actuality to the past.";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "Danger is at hand.  It furthers one to desist.";
+            iChing[Hexagram].Read2 = "Nine in the second place means:"+ Environment.NewLine +
+                "The axletrees are taken from the wagon."+ Environment.NewLine + Environment.NewLine +
+                "This line references the   third line in THE TAMING POWER OF THE SMALL  (9)";
+            iChing[Hexagram].Read3 = "Nine in the third place means:"+ Environment.NewLine +
+                "A good horse that follows others."+ Environment.NewLine +
+                "Awareness of danger,"+ Environment.NewLine +
+                "With perseverance, furthers."+ Environment.NewLine +
+                "Practice chariot driving and armed defense daily."+ Environment.NewLine +
+                "It furthers one to have somewhere to go.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"+ Environment.NewLine +
+                "The headboard of a young bull."+ Environment.NewLine +
+                "Great good fortune.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "The tusk of a gelded boar."+ Environment.NewLine +
+                "Good fortune.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"+ Environment.NewLine +
+                "One attains the way of heaven.  Success.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "○";
+            iChing[Hexagram].Place1ChangesToNumber = 18;
+            iChing[Hexagram].Place2ChangesToNumber = 22;
+            iChing[Hexagram].Place3ChangesToNumber = 41;
+            iChing[Hexagram].Place4ChangesToNumber = 14;
+            iChing[Hexagram].Place5ChangesToNumber = 9;
+            iChing[Hexagram].Place6ChangesToNumber = 11;
+            
+            
+            Hexagram = 27;
+            iChing[Hexagram].EngTitle = "Corners of the Mouth (Providing Nourishment)";
+            iChing[Hexagram].ChiTitle = "I";
+            iChing[Hexagram].Hex = "䷚";
+            iChing[Hexagram].Code = new int[]{1,0,0,0,0,1};
+            iChing[Hexagram].Above = "KÊN  /  KEEPING STILL, MOUNTAIN";
+            iChing[Hexagram].Below = "CHÊN  /  THE AROUSING, THUNDER";
+            iChing[Hexagram].AboveSymbol = "☶";
+            iChing[Hexagram].BelowSymbol = "☳";
+            iChing[Hexagram].Intro1 = "This hexagram is a picture of an open mouth; above and below are firm lines of the lips, and between them the opening.  Starting with the mouth, through which we take food for nourishment, the thought leads to nourishment itself.  Nourishment of oneself, specifically of the body, is represented in the three lower lines, while the three upper lines represent nourishment and care of others, in a higher, spiritual sense.";
+            iChing[Hexagram].TheJudgment = "THE CORNERS OF THE MOUTH."+ Environment.NewLine +
+                "Perseverance brings good fortune."+ Environment.NewLine +
+                "Pay heed to the providing of nourishment"+ Environment.NewLine +
+                "And to what a man seeks"+ Environment.NewLine +
+                "To fill his own mouth with.";
+            iChing[Hexagram].Intro2 = "In bestowing care and nourishment, it is important that the right people should be taken care of and that we should attend to our own nourishment in the right way.  If we wish to know what anyone is like, we have only to observe on whom he bestows his care and what sides of his own nature he cultivates and nourishes.  Nature nourishes all creatures.  The great man fosters and takes care of superior men, in order to take care of all men through them.  Mencius says about this: If we wish to know whether anyone is superior or not, we need only observe what part of his being he regards as especially important.  The body has superior and inferior, important and unimportant parts.  We must not injure important parts for the sake of the unimportant, nor must we injure the superior parts for the sake of the inferior.  He who cultivates the inferior parts of his nature is an inferior man.  He who cultivates the superior parts of his nature is a superior man.";
+            iChing[Hexagram].TheImage = "At the foot of the mountain, thunder:"+ Environment.NewLine +
+                "The image of PROVIDING NOURISHMENT."+ Environment.NewLine +
+                "Thus the superior man is careful of his words"+ Environment.NewLine +
+                "And temperate in eating and drinking.";
+            iChing[Hexagram].Intro3 = "“God comes forth in the sign of the Arousing”: when in the spring the life forces stir again, all things comes into being anew.  “He brings to perfection in the sign of Keeping Still”: thus in the early spring, when the seeds fall to earth, all things are made ready.  This is an image of providing nourishment through movement and tranquillity.  The superior man takes it as a pattern for the nourishment and cultivation of his character.  Words are a movement going from within outward.  Eating and drinking are movements from without inward.  Both kinds of movement can be modified by tranquillity.  For tranquillity keeps the words that come out of the mouth from exceeding proper measure, and keeps the food that goes into the mouth from exceeding its proper measure.  Thus character is cultivated.";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "You let your magic tortoise go,"+ Environment.NewLine +
+                "And look at me with the corners of your mouth drooping."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "Turning to the summit for nourishment,"+ Environment.NewLine +
+                "Deviating from the path"+ Environment.NewLine +
+                "To seek nourishment from the hill."+ Environment.NewLine +
+                "Continuing to do this brings misfortune.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "Turning away from nourishment."+ Environment.NewLine +
+                "Perseverance brings misfortune."+ Environment.NewLine +
+                "Do not act thus for ten years."+ Environment.NewLine +
+                "Nothing serves to further.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"+ Environment.NewLine +
+                "Turning to the summit"+ Environment.NewLine +
+                "For provision of nourishment"+ Environment.NewLine +
+                "Brings good fortune."+ Environment.NewLine +
+                "Spying about with sharp eyes"+ Environment.NewLine +
+                "Like a tiger with insatiable craving."+ Environment.NewLine +
+                "No blame.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "Turning away from the path."+ Environment.NewLine +
+                "To remain persevering brings good fortune."+ Environment.NewLine +
+                "One should not cross the great water.";
+            iChing[Hexagram].Read6 = "Nine at the top means:"+ Environment.NewLine +
+                "The source of nourishment."+ Environment.NewLine +
+                "Awareness of danger brings good fortune."+ Environment.NewLine +
+                "It furthers one to cross the great water.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "○";
+            iChing[Hexagram].Place1ChangesToNumber = 23;
+            iChing[Hexagram].Place2ChangesToNumber = 41;
+            iChing[Hexagram].Place3ChangesToNumber = 22;
+            iChing[Hexagram].Place4ChangesToNumber = 21;
+            iChing[Hexagram].Place5ChangesToNumber = 42;
+            iChing[Hexagram].Place6ChangesToNumber = 24;
+            
+            
+            Hexagram = 28;
+            iChing[Hexagram].EngTitle = "Preponderance of the Great";
+            iChing[Hexagram].ChiTitle = "Ta Kuo";
+            iChing[Hexagram].Hex = "䷛";
+            iChing[Hexagram].Code = new int[]{0,1,1,1,1,0};
+            iChing[Hexagram].Above = "TUI  /  THE JOYOUS, LAKE ";
+            iChing[Hexagram].Below = "SUN  /  THE GENTLE, WIND, WOOD";
+            iChing[Hexagram].AboveSymbol = "☱";
+            iChing[Hexagram].BelowSymbol = "☴";
+            iChing[Hexagram].Intro1 = "This hexagram consists of four strong lines inside and two weak lines outside.  When the strong are outside and the weak inside, all is well and there is nothing out of balance, nothing extraordinary in the situation.  Here, however, the opposite is the case.  The hexagram represents a beam that is thick and heavy in the middle but too weak at the ends.  This is a condition that cannot last; it must be changed, must pass, or misfortune will result.";
+            iChing[Hexagram].TheJudgment = "PREPONDERANCE OF THE GREAT."+ Environment.NewLine +
+                "The ridgepole sags to the breaking point."+ Environment.NewLine +
+                "It furthers one to have somewhere to go."+ Environment.NewLine +
+                "Success.";
+            iChing[Hexagram].Intro2 = "The weight of the great is excessive.  The load is too heavy for the strength of the supports.  The ridgepole on which the whole roof rests, sags to the breaking point, because its supporting ends are too weak for the load they bear.  It is an exceptional time and situation; therefore extraordinary measures are demanded.  It is necessary to find a way of transition as quickly as possible, and to take action.  This promises success.  For although the strong element is in excess, it is in the middle, that is, at the center of gravity, so that a revolution is not to be feared.  Nothing is to be achieved by forcible measures.  The problem must be solved by gentle penetration to the meaning of the situation (as is suggested by the attribute of the inner trigram, Sun); then the change–over to other conditions will be successful.  It demands real superiority; therefore the time when the great preponderates is a momentous time."; 
+            iChing[Hexagram].TheImage = "The lake rises above the trees:"+ Environment.NewLine +
+                "The image of PREPONDERANCE OF THE GREAT."+ Environment.NewLine +
+                "Thus the superior man, when he stands alone,"+ Environment.NewLine +
+                "Is unconcerned,"+ Environment.NewLine +
+                "And if he has to renounce the world,"+ Environment.NewLine +
+                "He is undaunted.";
+            iChing[Hexagram].Intro3 = "Extraordinary times when the great preponderates are like floodtimes when the lake rises over the treetops.  But such conditions are temporary.  The two trigrams indicate the attitude proper to such exceptional times: the symbol of the trigram Sun is the tree, which stands firm even though it stands alone, and the attribute of Tui is joyousness, which remains undaunted even if it must renounce the world.";
+            iChing[Hexagram].Read1 = "Six at the beginning means:"+ Environment.NewLine +
+                "To spread white rushes underneath."+ Environment.NewLine +
+                "No blame.";
+            iChing[Hexagram].Read2 = "Nine in the second place means:"+ Environment.NewLine +
+                "A dry poplar sprouts at the root."+ Environment.NewLine +
+                "An older man takes a young wife."+ Environment.NewLine +
+                "Everything furthers.";
+            iChing[Hexagram].Read3 = "Nine in the third place means:"+ Environment.NewLine +
+                "The ridgepole sags to the breaking point."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read4 =
+                "Nine in the fourth place means:"+ Environment.NewLine +
+                "The ridgepole is braced. Good fortune."+ Environment.NewLine +
+                "If there are ulterior motives, it is humiliating.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:"+ Environment.NewLine +
+                "A withered poplar puts forth flowers."+ Environment.NewLine +
+                "An older woman takes a husband."+ Environment.NewLine +
+                "No blame.  No praise.";
+            iChing[Hexagram].Read6 = "Six at the top means:"+ Environment.NewLine +
+                "One must go through the water."+ Environment.NewLine +
+                "It goes over one’s head."+ Environment.NewLine +
+                "Misfortune.  No blame.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "○";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "○";
+            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 43;
+            iChing[Hexagram].Place2ChangesToNumber = 31;
+            iChing[Hexagram].Place3ChangesToNumber = 47;
+            iChing[Hexagram].Place4ChangesToNumber = 48;
+            iChing[Hexagram].Place5ChangesToNumber = 32;
+            iChing[Hexagram].Place6ChangesToNumber = 44;
+            
+             
+            Hexagram = 29;
+            iChing[Hexagram].EngTitle = "The Abysmal (Water)";
+            iChing[Hexagram].ChiTitle = "K’an";
+            iChing[Hexagram].Hex = "䷜";
+            iChing[Hexagram].Code = new int[]{0,1,0,0,1,0};
+            iChing[Hexagram].Above = "K’AN  /  THE ABYSMAL, WATER";
+            iChing[Hexagram].Below = "K’AN  /  THE ABYSMAL, WATER";
+            iChing[Hexagram].AboveSymbol = "☵";
+            iChing[Hexagram].BelowSymbol = "☵";
+            iChing[Hexagram].Intro1 = "This hexagram consists of a doubling of the trigram K’an.  It is one of the eight hexagrams in which doubling occurs.  The trigram K’an means a plunging in.  A yang line has plunged in between two yin lines and is closed in by them like water in a ravine.  The trigram K’an is also the middle son.  The Receptive has obtained the middle line of the Creative, and thus K’an develops.  As an image it represents water, the water that comes from above and is in motion on earth in streams and rivers, giving rise to all life on earth."+ Environment.NewLine +Environment.NewLine +
+                "In man’s world K’an represents the heart, the soul locked up within the body, the principle of light inclosed in the dark—that is, reason.  The name of the hexagram, because the trigram is doubled, has the additional meaning, “repetition of danger.”  Thus the hexagram is intended to designate an objective situation to which one must become accustomed, not a subjective attitude.  For danger due to a subjective attitude means either foolhardiness or guile.  Hence too a ravine is used to symbolize danger; it is a situation in which a man is in the same pass as the water in a ravine, and, like the water, he can escape if he behaves correctly.";
+            iChing[Hexagram].TheJudgment = "The Abysmal repeated."+ Environment.NewLine +
+                "If you are sincere, you have success in your heart,"+ Environment.NewLine +
+                "And whatever you do succeeds.";
+            iChing[Hexagram].Intro2 = "Through repetition of danger we grow accustomed to it.  Water sets the example for the right conduct under such circumstances.  It flows on and on, and merely fills up all the places through which it flows; it does not shrink from any dangerous spot nor from any plunge, and nothing can make it lose its own essential nature.  It remains true to itself under all conditions.  Thus likewise, if one is sincere when confronted with difficulties, the heart can penetrate the meaning of the situation.  And once we have gained inner mastery of a problem, it will come about naturally that the action we take will succeed.  In danger all that counts is really carrying out all that has to be done—thoroughness—and going forward, in order not to perish through tarrying in the danger."+ Environment.NewLine +Environment.NewLine +
+                "Properly used, danger can have an important meaning as a protective measure.  Thus heaven has its perilous height protecting it against every attempt at invasion, and earth has its mountains and bodies of water, separating countries by their dangers.  Thus also rulers make use of danger to protect themselves against attacks from without and against turmoil within.";
+            iChing[Hexagram].TheImage = "Water flows on uninterruptedly and reaches its goal:"+ Environment.NewLine +
+                "The image of the Abysmal repeated."+ Environment.NewLine +
+                "Thus the superior man walks in lasting virtue"+ Environment.NewLine +
+                "And carries on the business of teaching.";
+            iChing[Hexagram].Intro3 = "Water reaches its goal by flowing continually.  It fills up every depression before it flows on.  The superior man follows its example; he is concerned that goodness should be an established attribute of character rather than an accidental and isolated occurrence.  So likewise in teaching others everything depends on consistency, for it is only through repetition that the pupil makes the material his own.";
+            iChing[Hexagram].Read1 = "Six at the beginning means:"+ Environment.NewLine +
+                "Repetition of the Abysmal."+ Environment.NewLine +
+                "In the abyss one falls into a pit."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read2 = "Nine in the second place means:"+ Environment.NewLine +
+                "The abyss is dangerous."+ Environment.NewLine +
+                "One should strive to attain small things only.";
+            iChing[Hexagram].Read3 = "Six in the third place means:"+ Environment.NewLine +
+                "Forward and backward, abyss on abyss."+ Environment.NewLine +
+                "In danger like this, pause at first and wait,"+ Environment.NewLine +
+                "Otherwise you will fall into a pit in the abyss."+ Environment.NewLine +
+                "Do not act this way.";
+            iChing[Hexagram].Read4 = "Six in the fourth place means:"+ Environment.NewLine +
+                "A jug of wine, a bowl of rice with it;"+ Environment.NewLine +
+                "Earthen vessels"+ Environment.NewLine +
+                "Simply handed in through the Window."+ Environment.NewLine +
+                "There is certainly no blame in this.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:"+ Environment.NewLine +
+                "The abyss is not filled to overflowing,"+ Environment.NewLine +
+                "It is filled only to the rim."+ Environment.NewLine +
+                "No blame.";
+            iChing[Hexagram].Read6 = "Six at the top means:"+ Environment.NewLine +
+                "Bound with cords and ropes,"+ Environment.NewLine +
+                "Shut in between thorn–hedged prison walls:"+ Environment.NewLine +
+                "For three years one does not find the way."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "○";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 60;
+            iChing[Hexagram].Place2ChangesToNumber = 8;
+            iChing[Hexagram].Place3ChangesToNumber = 48;
+            iChing[Hexagram].Place4ChangesToNumber = 47;
+            iChing[Hexagram].Place5ChangesToNumber = 7;
+            iChing[Hexagram].Place6ChangesToNumber = 59;
+            
+            
+            Hexagram = 30;
+            iChing[Hexagram].EngTitle = "The Clinging  (Fire)";
+            iChing[Hexagram].ChiTitle = "Li";
+            iChing[Hexagram].Hex = "䷝";
+            iChing[Hexagram].Code = new int[]{1,0,1,1,0,1};
+            iChing[Hexagram].Above = "LI  /  THE CLINGING, FIRE ";
+            iChing[Hexagram].Below = "LI  /  THE CLINGING, FIRE ";
+            iChing[Hexagram].AboveSymbol = "☲";
+            iChing[Hexagram].BelowSymbol = "☲";
+            iChing[Hexagram].Intro1 = "This hexagram is another double sign.  The trigram Li means “to cling to something,” and also “brightness.”  A dark line clings to two light lines, one above and one below—the image of an empty space between two strong lines, whereby the two strong lines are made bright.  The trigram represents the middle daughter.  The Creative has incorporated the central line of the Receptive, and thus Li develops.  As an image, it is fire.  Fire has no definite form but clings to the burning object and thus is bright.  As water pours down from heaven, so fire flames up from the earth.  While K’an means the soul shut within the body, Li stands for nature in its radiance.";
+            iChing[Hexagram].TheJudgment = "THE CLINGING.  Perseverance furthers."+ Environment.NewLine +
+                "It brings success."+ Environment.NewLine +
+                "Care of the cow brings good fortune.";
+            iChing[Hexagram].Intro2 = "What is dark clings to what is light and so enhances the brightness of the latter.  A luminous thing giving out light must have within itself something that perseveres; otherwise it will in time burn itself out.  Everything that gives light is dependent on something to which it clings, in order that it may continue to shine."+ Environment.NewLine +Environment.NewLine +
+                "Thus the sun and moon cling to heaven, and grain, grass, and trees cling to the earth.  So too the twofold clarity of the dedicated man clings to what is right and thereby can shape the world.  Human life on earth is conditioned and unfree, and when man recognizes this limitation and makes himself dependent upon the harmonious and beneficent forces of the cosmos, he achieves success.  The cow is the symbol of extreme docility.  By cultivating in himself an attitude of compliance and voluntary dependence, man acquires clarity without sharpness and finds his place in the world.";
+            iChing[Hexagram].TheImage = "That which is bright rises twice:"+ Environment.NewLine +
+                "The image of FIRE."+ Environment.NewLine +
+                "Thus the great man, by perpetuating this brightness,"+ Environment.NewLine +
+                "Illumines the four quarters of the world.";
+            iChing[Hexagram].Intro3 = "Each of the two trigrams represents the sun in the course of a day.  The two together represent the repeated movement of the sun, the function of light with respect to time.  The great man continues the work of nature in the human world.  Through the clarity of his nature he causes the light to spread farther and farther and to penetrate the nature of man ever more deeply.";
+            iChing[Hexagram].Read1 = "Nine at the beginning means:"+ Environment.NewLine +
+                "The footprints run crisscross."+ Environment.NewLine +
+                "If one is seriously intent, no blame.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "Yellow light.  Supreme good fortune.";
+            iChing[Hexagram].Read3 = "Nine in the third place means:"+ Environment.NewLine +
+                "In the light of the setting sun,"+ Environment.NewLine +
+                "Men either beat the pot and sing"+ Environment.NewLine +
+                "Or loudly bewail the approach of old age."+ Environment.NewLine +
+                "Misfortune.";
+            iChing[Hexagram].Read4 = "Nine in the fourth place means:"+ Environment.NewLine +
+                "Its coming is sudden;"+ Environment.NewLine +
+                "It flames up, dies down, is thrown away.";
+            iChing[Hexagram].Read5 = "Six in the fifth place means:"+ Environment.NewLine +
+                "Tears in floods, sighing and lamenting."+ Environment.NewLine +
+                "Good fortune.";
+            iChing[Hexagram].Read6 = "The king used him to march forth and chastise."+ Environment.NewLine +
+                "Then it is best to kill the leaders"+ Environment.NewLine +
+                "And take captive the followers.  No blame.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "○";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 56;
+            iChing[Hexagram].Place2ChangesToNumber = 14;
+            iChing[Hexagram].Place3ChangesToNumber = 21;
+            iChing[Hexagram].Place4ChangesToNumber = 22;
+            iChing[Hexagram].Place5ChangesToNumber = 13;
+            iChing[Hexagram].Place6ChangesToNumber = 55;
+            
+            
+            Hexagram = 31;
+            iChing[Hexagram].EngTitle = "Influence (Wooing)";
+            iChing[Hexagram].ChiTitle = "Hsien";
+            iChing[Hexagram].Hex = "䷞";
+            iChing[Hexagram].Code = new int[]{0,0,1,1,1,0};
+            iChing[Hexagram].Above = "TUI  /  THE JOYOUS, LAKE ";
+            iChing[Hexagram].Below = "KÊN  /  KEEPING STILL, MOUNTAIN";
+            iChing[Hexagram].AboveSymbol = "☱";
+            iChing[Hexagram].BelowSymbol = "☶";
+            iChing[Hexagram].Intro1 = "The name of the hexagram means “universal,” “general,” and in a figurative sense “to influence,” “to stimulate.”  The upper trigram is Tui, the Joyous; the lower is Kên, Keeping Still.  By its persistent, quiet influence, the lower, rigid trigram stimulates the upper, weak trigram, which responds to this stimulation cheerfully and joyously.  Kên, the lower trigram, is the youngest son; the upper, Tui, is the youngest daughter.  Thus the universal mutual attraction between the sexes is represented.  In courtship, the masculine principle must seize the initiative and place itself below the feminine principle."+ Environment.NewLine +Environment.NewLine +
+                "Just as the first part of book I begins with the hexagrams of heaven and earth, the foundations of all that exists, the second part begins with the hexagrams of courtship and marriage, the foundations of all social relationships.";
+            iChing[Hexagram].TheJudgment = "Influence.  Success."+ Environment.NewLine +
+                "Perseverance furthers."+ Environment.NewLine +
+                "To take a maiden to wife brings good fortune.";
+            iChing[Hexagram].Intro2 = "The weak element is above, the strong below; hence their powers attract each other, so that they unite.  This brings about success, for all success depends on the effect of mutual attraction.  By keeping still within while experiencing joy without, one can prevent the joy from going to excess and hold it within proper bounds.  This is the meaning of the added admonition, “Perseverance furthers,” for it is perseverance that makes the difference between seduction and courtship; in the latter the strong man takes a position inferior to that of the weak girl and shows consideration for her.  This attraction between affinities is a general law of nature.  Heaven and earth attract each other and thus all creatures come into being.  Through such attraction the sage influences men’s hearts, and thus the world attains peace.  From the attractions they exert we can learn the nature of all beings in heaven and on earth.";
+            iChing[Hexagram].TheImage = "A lake on the mountain:"+ Environment.NewLine +
+                "The image of influence"+ Environment.NewLine +
+                "Thus the superior man encourages people to approach him"+ Environment.NewLine +
+                "By his readiness to receive them.";
+            iChing[Hexagram].Intro3 = "A mountain with a lake on its summit is stimulated by the moisture from the lake.  It has this advantage because its summit does not jut out as a peak but is sunken.  The image counsels that the mind should be kept humble and free, so that it may remain receptive to good advice.  People soon give up counseling a man who thinks that he knows everything better than anyone else.";
+            iChing[Hexagram].Read1 = "Six at the beginning means:"+ Environment.NewLine +
+                "The influence shows itself in the big toe.";
+            iChing[Hexagram].Read2 = "Six in the second place means:"+ Environment.NewLine +
+                "The influence shows itself in the calves of the legs."+ Environment.NewLine +
+                "Misfortune."+ Environment.NewLine +
+                "Tarrying brings good fortune.";
+            iChing[Hexagram].Read3 = "Nine in the third place means:"+ Environment.NewLine +
+                "The influence shows itself in the thighs."+ Environment.NewLine +
+                "Holds to that which follows it."+ Environment.NewLine +
+                "To continue is humiliating.";
+            iChing[Hexagram].Read4 = "Nine in the fourth place means:"+ Environment.NewLine +
+                "Perseverance brings good fortune."+ Environment.NewLine +
+                "Remorse disappears."+ Environment.NewLine +
+                "If a man is agitated in mind,"+ Environment.NewLine +
+                "And his thoughts go hither and thither,"+ Environment.NewLine +
+                "Only those friends"+ Environment.NewLine +
+                "On whom he fixes his conscious thoughts"+ Environment.NewLine +
+                "Will follow.";
+            iChing[Hexagram].Read5 = "Nine in the fifth place means:"+ Environment.NewLine +
+                "The influence shows itself in the back of the neck."+ Environment.NewLine +
+                "No remorse.";
+            iChing[Hexagram].Read6 = "Six at the top means:"+ Environment.NewLine +
+                "The influence shows itself in the jaws, cheeks, and tongue.";
+            iChing[Hexagram].SquareCircle1 = "";
+            iChing[Hexagram].SquareCircle2 = "";
+            iChing[Hexagram].SquareCircle3 = "";
+            iChing[Hexagram].SquareCircle4 = "○";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle6 = "";
+            iChing[Hexagram].Place1ChangesToNumber = 49;
+            iChing[Hexagram].Place2ChangesToNumber = 28;
+            iChing[Hexagram].Place3ChangesToNumber = 45;
+            iChing[Hexagram].Place4ChangesToNumber = 39;
+            iChing[Hexagram].Place5ChangesToNumber = 62;
+            iChing[Hexagram].Place6ChangesToNumber = 33;
+            
 
             /*
              
@@ -1482,7 +2111,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle6 = "□";
 
             Random rand = new Random();
-            int randInt = rand.Next(1, 20); 
+            int randInt = rand.Next(1, 29); 
             currentlyShowing = randInt;
             updateApplication();
  
