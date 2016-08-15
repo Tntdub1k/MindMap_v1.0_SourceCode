@@ -118,7 +118,7 @@ namespace iChing
 
         private void Place6_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
-            currentlyShowing = iChing[currentlyShowing].Place6ChangesToNumber;
+           currentlyShowing = iChing[currentlyShowing].Place6ChangesToNumber;
             updateApplication();
         }
 
@@ -4033,7 +4033,9 @@ He loses it, in truth.";
         }
 
 
-        
+
+
+   
 
 
     }
