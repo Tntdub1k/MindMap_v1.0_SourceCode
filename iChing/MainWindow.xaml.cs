@@ -33,7 +33,7 @@ namespace iChing
 
         private void updateApplication()
         {
-            TitleBox.Content = currentlyShowing+". "+iChing[currentlyShowing].ChiTitle + " ~ " +iChing[currentlyShowing].EngTitle;
+            TitleBox.Content = currentlyShowing+". "+iChing[currentlyShowing].ChiTitle + " / " +iChing[currentlyShowing].EngTitle;
             AboveBelowBox.Text = "above "+iChing[currentlyShowing].Above + "\nbelow " + iChing[currentlyShowing].Below;
             AboveBelowSymbolsBox.Text = iChing[currentlyShowing].AboveSymbol + "\n" + iChing[currentlyShowing].BelowSymbol;
             Intro1Box.Text = iChing[currentlyShowing].Intro1;
@@ -47,12 +47,18 @@ namespace iChing
             Line4Box.Text = iChing[currentlyShowing].Read4;
             Line5Box.Text = iChing[currentlyShowing].Read5;
             Line6Box.Text = iChing[currentlyShowing].Read6;
-            Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].Hex;
-            Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].Hex;
-            Changes3Box.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].Hex;
-            Changes4Box.Text = iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].Hex;
-            Changes5Box.Text = iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].Hex;
-            Changes6Box.Text = iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle + " " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].Hex;
+            Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
+            Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
+            Changes3Box.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle;
+            Changes4Box.Text = iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle;
+            Changes5Box.Text = iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle;
+            Changes6Box.Text = iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle;
+            Changes1BoxH.Text = iChing[iChing[currentlyShowing].Place1ChangesToNumber].Hex;
+            Changes2BoxH.Text = iChing[iChing[currentlyShowing].Place2ChangesToNumber].Hex;
+            Changes3BoxH.Text = iChing[iChing[currentlyShowing].Place3ChangesToNumber].Hex;
+            Changes4BoxH.Text = iChing[iChing[currentlyShowing].Place4ChangesToNumber].Hex;
+            Changes5BoxH.Text = iChing[iChing[currentlyShowing].Place5ChangesToNumber].Hex;
+            Changes6BoxH.Text = iChing[iChing[currentlyShowing].Place6ChangesToNumber].Hex;
             Line1BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle1;
             Line2BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle2;
             Line3BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle3;
@@ -76,15 +82,12 @@ namespace iChing
                 else { Place6.Fill = (Brush)FindResource("Yin"); };
             }
             else { MessageBox.Show("Not yet defined"); }
-            LinesViewer.ScrollToTop();
-            MainTextViewer.ScrollToTop();
-
+            //LinesViewer.ScrollToTop();
+            //MainTextViewer.ScrollToTop();
+            PlacesPanel.BringIntoView();
         }
 
-        private void TextBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
+
 
         private void Place1_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -4030,6 +4033,15 @@ He loses it, in truth.";
             currentlyShowing = randInt;
             updateApplication();
  
+        }
+
+        private void TextBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Line1Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
         }
 
 
