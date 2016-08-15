@@ -51,7 +51,9 @@
         <System:Double x:Key="placesSize">10</System:Double>
         <System:Double x:Key="HexSize">18</System:Double>
         <System:Double x:Key="WidthOfChineseName">NaN</System:Double>
-        <System:Double x:Key="WidthOfChineseSymbol">184</System:Double>
+        <System:Double x:Key="WidthOfChineseSymbol">79</System:Double>
+        <System:Double x:Key="WidthOfCHIname">NaN</System:Double>
+        <System:Double x:Key="WidthofCHIName">81</System:Double>
     </Window.Resources>
     <TabControl x:Name="TabControl1" HorizontalAlignment="Left" Height="701" VerticalAlignment="Top" Width="743">
         <TabItem Header="Info">
@@ -414,11 +416,156 @@
                     <ColumnDefinition Width="371*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.ColumnSpan="3">
-                    <TextBox Height="23" TextWrapping="Wrap" Text="Part 1" HorizontalAlignment="Center" FontSize="13" FontFamily="{DynamicResource SystemFont}" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    <StackPanel Height="25" Orientation="Horizontal" PreviewMouseDown="StackPanel_PreviewMouseDown">
-                        <TextBox TextWrapping="Wrap" Text="1 Ch'ien " Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}"/>
-                        <TextBox TextWrapping="Wrap" Text="乾 " BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}"/>
-                        <TextBox TextWrapping="Wrap" Text="The Creative" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right"/>
+                    <TextBox Height="23" TextWrapping="Wrap" Text="Part 1" HorizontalAlignment="Center" FontSize="13" FontFamily="{DynamicResource SystemFont}" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0"/>
+                    <StackPanel x:Name="Id1" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" ClipToBounds="True" Cursor="Hand" Tag="1">
+                        <TextBox TextWrapping="Wrap" Text="1 Ch'ien " Margin="0" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True" Height="16"/>
+                        <TextBox TextWrapping="Wrap" Text="乾 " BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0" Height="16"/>
+                        <TextBox TextWrapping="Wrap" Text="The Creative" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0" Height="16"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id2" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="2">
+                        <TextBox TextWrapping="Wrap" Text="2 K'un" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True" Height="16"/>
+                        <TextBox TextWrapping="Wrap" Text="坤" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0" Height="16"/>
+                        <TextBox TextWrapping="Wrap" Text="The Receptive" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0" Height="16"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id3" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="3">
+                        <TextBox TextWrapping="Wrap" Text="3 Chun" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="屯" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Difficulty at the Beginning" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id4" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="4">
+                        <TextBox TextWrapping="Wrap" Text="4 Mêng" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="蒙" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Youthful Folly" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id5" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="5">
+                        <TextBox TextWrapping="Wrap" Text="5 Hsü" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="需" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Waiting (Nourishment)" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id6" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="6">
+                        <TextBox TextWrapping="Wrap" Text="6 Sung" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="訟" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Conflict" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id7" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="7">
+                        <TextBox TextWrapping="Wrap" Text="7 Shih" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="師" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="The Army" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id8" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="8">
+                        <TextBox TextWrapping="Wrap" Text="8 Pi" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="比" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Holding Together [Union]" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id9" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="9">
+                        <TextBox TextWrapping="Wrap" Text="9 Hsiao Ch'u" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="小畜" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="The Taming Power of the Small" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id10" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="10">
+                        <TextBox TextWrapping="Wrap" Text="10 Lü" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="履" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Treading [Conduct]" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id11" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="11">
+                        <TextBox TextWrapping="Wrap" Text="11 T'ai" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="泰" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Peace" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id12" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="12">
+                        <TextBox TextWrapping="Wrap" Text="12 P'i" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="否" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Standstill [Stagnation]" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id13" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="13">
+                        <TextBox TextWrapping="Wrap" Text="13 T'ung Jên" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="同人" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Fellowship with Men" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id14" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="14">
+                        <TextBox TextWrapping="Wrap" Text="14 Ta Yu" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="大有" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Possession in Great Measure" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id15" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="15">
+                        <TextBox TextWrapping="Wrap" Text="15 Ch'ien" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="謙" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Modesty" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id16" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="16">
+                        <TextBox TextWrapping="Wrap" Text="16 Yü" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="豫" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Enthusiasm" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id17" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="17">
+                        <TextBox TextWrapping="Wrap" Text="17 Sui" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="隨 " BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Following" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id18" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="18">
+                        <TextBox TextWrapping="Wrap" Text="18 Ku" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="蠱" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Work on what has been spoiled [Decay]" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id19" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="19">
+                        <TextBox TextWrapping="Wrap" Text="19 Lin" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="臨" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Approach" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id20" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="20">
+                        <TextBox TextWrapping="Wrap" Text="20 Kuan" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="觀" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Contemplation (View)" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id21" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="21">
+                        <TextBox TextWrapping="Wrap" Text="21 Shih Ho" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="噬嗑" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Biting Through" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id22" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="22">
+                        <TextBox TextWrapping="Wrap" Text="22 Pi" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="賁" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Grace" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id23" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="23">
+                        <TextBox TextWrapping="Wrap" Text="23 Po" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="剝" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Splitting Apart" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id24" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="24">
+                        <TextBox TextWrapping="Wrap" Text="24 Fu" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="復" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Return (The Turning Point)" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id25" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="25">
+                        <TextBox TextWrapping="Wrap" Text="25 Wu Wang" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="無妄" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Innocence (The Unexpected)" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id26" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="26">
+                        <TextBox TextWrapping="Wrap" Text="26 Ta Ch'u" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="大畜" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="The Taming Power of the Great" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id27" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="27">
+                        <TextBox TextWrapping="Wrap" Text="27 I" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="頤" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Corners of the Mouth (Providing Nourishment)" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id28" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="28">
+                        <TextBox TextWrapping="Wrap" Text="28 Ta Kuo" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="大過" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="Preponderance of the Great " Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id29" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="29">
+                        <TextBox TextWrapping="Wrap" Text="29 K'an" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="坎" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="The Abysmal (Water)" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Id30" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" Tag="30">
+                        <TextBox TextWrapping="Wrap" Text="30 Li" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True"/>
+                        <TextBox TextWrapping="Wrap" Text="離" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" IsReadOnly="True" BorderThickness="0"/>
+                        <TextBox TextWrapping="Wrap" Text="The Clinging, Fire" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Column="3" HorizontalAlignment="Left" Height="591" VerticalAlignment="Top" Width="371">

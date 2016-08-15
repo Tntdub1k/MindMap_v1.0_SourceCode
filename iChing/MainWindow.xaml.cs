@@ -4057,10 +4057,24 @@ He loses it, in truth.";
             updateApplication();
             TabControl1.SelectedIndex = 0;
         }
-        private void StackPanel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+
+
+        private void Id1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            displayNumber(1);
+            StackPanel sp = (StackPanel)sender;
+            try
+            {
+                string tagString = sp.Tag.ToString();
+                displayNumber(Convert.ToInt32(tagString));
+            }
+            catch (Exception)
+            {
+                throw new Exception("whats the number for this hex?");
+            }
+            
+            
         }
+
 
  
 
