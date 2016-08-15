@@ -50,8 +50,10 @@
         <System:Double x:Key="placestextyoffset">4</System:Double>
         <System:Double x:Key="placesSize">10</System:Double>
         <System:Double x:Key="HexSize">18</System:Double>
+        <System:Double x:Key="WidthOfChineseName">NaN</System:Double>
+        <System:Double x:Key="WidthOfChineseSymbol">184</System:Double>
     </Window.Resources>
-    <TabControl HorizontalAlignment="Left" Height="701" VerticalAlignment="Top" Width="743">
+    <TabControl x:Name="TabControl1" HorizontalAlignment="Left" Height="701" VerticalAlignment="Top" Width="743">
         <TabItem Header="Info">
             <Grid HorizontalAlignment="Left" Height="696" VerticalAlignment="Top" Width="1143">
                 <Grid.ColumnDefinitions>
@@ -400,7 +402,29 @@
             </Grid>
         </TabItem>
         <TabItem Header="Table">
-            <Grid Height="665" Width="743"/>
+            <Grid Height="665" Width="743">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="591*"/>
+                    <RowDefinition Height="74*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="152*"/>
+                    <ColumnDefinition Width="85*"/>
+                    <ColumnDefinition Width="135*"/>
+                    <ColumnDefinition Width="371*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.ColumnSpan="3">
+                    <TextBox Height="23" TextWrapping="Wrap" Text="Part 1" HorizontalAlignment="Center" FontSize="13" FontFamily="{DynamicResource SystemFont}" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <StackPanel Height="25" Orientation="Horizontal" PreviewMouseDown="StackPanel_PreviewMouseDown">
+                        <TextBox TextWrapping="Wrap" Text="1 Ch'ien " Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}"/>
+                        <TextBox TextWrapping="Wrap" Text="乾 " BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseSymbol}"/>
+                        <TextBox TextWrapping="Wrap" Text="The Creative" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource WidthOfChineseName}" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="3" HorizontalAlignment="Left" Height="591" VerticalAlignment="Top" Width="371">
+                    <TextBox Height="23" TextWrapping="Wrap" Text="Part 2" HorizontalAlignment="Center" FontSize="13" FontFamily="{DynamicResource SystemFont}" FontWeight="Bold" Margin="162.775,0,161.225,0" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                </StackPanel>
+            </Grid>
         </TabItem>
     </TabControl>
 </Window>
