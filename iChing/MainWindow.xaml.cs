@@ -92,42 +92,42 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place1ChangesToNumber;
             updateApplication();
-            PlacesPanel.BringIntoView();
+            MainTextViewer.ScrollToBottom();
         }
 
         private void Place2_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place2ChangesToNumber;
             updateApplication();
-            PlacesPanel.BringIntoView();
+            MainTextViewer.ScrollToBottom();
         }
 
         private void Place3_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place3ChangesToNumber;
             updateApplication();
-            PlacesPanel.BringIntoView();
+            MainTextViewer.ScrollToBottom();
         }
 
         private void Place4_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place4ChangesToNumber;
             updateApplication();
-            PlacesPanel.BringIntoView();
+            MainTextViewer.ScrollToBottom();
         }
 
         private void Place5_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place5ChangesToNumber;
             updateApplication();
-            PlacesPanel.BringIntoView();
+            MainTextViewer.ScrollToBottom();
         }
 
         private void Place6_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
            currentlyShowing = iChing[currentlyShowing].Place6ChangesToNumber;
             updateApplication();
-            PlacesPanel.BringIntoView();
+            MainTextViewer.ScrollToBottom();
         }
 
         private void SetupText()
@@ -4055,7 +4055,7 @@ He loses it, in truth.";
             currentlyShowing = number;
             MainTextViewer.ScrollToTop();
             updateApplication();
-            TabControl1.SelectedIndex = 0;
+            TabControl1.SelectedIndex = 1;
         }
 
 
