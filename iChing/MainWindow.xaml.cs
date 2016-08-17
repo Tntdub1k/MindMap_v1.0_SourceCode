@@ -33,7 +33,8 @@ namespace iChing
 
         private void updateApplication()
         {
-            TitleBox.Content = currentlyShowing+". "+iChing[currentlyShowing].ChiTitle + " / " +iChing[currentlyShowing].EngTitle;
+            TitleBox.Content = currentlyShowing + ". " + iChing[currentlyShowing].ChiTitle + " / " + iChing[currentlyShowing].EngTitle;
+            HexTitle.Text = iChing[currentlyShowing].Hex;
             AboveBelowBox.Text = "above "+iChing[currentlyShowing].Above + "\nbelow " + iChing[currentlyShowing].Below;
             AboveBelowSymbolsBox.Text = iChing[currentlyShowing].AboveSymbol + "\n" + iChing[currentlyShowing].BelowSymbol;
             Intro1Box.Text = iChing[currentlyShowing].Intro1;
@@ -47,6 +48,13 @@ namespace iChing
             Line4Box.Text = iChing[currentlyShowing].Read4;
             Line5Box.Text = iChing[currentlyShowing].Read5;
             Line6Box.Text = iChing[currentlyShowing].Read6;
+            ChangesTo1.Text = "-- " + iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle + " --";
+            ChangesTo2.Text = "-- " + iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle + " --";
+            ChangesTo3.Text = "-- " + iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle + " --";
+            ChangesTo4.Text = "-- " + iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle + " --";
+            ChangesTo5.Text = "-- " + iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle + " --";
+            ChangesTo6.Text = "-- " + iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle + " --";
+            
             Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
             Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
             Changes3Box.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle;
@@ -4047,6 +4055,29 @@ He loses it, in truth.";
 
         private void Line1Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if (Comment1.Visibility == System.Windows.Visibility.Collapsed)
+            {
+                Comment1.Visibility = System.Windows.Visibility.Visible;
+                Comment1.Text = @"In China the dragon has a meaning altogether different from that given it in 
+the Western world. The dragon is a symbol of the electrically charged, 
+dynamic, arousing force that manifests itself in the thunderstorm. In winter 
+this energy withdraws into the earth; in the early summer it becomes active 
+again, appearing in the sky as thunder and lightning. As a result the creative 
+forces on earth begin to stir again.
+
+  Here this creative force is still hidden beneath the earth and therefore has 
+no effect. In terms of human affairs, this symbolizes a great man who is still 
+unrecognized. Nonetheless he remains true to himself. He does not allow 
+himself to be influenced by outward success or failure, but confident in his 
+strength, he bides his time. Hence it is wise for the man who consults the 
+oracle and draws this line to wait in the calm strength of patience. The time 
+will fulfill itself.  One need not fear least strong will should not prevail; the 
+main thing is not to expend one's powers prematurely in an attempt to obtain 
+by force something for which the time is not yet ripe.";
+            }
+            else {
+                Comment1.Visibility = System.Windows.Visibility.Collapsed;
+            }
         }
 
 
@@ -4073,6 +4104,67 @@ He loses it, in truth.";
             }
             
             
+        }
+
+        private void Line6Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Comment6.Visibility == System.Windows.Visibility.Collapsed)
+            {
+                Comment6.Visibility = System.Windows.Visibility.Visible;
+                Comment6.Text = @"Text";
+            }
+            else {
+                Comment6.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        private void Line5Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Comment5.Visibility == System.Windows.Visibility.Collapsed)
+            {
+                Comment5.Visibility = System.Windows.Visibility.Visible;
+                Comment5.Text = @"Text";
+            }
+            else {
+                Comment5.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        private void Line4Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Comment4.Visibility == System.Windows.Visibility.Collapsed)
+            {
+                Comment4.Visibility = System.Windows.Visibility.Visible;
+                Comment4.Text = @"Text";
+            }
+            else {
+                Comment4.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        private void Line3Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Comment3.Visibility == System.Windows.Visibility.Collapsed)
+            {
+                Comment3.Visibility = System.Windows.Visibility.Visible;
+                Comment3.Text = @"Text";
+            }
+            else {
+                Comment3.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        private void Line2Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Comment2.Visibility == System.Windows.Visibility.Collapsed)
+            {
+                Comment2.Visibility = System.Windows.Visibility.Visible;
+                Comment2.Text = @"Text";
+            }
+            else {
+                Comment2.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
         }
 
 
@@ -4182,4 +4274,4 @@ He loses it, in truth.";
         public int[] Code { get; set; }
 
     }
-}
+
