@@ -208,7 +208,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
 
             Hexagram = 2;
@@ -273,7 +273,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 ="○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
 
             Hexagram = 3;
@@ -342,7 +342,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
 
             Hexagram = 4;
@@ -398,7 +398,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 41;
             iChing[Hexagram].Place1ChangesToTitle = "Decrease ䷨";
@@ -462,7 +462,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 48;
             iChing[Hexagram].Place1ChangesToTitle = "The Well ䷯";
@@ -534,7 +534,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 10;
             iChing[Hexagram].Place1ChangesToTitle = "Treading (Conduct) ䷉";
@@ -597,7 +597,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 19;
             iChing[Hexagram].Place1ChangesToTitle = "Approach ䷒";
@@ -669,7 +669,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 3;
             iChing[Hexagram].Place1ChangesToTitle = "Difficulty at the Beginning ䷂";
@@ -729,8 +729,8 @@ namespace iChing
             iChing[Hexagram].SquareCircle1 = "";
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
-            iChing[Hexagram].SquareCircle4 = "□";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle4 = "⬜";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 57 ;
             iChing[Hexagram].Place1ChangesToTitle = "The Gentle (The Penetrating, Wind) ䷸";
@@ -790,9 +790,9 @@ namespace iChing
                 "When everything is fulfilled, supreme good fortune comes.";
             iChing[Hexagram].SquareCircle1 = "";
             iChing[Hexagram].SquareCircle2 = "";
-            iChing[Hexagram].SquareCircle3 = "□";
+            iChing[Hexagram].SquareCircle3 = "⬜";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 6;
             iChing[Hexagram].Place1ChangesToTitle = "Conflict ䷅";
@@ -864,7 +864,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 46;
             iChing[Hexagram].Place1ChangesToTitle = "Pushing Upwards ䷭";
@@ -922,10 +922,10 @@ namespace iChing
                 "The standstill comes to an end."+ Environment.NewLine +
                 "First standstill, then good fortune.";
             iChing[Hexagram].SquareCircle1 = "";
-            iChing[Hexagram].SquareCircle2 = "□";
+            iChing[Hexagram].SquareCircle2 = "⬜";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 25;
             iChing[Hexagram].Place2ChangesToNumber = 6;
@@ -979,7 +979,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 33;
             iChing[Hexagram].Place2ChangesToNumber = 1;
@@ -1034,7 +1034,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 50;
             iChing[Hexagram].Place2ChangesToNumber = 30;
@@ -1089,7 +1089,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "○";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 36;
             iChing[Hexagram].Place2ChangesToNumber = 46;
@@ -1149,7 +1149,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "○";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 51;
             iChing[Hexagram].Place2ChangesToNumber = 40;
@@ -1207,7 +1207,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 45;
             iChing[Hexagram].Place2ChangesToNumber = 58;
@@ -1262,7 +1262,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 26;
             iChing[Hexagram].Place2ChangesToNumber = 52;
@@ -1320,7 +1320,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 7;
             iChing[Hexagram].Place2ChangesToNumber = 24;
@@ -1378,7 +1378,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "○";
             iChing[Hexagram].Place1ChangesToNumber = 42;
             iChing[Hexagram].Place2ChangesToNumber = 59;
@@ -1437,7 +1437,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 35;
             iChing[Hexagram].Place2ChangesToNumber = 38;
@@ -1489,7 +1489,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "○";
             iChing[Hexagram].Place1ChangesToNumber = 52;
             iChing[Hexagram].Place2ChangesToNumber = 26;
@@ -1543,7 +1543,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "○";
             iChing[Hexagram].Place1ChangesToNumber = 27;
             iChing[Hexagram].Place2ChangesToNumber = 4;
@@ -1603,7 +1603,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 2;
             iChing[Hexagram].Place2ChangesToNumber = 19;
@@ -1659,7 +1659,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 12;
             iChing[Hexagram].Place2ChangesToNumber = 10;
@@ -1714,7 +1714,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "○";
             iChing[Hexagram].Place1ChangesToNumber = 18;
             iChing[Hexagram].Place2ChangesToNumber = 22;
@@ -1778,7 +1778,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "○";
             iChing[Hexagram].Place1ChangesToNumber = 23;
             iChing[Hexagram].Place2ChangesToNumber = 41;
@@ -1836,7 +1836,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "○";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 43;
             iChing[Hexagram].Place2ChangesToNumber = 31;
@@ -1897,7 +1897,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 60;
             iChing[Hexagram].Place2ChangesToNumber = 8;
@@ -1950,7 +1950,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 56;
             iChing[Hexagram].Place2ChangesToNumber = 14;
@@ -2007,7 +2007,7 @@ namespace iChing
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "○";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 49;
             iChing[Hexagram].Place2ChangesToNumber = 28;
@@ -2061,7 +2061,7 @@ Restlessness as an enduring condition brings misfortune.";
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 34;
             iChing[Hexagram].Place2ChangesToNumber = 62;
@@ -2107,11 +2107,11 @@ And downfall to the inferior man.";
 Friendly retreat.  Perseverance brings good fortune.";
             iChing[Hexagram].Read6 = @"Nine at the top means:
 Cheerful retreat.  Everything serves to further.";
-            iChing[Hexagram].SquareCircle1 = "□";
-            iChing[Hexagram].SquareCircle2 = "□";
+            iChing[Hexagram].SquareCircle1 = "⬜";
+            iChing[Hexagram].SquareCircle2 = "⬜";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 13;
             iChing[Hexagram].Place2ChangesToNumber = 44;
@@ -2165,7 +2165,7 @@ If one notes the difficulty, this brings good fortune.";
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "○";
-            iChing[Hexagram].SquareCircle5 = "";// ○ □
+            iChing[Hexagram].SquareCircle5 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 32;
             iChing[Hexagram].Place2ChangesToNumber = 55;
@@ -2224,7 +2224,7 @@ Perseverance brings humiliation.";
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 21;
             iChing[Hexagram].Place2ChangesToNumber = 64;
@@ -2283,8 +2283,8 @@ Then he plunged into the depths of the earth.";
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
-            iChing[Hexagram].SquareCircle6 = "□";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
+            iChing[Hexagram].SquareCircle6 = "⬜";
             iChing[Hexagram].Place1ChangesToNumber = 15;
             iChing[Hexagram].Place2ChangesToNumber = 11;
             iChing[Hexagram].Place3ChangesToNumber = 24;
@@ -2338,7 +2338,7 @@ In the end good fortune comes.";
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 53;
             iChing[Hexagram].Place2ChangesToNumber = 9;
@@ -2402,7 +2402,7 @@ As one goes, rain falls; then good fortune comes.";
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 64;
             iChing[Hexagram].Place2ChangesToNumber = 21;
@@ -2450,7 +2450,7 @@ Friends come.";
 Going leads to obstructions,
 Coming leads to great good fortune.
 It furthers one to see the great man.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -2507,7 +2507,7 @@ Thus he proves to inferior men that he is in earnest.";
             iChing[Hexagram].Read6 = @"Six at the top means:
 The prince shoots at a hawk on a high wall.
 He kills it.  Everything serves to further.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -2572,12 +2572,12 @@ Perseverance brings good fortune.
 It furthers one to undertake something.
 One obtains servants
 But no longer has a separate home.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
-            iChing[Hexagram].SquareCircle3 = "□";
+            iChing[Hexagram].SquareCircle3 = "⬜";
             iChing[Hexagram].SquareCircle4 = "";
             iChing[Hexagram].SquareCircle5 = "○";
-            iChing[Hexagram].SquareCircle6 = "□";
+            iChing[Hexagram].SquareCircle6 = "⬜";
             iChing[Hexagram].Place1ChangesToNumber = 4;
             iChing[Hexagram].Place2ChangesToNumber = 27;
             iChing[Hexagram].Place3ChangesToNumber = 26;
@@ -2635,10 +2635,10 @@ He brings increase to no one.
 Indeed, someone even strikes him.
 He does not keep his heart constantly steady.
 Misfortune.";
-            iChing[Hexagram].SquareCircle1 = "□";// ○ □
+            iChing[Hexagram].SquareCircle1 = "⬜";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
-            iChing[Hexagram].SquareCircle4 = "□";
+            iChing[Hexagram].SquareCircle4 = "⬜";
             iChing[Hexagram].SquareCircle5 = "○";
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 20;
@@ -2719,8 +2719,8 @@ Misfortune.";
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
-            iChing[Hexagram].SquareCircle5 = "○";// ○ □ ◻ 
-            iChing[Hexagram].SquareCircle6 = "□";
+            iChing[Hexagram].SquareCircle5 = "○";// ○ ⬜ ◻ 
+            iChing[Hexagram].SquareCircle6 = "⬜";
 
              
             Hexagram = 44;
@@ -2770,7 +2770,7 @@ Then it drops down to one from heaven.";
             iChing[Hexagram].Read6 = @"Nine at the top means:
 He comes to meet with his horns.
 Humiliation.  No blame.";
-            iChing[Hexagram].SquareCircle1 = "□";// ○ □
+            iChing[Hexagram].SquareCircle1 = "⬜";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -2834,7 +2834,7 @@ Then remorse disappears.";
             iChing[Hexagram].Read6 = @"Six at the top means:
 Lamenting and sighing, floods of tears.
 No blame.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "○";
@@ -2888,7 +2888,7 @@ One pushes upward by steps.";
 Pushing upward in darkness.
 It furthers one
 To be unremittingly persevering.";
-            iChing[Hexagram].SquareCircle1 = "□";// ○ □
+            iChing[Hexagram].SquareCircle1 = "⬜";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -2950,7 +2950,7 @@ He is oppressed by creeping vines.
 He moves uncertainly and says, “Movement brings remorse.”
 If one feels remorse over this and makes a start,
 Good fortune comes.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3013,7 +3013,7 @@ One draws from the well
 Without hindrance.
 It is dependable.
 Supreme good fortune.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3074,7 +3074,7 @@ The superior man changes like a panther.
 The inferior man molts in the face.
 Starting brings misfortune.
 To remain persevering brings good fortune.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3142,7 +3142,7 @@ Perseverance furthers.
 The ting has rings of jade.
 Great good fortune.
 Nothing that would not act to further.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3207,7 +3207,7 @@ If it has not yet touched one’s own body
 But has reached one’s neighbor first,
 There is no blame.
 One’s comrades have something to talk about.";
-            iChing[Hexagram].SquareCircle1 = "○";// ○ □
+            iChing[Hexagram].SquareCircle1 = "○";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3270,7 +3270,7 @@ Remorse disappears.";
             iChing[Hexagram].Read6 = @"Nine at the top means:
 Noblehearted keeping still.
 Good fortune.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3336,7 +3336,7 @@ Good fortune.";
 The wild goose gradually draws near the cloud heights.
 Its feathers can be used for the sacred dance.
 Good fortune.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3402,12 +3402,12 @@ We see here a girl of aristocratic birth who marries a man of modest circumstanc
 The woman holds the basket, but there are no fruits in it.
 The man stabs the sheep, but no blood flows.
 Nothing that acts to further.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
-            iChing[Hexagram].SquareCircle3 = "□";
+            iChing[Hexagram].SquareCircle3 = "⬜";
             iChing[Hexagram].SquareCircle4 = "";
             iChing[Hexagram].SquareCircle5 = "○";
-            iChing[Hexagram].SquareCircle6 = "□";
+            iChing[Hexagram].SquareCircle6 = "⬜";
             iChing[Hexagram].Place1ChangesToNumber = 40;
             iChing[Hexagram].Place2ChangesToNumber = 51;
             iChing[Hexagram].Place3ChangesToNumber = 34;
@@ -3467,7 +3467,7 @@ He peers through the gate
 And no longer perceives anyone.
 For three years he sees nothing.
 Misfortune.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3529,7 +3529,7 @@ Then must needs lament and weep.
 Through carelessness he loses his cow.
 Misfortune.
 ";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3590,10 +3590,10 @@ Good fortune.
 Penetration under the bed.
 He loses his property and his ax.
 Perseverance brings misfortune.";
-            iChing[Hexagram].SquareCircle1 = "□";// ○ □
+            iChing[Hexagram].SquareCircle1 = "⬜";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
-            iChing[Hexagram].SquareCircle4 = "□";
+            iChing[Hexagram].SquareCircle4 = "⬜";
             iChing[Hexagram].SquareCircle5 = "○";
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 9;
@@ -3637,12 +3637,12 @@ After ridding himself of mistakes a man has joy.";
 Sincerity toward disintegrating influences is dangerous.";
             iChing[Hexagram].Read6 = @"Six at the top means:
 Seductive joyousness.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
-            iChing[Hexagram].SquareCircle3 = "□";
+            iChing[Hexagram].SquareCircle3 = "⬜";
             iChing[Hexagram].SquareCircle4 = "";
             iChing[Hexagram].SquareCircle5 = "○";
-            iChing[Hexagram].SquareCircle6 = "□";
+            iChing[Hexagram].SquareCircle6 = "⬜";
             iChing[Hexagram].Place1ChangesToNumber = 60;
             iChing[Hexagram].Place2ChangesToNumber = 54;
             iChing[Hexagram].Place3ChangesToNumber = 10;
@@ -3695,10 +3695,10 @@ Dissolution! A king abides without blame.";
 He dissolves his blood.
 Departing, keeping at a distance, going out,
 Is without blame.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
-            iChing[Hexagram].SquareCircle2 = "□";
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
+            iChing[Hexagram].SquareCircle2 = "⬜";
             iChing[Hexagram].SquareCircle3 = "";
-            iChing[Hexagram].SquareCircle4 = "□";
+            iChing[Hexagram].SquareCircle4 = "⬜";
             iChing[Hexagram].SquareCircle5 = "○";
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 61;
@@ -3749,7 +3749,7 @@ Going brings esteem.";
 Galling limitation.
 Perseverance brings misfortune.
 Remorse disappears.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3809,10 +3809,10 @@ No blame.";
             iChing[Hexagram].Read6 = @"Nine at the top means:
 Cockcrow penetrating to heaven.
 Perseverance brings misfortune.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
-            iChing[Hexagram].SquareCircle3 = "□";
-            iChing[Hexagram].SquareCircle4 = "□";
+            iChing[Hexagram].SquareCircle3 = "⬜";
+            iChing[Hexagram].SquareCircle4 = "⬜";
             iChing[Hexagram].SquareCircle5 = "○";
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 60;
@@ -3873,7 +3873,7 @@ He passes him by, not meeting him.
 The flying bird leaves him.
 Misfortune.
 This means bad luck and injury.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3932,7 +3932,7 @@ As the neighbor in the west
 With his small offering.";
             iChing[Hexagram].Read6 = @"Six at the top means:
 He gets his head in the water.  Danger.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "○";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -3990,7 +3990,7 @@ There is drinking of wine
 In genuine confidence.  No blame.
 But if one wets his head,
 He loses it, in truth.";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
@@ -4026,7 +4026,7 @@ He loses it, in truth.";
             iChing[Hexagram].Read4 = @"";
             iChing[Hexagram].Read5 = @"";
             iChing[Hexagram].Read6 = @"";
-            iChing[Hexagram].SquareCircle1 = "";// ○ □
+            iChing[Hexagram].SquareCircle1 = "";// ○ ⬜
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
             iChing[Hexagram].SquareCircle4 = "";
