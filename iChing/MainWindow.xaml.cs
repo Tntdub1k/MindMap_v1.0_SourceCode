@@ -48,12 +48,12 @@ namespace iChing
             Line4Box.Text = iChing[currentlyShowing].Read4;
             Line5Box.Text = iChing[currentlyShowing].Read5;
             Line6Box.Text = iChing[currentlyShowing].Read6;
-            ChangesTo1.Text = "-- " + iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle + " --";
-            ChangesTo2.Text = "-- " + iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle + " --";
-            ChangesTo3.Text = "-- " + iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle + " --";
-            ChangesTo4.Text = "-- " + iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle + " --";
-            ChangesTo5.Text = "-- " + iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle + " --";
-            ChangesTo6.Text = "-- " + iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle + " --";
+            ChangesTo1.Text = "● " + iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
+            ChangesTo2.Text = "● " + iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
+            ChangesTo3.Text = "● " + iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle;
+            ChangesTo4.Text = "● " + iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle;
+            ChangesTo5.Text = "● " + iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle;
+            ChangesTo6.Text = "● " + iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle;
             
             Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
             Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
@@ -4159,7 +4159,23 @@ by force something for which the time is not yet ripe.";
             if (Comment2.Visibility == System.Windows.Visibility.Collapsed)
             {
                 Comment2.Visibility = System.Windows.Visibility.Visible;
-                Comment2.Text = @"Text";
+                Comment2.Text = @"In China the dragon has a meaning altogether different from that given it in 
+the Western world. The dragon is a symbol of the electrically charged, 
+dynamic, arousing force that manifests itself in the thunderstorm. In winter 
+this energy withdraws into the earth; in the early summer it becomes active 
+again, appearing in the sky as thunder and lightning. As a result the creative 
+forces on earth begin to stir again.
+
+  Here this creative force is still hidden beneath the earth and therefore has 
+no effect. In terms of human affairs, this symbolizes a great man who is still 
+unrecognized. Nonetheless he remains true to himself. He does not allow 
+himself to be influenced by outward success or failure, but confident in his 
+strength, he bides his time. Hence it is wise for the man who consults the 
+oracle and draws this line to wait in the calm strength of patience. The time 
+will fulfill itself.  One need not fear least strong will should not prevail; the 
+main thing is not to expend one's powers prematurely in an attempt to obtain 
+by force something for which the time is not yet ripe.";
+                ;
             }
             else {
                 Comment2.Visibility = System.Windows.Visibility.Collapsed;
