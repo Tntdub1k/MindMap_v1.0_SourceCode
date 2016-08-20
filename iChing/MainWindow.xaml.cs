@@ -73,6 +73,14 @@ namespace iChing
             Line4BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle4;
             Line5BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle5;
             Line6BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle6;
+            BorderComment1.Visibility = Visibility.Collapsed;
+            BorderComment2.Visibility = Visibility.Collapsed;
+            BorderComment3.Visibility = Visibility.Collapsed;
+            BorderComment4.Visibility = Visibility.Collapsed;
+            BorderComment5.Visibility = Visibility.Collapsed;
+            BorderComment6.Visibility = Visibility.Collapsed;
+            
+            
             
             //Update hexagram places
             if (iChing[currentlyShowing].Code != null) {
@@ -102,42 +110,42 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place1ChangesToNumber;
             updateApplication();
-            MainTextViewer.ScrollToBottom();
+            SetToLines();
         }
 
         private void Place2_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place2ChangesToNumber;
             updateApplication();
-            MainTextViewer.ScrollToBottom();
+            SetToLines();
         }
 
         private void Place3_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place3ChangesToNumber;
             updateApplication();
-            MainTextViewer.ScrollToBottom();
+            SetToLines();
         }
 
         private void Place4_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place4ChangesToNumber;
             updateApplication();
-            MainTextViewer.ScrollToBottom();
+            SetToLines();
         }
 
         private void Place5_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             currentlyShowing = iChing[currentlyShowing].Place5ChangesToNumber;
             updateApplication();
-            MainTextViewer.ScrollToBottom();
+            SetToLines();
         }
 
         private void Place6_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
            currentlyShowing = iChing[currentlyShowing].Place6ChangesToNumber;
             updateApplication();
-            MainTextViewer.ScrollToBottom();
+            SetToLines();
         }
 
         private void SetupText()
@@ -4057,9 +4065,9 @@ He loses it, in truth.";
 
         private void Line1Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Comment1.Visibility == System.Windows.Visibility.Collapsed)
+            if (BorderComment1.Visibility == System.Windows.Visibility.Collapsed)
             {
-                Comment1.Visibility = System.Windows.Visibility.Visible;
+                BorderComment1.Visibility = System.Windows.Visibility.Visible;
                 Comment1.Text = @"In China the dragon has a meaning altogether different from that given it in 
 the Western world. The dragon is a symbol of the electrically charged, 
 dynamic, arousing force that manifests itself in the thunderstorm. In winter 
@@ -4078,7 +4086,7 @@ main thing is not to expend one's powers prematurely in an attempt to obtain
 by force something for which the time is not yet ripe.";
             }
             else {
-                Comment1.Visibility = System.Windows.Visibility.Collapsed;
+                BorderComment1.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
 
@@ -4110,57 +4118,57 @@ by force something for which the time is not yet ripe.";
 
         private void Line6Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Comment6.Visibility == System.Windows.Visibility.Collapsed)
+            if (BorderComment6.Visibility == System.Windows.Visibility.Collapsed)
             {
-                Comment6.Visibility = System.Windows.Visibility.Visible;
+                BorderComment6.Visibility = System.Windows.Visibility.Visible;
                 Comment6.Text = @"Text";
             }
             else {
-                Comment6.Visibility = System.Windows.Visibility.Collapsed;
+                BorderComment6.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
 
         private void Line5Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Comment5.Visibility == System.Windows.Visibility.Collapsed)
+            if (BorderComment5.Visibility == System.Windows.Visibility.Collapsed)
             {
-                Comment5.Visibility = System.Windows.Visibility.Visible;
+                BorderComment5.Visibility = System.Windows.Visibility.Visible;
                 Comment5.Text = @"Text";
             }
             else {
-                Comment5.Visibility = System.Windows.Visibility.Collapsed;
+                BorderComment5.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
 
         private void Line4Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Comment4.Visibility == System.Windows.Visibility.Collapsed)
+            if (BorderComment4.Visibility == System.Windows.Visibility.Collapsed)
             {
-                Comment4.Visibility = System.Windows.Visibility.Visible;
+                BorderComment4.Visibility = System.Windows.Visibility.Visible;
                 Comment4.Text = @"Text";
             }
             else {
-                Comment4.Visibility = System.Windows.Visibility.Collapsed;
+                BorderComment4.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
 
         private void Line3Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Comment3.Visibility == System.Windows.Visibility.Collapsed)
+            if (BorderComment3.Visibility == System.Windows.Visibility.Collapsed)
             {
-                Comment3.Visibility = System.Windows.Visibility.Visible;
+                BorderComment3.Visibility = System.Windows.Visibility.Visible;
                 Comment3.Text = @"Text";
             }
             else {
-                Comment3.Visibility = System.Windows.Visibility.Collapsed;
+                BorderComment3.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
 
         private void Line2Box_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Comment2.Visibility == System.Windows.Visibility.Collapsed)
+            if (BorderComment2.Visibility == System.Windows.Visibility.Collapsed)
             {
-                Comment2.Visibility = System.Windows.Visibility.Visible;
+                BorderComment2.Visibility = System.Windows.Visibility.Visible;
                 Comment2.Text = @"In China the dragon has a meaning altogether different from that given it in 
 the Western world. The dragon is a symbol of the electrically charged, 
 dynamic, arousing force that manifests itself in the thunderstorm. In winter 
@@ -4180,15 +4188,20 @@ by force something for which the time is not yet ripe.";
                 ;
             }
             else {
-                Comment2.Visibility = System.Windows.Visibility.Collapsed;
+                BorderComment2.Visibility = System.Windows.Visibility.Collapsed;
             }
+        }
+
+        private void SetToLines()
+        {
+            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 27);
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 27);
-
+            SetToLines();
         }
 
         private void Button_ClickText(object sender, RoutedEventArgs e)
