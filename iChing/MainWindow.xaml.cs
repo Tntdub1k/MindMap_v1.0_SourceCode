@@ -4236,6 +4236,191 @@ by force something for which the time is not yet ripe.";
                 updateApplication(); 
             }
         }
+
+        void SearchItemClick(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            int hexNumber = Convert.ToInt32(tb.Tag);
+            currentlyShowing = hexNumber;
+            updateApplication();
+        }
+
+        private static int[] AllIndexesOf(string str, string substr)
+        {
+            if (string.IsNullOrWhiteSpace(str) ||
+                string.IsNullOrWhiteSpace(substr))
+            {
+                throw new ArgumentException("String or substring is not specified.");
+            }
+
+            var indexes = new List<int>();
+            int index = 0;
+
+            while ((index = str.IndexOf(substr, index, StringComparison.OrdinalIgnoreCase)) != -1)
+            {
+                indexes.Add(index++);
+            }
+
+            return indexes.ToArray();
+        }
+
+        private string SearchTextPortion(string text, string substr )
+        {
+            int margin = 5;
+            int length = 70;
+            
+            string compiledSearch = "";
+
+            
+            int[] arrayOfFoundResults = AllIndexesOf(text, substr);
+            for (int j = 0; j < arrayOfFoundResults.Length; j++)
+            {
+                
+                int begin = arrayOfFoundResults[j] - margin;
+                
+                if (begin < 0)
+                {
+                    begin = 0;
+                }
+                if (begin + length > text.Length - 1)
+                {
+                    begin = text.Length - 1 - length;
+                }
+                compiledSearch += "--" + text.Substring(begin, length) +"\n";
+            }
+            return compiledSearch;
+        }
+        private string SearchLinesPortion(string text, string substr, string linenum)
+        {
+            int margin = 5;
+            int length = 0;
+            if (text.Length > 50)
+            {
+                length = 50;
+            }
+            else
+            {
+                length = text.Length;
+            }
+
+            string compiledSearch = "";
+
+
+            int[] arrayOfFoundResults = AllIndexesOf(text, substr);
+            for (int j = 0; j < arrayOfFoundResults.Length; j++)
+            {
+
+                int begin = arrayOfFoundResults[j] - margin;
+
+                if (begin < 0)
+                {
+                    begin = 0;
+                }
+                if (begin + length > text.Length - 1)
+                {
+                    begin = text.Length - 1 - length;
+                }
+                compiledSearch += linenum + " --" + text.Substring(begin, length) + "\n";
+            }
+            return compiledSearch;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(SearchEntry.Text))
+            {
+                SearchViewer.Visibility = Visibility.Visible;
+                string substr = SearchEntry.Text;
+
+
+                /*TextBox newBox = new TextBox();
+                newBox.Text = "Hello1";
+                newBox.PreviewMouseDown += new MouseButtonEventHandler((s2, e2) => SearchItemClick(s2,e2, 12));
+                SearchPanel.Children.Add(newBox);
+                SearchPanel.UpdateLayout();
+                */
+
+                for (int i = 1; i <= 64; i++)
+                {
+
+                    string MainText = SearchTextPortion(iChing[i].Intro1, SearchEntry.Text);
+                    MainText += SearchTextPortion(iChing[i].TheJudgment, SearchEntry.Text);
+                    MainText += SearchTextPortion(iChing[i].Intro2, SearchEntry.Text);
+                    MainText += SearchTextPortion(iChing[i].TheImage, SearchEntry.Text);
+                    MainText += SearchTextPortion(iChing[i].Intro3, SearchEntry.Text);
+
+                    string Lines = SearchLinesPortion(iChing[i].Read1, SearchEntry.Text,"1");
+                    Lines += SearchLinesPortion(iChing[i].Read2, SearchEntry.Text,"2");
+                    Lines += SearchLinesPortion(iChing[i].Read3, SearchEntry.Text,"3");
+                    Lines += SearchLinesPortion(iChing[i].Read4, SearchEntry.Text,"4");
+                    Lines += SearchLinesPortion(iChing[i].Read5, SearchEntry.Text,"5");
+                    Lines += SearchLinesPortion(iChing[i].Read6, SearchEntry.Text,"6");
+
+
+                    bool textResult = !String.IsNullOrEmpty(MainText);
+                    bool linesResult = !String.IsNullOrEmpty(Lines);
+
+                    if (textResult || linesResult)
+                    {
+                        //Title
+                        string hexResult = Convert.ToString(i) + ". " + iChing[i].EngTitle + " " + iChing[i].Hex;
+                        TextBox TitleBox= new TextBox();
+                        TitleBox.Tag = i;
+                        TitleBox.Text = hexResult;
+                        TitleBox.FontWeight = FontWeights.Bold;
+                        TitleBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
+                        SearchPanel.Children.Add(TitleBox);
+
+                        if (textResult) {
+                            TextBox mainTextBox = new TextBox();
+                            mainTextBox.Tag = i;
+                            mainTextBox.Text = "[Text] " + MainText;
+                            mainTextBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
+                            SearchPanel.Children.Add(mainTextBox);
+                            SearchPanel.UpdateLayout();
+                        }
+
+                        if (linesResult)
+                        {
+                            TextBox linesBox = new TextBox();
+                            linesBox.Tag = i;
+                            linesBox.Text = "[Lines] " + Lines;
+                            linesBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
+                            SearchPanel.Children.Add(linesBox);
+                            SearchPanel.UpdateLayout();
+                        }
+                    }
+  
+
+                    //search maintext
+
+
+                    //search lines
+
+
+                    //search comments
+
+
+                    //add entry to search bar
+                }
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SearchPanel.Children.Clear();
+            SearchViewer.Visibility = Visibility.Collapsed;
+        }
+
+
+        private void SearchEntry_KeyUp(object sender, KeyEventArgs e)
+        {
+            SearchPanel.Children.Clear();
+            if (SearchEntry.Text.Length > 2)
+            {
+                Button_Click_1(this, e);
+            }
+        }
         }
 
 
