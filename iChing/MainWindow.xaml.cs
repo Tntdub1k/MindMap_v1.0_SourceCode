@@ -75,7 +75,9 @@ namespace iChing
             Line6BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle6;
             
             //Update hexagram places
-            if (iChing[currentlyShowing].Code != null) { 
+            if (iChing[currentlyShowing].Code != null) {
+                HexBox.Text = iChing[currentlyShowing].Hex;
+                /*
                 if (iChing[currentlyShowing].Code[0] == 1) { Place1.Fill = (Brush)FindResource("Yang"); }
                 else { Place1.Fill = (Brush)FindResource("Yin"); };
                 if (iChing[currentlyShowing].Code[1] == 1) { Place2.Fill = (Brush)FindResource("Yang"); }
@@ -87,7 +89,7 @@ namespace iChing
                 if (iChing[currentlyShowing].Code[4] == 1) { Place5.Fill = (Brush)FindResource("Yang"); }
                 else { Place5.Fill = (Brush)FindResource("Yin"); };
                 if (iChing[currentlyShowing].Code[5] == 1) { Place6.Fill = (Brush)FindResource("Yang"); }
-                else { Place6.Fill = (Brush)FindResource("Yin"); };
+                else { Place6.Fill = (Brush)FindResource("Yin"); };*/
             }
             else { MessageBox.Show("Not yet defined"); }
             //LinesViewer.ScrollToTop();
@@ -4179,6 +4181,46 @@ by force something for which the time is not yet ripe.";
             }
             else {
                 Comment2.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 27);
+
+        }
+
+        private void Button_ClickText(object sender, RoutedEventArgs e)
+        {
+            MainTextViewer.ScrollToTop();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+                if (currentlyShowing > 1)
+                {
+                    currentlyShowing--;
+                }
+                else
+                {
+                    currentlyShowing = 64;
+                }
+                updateApplication();
+            }
+            if (e.Key == Key.Right)
+            {
+                if (currentlyShowing < 64)
+                {
+                    currentlyShowing++;
+                }
+                else
+                {
+                    currentlyShowing = 1;
+                }
+                updateApplication(); 
             }
         }
         }

@@ -1,0 +1,328 @@
+body {
+	font:normal 1em verdana, sans-serif;
+	line-height:130%;
+	color:#333;
+	background-color:#FFEBCD;
+					/*	background-image: url(../images/bgBamb87Vgif.gif);  
+					add this here with better colors for hover and take the dots away from around links with focus */
+
+	padding: 20px;
+	border:5px double #A52A2A;
+	margin:15px;
+	}
+div {
+	padding:1em .5em;
+	border:3px double #8B0503;
+	margin:1.5em 0;
+	}
+div.hexWrap {
+	padding: 0 2em;
+	border:none;
+	}
+div.containLines {
+	padding:0;
+	border:none;
+	}
+div.list {border:none;}
+
+p.named, p.namedSpot  {
+	position: relative;
+	z-index: 0;
+	padding: 0;
+	margin: -1em 0 -1em 0;
+	}
+blockquote {
+	display: block;
+	padding: 0 3.5em 0 2em;
+	color: #338;
+	text-align: justify;
+	}
+.subQuote {
+	display: block;
+	padding: 0 3.5em 0 2em;
+	color: #008;
+	text-align: left;
+	}
+.star {
+	font:900 1.3em arial, verdana, sans-serif;
+ 	line-height:.5em;
+ 	vertical-align:middle;
+	}
+.reference {
+ 	text-indent:3em; 
+	padding:0 0 1em 0;
+	margin:-1em 0 2em 0;
+	}
+.reference a {
+	text-decoration: none;
+	font: bold .9em arial, verdana, sans-serif;
+	font-style: italic;
+	color: #8B0503;
+	}
+.reference a:hover, .reference a:focus {
+	font: bold .9em arial, Verdana, sans-serif;
+	font-style: italic;
+	color: #33F;
+	background-color: white; 
+	}
+a.inlineRef {
+	text-decoration: none;
+	font: normal 1em arial, verdana, sans-serif;
+	font-style: italic;
+	color: #8B0503;
+	}	
+a.inlineRef:active, a.inlineRef:visited {
+	border: none;
+	}
+a.inlineRef:hover, a.inlineRef:focus {
+	font: normal 1em arial, verdana, sans-serif;
+	font-style: italic;
+	color: #33F;
+	background-color: white;
+	border: none; 
+	}
+table.hex {
+	font: bold 1.1em georgia, garamond, times, "times new roman", serif;
+	color: #732100;
+	background-color: #FF8F6F;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	width: 625px;
+	padding: 10px;
+	border: 5px double #732100; /* #FF8F6F;	*/
+	margin: 10px auto;
+	}
+table.hex td {
+	font: bold 1.3em georgia, garamond, times, "times new roman", serif;
+	color: #732100;
+	background-color: #FAF0E6;
+	line-height: 1.6em;
+	vertical-align: middle;
+	border: 1px solid #888;
+	white-space: nowrap;
+	}
+table.hex td a{
+	text-decoration: none;
+	color: #732100;
+	background-color: #FAF0E6;
+	padding: 3px 11px 5px 13px;
+	}
+table.hex td a:hover, table.hex td a:focus{
+	text-decoration: underline;
+	color: #33F;
+	background-color: white;
+	padding: 3px 13px 5px 11px;
+	}
+table.hex th.picture {
+	width: 40px;	
+	}
+table.hex th.word {
+	width: 60px;	
+	}
+a {
+	color: #732100;
+	}
+
+.list a {
+	text-decoration:none;
+	font-weight:400;
+	padding:3px 4px;
+	}
+.list a:hover, .list a:focus {
+	color:#33F;
+	background-color:white;
+	font-weight:400;
+	padding:3px 4px ; 
+	}
+.list ul {
+	list-style-position: outside;
+	}
+ul span.hexNameChinese{
+	display: inline-block;
+	width: 7em;
+	text-align: left;
+	}
+.containLines p.list {
+	float: right;
+	margin-top: 0;
+	}
+a.key{text-decoration: overline underline;}
+a.img.hotSpot {
+	border: 1px solid white;
+	}
+a img, img.hotSpot {
+	float: right;
+	padding: 5px;
+	margin: 15px;
+	}
+a img.hotSpot1 {
+	float: right;
+	padding: 10px 5px;
+	background-color: white;
+	margin: -25px -35px 0 0;
+	}
+ a img{
+	border: none;
+	}
+a img.hotSpot:hover, a img.hotSpot1:hover, a img.hotSpot:focus, a img.hotSpot1:focus {
+	border: 1px solid red;
+	color: white;
+	background-color: #8B0000;
+	}
+img {
+	padding: 0;
+	margin: 1px auto;
+	vertical-align: middle;
+	}
+img[alt]{
+	line-height:28pt;
+	font-size:28pt;
+	}
+img.notagram[alt]{font-size:.6em;}
+h1 {
+	text-indent: 1.5em;
+	font: 900 2.5em garamond, bookman, serif;
+	}
+h2 {
+	text-indent: 1.5em;
+	font: 700 1.5em garamond, bookman, serif;
+	}
+.subTitle {
+	margin: 1em auto 1em 5em;
+	text-indent: 0;
+	}
+.subTitle i {
+	margin: 0 1em 0 .75em;
+	}
+
+.judgment {
+	font: 700 1.1em Garamond, serif;
+	text-indent: 0;
+	color: #A52A2A;
+	margin: 0 0 0 5em;
+	}
+.judgSub {
+	color: #8B0503;
+	font: 500 1em verdana, sans-serif;
+	text-indent: 0;
+	line-height: 1.4em;
+	margin: 1em auto 1em 7em;
+	}
+h3.key {padding-left: 2em;}
+h3.theImage {
+	font: 700 1.1em Garamond, serif;
+	text-indent: 0;
+	color: #A52A2A;
+	margin: 0 0 0 5em;
+	}
+.imageSub {
+	margin: 1em auto 1em 7em;
+	color: #8B0503;
+	}
+h3.lines {
+	font: 700 1.1em Garamond, serif;
+	text-indent: 0;
+	color: #A52A2A;
+	margin: 0 0 0 5em;
+	}
+li.part  h4 {text-align:center;}
+.linesSub {
+	color: #8B0503;
+	font: 500 1em verdana, sans-serif;
+	text-indent: 0;
+	line-height: 1.4em;
+	margin: 1em auto 1em 7em;
+	}
+.linePosition {
+	font-weight: 700;
+	}
+ul {
+	text-indent:0;
+	line-height:1.4em;
+	margin:1em auto 1em 7em; 
+	}
+ul.govRuler {
+	list-style: url(../images/govCir.png) circle outside;
+	padding: 0;
+	}
+ul.constRuler {
+	list-style: url(../images/constSq.png) square outside;
+	padding: 0;
+	}
+ul.notRuler{ 
+	list-style: none;
+	padding: 0;
+	}
+.govRuler img, .constRuler img {
+	font:bold 1em sans-serif;
+	}
+ul.allLines { 
+	list-style:none;
+	padding:0;
+	position: relative; 
+	z-index:1;
+	}
+li a, li a:active, li a:visited {
+	border:none;
+	}
+ul a.thisPops {
+	text-decoration: none;
+	color: #A52A2A;
+	background-color: #FFEBCD;
+					/*	background-image: url(../images/bgBamb87Vgif.gif);   add this here with better colors for hover */
+
+	padding:.2em 0 1em .5em;
+	margin:1em 0 0 0;
+	}
+ul a.thisPops {
+	display:block;
+	position: relative;
+	}
+ul a.thisPops:hover, ul a.thisPops:focus {
+	color: #A52A2A;
+	background-color: #FFF8DF;
+	background-image: none;
+	border-width: 0;
+	z-index:10;
+	}
+.commentPopUp { 
+	display: none;
+	}
+.line {
+	display: block;
+	border: none;
+	}
+ul a.thisPops:hover .commentPopUp, ul a.thisPops:focus .commentPopUp {
+	display: block;
+	width:105%;
+	position:absolute;
+	color:#000;
+	background-color:#FFF8DC;
+	padding:.5em 1.5em 1.5em 1.5em;
+	border:5px double #A52A2A;
+	margin:0 0 0 -8em;
+	}
+.footer, .list {text-align:left;padding:0 2em;}
+
+div.valid {display:block; width:100px;float:right;border:none; padding:0;margin:8px;}
+div.valid img {display:inline-block; text-align:center;border:none; padding:3px;margin:0;}
+div.valid img[alt] {font-size:.5em; line-height:1em; text-decoration:underline;}
+
+span.sp1, span.count {display:inline-block;color:#000;}
+.sp1 {width:3em;}
+span.count {width:2em;text-align:right;font-family:Times, serif;margin-left:-5em;}
+
+th img[alt]{font-size:.7em;line-height:.7em;}
+img.hotSpot[alt]{font-size:1em;}
+ul.tableOfContents {margin-left:3em;}
+
+ul.tableOfContents li.part, ul.tableOfContents li.part li {
+	margin:0 0 0 -5em;
+	padding:0 2.5em 0 0;
+	list-style-type:none;
+	list-style-position:inside;
+	text-align:left;
+	}
+ul.tableOfContents li.part {float:left;text-indent:-1em;}
+/* last change 16 May, 2011 last upload 03 May, 2011 */
