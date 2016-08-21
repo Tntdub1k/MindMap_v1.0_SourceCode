@@ -76,20 +76,18 @@
         </LinearGradientBrush>
         <Color x:Key="border">#FFBF1111</Color>
     </Window.Resources>
-    <TabControl x:Name="TabControl1" Height="695" VerticalAlignment="Top" Margin="0,6,-6,0">
+    <TabControl x:Name="TabControl1" Height="701" VerticalAlignment="Top" Margin="0,0,-6,0">
         <TabItem Header="Table">
-            <Grid Height="665" Width="743">
+            <Grid Margin="20,0,17,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="641*"/>
                     <RowDefinition Height="24*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="152*"/>
-                    <ColumnDefinition Width="60*"/>
-                    <ColumnDefinition Width="155*"/>
-                    <ColumnDefinition Width="376*"/>
+                    <ColumnDefinition Width="151*"/>
+                    <ColumnDefinition Width="174*"/>
                 </Grid.ColumnDefinitions>
-                <ScrollViewer HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="733" Grid.ColumnSpan="4" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+                <ScrollViewer HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="1302" Grid.ColumnSpan="3" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">
                     <ScrollViewer.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -99,12 +97,12 @@
                         </TransformGroup>
                     </ScrollViewer.RenderTransform>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="743">
-                        <Grid HorizontalAlignment="Left" Height="1422" VerticalAlignment="Top" Width="736">
+                        <Grid HorizontalAlignment="Left" Height="1402" VerticalAlignment="Top" Width="1292" Margin="0,0,-549,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="338*"/>
                                 <RowDefinition Height="373*"/>
                             </Grid.RowDefinitions>
-                            <StackPanel Margin="0,0,364,0">
+                            <StackPanel Margin="87,0,605,0">
                                 <TextBox Height="23" TextWrapping="Wrap" Text="Part 1" HorizontalAlignment="Center" FontSize="13" FontFamily="{DynamicResource SystemFont}" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" HorizontalContentAlignment="Center"/>
                                 <StackPanel x:Name="Id1" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" ClipToBounds="True" Cursor="Hand" Tag="1">
                                     <TextBox TextWrapping="Wrap" Text="1 Ch'ien " Margin="0" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True" Height="16"/>
@@ -257,7 +255,7 @@
                                     <TextBox TextWrapping="Wrap" Text="The Clinging, Fire" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource IndexEnglishNamesWidth}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0"/>
                                 </StackPanel>
                             </StackPanel>
-                            <StackPanel HorizontalAlignment="Left" Margin="367,0,0,0" Width="345">
+                            <StackPanel HorizontalAlignment="Left" Margin="692,0,0,0" Width="600">
                                 <TextBox Height="23" TextWrapping="Wrap" Text="Part 2" HorizontalAlignment="Center" FontSize="13" FontFamily="{DynamicResource SystemFont}" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" Width="345"/>
                                 <StackPanel x:Name="Id31" Orientation="Horizontal" PreviewMouseDown="Id1_PreviewMouseDown" ClipToBounds="True" Cursor="Hand" Tag="31" Margin="0,0,-1,0" VerticalAlignment="Top">
                                     <TextBox TextWrapping="Wrap" Text="31 Hsien" Margin="0" BorderBrush="{x:Null}" Width="{DynamicResource WidthofCHIName}" IsReadOnlyCaretVisible="True" SelectionBrush="{x:Null}" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Top"/>
