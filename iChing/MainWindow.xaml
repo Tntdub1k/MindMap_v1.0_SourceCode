@@ -459,7 +459,7 @@
                 </StackPanel>
                 <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="318,24,-164,0" Grid.Row="3" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19"/>
                 <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="318,0,-164,187" Grid.Row="3" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19"/>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="687,0,-533,187" Grid.Row="3" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3"/>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="661,0,-535,187" Grid.Row="3" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3" Width="65"/>
             </Grid>
         </TabItem>
         <TabItem Header="Table">
@@ -820,9 +820,10 @@
         </TabItem>
         <TabItem Header="Map" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55" GotFocus="TabItem_GotFocus">
             <Grid Background="#FFE5E5E5">
-                <ScrollViewer HorizontalAlignment="Left" Height="598" Margin="197,65,0,0" VerticalAlignment="Top" Width="1130" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Height="598" Margin="197,65,0,0" VerticalAlignment="Top" Width="1130" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <StackPanel x:Name="TracingPanel" HorizontalAlignment="Left" Height="1430" VerticalAlignment="Top"/>
                 </ScrollViewer>
+                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="72,365,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
             </Grid>
         </TabItem>
     </TabControl>

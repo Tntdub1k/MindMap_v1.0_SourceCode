@@ -25,18 +25,47 @@ namespace iChing
         private Comments[] WilhelmBaynesComments = new Comments[65];
         private int currentlyShowing = 0;
         private bool tracing = false;
-        private List<List<int>> TracingTable = new List<List<int>>();
-        private List<int> TraceMap = new List<int>();
+        private int savingID = 0;
 
         public MainWindow()
         {
             InitializeComponent();
             SetupText();
-            
+
+            try
+            {
+                StackPanel savedTracingPanel;
+                string tracingpanel = System.IO.File.ReadAllText("tracingpanelsaved");
+                savedTracingPanel = (StackPanel)System.Windows.Markup.XamlReader.Parse(tracingpanel);
+                foreach (object child in savedTracingPanel.Children)
+                {
+                    TracingPanel.Children.Add(CloneFrameworkElement(child as StackPanel));
+
+                }
+            }
+            catch (Exception e)
+            {
+                //
+            }
         }
+
+    FrameworkElement CloneFrameworkElement(FrameworkElement originalElement)
+    {
+        string elementString = System.Windows.Markup.XamlWriter.Save(originalElement);
+
+        System.IO.StringReader stringReader = new System.IO.StringReader(elementString);
+        System.Xml.XmlReader xmlReader = System.Xml.XmlReader.Create(stringReader);
+        FrameworkElement clonedElement = (FrameworkElement)System.Windows.Markup.XamlReader.Load(xmlReader);
+
+        return clonedElement;
+    }
+
 
         private void SetupTable()
         {
+
+          
+
 
             int[,] HexArray =  {{1,25,6,33,12,44,13,10},
                                 {34,51,40,62,16,32,55,54},
@@ -6805,8 +6834,6 @@ intemperance.";
             //Hexagram table uses IChing data (for hexagram symbols)
             SetupTable();
 
-
-
             Random rand = new Random();
             int randInt = rand.Next(1, 64); 
             currentlyShowing = randInt;
@@ -7164,6 +7191,10 @@ intemperance.";
         {
             PathTemplate newPathEntry = new PathTemplate();
             newPathEntry.HexBox.Text = iChing[currentlyShowing].Hex;
+            newPathEntry.Name = "Entry" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.PathTemplate_Copy.Name = "PT" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.HexBox.Name = "HB" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.TextBox.Name = "TB" + DateTime.Now.ToString("yymmddssffff");
             newPathEntry.TextBox.Text = iChing[currentlyShowing].EngTitle;
             foreach (object child in TracingPanel.Children)
             {
@@ -7200,6 +7231,12 @@ intemperance.";
         private void TabItem_GotFocus(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            string tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
+            System.IO.File.WriteAllText("tracingpanelsaved", tracingpanel);
         }
         }
 
