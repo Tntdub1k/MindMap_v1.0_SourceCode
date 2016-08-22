@@ -30,6 +30,76 @@ namespace iChing
         {
             InitializeComponent();
             SetupText();
+            
+        }
+
+        private void SetupTable()
+        {
+
+            int[,] HexArray =  {{1,25,6,33,12,44,13,10},
+                                {34,51,40,62,16,32,55,54},
+                                {5,3,29,39,8,48,63,60},
+                                {26,27,4,52,23,18,22,41},
+                                {11,24,7,15,2,46,36,19},
+                                {9,42,59,53,20,57,37,61},
+                                {14,21,64,56,35,50,30,28},
+                                {43,17,47,31,45,28,49,58}};
+
+            for(int row=0; row<8;row++){
+                for (int column = 0; column < 8; column++)
+                {
+                    Border HexBorder = new Border();
+                    HexBorder.BorderThickness = new Thickness { Top = 0, Right = 1, Left = 0, Bottom = 1 };
+                    HexBorder.Width = 45;
+                    HexBorder.Height = 28;
+                    HexBorder.BorderBrush = new SolidColorBrush(Colors.Black);
+                    
+                    TextBox HexBox = new TextBox();
+                    HexBorder.Child = HexBox;
+                    string HexNum = Convert.ToString(HexArray[row, column]);
+                    HexBox.Text = HexNum +"  "+iChing[HexArray[row, column]].Hex;
+                    HexBox.Tag = HexNum;
+
+                    
+                    HexBox.FontSize = 15;
+                    HexBox.VerticalContentAlignment = System.Windows.VerticalAlignment.Center;
+                    HexBox.BorderThickness = new Thickness { Top = 0, Right = 0, Left = 0, Bottom = 0 };
+                    HexBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
+
+                    switch (row)
+                    {
+                        case 0:
+                            ChienPanel.Children.Add(HexBorder);
+                            break;
+                        case 1:
+                            ChenPanel.Children.Add(HexBorder);
+                            break;
+                        case 2:
+                            KanPanel.Children.Add(HexBorder);
+                            break;
+                        case 3:
+                            KenPanel.Children.Add(HexBorder);
+                            break;
+                        case 4:
+                            KunPanel.Children.Add(HexBorder);
+                            break;
+                        case 5:
+                            SunPanel.Children.Add(HexBorder);
+                            break;
+                        case 6:
+                            LiPanel.Children.Add(HexBorder);
+                            break;
+                        case 7:
+                            TuiPanel.Children.Add(HexBorder);
+                            break;
+
+
+                    }
+                }
+            }
+                                    
+                        //TitleBox.Text = hexResult;
+                        //TitleBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
         }
 
         private void updateApplication()
@@ -4483,76 +4553,756 @@ inevitable. Under such circumstances one must be content with what has
 been achieved. To advance any further, before the appropriate time has 
 come, would lead to misfortune.";
             Hexagram = 10;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The situation is one in which we are still not bound by any obligations of 
+social intercourse. If our conduct is simple, we remain free of them We can 
+quietly follow our predilections as long as we are content and make not 
+demands on people.
+
+  The meaning of the hexagram is not standstill but progress. A man finds 
+himself in an altogether inferior position at the start. However, he has the 
+inner strength that guarantees progress. If he can be content with simplicity, 
+he can make progress without blame. When a man is dissatisfied with 
+modest circumstances, he is restless and ambitious and tries to advance, not 
+for the sake of accomplishing anything worth while, but merely in order to 
+escape from lowliness and poverty by dint of his conduct. Once his purpose is 
+achieved, he is certain to become arrogant and luxury-loving. Therefore 
+blame attaches to his progress. On the other hand, a man who is good at his 
+work is content to behave simply. He wishes to make progress in order to 
+accomplish something. When he attains his goal, he does something worth 
+while, an all is well.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The situation of a lonely sage is indicated here. He remains withdrawn from 
+the bustle of life, seeks nothing, asks nothing of anyone, and travels through 
+life unassailed, on a level road. Since he is content and does not challenge 
+fate, he remains free of entanglements.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"A one-eyed man can indeed see, but not enough for clear vision. A lame 
+man can indeed treat, but not enough to make progress. If in spite of such 
+defects a man considers himself strong and consequently exposes himself to 
+danger, he is inviting disaster, for he is undertaking something beyond his 
+strength. This reckless way of plunging ahead, regardless of the adequacy of 
+one's powers, can be justified only in the case of a warrior battling for his 
+prince.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"
+This text refers to a dangerous enterprise. The inner power to carry it through 
+is there, but this inner power is combined with hesitating caution in one's 
+external attitude. This line contrasts with the preceding line, which is weak 
+within but outwardly presses forward. Here one is sure of ultimate success, 
+which consists in achieving one's purpose, that is, in overcoming danger by 
+going forward.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"This refers to the ruler of the hexagram as a whole. One sees that one has to 
+be resolute in conduct. But at the same time one must remain conscious of 
+the danger connected with such resoluteness, especially if it is to be 
+persevered in. Only awareness of the danger makes success possible.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The work is ended. If we want to know whether good fortune will follow, we 
+must look back upon our conduct and its consequences. If the effects are good, 
+then good fortune is certain. No one knows himself. It is only by the 
+consequences of his actions, by the fruit of his labors, that a man can judge 
+what he is to expect.";
             Hexagram = 11;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"In times of prosperity every able man called to fill an office draws like minded 
+people along with him, just as in pulling up ribbon grass one always pulls up 
+a bunch of it, because the stalks are connected by their roots. In such times, 
+when it is possible to extend influence widely, the mind of an able man is set 
+upon going out into life and accomplishing something.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"In times of prosperity it is important and above all to possess enough 
+greatness of soul to bear with imperfect people. For in the hands of a great 
+master no material is unproductive; he can find use for everything. But this 
+generosity is by no means laxity or weakness. It is during times of prosperity 
+especially that we must always be ready to risk even dangerous undertakings, 
+such as the crossing of a river, if they are necessary. So too we must not 
+neglect what is distant but must attend scrupulously to everything. 
+Factionalism and the dominance of cliques are especially to be avoided. Even 
+if people of like mind come forward together, they ought not to form a faction 
+by holding together for mutual advantage; instead, each man should do is 
+duty. Theses are four ways in which one can overcome the hidden danger of 
+a gradual slackening that always lurks in any time of peace. And that is how 
+one finds the middle way for action.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Everything on earth is subject to change. Prosperity is followed by decline: 
+this is the eternal law on earth. Evil can indeed be held in check but not 
+permanently abolished. It always returns. This conviction might induct 
+melancholy, but it should not; it ought only to keep us from falling into 
+illusion when good fortune comes to us. If we continue mindful of the 
+danger, we remain persevering and make no mistakes. As long as a man's 
+inner nature remains stronger and richer than anything offered by external 
+fortune, as long as he remains inwardly superior to fate, fortune will not 
+desert him.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In times of mutual confidence, people of high rank come in close contact with 
+the lowly quite simply and without boasting of their wealth. This is not due 
+to the force of circumstances but corresponds with their inmost sentiment. 
+The approach is made quite spontaneously, because it is based on inner 
+conviction.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The sovereign I is T'ang the Completer. By his decree the imperial princesses, 
+although higher in rank than their husbands, had to obey them like all other 
+wives. Here too we are shown a truly modest union of high and low that 
+brings happiness and blessings.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The change alluded to in the middle of the hexagram has begun to take place. 
+The wall of the town sinks back into the moat from which it was dug. The 
+hour of doom is at hand. When matters have come to this pass, we should 
+submit to fate and not try to stave it off by violent resistance. The one 
+recourse left us is to hold our own within our intimate circle. Should we 
+persevere in trying to resist the evil in the usual way, our collapse would only 
+be more complete, and humiliation would be the result.";
             Hexagram = 12;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The text is almost the same as that of the first line of the preceding hexagram, 
+but with a contrary meaning. In the latter a man is drawing another along 
+with him on the road to an official career; here a man is drawing another 
+with him into retirement from public life. This is why the text says here, 
+""Perseverance brings good fortune and success,"" and not ""Undertakings bring 
+good fortune."" If it becomes impossible to make our influence count, it is 
+only by retirement that we spare ourselves humiliation. Success in a higher 
+sense can be ours, because we know how to safeguard the value of our 
+personalities.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Inferior people are ready to flatter their superiors in a servile way. They 
+would also endure the superior man if he would put an end to their 
+confusion. This is fortunate for them. But the great man calmly bears the 
+consequences of the standstill. He does not mingle with the crowd of the 
+inferior; that is not his place. By his willingness to suffer personally he 
+insures the success of his fundamental principles.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Inferior people who have risen to power illegitimately do not feel equal to the 
+responsibility they have taken upon themselves. In their hearts they begin to 
+be ashamed, although at first they do not show it outwardly. This marks a 
+turn for the better. ";
+            WilhelmBaynesComments[Hexagram].Read4 = @"The time of standstill is nearing the point of change into its opposite. 
+Whoever wishes to restore order must feel himself called to the task and 
+have the necessary authority. A man who sets himself up as capable of 
+creating order according to his own judgment could make mistakes and end 
+in failure. But the man who is truly called to the task is favored by the 
+conditions of the time, and all those of like mind will share in his blessing.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The time undergoes a change. The right man, able to restore order, has 
+arrived. Hence ""good fortune."" But such periods of transition are the very 
+times in which we must fear and tremble. Success is assured only through 
+greatest caution, which asks always, ""What if it should fail?"" When a 
+mulberry bush is cut down, a number of unusually strong shoots sprout from 
+the roots. Hence the image of tying something to a cluster of mulberry shoots 
+is used to symbolize the way of making success certain. Confucius says about 
+this line:
+
+Danger arises when a man feels secure in his position. Destruction threatens 
+when a man seeks to preserve his worldly estate. Confusion develops when a 
+man has put everything in order. Therefore the superior man does not forget 
+danger in his security, not ruin when he is well established, nor confusion 
+when his affairs are in order. In this way he gains personal safety and is able 
+to protect the empire.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The standstill does not last forever. However, it does not cease of its own 
+accord; the right man is needed to end it. This is the difference between a 
+state of peace and a state of stagnation. Continuous effort is necessary to 
+maintain peace: left to itself it would change into stagnation and 
+disintegration. The time of disintegration, however, does not change back 
+automatically to a condition of peace and prosperity; effort must be put forth 
+in order to end it. This shows the creative attitude that man must take if the 
+world is to be put in order.";
             Hexagram = 13;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The beginning of union among people should take place before the door. All 
+are equally close to one another. No divergent aims have yet arisen, and one 
+makes not mistakes. The basic principles of any kind of union must be 
+equally accessible to all concerned. Secret agreements bring misfortune.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"There is danger here of formation of a separate faction on the basis of 
+personal and egotistic interests. Such factions, which are exclusive and, 
+instead of welcoming all men, must condemn one group in order to unite the 
+others, originate from low motives and therefore lead in the course of time to 
+humiliation.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Here fellowship has changed about to mistrust. Each man distrusts the other, 
+plans a secret ambush, and seeks to spy on his fellow form afar. We are 
+dealing with an obstinate opponent whom we cannot come at by this method. 
+Obstacles standing in the way of fellowship with others are shown here. One 
+has mental reservations for one's own part and seeks to take his opponent by 
+surprise. This very fact makes one mistrustful, suspecting the same wiles in 
+his opponent and trying to ferret them out. The result is that one departs 
+further and further from true fellowship. The longer this goes on, the more 
+alienated one becomes.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Here the reconciliation that follows quarrel mover nearer. It is true that there 
+are still dividing walls on which we stand confronting one another. But the 
+difficulties are too great. We get into straits, and this brings us to our senses. 
+We cannot fight, and therein lies our good fortune.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Two people are outwardly separated, but in their hearts they are united. They 
+are kept apart by their positions in life. Many difficulties and obstructions 
+arise between them and cause them grief. But, remaining true to each other, 
+the allow nothing to separate them, and although it costs them a severe 
+struggle to overcome the obstacles, they will succeed. When they come 
+together their sadness will change to joy. Confucius says of this:
+
+Life leads the thoughtful man on a path of many windings.
+Now the course is checked, now it runs straight again.
+Here winged thoughts may pour freely forth in words,
+There the heavy burden of knowledge must be shut away in silence.
+But when two people are at one in the inmost hearts,
+They shatter even the strength of iron or of bronze.
+And when two people understand each other in their inmost hearts,
+Their words are sweet and strong, like the fragrance of orchids.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The warm attachment that springs from the heart is lacking here. We are by 
+this time actually outside of fellowship with others. However, we ally 
+ourselves with them. The fellowship does not include all, but only those 
+who happen to dwell near one another. The meadow is the pasture at the 
+entrance to the town. At this stage, the ultimate goal of the union of 
+mankind has not yet been attained, but we need not reproach ourselves. We 
+join the community without separate aims of our own. ";
             Hexagram = 14;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Great possession that is still in its beginnings and that has not yet been 
+challenged brings no blame, since there has been no opportunity to make 
+mistakes. Yet there are many difficulties to be overcome. It is only by 
+remaining conscious of theses difficulties that one can keep inwardly free of 
+possible arrogance and wastefulness, and thus in principle overcome all cause 
+for blame.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Great possession consists not only in the quantity of goods at one's disposal, 
+but first and foremost, in their mobility and utility, for then they can be used 
+in undertakings, and we remain free of embarrassment and mistakes. The big 
+wagon, which will carry a heavy load and in which one can journey farm 
+means that there are at hand able helpers who give their support t and are 
+equal to their task. One can load great responsibility upon such persons, and 
+this is necessary in important undertakings.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"A magnanimous, liberal-minded man should not regard what he possesses as 
+his exclusive personal property , but should place it at the disposal of the ruler 
+or of the people at large. In so doing, he takes the right attitude toward his 
+possession, which as private property can never endure. A petty man is 
+incapable of this. He is harmed by great possessions, because instead of 
+sacrificing them, he would keep them for himself.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This characterizes the position of a man placed among rich and powerful 
+neighbors. It is a dangerous position. He must look neither to the right nor 
+to the left, and must shun envy and the temptation to vie with others. In this 
+way he remains free of mistakes.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The situation is very favorable. People are being won not by coercion but by 
+unaffected sincerity, so that they are attached to us in sincerity and truth. 
+However, benevolence alone is not sufficient at the time of POSSESSION IN 
+GREAT MEASURE. For insolence might begin to spread. Insolence must be 
+kept in bounds by dignity; then good fortune is assured.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"
+In the fullness of possession and at the height of power, one remains modest 
+and gives honor to the sage who stands outside the affairs of the world. By 
+this means one puts oneself under the beneficent influence descending form 
+heaven, and all goes well. Confucius says of this line:
+
+To bless means to help. Heaven helps the man who is devoted; men help the 
+man who is true. He who walks in truth and is devoted in his thinking, and 
+furthermore reveres the worthy, is blessed by heaven. He has good fortune, 
+and there is nothing that would not further.";
             Hexagram = 15;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A dangerous enterprise, such as the crossing of a great stream, is made much 
+more difficult if many claims and considerations have to be taken into 
+account. On the other hand, the task is easy if it is attended to quickly and 
+simply. Therefore the unassuming attitude of mind that goes with modesty 
+fits a man to accomplish even difficult undertakings: he imposes no 
+demands or stipulations but settles matters easily and quickly. Where no 
+claims are put forward, no resistances arise.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Out of the fullness of the heart the mouth speaketh."" When a man's 
+attitude of mind is so modest that this expresses itself in his outward 
+behavior, it is a source of good fortune to him. For the possibility of exerting 
+a lasting influence arises of itself and no one can interfere.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This is the center of the hexagram, where its secret is disclosed. A 
+distinguished name is readily earned by great achievements. If a man allows 
+himself to be dazzled by fame, he will soon be criticized, and difficulties will 
+arise. If, on the contrary, he remains modest despite his merit, he makes 
+himself beloved and wins the support necessary for carrying his work 
+through to the end.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"
+Everything has its proper measure. Even modesty in behavior can be carried 
+too far. Here, however, it is appropriate, because the place between a worthy 
+helper below and a kindly ruler above carries great responsibility. The 
+confidence of the man in superior place must not be abused nor the merits of 
+the man in inferior placed concealed. There are officials who indeed do not 
+strive for prominence; they hide behind the letter of ordinances, decline all 
+responsibility, accept pay without giving its equivalent in work, and bear 
+empty titles. This is the opposite of what is meant here by modesty. In such a 
+position, modesty is shown by interest in one's work.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Modesty is not to be confused with weak good nature that lets things take 
+their own course. When a man holds a responsible position, he must at times 
+resort to energetic measures. In doing so he must not try to make an 
+impression by boasting of his superiority but must make certain of the people 
+around him. The measures taken should be purely objective and in no way 
+personally offensive. Thus modesty manifests itself even in severity.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"A person who is really sincere in his modesty must make it show in reality. 
+He must proceed with great energy in this. When enmity arises nothing is 
+easier than to lay the blame on another. A weak man takes offense perhaps, 
+and draws back, feeling self-pity; he thinks that it is modesty that keeps him 
+from defending himself. Genuine modesty sets one to creating order and 
+inspires one to begin by disciplining one's own ego and one's immediate 
+circle. Only through having the courage to marshal one's armies against 
+oneself, will something forceful really be achieved.";
             Hexagram = 16;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A man in an inferior position has aristocratic connections about which he 
+boasts enthusiastically. This arrogance inevitably invites misfortune.  
+Enthusiasm should never be an egotistic emotion; it is justified only when it 
+is a general feeling that unites one with others.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"This describes a person who does not allow himself to be misled by any 
+illusions. While others are letting themselves be dazzled by enthusiasm, he 
+recognizes with perfect clarity the first signs of the time. Thus he neither 
+flatters those above nor neglects those beneath him; he is as firm as a rock. 
+When the first sign of discord appears, he knows the right moment for 
+withdrawing and does not delay even for a day. Perseverance in such conduct 
+will bring good fortune. Confucius says about this line:
+
+To know the seeds, that is divine indeed. In his association with those above 
+him, the superior man does not flatter. In his association with those beneath 
+him, he is not arrogant. For he knows the seeds. The seeds are the first 
+imperceptible beginning of movement, the first trace of good fortune (or 
+misfortune) that shows itself. The superior man perceives the seeds and 
+immediately takes actin. He does not wait even a whole day. In the Book of 
+Changes it is said: ""Firm as a rock. Not a whole day. Perseverance brings 
+good fortune.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This line is the opposite of the preceding one: the latter bespeaks self-reliance, 
+while here there is enthusiastic looking up to a leader. If a man hesitates too 
+long, this also will bring remorse. The right moment for approach must be 
+seized: only then will he do the right thing.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This describes a man who is able to awaken enthusiasm through his own 
+sureness and freedom from hesitation. He attracts people because he has no 
+doubts and is wholly sincere. Owing to his confidence in them he wins their 
+enthusiastic co-operation and attains success. Just as a clasp draws the hair 
+together and hold it, so he draws man together by the support he gives them.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Here enthusiasm is obstructed. A man is under constant pressure, which 
+prevents him from breathing freely. However, this pressure has its 
+advantage—it prevents him from consuming his powers in empty 
+enthusiasm. Thus constant pressure can actually serve to keep one alive.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"It is a bad thing for a man to let himself be deluded by enthusiasm. But if this 
+delusion has run its course, and he is still capable of changing, then he is 
+freed of error. A sober awakening from false enthusiasm is quite possible and 
+very favorable.";
             Hexagram = 17;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"There are exceptional conditions in which the relation between leader and 
+followers changes. It is implicit in the idea of following and adaptation that if 
+one wants to lead others, one must remain accessible and responsive to the 
+views of those under him. At the same time, however, he must have firm 
+principles, so that he does not vacillate where there is only a question of 
+current opinion. Once we are ready to listen to the opinions of others, we 
+must not associate exclusively with people who share our views or with 
+members of our own party; instead, we must go out and mingle freely with 
+all sorts of people, friends or foes. That is the only way to achieve something.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"In friendships and close relationships an individual must make a careful 
+choice. He surrounds himself either with good or with bad company; he 
+cannot have both at once. If he throws himself away on unworthy friends he 
+loses connection with people of intellectual power who could further him in 
+the good.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"When the right connection with distinguished people has been found, a 
+certain loss naturally ensues. A man must part company with the inferior 
+and superficial. But in his heart he will feel satisfied, because he seeks and 
+needs for the development of his personality. The important thing is to 
+remain firm. He must know what he wants and not be led astray by 
+momentary inclinations.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"It often happens, when a man exerts a certain amount of influence, that he 
+obtains a following by condescension toward inferiors. But the people who 
+attach themselves to him are not honest in their intentions. They seek 
+personal advantage and try to make themselves indispensable through 
+flattery and subservience. If one becomes accustomed to such satellites and 
+cannot do without them, it brings misfortune. Only when a man is 
+completely free from his ego, and intent, by conviction, upon what is right 
+and essential, does he acquire the clarity that enables him to see through such 
+people, and become free of blame.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Every man must have something he follows—something that serves him as a 
+lodestar. He who follows with conviction the beautiful and the good may feel 
+himself strengthened by this saying.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"This refers to a man, an exalted sage, who has already put the turmoil of the 
+world behind him. But a follower appears who understands him and is not 
+to be put off. So the sage comes back into the world and aids the other in his 
+work. Thus there develops an eternal tie between the two.
+
+  The allegory is chosen from the annals of the Chou dynasty. The rulers of 
+this dynasty honored men who had served them well by awarding them a 
+place in the royal family's temple of ancestors on the Western Mountain. In 
+this way they were regarded as sharing in the destiny of the ruling family. ";
             Hexagram = 18;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"This refers to a man, an exalted sage, who has already put the turmoil of the 
+world behind him. But a follower appears who understands him and is not 
+to be put off. So the sage comes back into the world and aids the other in his 
+work. Thus there develops an eternal tie between the two.
+
+  The allegory is chosen from the annals of the Chou dynasty. The rulers of 
+this dynasty honored men who had served them well by awarding them a 
+place in the royal family's temple of ancestors on the Western Mountain. In 
+this way they were regarded as sharing in the destiny of the ruling family. ";
+            WilhelmBaynesComments[Hexagram].Read2 = @"This refers to mistakes that as a result of weakness have brought about decay-
+hence the symbol, ""what has been spoiled by the mother. "" In setting things 
+right in such a case, a certain gentle consideration is called for. In order not to 
+wound, one should not attempt to proceed too drastically. ";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This describes a man who proceeds a little too energetically in righting the 
+mistakes of the past. Now and then, as a result, minor discourse and 
+annoyances will surely develop. But too much energy is better than too little. 
+Therefore, although he may at times have slight cause for regret, he remains 
+free of any serious blame. ";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This shows the situation of someone too weak to take measures against decay 
+that has its roots in the past and is just beginning to manifest itself. It is 
+allowed to run its course. If this continues, humiliation will result. ";
+            WilhelmBaynesComments[Hexagram].Read5 = @"An individual is confronted with corruption originating from neglect in 
+former times. He lacks the power to ward it off alone, but with able helpers 
+he can at least bring about a thorough reform, if he cannot create a new 
+beginning, and this also is praiseworthy.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Not every man has an obligation to mingle in the affairs of the world. There 
+are some who are developed to such a degree that they are justified in letting 
+the world go its own way and refusing to enter public life with a view to 
+reforming it. But this does not imply a right to remain idle or to sit back and 
+merely criticize. Such withdrawal is justified only when we strive to realize 
+in ourselves the higher aims of mankind. For although the sage remains 
+distant from the turmoil of daily life, he creates incomparable human values 
+for the future. ";
             Hexagram = 19;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The good begins to prevail and to find response in influential circles. This in 
+turn is an incentive to men of ability. IT is well to join this upward trend, but 
+we must not let ourselves be carried away by the current of the time; we must 
+adhere perseveringly to what is right. This bring good fortune.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"When the stimulus to approach comes from a high place, and when a man 
+has the inner strength and consistency that need no admonition, good 
+fortune will ensue. Nor need the future cause any concern. He is well aware 
+that everything earthly is transitory, and that a descent follows upon every 
+rise, but need not be confused by this universal law of fate. Everything serves 
+to further. Therefore he will travel the paths of life swiftly, honestly, and 
+valiantly.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Things are going well for a man: he achieves power and influence. But in 
+this lies the danger that he may relax, and confident of his position, allow the 
+easygoing, careless mood to show itself in his dealings with other people. 
+This would inevitably be harmful. But there is possibility of a change of 
+mood. If he regrets his mistaken attitude and feels the responsibility of an 
+influential position, he frees himself of faults.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"While the three lower lines indicate rise to power and influence, the three 
+upper lines show the attitude of persons in higher position toward those of 
+lower rank for whom they procure influence. Here is shown the open-
+minded approach of a person of high rank to a man of ability whom he draws 
+in to his own circle, regardless of class prejudice. This is very favorable. ";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A prince, or anyone in a leading position, must have the wisdom to attract to 
+himself people of ability who are expert in directing affairs. His wisdom 
+consists both in selecting the right people and in allowing those chosen to 
+have a free hand without interference from him.  For only through such self-
+restraint will he find the experts needed to satisfy all of his requirements.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"A sage who has put the world behind him and who in spirit has already 
+withdrawn from life may, under certain circumstances, decide to return once 
+more to the here and now and to approach other men. This means great 
+good fortune for the men whom he teaches and helps. And for him this great 
+hearted humbling of himself is blameless.";
             Hexagram = 20;
+            WilhelmBaynesComments[Hexagram].Read1 = @"This means contemplation from a distance, without comprehension. A man 
+of influence is at hand, but his influence is not understood by the common 
+people. This matters little in the case of the masses, for they benefit by the 
+actions of the ruling sage whether they understand them or not. But for a 
+superior man it is a disgrace. He must not content himself with a shallow, 
+thoughtless view of prevailing forces; he must contemplate them as a 
+connected whole and try to understand them.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Through the crack of the door one has a limited outlook; one looks outward 
+from within. Contemplation is subjectively limited. One tends to relate 
+everything to oneself and cannot put oneself in another's place and 
+understand his motives. This is appropriate for a good housewife. It is not 
+necessary for her to be conversant with the affairs of the world. But for a man 
+who must take active part in public life, such a narrow, egotistic way of 
+contemplating things is of course harmful.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This is the place of transition. We no longer look outward to receive pictures 
+that are more or less limited and confused, but direct out contemplation upon 
+ourselves in order to find a guideline for our decisions. This self-
+contemplation means the overcoming of naive egotism in the person who 
+sees everything solely from his own standpoint. He begins to reflect and in 
+this way acquires objectivity. However, self-knowledge does not mean 
+preoccupation with one's own thoughts; rather, it means concern about the 
+effects one creates. It is only the effects our lives produce that give us the 
+right to judge whether what we have done means progress or regression.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This describes a man who understands the secrets by which a kingdom can be 
+made to flourish. Such a man must be given an authoritative position, in 
+which he can exert influence. He should be, so to speak, a guest-that is, he 
+should be honored and act independently, and should not be used as a tool.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A man in an authoritative position to whom others look up must always be ready for 
+self-examination. The right sort of self-examination, however, consists not in idle 
+brooding over oneself but in examining the effects one produces. Only when these 
+effects are good, and when one's influence on others is good, will the contemplation 
+of one's own life bring the satisfaction of knowing oneself to be free of mistakes. ";
+            WilhelmBaynesComments[Hexagram].Read6 = @"While the preceding line represents a man who contemplates himself, here 
+in the highest place everything that is personal, related to the ego, is excluded. 
+The picture is that of a sage who stands outside the affairs of the world. 
+Liberated from his ego, he contemplates the laws of life and so realizes that 
+knowing how to become free of blame is the highest good.";
+            Hexagram = 21;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 22;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 23;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 24;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 25;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 26;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 27;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 28;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 29;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 30;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 31;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 32;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 33;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 34;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 35;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 36;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 37;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 38;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 39;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 40;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 41;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 42;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 43;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 44;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 45;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 46;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 47;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 48;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 49;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 50;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 51;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 52;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 53;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 54;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 55;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 56;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 57;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 58;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 59;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 60;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 61;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 62;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 63;
+            WilhelmBaynesComments[Hexagram].Read1 = @"";
+            WilhelmBaynesComments[Hexagram].Read2 = @"";
+            WilhelmBaynesComments[Hexagram].Read3 = @"";
+            WilhelmBaynesComments[Hexagram].Read4 = @"";
+            WilhelmBaynesComments[Hexagram].Read5 = @"";
+            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            Hexagram = 64;
             WilhelmBaynesComments[Hexagram].Read1 = @"";
             WilhelmBaynesComments[Hexagram].Read2 = @"";
             WilhelmBaynesComments[Hexagram].Read3 = @"";
@@ -4562,10 +5312,8 @@ come, would lead to misfortune.";
 
 
 
-
-
-
-
+            //Hexagram table uses IChing data (for hexagram symbols)
+            SetupTable();
 
 
 
@@ -4587,6 +5335,7 @@ come, would lead to misfortune.";
             {
                 BorderComment1.Visibility = System.Windows.Visibility.Visible;
                 Comment1.Text = WilhelmBaynesComments[currentlyShowing].Read1;
+                BorderComment1.BringIntoView();
             }
             else {
                 BorderComment1.Visibility = System.Windows.Visibility.Collapsed;
@@ -4625,6 +5374,7 @@ come, would lead to misfortune.";
             {
                 BorderComment6.Visibility = System.Windows.Visibility.Visible;
                 Comment6.Text = WilhelmBaynesComments[currentlyShowing].Read6;
+                BorderComment6.BringIntoView();
             }
             else {
                 BorderComment6.Visibility = System.Windows.Visibility.Collapsed;
@@ -4637,6 +5387,8 @@ come, would lead to misfortune.";
             {
                 BorderComment5.Visibility = System.Windows.Visibility.Visible;
                 Comment5.Text = WilhelmBaynesComments[currentlyShowing].Read5;
+                BorderComment5.BringIntoView();
+
             }
             else {
                 BorderComment5.Visibility = System.Windows.Visibility.Collapsed;
@@ -4649,6 +5401,7 @@ come, would lead to misfortune.";
             {
                 BorderComment4.Visibility = System.Windows.Visibility.Visible;
                 Comment4.Text = WilhelmBaynesComments[currentlyShowing].Read4;
+                BorderComment4.BringIntoView();
             }
             else {
                 BorderComment4.Visibility = System.Windows.Visibility.Collapsed;
@@ -4661,6 +5414,7 @@ come, would lead to misfortune.";
             {
                 BorderComment3.Visibility = System.Windows.Visibility.Visible;
                 Comment3.Text = WilhelmBaynesComments[currentlyShowing].Read3;
+                BorderComment3.BringIntoView();
             }
             else {
                 BorderComment3.Visibility = System.Windows.Visibility.Collapsed;
@@ -4673,6 +5427,7 @@ come, would lead to misfortune.";
             {
                 BorderComment2.Visibility = System.Windows.Visibility.Visible;
                 Comment2.Text = WilhelmBaynesComments[currentlyShowing].Read2;
+                BorderComment2.BringIntoView();
                 ;
             }
             else {
