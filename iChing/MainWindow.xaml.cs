@@ -58,6 +58,7 @@ namespace iChing
                     string HexNum = Convert.ToString(HexArray[row, column]);
                     HexBox.Text = HexNum +"  "+iChing[HexArray[row, column]].Hex;
                     HexBox.Tag = HexNum;
+                    HexBox.ToolTip = iChing[HexArray[row, column]].ChiTitle+ " ~ "+iChing[HexArray[row, column]].EngTitle;
                     HexBox.FontSize = 15;
                     HexBox.IsReadOnly = true;
                     HexBox.Cursor = Cursors.Arrow;
@@ -6811,7 +6812,7 @@ intemperance.";
             currentlyShowing = number;
             MainTextViewer.ScrollToTop();
             updateApplication();
-            TabControl1.SelectedIndex = 1;
+            TabControl1.SelectedIndex = 0;
         }
 
 

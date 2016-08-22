@@ -54,8 +54,8 @@
         <System:Double x:Key="WidthOfChineseSymbol">94</System:Double>
         <System:Double x:Key="WidthOfCHIname">NaN</System:Double>
         <System:Double x:Key="WidthofCHIName">80</System:Double>
-        <System:Double x:Key="IndexEnglishNamesWidth">174</System:Double>
-        <System:Double x:Key="widthenglishrightside">174</System:Double>
+        <System:Double x:Key="IndexEnglishNamesWidth">269</System:Double>
+        <System:Double x:Key="widthenglishrightside">210</System:Double>
         <SolidColorBrush x:Key="Brush1" Color="#FFACACAC"/>
         <LinearGradientBrush x:Key="Brush2" EndPoint="0.5,1" StartPoint="0.5,0">
             <LinearGradientBrush.RelativeTransform>
@@ -170,7 +170,15 @@
                             <TextBox x:Name="TheImageBox" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" IsHitTestVisible="False" IsReadOnly="True" BorderBrush="{x:Null}" Background="Transparent" Foreground="{DynamicResource LinesBrushColor}" HorizontalAlignment="Left" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" Grid.ColumnSpan="2" Margin="289,0,0,0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
                         </Grid>
                         <TextBox x:Name="Intro3Box" TextWrapping="Wrap" Text="TextBox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
-                        <StackPanel x:Name="LinesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="665" ScrollViewer.CanContentScroll="True" Margin="0,0,0,20">
+                        <StackPanel x:Name="LinesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="665" ScrollViewer.CanContentScroll="True" Margin="0,0,0,20" RenderTransformOrigin="0.5,0.5">
+                            <StackPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform X="-6"/>
+                                </TransformGroup>
+                            </StackPanel.RenderTransform>
                             <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="22*"/>
@@ -463,7 +471,7 @@
                     <ColumnDefinition Width="151*"/>
                     <ColumnDefinition Width="174*"/>
                 </Grid.ColumnDefinitions>
-                <ScrollViewer HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="1302" Grid.ColumnSpan="3" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">
+                <ScrollViewer HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="1287" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" VerticalScrollBarVisibility="Auto">
                     <ScrollViewer.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -472,7 +480,7 @@
                             <TranslateTransform X="-2.326"/>
                         </TransformGroup>
                     </ScrollViewer.RenderTransform>
-                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="743">
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="1252" Height="655">
                         <Grid HorizontalAlignment="Left" Height="1402" VerticalAlignment="Top" Width="1292" Margin="0,0,-549,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="338*"/>
@@ -804,21 +812,6 @@
                                     <TextBox TextWrapping="Wrap" Text="Before Completion" Margin="0,1" BorderBrush="{x:Null}" Width="{DynamicResource widthenglishrightside}" HorizontalAlignment="Right" SelectionBrush="{x:Null}" AllowDrop="False" IsTabStop="False" Cursor="" IsReadOnly="True" BorderThickness="0" VerticalAlignment="Top"/>
                                 </StackPanel>
                             </StackPanel>
-                            <Grid HorizontalAlignment="Left" Height="115" Margin="132,115,0,0" Grid.Row="1" VerticalAlignment="Top" Width="403">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="10*"/>
-                                    <RowDefinition Height="13*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="49*"/>
-                                    <ColumnDefinition Width="60*"/>
-                                    <ColumnDefinition Width="55*"/>
-                                    <ColumnDefinition Width="239*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox TextWrapping="Wrap" Text="TextBox"/>
-                                <TextBox TextWrapping="Wrap" Text="TextBox" Grid.Column="1"/>
-                                <TextBox TextWrapping="Wrap" Text="TextBox" Grid.Column="2"/>
-                            </Grid>
                         </Grid>
                     </StackPanel>
                 </ScrollViewer>
