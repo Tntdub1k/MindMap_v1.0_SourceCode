@@ -3,26 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="61.412" d:DesignWidth="91.088">
-    <StackPanel x:Name="PathTemplate_Copy" HorizontalAlignment="Center" Width="92" Margin="0,0,-1,-4" ToolTip="27" PreviewMouseUp="StackPanel_PreviewMouseUp">
-        <TextBox TextWrapping="Wrap" Text="䷿" FontSize="36" Height="41" BorderBrush="{x:Null}" Width="92" HorizontalContentAlignment="Stretch" TextAlignment="Center" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Center" VerticalAlignment="Top" IsReadOnly="True" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+             mc:Ignorable="d" Height="145">
+    <StackPanel x:Name="PathTemplate_Copy" HorizontalAlignment="Center" Margin="2,0,1,10" ToolTip="27" PreviewMouseUp="StackPanel_PreviewMouseUp" Height="135" Width="75">
+        <TextBox x:Name="HexBox" TextWrapping="Wrap" Text="䷿" FontSize="72" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" TextAlignment="Center" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Center" VerticalAlignment="Top" IsReadOnly="True" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Width="74">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
-                    <TranslateTransform Y="-5"/>
+                    <TranslateTransform Y="-10"/>
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBlock Text="Corners of the Mouth (Providing Nourishment)" FontSize="8" VerticalAlignment="Center" HorizontalAlignment="Center" Width="92" TextWrapping="Wrap" UseLayoutRounding="False" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="TextBox" Text="Corners of the Mouth (Providing Nourishment)" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" UseLayoutRounding="False" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="68.5" Height="67" Margin="3.25,0">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
-                    <TranslateTransform Y="-4"/>
+                    <TranslateTransform Y="-22"/>
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>

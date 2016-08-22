@@ -24,7 +24,9 @@ namespace iChing
         private iChingNumber[] iChing = new iChingNumber[65];
         private Comments[] WilhelmBaynesComments = new Comments[65];
         private int currentlyShowing = 0;
-
+        private bool tracing = false;
+        private List<List<int>> TracingTable = new List<List<int>>();
+        private List<int> TraceMap = new List<int>();
 
         public MainWindow()
         {
@@ -185,6 +187,10 @@ namespace iChing
             currentlyShowing = iChing[currentlyShowing].Place1ChangesToNumber;
             updateApplication();
             SetToLines();
+            if (tracing == true)
+            {
+                    AddEntryToTraceMap();
+            }
         }
 
         private void Place2_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -192,6 +198,10 @@ namespace iChing
             currentlyShowing = iChing[currentlyShowing].Place2ChangesToNumber;
             updateApplication();
             SetToLines();
+            if (tracing == true)
+            {
+                AddEntryToTraceMap();
+            }
         }
 
         private void Place3_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -199,6 +209,10 @@ namespace iChing
             currentlyShowing = iChing[currentlyShowing].Place3ChangesToNumber;
             updateApplication();
             SetToLines();
+            if (tracing == true)
+            {
+                AddEntryToTraceMap();
+            }
         }
 
         private void Place4_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -206,6 +220,10 @@ namespace iChing
             currentlyShowing = iChing[currentlyShowing].Place4ChangesToNumber;
             updateApplication();
             SetToLines();
+            if (tracing == true)
+            {
+                AddEntryToTraceMap();
+            }
         }
 
         private void Place5_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -213,6 +231,10 @@ namespace iChing
             currentlyShowing = iChing[currentlyShowing].Place5ChangesToNumber;
             updateApplication();
             SetToLines();
+            if (tracing == true)
+            {
+                AddEntryToTraceMap();
+            }
         }
 
         private void Place6_PreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -220,6 +242,10 @@ namespace iChing
            currentlyShowing = iChing[currentlyShowing].Place6ChangesToNumber;
             updateApplication();
             SetToLines();
+            if (tracing == true)
+            {
+                AddEntryToTraceMap();
+            }
         }
 
         private void SetupText()
@@ -7132,6 +7158,48 @@ intemperance.";
             {
                 Button_Click_1(this, e);
             }
+        }
+
+        private void AddEntryToTraceMap()
+        {
+            PathTemplate newPathEntry = new PathTemplate();
+            newPathEntry.HexBox.Text = iChing[currentlyShowing].Hex;
+            newPathEntry.TextBox.Text = iChing[currentlyShowing].EngTitle;
+            foreach (object child in TracingPanel.Children)
+            {
+                if (child is StackPanel){
+                    if( Convert.ToString((child as StackPanel).Tag) == "Map"+Convert.ToString(TracingPanel.Children.Count)){
+                        (child as StackPanel).Children.Add(newPathEntry);
+                        (child as StackPanel).Children.Add(new TextBox() { Text = " ⬤ ", FontSize = 8, Height=80, VerticalAlignment=VerticalAlignment.Top, Background = null, BorderBrush =null, VerticalContentAlignment=VerticalAlignment.Center});
+                }
+      
+                }
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            switch (tracing)
+            {
+                case true:
+                    tracing = false;
+                    TracerBtn.Content = "Trace";
+                    break;
+                case false:
+                    tracing = true;
+                    StackPanel newPathPanel = new StackPanel();
+                    newPathPanel.Orientation = Orientation.Horizontal;
+                    newPathPanel.Tag = "Map"+Convert.ToString(TracingPanel.Children.Count+1);
+                    TracingPanel.Children.Add(newPathPanel);
+                    AddEntryToTraceMap();
+                    TracerBtn.Content = "Finish Tracing";
+                    break;
+            }
+        }
+
+        private void TabItem_GotFocus(object sender, RoutedEventArgs e)
+        {
+
         }
         }
 

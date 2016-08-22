@@ -10,4 +10,7 @@ C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.
 C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csproj.GenerateResource.Cache
 C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.exe
 C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.pdb
-C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\PathTemplate.baml
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\PathTemplate.g.cs
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing_MarkupCompile.lref
