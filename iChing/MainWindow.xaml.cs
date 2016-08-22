@@ -49,23 +49,25 @@ namespace iChing
                 for (int column = 0; column < 8; column++)
                 {
                     Border HexBorder = new Border();
-                    HexBorder.BorderThickness = new Thickness { Top = 0, Right = 1, Left = 0, Bottom = 1 };
                     HexBorder.Width = 45;
                     HexBorder.Height = 28;
+                    HexBorder.BorderThickness = new Thickness { Top = 0, Right = 1, Left = 0, Bottom = 1 };
                     HexBorder.BorderBrush = new SolidColorBrush(Colors.Black);
                     
                     TextBox HexBox = new TextBox();
-                    HexBorder.Child = HexBox;
                     string HexNum = Convert.ToString(HexArray[row, column]);
                     HexBox.Text = HexNum +"  "+iChing[HexArray[row, column]].Hex;
                     HexBox.Tag = HexNum;
-
-                    
                     HexBox.FontSize = 15;
+                    HexBox.IsReadOnly = true;
+                    HexBox.Cursor = Cursors.Arrow;
                     HexBox.VerticalContentAlignment = System.Windows.VerticalAlignment.Center;
+                    HexBox.HorizontalContentAlignment = System.Windows.HorizontalAlignment.Center;
                     HexBox.BorderThickness = new Thickness { Top = 0, Right = 0, Left = 0, Bottom = 0 };
                     HexBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
 
+                    HexBorder.Child = HexBox;
+                    
                     switch (row)
                     {
                         case 0:
@@ -5002,313 +5004,1774 @@ The picture is that of a sage who stands outside the affairs of the world.
 Liberated from his ego, he contemplates the laws of life and so realizes that 
 knowing how to become free of blame is the highest good.";
             Hexagram = 21;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"If a sentence is imposed the first time a man attempts to do wrong, the 
+penalty is a mild one.  Only the toes are put in the stocks.  This prevents him 
+from sinning further and thus he becomes free of blame.  It is a warning to 
+halt in time on the path of evil.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"It is easy to discriminate between right and wrong in this case;
+it is like biting through tender meat. But one encounters a
+hardened sinner, and, aroused by anger, one goes a little too
+far. The disappearance of the nose in the course of the bite
+signifies that indignation blots out finer sensibility. However,
+there is no great harm in this, because the penalty as such is
+just.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"
+Punishment is to be carried out by someone who lacks the power and 
+authority to do so.  Therefore the culprits do not submit.  The matter at issue 
+is an old one-as symbolized by salted game-and in dealing with it difficulties 
+arise.  This old meat is spoiled: by taking up the problem the punisher arouses 
+poisonous hatred against himself, and n this way is put in a somewhat 
+humiliating position.  But since punishment was required by the time, he 
+remains free of blame.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"There are great obstacles to be overcome, powerful opponents are to be 
+punished. Though this is arduous, the effort succeeds. But it is necessary to 
+be hard as metal and straight as an arrow to surmount the difficulties. If one 
+knows these difficulties and remains persevering, he attains good fortune. 
+The difficult task is achieved in the end.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The case to be decided is indeed not easy but perfectly clear.  Since we 
+naturally incline to leniency, we must make every effort to be like yellow 
+gold-that is, as true as gold and as impartial as yellow, the color of the middle 
+[the mean]. It is only by remaining conscious of the dangers growing out of 
+the responsibility we have assumed that we can avoid making mistakes.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"In contrast to the first line, this line refers to a man who is incorrigible. His 
+punishment is the wooden cangue, and his ears disappear under it-that is to 
+say, he is deaf to warnings. This obstinacy leads to misfortune.";
             Hexagram = 22;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A beginner in subordinate place must take upon himself the labor of 
+advancing. There might be an opportunity of surreptitiously easing the way-
+symbolized by the carriage-but a self-contained man scorns help gained in a 
+dubious fashion. He thinks it more graceful to go on foot than to drive in a 
+carriage under false pretenses.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The beard is not an independent thing; it moves only with the chin. The 
+image therefore means that form is to be considered only as a result and 
+attribute of content. The beard is a superfluous ornament. To devote care to it 
+for its own sake, without regard for the inner content of which it is an 
+ornament, would bespeak a certain vanity.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This represents a very charming life situation. One is under the spell of grace 
+and the mellow mood induced by wine. This grace can adorn, but it can also 
+swamp us. Hence the warning not to sink into convivial indolence but to 
+remain constant in perseverance. Good fortune depends on this.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"An individual is in a situation in which doubts arise as to which is better-to 
+pursue the grace of external brilliance, or to return to simplicity. The doubt 
+itself implies the answer. Confirmation comes from the outside; it comes like 
+a white winged horse. The white color indicates simplicity. At first it may be 
+disappointing to renounce the comforts that might have been obtained, yet 
+one finds peace of mind in a true relationship with the friend who courts 
+him. The winged horse is the symbol of the thoughts that transcend all limits 
+of space and time.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A man withdraws from contact with people of the lowlands, who seek 
+nothing but magnificence and luxury, in to the solitude of the heights. There 
+he finds an individual to look up to, whom he would like to have as a friend. 
+But the gifts he has to offer are poor and few, so that he feels ashamed. 
+However, it is not the material gifts that count, but sincerity of feeling, and so 
+all goes well in the end.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Here at the highest stage of development all ornament is discarded. Form no 
+longer conceals content but brings out its value to the full. Perfect grace 
+consists not in exterior ornamentation of the substance, but in the simple 
+fitness of its form.";
             Hexagram = 23;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Inferior people are on the rise and stealthily begin their destructive 
+burrowing from below in order to undermine the place where the superior 
+man rests. Those followers of the ruler who remain loyal are destroyed by 
+slander and intrigue. The situation bodes disaster, yet there is nothing to do 
+but wait.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The power of the inferior people is growing. The danger draws close to one's 
+person; already there are clear indication, and rest is disturbed. Moreover, in 
+this dangerous situation one is as yet without help or friendly advances from 
+above or below. Extreme caution is necessary in this isolation. One must 
+adjust to the time and promptly avoid the danger. Stubborn perseverance in 
+maintaining one's standpoint would lead to downfall.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"An individual finds himself in an evil environment to which he is 
+committed by external ties. But he has an inner relationship with a superior 
+man, and through this he attains the stability to free himself from the way of 
+the inferior people around him. This brings him into opposition to them of 
+course, but that is not wrong.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Here the disaster affects not only the resting place but even the occupant. No 
+warning or other comment is added. Misfortune has reached its peak: it can 
+no longer be warded off.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Here, in immediate proximity to the strong, light-giving principle at the top, 
+the nature of the dark force undergoes a change. It no longer opposes the 
+strong principle by means of intrigues but submits to its guidance. Indeed, as 
+the head of the other weak lines, it leads all of these to the strong line, just as 
+a princess leads her maids-in-waiting like a shoal of fishes to her husband and 
+thus gains his favor. Inasmuch as the lower element thus voluntarily places 
+itself under the higher, it attains happiness and the higher also receives its 
+due. Therefore all goes well.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Here the splitting apart reaches its end. When misfortune has spent itself, 
+better times return. The seed of the good remains, and it is just when the 
+fruit falls to the ground that food sprouts anew from its seed. The superior 
+man again attains influence and effectiveness. He is supported by public 
+opinion as if in a carriage. But the inferior man's wickedness is visited upon 
+himself. His house is split apart. A law of nature is at work here. Evil is not 
+destructive to the good alone but inevitably destroys itself as well. For evil, 
+which lives solely by negation, cannot continue to exist on its own strength 
+alone. The inferior man himself fares best when held under control by a 
+superior man. ";
             Hexagram = 24;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Slight digressions from the good cannot be avoided, but one must turn back 
+in time, before going too far. This is especially important in the development 
+of character; every faintly evil thought must be put aside immediately, before 
+it goes too far and takes root in the mind. Then there is no cause for remorse, 
+and all goes well.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Return always calls for a decision and is an act of self-mastery. It is made 
+easier if a man is in good company. If he can bring himself to put aside pride 
+and follow the example of good men, good fortune results.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"There are people of a certain inner instability who feel a constant urge to 
+reverse themselves. There is danger in continually deserting the good 
+because of uncontrolled desires, then turning back to it again because of a 
+better resolution. However, since this does not lead to habituation in evil, a 
+general inclination to overcome the defect is not wholly excluded.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"A man is in a society composed of inferior people, but is connected spiritually 
+with a strong and good friend, and this makes him turn back alone. 
+Although nothing is said of reward and punishment, this return is certainly 
+favorable, for such a resolve to choose the good brings its own reward. ";
+            WilhelmBaynesComments[Hexagram].Read5 = @"When the time for return has come, a man should not take shelter in trivial 
+excuses, but should look within and examine himself. And if he has done 
+something wrong he should make a noblehearted resolve to confess his fault. 
+No one will regret having taken this road.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"If a man misses the right time for return, he meets with misfortune. The 
+misfortune has its inner cause in a wrong attitude toward the world. The 
+misfortune coming upon him for without results from this wrong attitude. 
+What is pictured here is blind obstinacy and the judgment that is visited 
+upon it.";
             Hexagram = 25;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The original impulses of the heart are always good, so that we may follow 
+them confidently, assured of good fortune and achievement of our aims.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"We should do every task for its own sake as time and place demand and not 
+with an eye to the result. Then each task turns out well, and anything we 
+undertake succeeds.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Sometimes undeserved misfortune befalls a man at the hands of another, as 
+for instance when someone passes by and takes a tethered cow along with 
+him. His gain is the owner's loss. In all transactions, no matter how 
+innocent, we must accommodate ourselves to the demands of the time, 
+otherwise unexpected misfortune overtakes us.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"We cannot lose what really belongs to us, even if we throw it away. 
+Therefore we need have no anxiety. All that need concern us is that we 
+should remain true to our own natures and not listen to others.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"An unexpected evil may come accidentally from without. If it does not 
+originate in one's own nature or have a foothold there, one should not resort 
+to external means to eradicate it, but should quietly let nature take its course. 
+Then improvement will come of itself.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"When, in a given situation, the time is not ripe for further progress, the best 
+thing to do is to wait quietly, without ulterior designs. If one acts 
+thoughtlessly and tries to push ahead in opposition to fate, success will not be 
+achieved.";
             Hexagram = 26;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A man wishes to make vigorous advance, but circumstances present an 
+obstacle. He sees himself held back firmly. If he should attempt to fore an 
+advance, it would lead him into misfortune. Therefore it is better for him to 
+compose himself and to wait until an outlet is offered for release of his 
+stored-up energies.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Here advance is checked just as in the third line of THE TAMING POWER OF 
+THE SMALL (9). However, in the later the restraining force is slight; thus a 
+conflict arises between the propulsive and the restraining movement, as a 
+result of which the spokes fall out of the wagon wheels, while here the 
+restraining force is absolutely superior; hence no struggle takes place. One 
+submits and removes the axletrees from the wagon -in other words, contents 
+himself with waiting. In this way energy accumulates for a vigorous advance 
+later on.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"The way opens; the hindrance has been cleared away. A man is in contact 
+with a strong will acting in the same direction as his own, and goes forward 
+like one good horse following another. But danger still threatens, and he 
+must remain aware of it, or he will be robbed of his firmness. Thus he must 
+acquire skill on the one hand in what will take him forward, and on the other 
+in what will protect him against unforeseen attacks. It is good in such a pass 
+to have a goal toward which to strive.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This line and the one following it are the two that tame the forward-pushing 
+lower lines. Before a bull's horns grow out, a headboard is fastened to its 
+forehead, so that later when the horns appear they cannot do harm. A good 
+way to restrain wild force is to forestall it. By so doing one achieves an easy 
+and great success.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Here the restraining of the impetuous forward drive is achieved in an 
+indirect way. A boar's tusk is in itself dangerous, but if the boar's nature is 
+altered, the tusk is no longer a menace. Thus also where men are concerned, 
+wild force should not be combated directly; instead, its roots should be eradicated.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The time of obstruction is past. The energy long dammed up by inhibition 
+forces its way out and achieves great success. This refers to a man who is 
+honored by the ruler and whose principles now prevail and shape the world. ";
             Hexagram = 27;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The magic tortoise is a creature possessed of such supernatural powers that it 
+lives on air and needs no earthly nourishment. The image means that a man 
+fitted by nature and position to live freely and independently renounces this 
+self-reliance and instead looks with envy and discontent at others who are 
+outwardly in better circumstances. But such base envy only arouses derision 
+and contempt in those others. This has bad results.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Normally a person either provides his own means of nourishment or is 
+supported in a proper way by those whose duty of privilege it is to provide for 
+him. If, owing to weakness of spirit, a man cannot support himself, a feeling 
+of uneasiness comes over him; this is because in shirking the proper way of 
+obtaining a living, he accepts support as a favor from those in higher place. 
+This is unworthy, for he is deviating from his true nature. Kept up 
+indefinitely, this course leads to misfortune.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"He who seeks nourishment that does not nourish reels from desire to 
+gratification and in gratification craves desire. Mad pursuit of pleasure for the 
+satisfaction of the senses never brings one to the goal. One should never (ten 
+years is a complete cycle of time) follow this path, for nothing good can come 
+of it.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In contrast to the six in the second place, which refers to a man bent 
+exclusively on his own advantage, this line refers to one occupying a high 
+position and striving to let his light sine forth. To do this he needs helpers, 
+because he cannot attain his lofty aim alone. With the greed of a hungry tiger 
+he is on the lookout for the right people. Since he is not working for himself 
+but for the good of all, there is no wrong in such zeal.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A man may be conscious of a deficiency in himself. He should be 
+undertaking the nourishment of the people, but he has not the strength to do 
+it. Thus he must turn from his accustomed path and beg counsel and help 
+from a man who is spiritually his superior but undistinguished outwardly. If 
+he maintains this attitude of mind perseveringly, success and good fortune 
+are his. But he must remain aware of his dependence. He must not put his 
+own person forward nor attempt great labors, such as crossing the great water.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"This describes a sage of the highest order, from whom emanate all influences 
+that provide nourishment for others. Such a position brings with it heavy 
+responsibility. If he remains conscious of this fact, he has good fortune and 
+may confidently undertake even great and difficult labors, such as crossing 
+the great water. These undertakings bring general happiness for him and for 
+all others.";
             Hexagram = 28;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"When a man wishes to undertake an enterprise in extraordinary times, he 
+must be extraordinarily cautious, just as when setting a heavy thing down on 
+the floor, one takes care to put rushes under it, so that nothing will break. 
+This caution, though it may seem exaggerated, is not a mistake. Exceptional 
+enterprises cannot succeed unless utmost caution is observed in their 
+beginnings and in the laying of their foundations.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Wood is near water; hence the image of an old poplar sprouting at the root. 
+This means an extraordinary situation arises when an older man marries a 
+young girl who suits him. Despite the unusualness of the situation, all goes 
+well.
+
+  From the point of view of politics, the meaning is that in exceptional times 
+one does well to join with the lowly, for this affords a possibility of renewal.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This indicates a type of man who in times of preponderance of the great 
+insists on pushing ahead. He accepts no advice from others, and therefore 
+they in turn are not willing to lend him support. Because of this the burden 
+grows, until the structure of things bends or breaks. Plunging willfully ahead 
+in times of danger only hastens the catastrophe.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Through friendly relations with people of lower rank, a responsible man 
+succeeds in becoming master of the situation. But if, instead of working for 
+the rescue of the whole, he were to misuse his connections to obtain personal 
+power and success, it would lead to humiliation.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A withered poplar that flowers exhausts its energies thereby and only hastens 
+its end. An older woman may marry once more, but no renewal takes place. 
+Everything remains barren. Thus, though all the amenities are observed, the 
+net result is only the anomaly of the situation.
+
+  Applied to politics, the metaphor means that if in times of insecurity we 
+give up alliance with those below us and keep up only the relationships we 
+have with people of higher rank, an unstable situation is created.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Here is a situation in which the unusual has reached a climax. One is 
+courageous and wishes to accomplish one's task, no matter what happens. 
+This leads into danger. The water rises over one's head. This is the 
+misfortune. But one incurs no blame in giving up one's life that the good 
+and the right may prevail. There are things that are more important than 
+life. ";
             Hexagram = 29;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"By growing used to what is dangerous, a man can easily allow it to become 
+part of him. He is familiar with it and grows used to evil. With this he has 
+lost the right way, and misfortune is the natural result.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"When we are in danger we ought not to attempt to get out of it immediately, 
+regardless of circumstances; at first we must content ourselves with not being 
+overcome by it. We must calmly weigh the conditions of the time and by 
+satisfied with small gains, because for the time being a great success cannot be 
+attained. A spring flows only sparingly at first, and tarries for some time 
+before it makes its way in to the open.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Here every step, forward or backward, leads into danger. Escape is out of the 
+question. Therefore we must not be misled into action, as a result of which 
+we should only bog down deeper in the danger; disagreeable as it may be to 
+remain in such a situation, we must wait until a way out shows itself.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In times of danger ceremonious forms are dropped. What matters most is 
+sincerity. Although as a rule it is customary for an official to present certain 
+introductory gifts and recommendations before he is appointed, here 
+everything is simplified to the utmost. The gifts are insignificant, there is no 
+one to sponsor him, he introduces himself; yet all this need not be 
+humiliating if only there is the honest intention of mutual help in danger. 
+Still another idea is suggested. The window is the place through which light 
+enters the room. If in difficult times we want to enlighten someone, we must 
+begin with that which is in itself lucid and proceed quite simply from that 
+point on.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Danger comes because one is too ambitious. In order to flow out of a ravine, 
+water does not rise higher than the lowest point of the rim. So likewise a 
+man when in danger has only to proceed along the line of least resistance; 
+thus he reaches the goal. Great labors cannot be accomplished in such times; it 
+is enough to get out of the danger.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"A man who in the extremity of danger has lost the right way and is 
+irremediably entangled in his sins has no prospect of escape. He is like a 
+criminal who sits shackled behind thorn hedged prison walls.";
             Hexagram = 30;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"It is early morning and work begins. The mind has been closed to the outside 
+world in sleep; now its connections with the world begin again. The traces of 
+one's impressions run crisscross. Activity and haste prevail. It is important 
+then to preserve inner composure and not to allow oneself to be swept along 
+by the bustle of life. If one is serious and composed, he can acquire the clarity 
+of mind needed for coming to terms with the innumerable impressions that 
+pour in. It is precisely at the beginning that serious concentration is 
+important, because the beginning holds the seed of all that is to follow.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Midday has come; the sun shines with a yellow light. Yellow is the color of 
+measure and mean. Yellow light is therefore a symbol of the highest culture 
+and art, whose consummate harmony consists in holding to the mean.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Here the end of the day has come. The light of the setting sun calls to mind 
+the fact that life is transitory and conditional. Caught in this external 
+bondage, men are usually robbed of their inner freedom as well. The sense of 
+the transitoriness of life impels them to uninhibited revelry in order to enjoy 
+life while it lasts, or else they yield to melancholy and spoil the precious time 
+by lamenting the approach of old age. Both attitudes are wrong. To the 
+superior man it makes no difference whether death comes early or late. He 
+cultivates himself, awaits his allotted time, and in this way secures his fate.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Clarity of mind has the same relation to life that fire has to wood. Fire clings 
+to wood, but also consumes it. Clarity of mind is rooted in life but can also 
+consume it. Everything depends upon how the clarity functions. Here the 
+image used is that of a meteor or a straw fire. A man who is excitable and 
+restless may rise quickly to prominence but produces no lasting effects. Thus 
+matters end badly when a man spends himself too rapidly and consumes 
+himself like a meteor.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Here the zenith of life has been reached. Were there no warning, one would 
+at this point consume oneself like a flame. Instead, understanding the vanity 
+of all things, one may put aside both hope and fear, and sigh and lament: if 
+one is intent on retaining his clarity of mind, good fortune will come from 
+this grief. For here we are dealing not with a passing mood, as in the nine in 
+the third place, but with a real change of heart.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"It is not the purpose of chastisement to impose punishment blindly but to 
+create discipline. Evil must be cured at its roots. To eradicate evil in political 
+life, it is best to kill the ringleaders and spare the followers. In educating 
+oneself it is best to root out bad habits and tolerate those that are harmless. 
+For asceticism that is too strict, like sentences of undue severity, fails in its 
+purpose.";
             Hexagram = 31;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A movement, before it is actually carried out, shows itself first in the toes. 
+The idea of an influence is already present, but is not immediately apparent to 
+others. As long as the intention has no visible effect, it is of no importance to 
+the outside world and leads neither to good nor to evil.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"In movement, the calf of the leg follows the foot; by itself it can neither go 
+forward nor stand still. Since the movement is not self-governed, it bodes ill. 
+One should wait quietly until one is impelled to action by a real influence. 
+Then one remains uninjured.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Every mood of the heart influences us to movement. What the heart desires, 
+the thighs run after without a moment's hesitation; they hold to the heart, 
+which they follow. In the life of man, however, acting on the spur of every 
+caprice is wrong and if continued leads to humiliation. Three considerations 
+suggest themselves here. First, a man should not run precipitately after all the 
+persons whom he would like to influence, but must be able to hold back 
+under certain circumstances. As little should he yield immediately to every 
+whim of those in whose service he stands. Finally, where the moods of his 
+own heart are concerned, he should never ignore the possibility of inhibition, 
+for this is the basis of human freedom.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Here the place of the heart is reached. The impulse that springs from this 
+source is the most important of all. It is of particular concern that this 
+influence be constant and good; then, in spite of the danger arising from the 
+great susceptibility of the human heart, there will be no cause for remorse. 
+When the quiet power of a man's own character is at work, the effects 
+produced are right. All those who are receptive to the vibrations of such a 
+spirit will then be influenced. Influence over others should not express itself 
+as a conscious and willed effort to manipulate them. Through practicing such 
+conscious incitement, one becomes wrought up and is exhausted by the 
+eternal stress and strain. Moreover, the effects produced are then limited to 
+those on whom one's thoughts are consciously fixed.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The back of the neck is the most rigid part of the body. When the influence 
+shows itself there, the will remains firm and the influence does not lead to 
+confusion. Hence remorse does not enter into consideration here. What 
+takes place in the depths of one's being, in the unconscious mind. It is true 
+that if we cannot be influenced ourselves, we cannot influence the outside 
+world.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"
+The most superficial way of trying to influence others is through talk that has 
+nothing real behind it. The influence produced by such mere tongue wagging 
+must necessarily remain insignificant. Hence no indication is added 
+regarding good or bad fortune.";
             Hexagram = 32;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Whatever endures can be created only gradually by long-continued work and 
+careful reflection. In the same sense Lao-tse says: ""If we wish to compress 
+something, we must first let it fully expand."" He who demands too much at 
+once is acting precipitately, and because he attempts too much, he ends by 
+succeeding in nothing.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The situation is abnormal. A man's force of character is greater than the 
+available material power. Thus he might be afraid of allowing himself to 
+attempt something beyond his strength. However, since it is the time of 
+DURATION, it is possible for him to control his inner strength and so to 
+avoid excess. Cause for remorse then disappears.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"If a man remains at the mercy of moods of hope or fear aroused by the outer 
+world, he loses his inner consistency of character. Such inconsistency 
+invariably leads to distressing experiences. These humiliations often come 
+from an unforeseen quarter. Such experiences are not merely effects 
+produced by the external world, but logical consequences evoked by his own 
+nature.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"If we are in pursuit of game and want to get a shot at a quarry, we must set 
+about it in the right way. A man who persists in stalking game in a place 
+where there is none may wait forever without finding any. Persistence in 
+search is not enough. What is not sought in the right way is not found.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A woman should follow a man her whole life long, but a man should at all 
+times hold to what is his duty at the given moment. Should he persistently 
+seek to conform to the woman, it would be a mistake for him. Accordingly it 
+is altogether right for a woman to hold conservatively to tradition, but a  man 
+must always be flexible and adaptable and allow himself to be guided solely by 
+what his duty requires of him at the moment.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"There are people who live in a state of perpetual hurry without ever attaining
+inner composure. Restlessness not only prevents all thoroughness but actually
+becomes a danger if it is dominant in places of authority";
             Hexagram = 33;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Since the hexagram is the picture of something that is retreating, the lowest 
+line represents the tail and the top line the head. In a retreat it is 
+advantageous to be at the front. Here one is at the back, in immediate contact 
+with the pursuing enemy. This is dangerous, and under such circumstances 
+it is not advisable to undertake anything. Keeping still is the easiest way of 
+escaping from the threatening danger.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"
+Yellow is the color of the middle. It indicates that which is correct and in line 
+with duty. Oxhide is strong and not to be torn.
+
+  While the superior men retreat and the inferior press after them, the 
+inferior man represented here holds on so firmly and tightly to the superior 
+man that the latter cannot shake him off. And because he is in quest of what 
+is right an so strong in purpose, he reaches his goal. Thus the line confirms 
+what is said in the Judgment: ""In what is small"" —here equivalent to ""in the 
+inferior man"" — ""perseverance furthers.""";
+            WilhelmBaynesComments[Hexagram].Read3 = @"When it is time to retreat it is both unpleasant and dangerous to be held back, 
+because then one no longer has freedom of action. In such a case the only 
+expedient is to take into one's service, so to speak, those who refuse to let one 
+go, so that one may at least keep one's initiative and not fall helplessly under 
+their domination. But even with this expedient the situation is far from 
+satisfactory—for what can one hope to accomplish with such servants?";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In retreating the superior man is intent on taking his departure willingly and 
+in all friendliness. He easily adjusts his mind to retreat, because in retreating 
+he does not have to do violence to his convictions. The only one who suffers 
+is the inferior man from whom he retreats, who will degenerate when 
+deprived of the guidance of the superior man.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"It is the business of the superior man to recognize in time that the moment 
+for retreat has come. If the right moment is chosen, the retreat can be carried 
+out within the forms of perfect friendliness, without the necessity of 
+disagreeable discussions. Yet, for all the observance of amenities, absolute 
+firmness of decision is necessary if one is not to be led astray by irrelevant 
+considerations.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The situation is unequivocal. Inner detachment has become an established 
+fact, and we are at liberty to depart. When one sees the way ahead thus 
+clearly, free of all doubt, a cheerful mood sets in, and one chooses what is 
+right without further thought. Such a clear path ahead always leads to the 
+good.";
             Hexagram = 34;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The toes are in the lowest place and are ready to advance. So likewise great 
+power in lowly station is inclined to effect advance by force. This, if carried 
+further, would certainly lead to misfortune, and therefore by way of advice a 
+warning is added.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The premise here is that the gates to success are beginning to open. 
+Resistance gives way and we forge ahead. This is the point at which, only too 
+easily, we become the prey of exuberant self-confidence. This is why the 
+oracle says that perseverance (i.e., perseverance in inner equilibrium, without 
+excessive use of power) brings good fortune.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Making a boast of power leads to entanglements, just as a goat entangles its 
+horns when it butts against a hedge. Whereas an inferior man revels in 
+power when he comes into possession of it, the superior man never makes 
+this mistake. He is conscious at all times of the danger of pushing ahead 
+regardless of circumstances, and therefore renounces in good time the empty 
+display of force.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"If a man goes on quietly and perseveringly working at the removal of 
+resistances, success comes in the end. The obstructions give way and all 
+occasion for remorse arising from excessive use of power disappears.
+
+Such a man's power does not show externally, yet it can move heavy loads, 
+like a big cart whose real strength lies in its axle. The less that power is 
+applied outwardly, the greater its effect.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The goat is noted for hardness outwardly and weakness within. Now the 
+situation is such that everything is easy; there is no more resistance. One can 
+give up a belligerent, stubborn way of acting and will not have to regret it.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"If we venture too far we come to a deadlock, unable either to advance or to 
+retreat and whatever we do merely serves to complicate thing further. Such 
+obstinacy leads to insuperable difficulties. But if, realizing the situation, we 
+compose ourselves and decide not to continue, everything will right itself in 
+time.";
             Hexagram = 35;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"At a time when all elements are pressing for progress, we are still uncertain 
+whether in the course of advance we may not meet with a rebuff. Then the 
+thing to do is simply continue in what is right; in the end this will bring good 
+fortune. It may be that we meet with no confidence. In this case we ought not 
+to try to win confidence regardless of the situation, but should remain calm 
+and cheerful and refuse to be roused to anger. Thus we remain free of 
+mistakes.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Progress is halted; an individual is kept from getting in touch with the man 
+in authority with whom he has a connection. When this happens, he must 
+remain persevering, although he is grieved; then with a maternal gentleness 
+the man in question will bestow great happiness upon him. This happiness 
+comes to him-and is well deserved-because in this case mutual attraction does 
+not rest on selfish or partisan motives but on firm and correct principles.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"A man strives onward, in association with others whose backing encourages 
+him. This dispels any cause for regret over the fact that he does not have 
+enough independence to triumph unaided over every hostile turn of fate.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In times of progress it is easy for strong men in the wrong places to amass 
+great possessions. But such conduct shuns the light. And since times of 
+progress are inevitably brought to the light, perseverance in such action 
+always leads to danger.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The situation described here is that of one who, finding himself in an 
+influential position in a time of progress, remains gentle and reserved. He 
+might reproach himself for lack of energy in making the most of the 
+propitiousness of the time and obtaining all possible advantage. However, 
+this regret passes away. He must not take either loss or gain to heart; they are 
+minor considerations. What matters much more is the fact that in this way 
+he has assured himself of opportunities for successful and beneficent 
+influence. ";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Making progress with lowered horns-i.e., acting on the offensive-is 
+permissible, in times like those referred to here, only in dealing with the 
+mistakes of one's own people. Even then we must bear in mind that 
+proceeding on the offensive may always be dangerous. In this way we avoid 
+the mistakes that otherwise threaten, and succeed in what we set out to do. 
+On the other hand, perseverance in such over energetic behavior, especially 
+toward persons with whom there is no close connection, will lead to 
+humiliation.";
             Hexagram = 36;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"With grandiose resolve a man endeavors to soar above all obstacles, but thus 
+encounters a hostile fate. He retreats and evades the issue. The time is 
+difficult. Without rest, he must hurry along, with no permanent abiding 
+place. If he does not want to make compromises within himself, but insists 
+on remaining true to his principles, he suffers deprivation. Never the less he 
+has a fixed goal to strive for even though the people with whom he lives do 
+not understand him and speak ill of him.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Here the Lord of Light is in a subordinate place and is wounded by the Lord of 
+Darkness. But the injury is not fatal; it is only a hindrance. Rescue is still 
+possible. The wounded man gives no thought to himself; he thinks only of 
+saving the others who are also in danger. Therefore he tries with all his 
+strength to save all that can be saved. There is good fortune in thus acting 
+according to duty.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"It seems as if chance were at work. While the strong, loyal man is striving 
+eagerly and in good faith to create order, he meets the ringleader of the 
+disorder, as if by accident, and seizes him. Thus victory is achieved. But in 
+abolishing abuses one must not be too hasty.  This would turn out badly 
+because the abuses have been in existence so long.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"We find ourselves close to the commander of darkness and so discover his 
+mot secret thoughts. In this way we realize that there is no longer any hope of 
+improvement, and thus we are enabled to leave the scene of disaster before 
+the storm breaks.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Prince Chi lived at the court of the evil tyrant Chou Hsin, who, although not 
+mentioned by name, furnished the historical example on which this whole 
+situation is based. Prince Chi was a relative of the tyrant and could not 
+withdraw from the court; therefore he concealed his true sentiments and 
+feigned insanity. Although he was held a slave, he did not allow external 
+misery to deflect him from his convictions.
+
+  This provides a teaching for those who cannot leave their posts in times of 
+darkness. In order to escape danger, they need invincible perseverance of 
+spirit and redoubled caution in their dealings with the world.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Here the climax of the darkening is reached. The dark power at first held so 
+high a place that it could wound all who were on the side of good and of the 
+light. But in the end it perishes of its own darkness, for evil must itself fall at 
+the very moment when it has wholly overcome the good, and thus 
+consumed the energy to which it owed its duration. ";
             Hexagram = 37;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The family must form a well-defined unit within which each member knows 
+his place. From the beginning each child must be accustomed to firmly 
+established rules of order, before ever its will is directed to other things. If we 
+begin too late to enforce order, when the will of the child has already been 
+overindulged, the whims and passions, grown stronger with the years, offer 
+resistance and give cause for remorse. If we insist on order from the outset, 
+occasions for remorse may arise-in general social life these are unavoidable-
+but the remorse always disappears again, and everything rights itself. For 
+there is nothing easily avoided and more difficult to carry through than 
+""breaking a child's will.""";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The wife must always be guided by the will of the master of the house, be he 
+father, husband, or grown son. There, without having to look for them, she 
+has great and important duties.  She must attend to the nourishment of her 
+family and to the food for the sacrifice. IN this way she becomes the center of 
+the social and religious life of the family, and her perseverance in this 
+position brings good fortune to the whole house. 
+  In relation to general conditions, the counsel here is to seek nothing by 
+means of force, but quietly to confine oneself to the duties at hand.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"In the family the proper mean between severity and indulgence ought to 
+prevail. Too great severity toward one's own flesh and blood leads to 
+remorse. The wise thing is to build strong dikes within which complete 
+freedom of movement is allowed each individual. But in doubtful instances 
+too great severity, despite occasional mistakes, is preferable, because it 
+preserves discipline in the family, whereas too great weakness leads to 
+disgrace.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"It is upon the woman of the house that the well-being of the family depends. 
+Well-being prevails when expenditures and income are soundly balanced. 
+This leads to great good fortune. In the sphere of public life, this line refers to 
+the faithful steward whose measures further the general welfare.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A king is the symbol of a fatherly man who is richly endowed in mind. He 
+does nothing to make himself feared; on the contrary, the whole family can 
+trust him, because love governs their intercourse. His character of itself 
+exercises the right influence.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"In the last analysis, order within the family depends on the character of the 
+master of the house. If he cultivates his personality so that it works 
+impressively through the force of inner truth, all goes well with the family. 
+In a ruling position one must of his own accord assume responsibility.";
             Hexagram = 38;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Even in times when oppositions prevail, mistakes can be avoided, so that 
+remorse disappears. When opposition begins to manifest itself, a man must 
+not try to bring about unity by force, for by so doing he would only achieve 
+the contrary, just as a horse goes farther and farther away if one runs after it. 
+It it is one's won horse, one can safely let it go; it will come back of its own 
+accord. So too when someone who belongs with us is momentarily estranged 
+because of a misunderstanding, he will return of his own accord if we leave 
+matters to him. One the other hand, it is well to be cautious when evil men 
+who do not belong with us force themselves upon us, again as the result of a 
+misunderstanding. Here the important thing is to avoid mistakes. We must 
+not try to shake off these evil men by force; this would give rise to real 
+hostility. We must simply endure them. They will eventually withdraw of 
+their own accord.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"As a result of misunderstandings, it has become impossible for people who by 
+nature belong together to meet in the correct way. This being so, an accidental 
+meeting under informal circumstances may serve the purpose, provided 
+there is an inner affinity between them.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Often it seems tot a man as though everything were conspiring against him. 
+He sees himself checked and hindered in his progress, insulted and 
+dishonored. However, he must not let himself be misled; despite this 
+opposition, he must cleave to the man with whom he knows he belongs. 
+Thus, notwithstanding the bad beginning, the matter will end well.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"If a man finds himself in a company of people from whom he is separated by 
+an inner opposition, he becomes isolated. But if in such a situation a man 
+meets someone who fundamentally by the very law of his being, is kin to 
+him, and whom he can trust completely, he overcomes all the dangers of 
+isolation. His will achieves its aim, and he becomes free of faults.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Coming upon a sincere man, one fails to recognize him at first because of the 
+general estrangement. However, he bites his way through the wrappings that 
+are causing the separation. When such a companion thus reveals himself in 
+his true character, it is one's duty to go to meet him and to work with him.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"
+Here the isolation is due to misunderstanding; it is brought about not by 
+outer circumstances but by inner conditions. A man misjudges his best 
+friends, taking them to be as unclean as a dirty pig in and as dangerous as a 
+wagon full of devils. He adopts an attitude of defense. But in the end, 
+realizing his mistake, he lays aside the bow, perceiving that the other is 
+approaching with the best intentions for the purpose of close union. Thus the 
+tension is relieved. The union resolves the tension, just as falling rain 
+relieves the sultriness preceding a thunderstorm. All goes well, for just when 
+opposition reaches its climax it changes over to its antithesis.";
             Hexagram = 39;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"When one encounters an obstruction, the important thing is to reflect on 
+how best to deal with it. When threatened with danger, one should not strive 
+blindly to go ahead, for this only leads to complications. The correct thing is, 
+on the contrary, to retreat for the time being, not in order to give up the 
+struggle but to await the right moment for action.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"
+Ordinarily it is best to go around an obstacle and try to overcome it along the 
+line of least resistance. But there is one instance in which a man must go out 
+to meet the trouble, even though difficulty piles upon difficulty: this is when 
+the path of duty leads directly to it-in other words, when he cannot act of his 
+own volition but is duty bound to go and seek out danger in the service of a 
+higher cause. Then he may do it without compunction, because it is not 
+through any fault of his that he is putting himself in this difficult situation.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"While the preceding line shows the official compelled by duty to follow the 
+way of danger, this line shows the man who must act as father of a family or 
+as head of his kin. If he were to plunge recklessly in to danger, it would be a 
+useless act, because those entrusted to his care cannot get along by themselves. 
+But if he withdraws and turns back to his own, they welcome him with great 
+joy.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This too describes a situation that cannot be managed single-handed. In such 
+a case the direct way is not the shortest. If a person were to forge ahead on his 
+own strength and without the necessary preparations, he would not find the 
+support he needs and would realize too late that he has been mistaken in his 
+calculations, inasmuch as the conditions on which he hoped he could rely 
+would prove to be inadequate. In this case it is better, therefore, to hold back 
+for the time being and to gather together trustworthy companions who can be 
+counted upon for help in overcoming the obstructions.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Here we see a man who is called to help in an emergency. He should not seek 
+to evade the obstructions, no matter how dangerously they pile up before 
+him. But because he is really called to the task, the power of his spirit is strong 
+enough to attract helpers whom he can effectively organize, so that through 
+the well-directed co-operation of all participants the obstruction is overcome.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"This refers to a man who has already left the world and its tumult behind 
+him. When the time of obstructions arrives, it might seem that the simplest 
+thing for him to do would be to turn his back upon the world and take refuge 
+in the beyond. But this road is barred to him. He must not seek his own 
+salvation and abandon the world to its adversity. Duty calls him back once 
+more into the turmoil of life. Precisely because of his experience and inner 
+freedom, he is able to create something both great and complete that brings 
+good fortune. And it is favorable to see the great man in alliance with whom 
+one can achieve the work of rescue.";
             Hexagram = 40;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"In keeping with the situation, few words are needed. The hindrance is past, 
+deliverance has come. One recuperates in peace and keeps still. This is the 
+right thing to do in times when difficulties have been overcome.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The image is taken from the hunt. The hunter catches three cunning foxes 
+and receives a yellow arrow as a reward. The obstacles in public life are the 
+designing foxes who try to influence the ruler through flattery. They must be 
+removed before there can be any deliverance. But the struggle must not be 
+carried on with the wrong weapons. The yellow color points to measure and 
+mean in proceeding against the enemy; the arrow signifies the straight course. 
+If one devotes himself wholeheartedly to the task of deliverance, he develops 
+so much inner strength from his rectitude that it acts as a weapon against all 
+that is false and low.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This refers to a man who has come out of needy circumstances in to comfort 
+and freedom from want. If now, in the manner of an upstart, he tries to take 
+his ease in comfortable surroundings that do not suit his nature, he thereby 
+attracts robbers. If he goes on thus he is sure to bring disgrace upon himself. 
+Confucius says about this line:
+
+Carrying a burden on the back is the business of common man; a carriage is 
+the appurtenance of a man of rank. Now, when a common man uses the 
+appurtenance of man of rank, robbers plot to take it away from him. If a man 
+is insolent toward those above him and hard toward those below him, 
+robbers plot to attack him. Carelessness in guarding things tempts thieves to 
+steal. Sumptuous ornaments worn by a maiden are an enticement to rob her 
+of her virtue.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In times of standstill it will happen that inferior people attach themselves to a 
+superior man, and through force of daily habit they may grow very close to 
+him and become indispensable, just as the big toe is indispensable to the foot 
+because it makes walking easier. But when the time of deliverance draws 
+near, with its call to deeds, a man must free himself from such chance 
+acquaintances with whim he has no inner connection. For otherwise the 
+friends who share his views, on whom he could really rely and together with 
+whom he could accomplish something, mistrust him and stay away.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Times of deliverance demand inner resolve. Inferior people cannot be 
+driven off by prohibitions or any external means. If one desires to be rid of 
+them, he must first break completely with them in his own mind; they will 
+see for themselves that he is in earnest and will withdraw.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The hawk on a high wall is the symbol of a powerful inferior in a high 
+position who is hindering the deliverance. He withstands the force of inner 
+influences, because he is hardened in his wickedness. He must be forcibly 
+removed, and this requires appropriate means. Confucius says about this 
+line:
+
+The hawk is the object of the hunt; bow and arrow are the tools and means. 
+The marksman is man (who must make proper use of the means to his end). 
+The superior man contains the means in his own person. He bides his time 
+and then acts. Why then should not everything go well? He acts and is free. 
+Therefore all he has to do is to go forth, and he takes his quarry. This is how a 
+man fares who acts after he has made ready the means.";
             Hexagram = 41;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"It is unselfish and good when a man, after completing his own urgent tasks, 
+uses his strength in the service of others, and without bragging or making 
+much of it, helps quickly where help is needed. But the man in a superior 
+position who is thus aided must weigh carefully how much he can accept 
+without doing the helpful servant or friend real harm. Only where such 
+delicacy of feeling exists can one give oneself unconditionally and without 
+hesitation.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"A high-minded self-awareness and a consistent seriousness with no forfeit of 
+dignity are necessary if a man wants to be of service to others. He who throw 
+himself away in order to do the bidding of a superior diminishes his own 
+position without thereby giving lasting benefit to the other. This is wrong. 
+To render true service of lasting value to another, one must serve him 
+without relinquishing oneself.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"When there are three people together, jealousy arises. One of them will have 
+to go. Avery close bond is possible only between two people. But when one 
+man is lonely, he is certain to find a companion who complements him.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"A man's faults often prevent even well-disposed people from coming closer 
+to him. His faults are sometimes reinforced by the environment in which he 
+lives. But if in humility he can bring himself to the point of giving them up, 
+he frees his well-disposed friends from an inner pressure and causes them to 
+approach the more quickly, and there is mutual joy.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"If someone is marked out by fate for good fortune, it comes without fail. All 
+oracles-as for instance those that are read from the shells of tortoises-are 
+bound to concur in giving him favorable signs. He need fear nothing, 
+because his luck is ordained from on high.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"There are people who dispense blessings to the whole world. Every increase 
+in power that comes to them benefits the whole of mankind and therefore 
+does not bring decrease to others. Through perseverance and zealous work a 
+man wins success and finds helpers as they are needed. But what he 
+accomplishes is not a limited private advantage; it is a public good and 
+available to everyone.";
             Hexagram = 42;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"If great help comes to a man from on high, this increased strength must be 
+used to achieve something great for which he might otherwise never have 
+found energy, or readiness to take responsibility. Great good fortune is 
+produced by selflessness, and in bringing about great good fortune, he 
+remains free of reproach.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"A man brings about real increase by producing in himself the conditions for 
+it, that it, through receptivity to and love of the good. Thus the thing for 
+which he strives comes of itself, with the inevitability of natural law. Where 
+increase is thus in harmony with the highest laws of the universe, it cannot 
+be prevented by any constellation of accidents. But everything depends on his 
+not letting unexpected good fortune make him heedless; he must make it his 
+own through inner strength an steadfastness. Then he acquires meaning 
+before God and man, and can accomplish something for the good of the 
+world.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"A time of blessing and enrichment has such powerful effects that even events 
+ordinarily unfortunate must turn out to the advantage of those affected by 
+them. These persons become free of error, and by acting in harmony with 
+truth they gain such inner authority that they exert influence as if sanctioned 
+by the letter and seal.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"It is important that there should be men who mediate between leaders and 
+followers. These should be disinterested people, especially in times of 
+increase, since the benefit is to spread from the leader to the people. Nothing 
+of this benefit should be held back in a selfish way; it should really reach those 
+for whom it is intended. This sort of intermediary, who also exercises a good 
+influence on the leader, is especially important in times when it is a matter of 
+great undertakings, decisive for the future and requiring the inner assent of 
+all concerned.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"True kindness does not count upon nor ask about merit and gratitude but acts 
+from inner necessity. And such a truly kind heart finds itself rewarded in 
+being recognized, and thus the beneficent influence will spread unhindered.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"
+The meaning here is that through renunciation those in high place should 
+bring increase to those below. By neglecting this duty and helping no one, 
+they in turn lose the furhtering influence of others and soon find themselves 
+alone. In this way they invite attacks. An attitude not permanently in 
+harmony with the demands of the time will necessarily bring misfortune 
+with it. Confucius says about this line:
+
+		
+The superior man sets his person at rest before he moves; he composes his 
+mind before he speaks; he makes his relations firm before he asks for 
+something. By attending to these three matters, the superior man gains 
+complete security. But if a man is brusque in his movements, others will not 
+cooperate. If he is agitated in his word, they awaken no echo in others. If he 
+asks for something without having fist established relations, it will not be 
+given to him. If no one is with him, those who would harm him draw near.";
             Hexagram = 43;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"In times of resolute advance, the beginning is especially difficult. We feel 
+inspired to press forward but resistance is still strong; therefore we ought to 
+gauge our own strength and venture only so far as we can go with certainty of 
+success. To plunge blindly ahead is wrong, because it is precisely at the 
+beginning that an unexpected setback can have the most disastrous results.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Readiness is everything. Resolution is indissolubly bound up with caution. 
+If an individual is careful and keeps his wits about him, he need not become 
+excited or alarmed. If he is watchful at all times, even before danger is present, 
+he is armed when danger approaches and need not be afraid. The superior 
+man is on his guard against what is not yet in sight and on the alert for what 
+is not yet within hearing; therefore he dwells in the midst of difficulties as 
+thought hey did not exist. If a man develops his character, people submit to 
+him of their own accord. If reason triumphs, the passions withdraw of 
+themselves. To be circumspect and not to forget one's armor is the right way 
+to security.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Here we have a man in an ambiguous situation. While all others are 
+engaged in a resolute fight against all that is inferior, he alone has a certain 
+relationship with an inferior man. If he were to show strength outwardly 
+and turn against this man before the time is ripe, he would only endanger the 
+entire situation, because the inferior man would too quickly have recourse to 
+countermeasures. The task of the superior man becomes extremely difficult 
+here. He must be firmly resolved within himself and, while maintaining 
+association with the inferior man, avoid any participation in his evilness. He 
+will of course be misjudged. It will be thought that he belong to the party of 
+the inferior man. He will be lonely because no one will understand him. His 
+relations with the inferior man will sully him in the eyes of the multitude, 
+and they will turn against him, grumbling. But he can endure this lack of 
+appreciation and makes no mistake, because he remains true to himself.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Here a man is suffering from inner restlessness and cannot abide in his place. 
+He would like to push forward under any circumstances, but encounters 
+insuperable obstacles. Thus his situation entails an inner conflict. This is due 
+to the obstinacy with which he seeks to enforce his will.  If he would desist 
+from this obstinacy, everything would go well. But this advice, like so much 
+other good counsel, will be ignored. For obstinacy makes a man unable to 
+hear, for all that he has ears.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Weeds always grow back again and are difficult to exterminate. So too the 
+struggle against an inferior man in a high position demands firm resolution. 
+One has certain relations with him, hence there is danger that one may give 
+up the struggle as hopeless. But this must not be. One must go on resolutely 
+and not allow himself to be deflected from him course. Only in this way does 
+one remain free of blame.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Victory seems to have been achieved. There remains merely a remnant of 
+the evil resolutely to be eradicated as the time demands. Everything looks 
+easy. Just there, however, lies the danger. If we are not on guard, evil will 
+succeed in escaping by means of concealment, and when it has eluded us new 
+misfortunes will develop from the remaining seeds, for evil does not die 
+easily. So too in dealing with the evil in own's own character, one must go to 
+work with thoroughness. If out of carelessness anything were to be 
+overlooked, new evil would arise from it.";
             Hexagram = 44;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"If an inferior element has wormed its way in, it must be energetically checked 
+at once. By consistently checking it, bad effects can be avoided. If it is allowed 
+to take its course, misfortune is bound to result; the insignificance of that 
+which creeps in should not be a temptation to underrate it. A pig that is still 
+young and lean cannot rage around much, but after it has eaten its fill and 
+become strong, its true nature comes out if it has not previously been curbed.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The inferior element is not overcome by violence but is kept under gentle 
+control. Then nothing evil is to be feared. But care must be taken not to let it 
+come in contact with those further away, because once free it would unfold its 
+evil aspects unchecked.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"There is a temptation to fall in with the evil element offering itself-a very 
+dangerous situation. Fortunately circumstances prevent this; one would like 
+to do it, but cannot. This leads to painful indecision in behavior. But if we 
+gain clear insight into the danger of the situation, we shall at least avoid more 
+serious mistakes.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Insignificant people must be tolerated in order to keep them well disposed. 
+Then we can make use of them if we should need them. If we become 
+alienated from them and do not meet them halfway, they turn their backs on 
+us and are not at our disposal when we need them. But this is our own fault.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The melon, like the fish, is a symbol of the principle of darkness. It is sweet 
+but spoils easily and for this reason is protected with a cover of willow leaves. 
+This is a situation in which a strong, superior, well-poised man tolerates and 
+protects the inferiors in his charge.  He has the firm lines of order an beauty 
+within himself but he does not lay stress upon them. He does not bother his 
+subordinates with outward show or tiresome admonitions but leaves them 
+quite free, putting his trust in the transforming power of a strong and upright 
+personality. And behold! Fate is favorable. His inferiors respond to his 
+influence and fall to his disposition like ripe fruit.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"When a man has withdrawn from the world, its tumult often becomes 
+unbearable to him. There are many people who in a noble pride hold 
+themselves aloof from all that is low and rebuff it brusquely wherever it 
+comes to meet them. Such persons are reproached for being proud and 
+distant, but since active duties no longer hold them to the world, this does 
+not greatly matter. They know how to bear the dislike of the masses with 
+composure.";
             Hexagram = 45;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The situation is this:  People desire to gather around a leader to whom they 
+look up. But they are in a large group, by which they allow themselves to be 
+influenced, so that they waver in their decision. Thus they lack a firm center 
+around which to gather. But if expression is given to this need, and if they 
+call for help, one grasp of the hand from the leader is enough to turn away all 
+distress. Therefore they must not allow themselves to be led astray. It is 
+undoubtedly right that they should attach themselves to this leader.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"In the time of GATHERING TOGETHER, we should make no arbitrary choice 
+of the way. There are secret forces at work, leading together those who belong 
+together. We must yield to this attraction; then we make no mistakes. 
+Where inner relationships exist, no great preparations and formalities are 
+necessary. People understand one another forthwith, just as the Divinity 
+graciously accepts a small offering if it comes from the heart.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Often a man feels an urge to unite with others, but the individuals around 
+him have already formed themselves into a group, so that he remains 
+isolated. The whole situation proves untenable. Then he ought to choose 
+the way of progress, resolutely allying himself with a man who stands nearer 
+to the center of the group, and can help him to gain admission to the closed 
+circle. This is not a mistake, even though at first his position as an outsider is 
+somewhat humiliating.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This describes a man who gathers people around him in the name of his 
+ruler. Since he is not striving for any special advantages for himself but is 
+working unselfishly to bring about general unity, his work is crowned with 
+success, and everything becomes as it should be.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"When people spontaneously gather around a man, it is only a good. It gives 
+him a certain influence that can be altogether useful.. But of course there is 
+also the possibility that many may gather around him not because of a feeling 
+of confidence but merely because of his influential position. This is certainly 
+to be regretted. The only means of dealing with such people is to gain their 
+confidence through steadfastness an intensified, unswerving devotion to 
+duty. In this way secret mistrust will gradually be overcome, and there will be 
+no occasion for regret.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"It may happen that an individual would like to ally himself with another, but 
+his good intentions are misunderstood. Then he becomes sad and laments. 
+But this is the right course. For it may cause the other person to come to his 
+senses, so that the alliance that has been sought and so painfully missed is 
+after all achieved.";
             Hexagram = 46;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"This situation at the beginning of ascent. Just as wood draws strength for its 
+upward push from the root, which in itself is in the lowest place, so the 
+power to rise comes from this low and obscure station. But there is a spiritual 
+affinity with the rulers above, and this solidarity creates the confidence 
+needed to accomplish something.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Here a strong man is presupposed. It is true that he does not fit in with his 
+environment, inasmuch as he is too brusque and pays too little attention to 
+form. But as he is upright in character, he meets with response, and his lack 
+of outward form does no harm. Here uprightness is the outcome of sound 
+qualities of character, whereas in the corresponding line of the preceding 
+hexagram it is the result of innate humility.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"All obstructions that generally block progress fall away here. Things proceed 
+with remarkable ease. Unhesitatingly one follows this road, in order to profit 
+by one's success. Seen from without, everything seems to be in the best of 
+order. However, no promise of good fortune is added.  It is a question how 
+long such unobstructed success can last. But it is wise not to yield to such 
+misgivings, because they only inhibit one's power. Instead, the point is to 
+profit by the propitiousness of time.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Mount Ch'i is in the western China, the homeland of King Wên, whose son, 
+the Duke of Chou, added the words to the individual lines. The 
+pronouncement takes us back to a time when the Chou dynasty was coming 
+into power. At that time King Wên introduced his illustrious helpers to the 
+god of his native mountain, and they received their places in the halls of the 
+ancestors by the side of the ruler. This indicates a stage in which pushing 
+upward attains its goal. One acquires fame in the sight of gods and men, is 
+received into the circle of those who foster the spiritual life of the nation, and 
+thereby attains a significance that endures beyond time.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"When a man is advancing farther and farther, it is important for him not to 
+become intoxicated by success. Precisely when he experiences great success it 
+is necessary to remain sober and not to try to skip any stages; he must go on 
+slowly, step by step, as though hesitant. Only such calm, steady progress, 
+overleaping nothing, leads to the goal.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"He who pushes upward blindly deludes himself. He knows only advance, 
+not retreat. But this means exhaustion. In such a case it is important to be 
+constantly mindful that one must be conscientious and consistent and must 
+remain so. Only thus does one become free of blind impulse, which is always 
+harmful.";
             Hexagram = 47;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"When adversity befalls a man, it is important above all things for him to be 
+strong and to overcome the trouble inwardly. If he is weak, the trouble 
+overwhelms him. Instead of proceeding on his way, he remains sitting under 
+a bare tree and falls ever more deeply into gloom and melancholy. This 
+makes the situation only more and more hopeless. Such an attitude comes 
+from an inner delusion that he must by all means overcome.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"This pictures a state of inner oppression. Externally, all is well, one has meat 
+and drink. But one is exhausted by the commonplaces of life, and there 
+seems to be no way of escape. Then help comes from a high place. A prince-
+in ancient China princes wore scarlet knee bands- is in search of able helpers. 
+But there are still obstructions to be overcome. Therefore it is important to 
+meet these obstructions in the visible realm by offerings and prayer. To set 
+forth without being prepared would be disastrous, though not morally wrong. 
+Here a disagreeable situation must be overcome by patience of spirit.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This shows a man who is restless and indecisive in times of adversity. At 
+first he wants to push ahead, then he encounters obstructions that, it is true, 
+mean oppression only when recklessly dealt with. He butts his head against a 
+wall and in consequence feels himself oppressed by the wall. Then he leans 
+on things that have in themselves no stability and that are merely a hazard 
+for him who leans on them.  Thereupon he turns back irresolutely and 
+retires into his house, only to find, as a fresh disappointment, that his wife is 
+not there. Confucius says about this line: 
+
+If a man permits himself to be oppressed by something that ought not to 
+oppress him, his name will certainly be disgraced. If he leans on things upon 
+which one cannot lean, his life will certainly be endangered. For him who is 
+in disgrace and danger, the hour of death draws near; how can he then still 
+see his wife?";
+            WilhelmBaynesComments[Hexagram].Read4 = @"A well-to-do man sees the need of the lower classes and would like very 
+much to be of help. But instead of proceeding with speed and energy where 
+their is need, he begins in a hesitant and measured way. Then he encounters 
+obstructions. Powerful and wealthy acquaintances draw him into their circle; 
+he has to do as they do and cannot withdraw from them. Hence he finds 
+himself in great embarrassment. But the trouble is transitory. The original 
+strength of his nature offsets the mistake he has made, and the goal is 
+reached.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"An individual who has the good of mankind at heart is oppressed from 
+above and below (this is the meaning of the cutting off of nose an defeat). He 
+finds no help among the people whose duty it would be to aid in the work of 
+rescue (ministers wore purple knee bands). But little by little, things take a 
+turn for the better. Until that time, he should turn to God, firm in his inner 
+composure, and pray and offer sacrifice for the general well-being.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"A man is oppressed by bonds that can easily be broken.  The distress is 
+drawing to an end. But he is still irresolute; he is still influenced by the 
+previous condition and fears that he may have cause for regret if he makes a 
+move. But as soon as he grasps the situation, changes this mental attitude, 
+and makes a firm decision, he masters the oppression.";
             Hexagram = 48;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"If a man wanders around in swampy lowlands, his life is submerged in mud. 
+Such a man loses all significance for mankind. He who throws himself away 
+is no longer sought out by others. In the end no one troubles about him any 
+more.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The water itself is clear, but it is not being used. Thus the well is a place 
+where only fish will stay, and whoever comes to it, comes only to catch fish. 
+But the jug is broken, so that the fish cannot be kept in it.
+
+  This describes the situation of a person who possesses good qualities but 
+neglects them. No one bothers about him. As a result he deteriorates in 
+mind. He associates with inferior men and can no longer accomplish 
+anything worth while.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"An able man is available. He is like a purified well whose water is drinkable. 
+But no use is made of him. This is the sorrow of those who know him. One 
+wishes that the prince might learn about it; this would be good fortune for all 
+concerned.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"True, if a well is being lined with sone, it cannot be used while the work is 
+going on. But the work is not in vain; the result is that the water stays clear. 
+In life also there are times when a man must put himself in order. During 
+such a time he can do nothing for others, but his work is nonetheless 
+valuable, because by enhancing his powers and abilities through inner 
+development, he can accomplish all the more later on.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A well that is fed by a spring of living water is a good well. A man who has 
+virtues like a well of this sort is born to be a leader and savior of men, for he 
+has the water of life. Nevertheless, the character for ""good fortune"" is left out 
+here. The all-important thing about a well is that its water be drawn. The 
+best water is only a potentiality for refreshment as long as it is not brought up. 
+So too with leaders of mankind: it is all-important that one should drink 
+from the spring of their words and translate them into life.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The well is there fore all. No one is forbidden to take water from it. No 
+matter how many come, all find what they need, for the well is dependable. It 
+has a spring and never runs dry. Therefore it is a great blessing to the whole 
+land. The same is true of the really great man, whose inner wealth is 
+inexhaustible; the more that people draw from him, the greater his wealth 
+becomes.";
             Hexagram = 49;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Changes ought to be undertaken only when there is nothing else to be done. 
+Therefore at first the utmost restraint is necessary. One must becomes firm in 
+one's mind, control oneself-yellow is the color of the means, and the cow is 
+the symbol of docility-and refrain from doing anything for the time being, 
+because any premature offensive will bring evil results.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"When we have tried in every other way to bring about reforms, but without 
+success, revolution becomes necessary. But such a thoroughgoing upheaval 
+must be carefully prepared. There must be available a man who has the 
+requisite abilities and who possesses public confidence. To such a man we 
+may well turn. This brings good fortune and is not a mistake. The first thing 
+to be considered is our inner attitude toward the new condition that will 
+inevitably come. We have to go out to meet it, as it were. Only in this way 
+can it be prepared for.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"When change is necessary, there are two mistakes to be avoided. One lies in 
+excessive haste and ruthlessness, which bring disaster. The other lies in 
+excessive hesitation and conservatism, which are also dangerous. Not every 
+demand for change in the existing order should be heeded. On the other 
+hand, repeated and well-founded complaints should not fail of a hearing. 
+When talk of change has come to one's ears three times, and has been 
+pondered well, he may believe and acquiesce in it. Then he will meet with 
+belief and will accomplish something.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Radical changes require adequate authority. A man must have inner strength 
+as well as influential position. What he does must correspond with a higher 
+truth and must not spring from arbitrary or petty motives; then it brings great 
+good fortune. If a revolution is not founded on such inner truth, the results 
+are bad, and it has no success. For in the end men will support only those 
+undertakings which they feel instinctively to be just.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A tigerskin, with its highly visible black stripes on a yellow ground, shows its 
+distinct pattern from afar. It is the same with a revolution brought about by a 
+great man: large, clear guiding lines become visible, understandable to 
+everyone. Therefore he need not first consult the oracle, for he wins the 
+spontaneous support of the people.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"After the large and fundamental problems are settled, certain minor reforms, 
+and elaborations of these, are necessary. These detailed reforms may be 
+likened to the equally distinct but relatively small marks of the panther's coat. 
+As a consequence, a change also takes place among the inferior people. In 
+conformity with the new order, they likewise ""molt."" This molting, it is true, 
+does not go very deep, but that is not to be expected. We must be satisfied 
+with the attainable. If we should go too far and try to achieve too much, it 
+would lead to unrest and misfortune. For the object of a great revolution is 
+the attainment of clarified, secure conditions ensuring a general stabilization 
+on the basis of what is possible at the moment.";
             Hexagram = 50;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"If a ting is turned upside down before being used, no harm is done-on the 
+contrary, this clears it of refuse. A concubine's position is lowly, but because 
+she has a son she comes to be honored.
+
+  These two metaphors express the idea that in a highly developed 
+civilization, such as that indicated by this hexagram, every person of good 
+will can in some way or other succeed. No matter how lowly he may be, 
+provided he is ready to purify himself, he is accepted. He attains a station in 
+which he can prove himself fruitful in accomplishment, and as a result he 
+gains recognition.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"In a period of advanced culture, it is of the greatest importance that one 
+should achieve something significant. If a man concentrates on such real 
+undertakings, he may indeed experience envy and disfavor, but that is not 
+dangerous. The more he limits himself to his actual achievements, the less 
+harm the envious inflict on him.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"The handle is the means for lifting up the ting. If the handle is altered, the 
+ting cannot be lifted up and used, and, sad to say, the delicious food in it, such 
+as pheasant fat, cannot be eaten by anyone.
+
+  This describes a man who, in a highly evolved civilization, finds himself in 
+a place where no one notices or recognizes him. This is a severe block to his 
+effectiveness. All of his good qualities and gifts of mind thus needlessly go to 
+waste. But if he will only see to it that he is possessed of something truly 
+spiritual, the time is bound to come, sooner or later, when the difficulties will 
+be resolved and all will go well. The fall of rain symbolizes here, as in other 
+instances, release of tension.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"
+A man has a difficult and responsible task to which he is not adequate. 
+Moreover, he does not devote himself to it with all his strength but goes 
+about with inferior people; therefore the execution of the work fails. In this 
+way he also incurs personal opprobrium.
+
+  Confucius says about this line:  ""Weak character coupled with honored 
+place, meager knowledge with large plans, limited powers with heavy 
+responsibility, will seldom escape disaster.""";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Here we have, in a ruling position, a man who is approachable and modest in 
+nature. As a result of this attitude he succeeds in finding strong and able 
+helpers who complement and aid him in his work. Having achieved this 
+attitude, which requires constant self-abnegation, it is important for him to 
+hold to it and not to let himself be led astray.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"In the preceding line the carrying rings are described as golden, to denote their 
+strength; here they are said to be of jade. Jade is notable for its combination of 
+hardness with soft luster. This counsel, in relation to the man who is open to 
+it, works greatly to his advantage. Here the counsel is described in relation to 
+the sage who imparts it. In imparting it, he will be mild and pure, like 
+precious jade. Thus the work finds favor in the eyes of the Deity, who 
+dispenses great good fortune, and becomes pleasing to men, wherefore all 
+goes well. ";
             Hexagram = 51;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The fear and trembling engendered by shock come to an individual at first in 
+such a way that he sees himself placed at a disadvantage as against others. But 
+this is only transitory. When the ordeal is over, he experiences relief, and 
+thus the very terror he had to endure at the outset brings good fortune in the 
+long run.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"This pictures a situation in which a shock endangers a man and he suffers 
+great losses. Resistance would be contrary to the movement of the time and 
+for this reason unsuccessful. Therefore he must simply retreat to heights 
+inaccessible to the threatening forces of danger. He must accept his loss of 
+property without worrying too much about it. When the time of shock and 
+upheaval that has robbed him of his possessions has passed, he will get them 
+back again without going in pursuit of them.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"There are three kinds of shock-the shock of heaven, which is thunder, the 
+shock of fate, and, finally, the shock of the heart. The present hexagram refers 
+less to inner shock than to the shock of fate. In such times of shock, presence 
+of mind is all too easily lost: the individual overlooks all opportunities for 
+action and mutely lets fate take its course. But if he allows the shocks of fate 
+to induce movement within his mind, he will overcome these external blows 
+with little effort.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Movement within the mind depends for its success partly on circumstances. 
+If there is neither a resistance that might be vigorously combated, nor yet a 
+yielding that permits of victory-if, instead, everything is tough and inert like 
+mire-movement is crippled.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"This is a case not of a single shock but of repeated shocks with no breathing 
+space between. Nonetheless, the shock causes no loss, because one takes care 
+to stay in the center of movement and in this way to be spared the fate of 
+being helplessly tossed hither and thither.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"When inner shock is at its height, it robs a man of reflection and clarity of 
+vision. In such a state of shock it is of course impossible to act with presence 
+of mind. Then the right thing is to keep still until composure and clarity are 
+restored. But this a man can do only when he himself is not yet infected by 
+the agitation, although its disastrous effects are already visible in those 
+around him. If he withdraws from the affair in time, he remains free of 
+mistakes and injury. But his comrades, who no longer heed any warning, 
+will in their excitement certainly be displeased with him. However, he must 
+not take this into account.";
             Hexagram = 52;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Keeping the toes still means halting before one has even begun to move. The 
+beginning is the time of few mistakes. At that time one is still in harmony 
+with primal innocence. Not yet influenced by obscuring interests and desires, 
+one sees things intuitively as they really are. A man who halts at the 
+beginning, so long as he has not yet abandoned the truth, finds the right way. 
+But persisting firmness is needed to keep one from drifting irresolutely.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The leg cannot move independently; it depends on the movement of the 
+body. If a leg is suddenly stopped while the whole body is in vigorous 
+motion, the continuing body movement will make one fall.
+
+  The same is true of a man who serves a master stronger than himself. He is 
+swept along, and even though he may himself halt on the path of 
+wrongdoing, he can no longer check the other in his powerful movement. 
+Where the master presses forward, the servant, no matter how good his 
+intentions, cannot save him.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"This refers to enforced quiet. The restless heart is to be subdued by forcible 
+means. But fire when it is smothered changes into acrid smoke that 
+suffocates as it spreads.
+
+  Therefore, in exercises in meditation and concentration, one ought not to 
+try to force results. Rather, calmness must develop naturally out of a state of 
+inner composure. If one tries to induce calmness by means of artificial 
+rigidity, meditation will lead to very unwholesome results.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"As has been pointed out above in the comment on the Judgment, keeping the 
+back at rest means forgetting the ego. This is the highest stage of rest. Here 
+this stage has not yet been reached: the individual in this instance, though 
+able to keep the ego, with its thoughts and impulses, in a state of rest, is not 
+yet quite liberated from its dominance. Nonetheless, keeping the heart at rest 
+is an important function, leading in the end to the complete elimination of 
+egotistic drives. Even though at this point one does not yet remain free from 
+all the dangers of doubt and unrest, this frame of mind is not a mistake, as it 
+leads ultimately to that other, higher level.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"A man in a dangerous situation, especially when he is not adequate to it, is 
+inclined to be very free with talk and presumptuous jokes. But injudicious 
+speech easily leads to situations that subsequently give much cause for regret. 
+However, if a man is reserved in speech, his words take ever more definite 
+form, and every occasion for regret vanishes.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"This marks the consummation of the effort to attain tranquillity. One is at 
+rest, not merely in a small, circumscribed way in regard to matters of detail, 
+but one has also a general resignation in regard to life as a whole, and this 
+confers peace and good fortune in relation to every individual matter.";
             Hexagram = 53;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"All the individual lines in this hexagram symbolize the gradual flight of the 
+wild goose. The wild goose is the symbol of conjugal fidelity, because it is 
+believed that this bird never takes another mate after the death of the first.
+
+  The initial line suggests the first resting place in the flight of water birds 
+from the water to the heights. The shore is reached. The situation is that of a 
+lonely young man who is just starting out to make his way in life. Since no 
+one comes to help him, his first steps are slow and hesitant, and he is 
+surrounded by danger. Naturally he is subjected to much criticism. But these 
+very difficulties keep him from being too hasty, and his progress is successful.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The cliff is a safe place on shore. The development has gone a step further. 
+The initial insecurity has been overcome, and a safe position in life has been 
+found, giving one enough to live on. This first success, opening up a path to 
+activity, brings a certain joyousness of mood, and one goes to meet the future 
+reassured.
+
+  It is said of the wild goose that it calls to its comrades whenever it finds 
+food; this is the symbol of peace and concord in good fortune. A man does 
+not want to keep his good luck for himself only, but is ready to share it with 
+others.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"The high plateau is dry and unsuitable for the wild goose. If it goes there, it 
+has lost its way and gone too far. This is contrary to the law of development.
+
+  It is the same in human life. If we do not let things develop quietly but 
+plunge of our own choice too rashly into a struggle, misfortune results. A 
+man jeopardizes his own life, and his family perishes thereby. However, this 
+is not all necessary; it is only the result of transgressing the law of natural 
+development. If one does not willfully provoke a conflict, but confines 
+himself to vigorously maintaining his own position and to warding off 
+unjustified attacks, all goes well.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"A tree is not a suitable place for a wild goose. But if it is clever, it will find a 
+flat branch on which it can get a footing. A man's life too, in the course of its 
+development, often brings him into inappropriate situations, in which he 
+finds it difficult to hold his own without danger. Then it is important to be 
+sensible and yielding. This enables him to discover a safe place in which life 
+can go on, although he may be surrounded by danger.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The summit is a high place. In a high position one easily becomes isolated. 
+One is misjudged by the very person on whom one is dependent-the woman 
+by her husband, the official by his superior. This is the work of deceitful 
+persons who have wormed their way in. The result is that relationships 
+remain sterile, and nothing is accomplished. But in the course of further 
+development, such misunderstandings are cleared away, and reconciliation is 
+achieved after all.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Here life comes to its end. A man's work stands completed. The path rises 
+high toward heaven, like the flight of wild geese when they have left the 
+earth far behind. There they fly, keeping to the order of their flight in strict 
+formation. And if their feathers fall, they can serve as ornaments in the 
+sacred dance pantomimes performed in the temples. Thus the life of a man 
+who has perfected himself is a bright light for the people of earth, who look 
+up to him as an example.";
             Hexagram = 54;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The princess of ancient China maintained a fixed order of rank among the 
+court ladies, who were subordinated to the queen as are younger sisters to the 
+eldest. Frequently they came from the family of the queen, who herself led 
+them to her husband.
+
+  The meaning is that a girl entering a family with the consent of the wife 
+will not rank outwardly as the equal of the latter but will withdraw modestly 
+into the background. However, if she understands how to fit herself into the 
+pattern of things, her position will be entirely satisfactory, and she will feel 
+sheltered in the love of the husband to whom she bears children.
+
+  The same meaning is brought out in the relationships between officials. A 
+man may enjoy the personal friendship of a prince and be taken into his 
+confidence. Outwardly this man must keep tactfully in the background 
+behind the official ministers of state, but, although he is hampered by this 
+status, as if he were lame, he can nevertheless accomplish something through 
+the kindliness of his nature.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Here the situation is that of a girl married to a man who has disappointed 
+her. Man and wife ought to work together like a pair of eyes. Here the girl is 
+left behind in loneliness; the man of her choice either has become unfaithful 
+or has died. But she does not lost the inner light of loyalty. Thought the 
+other eye is gone, she maintains her loyalty even in loneliness.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Here the situation is that of a girl married to a man who has disappointed 
+her. Man and wife ought to work together like a pair of eyes. Here the girl is 
+left behind in loneliness; the man of her choice either has become unfaithful 
+or has died. But she does not lost the inner light of loyalty. Thought the 
+other eye is gone, she maintains her loyalty even in loneliness.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"The girl is virtuous. She does not wish to throw herself away, and allows the 
+customary time for marriage to slip by. However, there is no harm in this; 
+she is rewarded for her purity and, even though belatedly, finds the husband 
+intended for her.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The sovereign I is T'ang the Completer. This ruler decreed that the imperial 
+princesses should be subordinated to their husbands in the same manner as 
+other women (cf. Hexagram 11, six in the fifth place). The emperor does not 
+wait for a suitor to woo his daughter but gives her in marriage when he sees 
+fit. Therefore it is in accord with custom for the girl's family to take the 
+initiative here.
+
+  We see here a girl of aristocratic birth who marries a man of modest 
+circumstances and understands how to adapt herself with grace to the new 
+situation. She is free of all vanity of outer adornment, and forgetting her rank 
+in her marriage, takes a place below that of her husband, just as the moon, 
+before it is quite full, does not directly face the sun.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"At the sacrifice to the ancestors, the woman had to present harvest offerings 
+in a basket, while the man slaughtered the sacrificial animal with his own 
+hand. Here the ritual is only superficially fulfilled; the woman takes an 
+empty basket and the man stabs a sheep slaughtered beforehand-solely to 
+preserve the forms. This impious, irreverent attitude bodes no good for a 
+marriage.";
             Hexagram = 55;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"To bring about a time of abundance, a union of clarity with energetic 
+movement is needed. Two individuals possessed of these two attributes are 
+suited to each other, and even if they spend an entire cycle of time together 
+during the period of abundance, it will not be too long, nor is it a mistake. 
+Therefore one may go forth, in order to make one's influence felt; it will meet 
+with recognition.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"It often happens that plots and party intrigues, which have the darkening 
+effect of an eclipse of the sun, come between a ruler intent on great 
+achievement and the man who could effect great undertakings. Then, 
+instead of the sun, we see the northern stars in the sky. The ruler is 
+overshadowed by a party that has usurped power. If a man at such a time 
+were to try to take energetic measures, he would encounter only mistrust and 
+envy, which would prohibit all movement. The essential thing then is to 
+hold inwardly to the power of truth, which in the end is so strong that it 
+exerts an invisible influence on the ruler, so that all goes well.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"The image is that of a progressive covering over of the sun.  Here the eclipse 
+reaches totality, therefore even the small stars can be seen at noon.
+
+  In the sphere of social relationships, this means that the prince is now so 
+eclipsed that even the most insignificant persons can push themselves into 
+the foreground. This makes it impossible for an able man, though he might 
+be the right hand of the ruler, to undertake anything. It is as though his arm 
+were broken, but he is not to blame for being thus hindered in action.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Here the darkness is already decreasing, therefore interrelated elements come 
+together. Here too the complement must be found-the necessary wisdom to 
+complement joy of action. Then everything will go well. The 
+complementary factor postulated here is the reverse of the one in the first 
+line. In the latter, wisdom is to be complemented by energy, while here 
+energy is complemented by wisdom.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The ruler is modest and therefore open to the counsel of able men. Thus he 
+is surrounded by men who suggest to him the lines of action. This brings 
+blessing, fame, and good fortune to him and all the people.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"This describes a man who because of his arrogance and obstinacy attains the 
+opposite of what he strives for. He seeks abundance and splendor for his 
+dwelling. He wishes at all odds to be master in his house, which so alienates 
+his family that in the end he finds himself completely isolated.";
             Hexagram = 56;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A wanderer should not demean himself or busy himself with inferior things 
+he meets with along the way. The humbler and more defenseless his 
+outward position, the more should he preserve his inner dignity. For a 
+stranger is mistaken if he hopes to find a friendly reception through lending 
+himself to jokes and buffoonery. The result will be only contempt and 
+insulting treatment.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"The wanderer her described is modest and reserved. He does not lose touch 
+with his inner being, hence he finds a resting place. In the outside world he 
+does not lose the liking of other people, hence all persons further him, so that 
+he can acquire property. Moreover, he wins the allegiance of a faithful and 
+trustworthy servant-a thing of inestimable value to a wanderer.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"A truculent stranger does not know how to behave properly. He meddles in 
+affairs and controversies that do not concern him; thus he loses his resting 
+place. He treats his servant with aloofness and arrogance; thus he loses the 
+man's loyalty. When a stranger in a strange land has no one left on whom he 
+can rely, the situation becomes very dangerous.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"This describes a wanderer who knows how to limit his desires outwardly, 
+though he is inwardly strong and aspiring. Therefore he finds at least a place 
+of shelter in which he can stay. He also succeeds in acquiring property, but 
+even with this he is not secure. He must be always on guard, ready to defend 
+himself with arms. Hence he is not at ease. He is persistently conscious of 
+being a stranger in a strange land.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Traveling statesman were in the habit of introducing themselves to local 
+princes with the gift of a pheasant, killing it at the first shot. Thus he finds 
+friends who praise and recommend him, and in the end the prince accepts 
+him and confers an office upon him.
+
+  Circumstances often cause a man to seek a home in foreign parts. If he 
+knows how to meet the situation and how to introduce himself in the right 
+way, he may find a circle of friends and a sphere of activity even in a strange 
+country.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The picture of a bird whose nest burns up indicates loss of one's resting place. 
+This misfortune may overtake the bird if it is heedless and imprudent when 
+building its nest. It is the same with a wanderer. If he lets himself go, 
+laughing and jesting, and forgets that he is a wanderer, he will later have 
+cause to weep and lament. For if through carelessness a man loses his cow-
+i.e., his modesty and adaptability-evil will result.";
             Hexagram = 57;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"In born gentleness is often carried to the point of indecisiveness. One does 
+not feel strong enough to advance resolutely. A thousand doubts crop up; one 
+is, however, not minded to withdraw but drifts indecisively to and fro. In 
+such a situation, a military decisiveness is the proper thing, so that one 
+resolutely does what order demands. Resolute discipline is far better than 
+irresolute license.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"At times one has to deal with hidden enemies, intangible influences that 
+slink into dark corners and from this hiding affect people by suggestion. In 
+instances like this, it is necessary to trace these things back to the most secret 
+recesses, in order to determine the nature of the influences to be dealt with. 
+This is the task of the priests; removing the influences is the task of the 
+magicians. The very anonymity of such plotting requires an especially 
+vigorous and indefatigable effort, but this is well worth while. For when such 
+elusive influences are brought into the light and branded, they lose their 
+power over people.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Penetrating reflection must not be pushed too far, lest it cripple the power of 
+decision. After a matter has been thoroughly pondered, it is essential to form 
+a decision and to act. Repeated deliberation brings fresh doubts and scruples, 
+and thereby humiliation, because one shows oneself unable to act.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"When a responsible position and accumulated experience lead one to 
+combine innate modesty with energetic action, great success is assured. The 
+three kinds of animals referred to served for offerings to the gods, for feasting 
+guests, and for everyday consumption. When the catch answered all three 
+purposes, the hunt was considered especially successful.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"In the situation described in Ku, WORK ON WHAT HAS BEEN SPOILED 
+(18), an entirely new point of departure must be set up, whereas here it is only 
+a question of reforms. The beginning has not been good, but the moment has 
+been reached when a new direction can be taken. Change and improvement 
+are called for. Such steps must be undertaken with steadfastness, that is, with 
+a firm and correct attitude of mind; then they will succeed, and remorse will 
+disappear. But it must be remembered that such improvements require 
+careful consideration. Before a change is made, it must be pondered over 
+again and again. After the change is made, it is necessary to note carefully for 
+some time after how the improvements bear the test of actuality. Such 
+careful work is accompanied by good fortune.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"A man's understanding is sufficiently penetrating. He follows up injurious 
+influences into the most secret corners. But he no longer has the strength to 
+combat them decisively. In this case any attempt to penetrate into the 
+personal domain of darkness would only bring harm.";
             Hexagram = 58;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A quiet, wordless, self-contained joy, desiring nothing from without and 
+resting content with everything, remains free of all egotistic likes and dislikes. 
+In this freedom lies good fortune, because it harbors the quiet security of a 
+heart fortified within itself.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"We often find ourselves associating with inferior people in whose company 
+we are tempted by pleasures that are inappropriate for the superior man. To 
+participate in such pleasures would certainly bring remorse, for a superior 
+man can find no real satisfaction in low pleasures. When, recognizing this, a 
+man does not permit his will to swerve, so that he does not find such ways 
+agreeable, not even dubious companions will venture to proffer any base 
+pleasures, because he would not enjoy them. Thus every cause for regret is 
+removed.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"True joy must spring from within. But if one is empty within and wholly 
+given over to the world, idle pleasures come streaming in from without. 
+This is what many people welcome as diversion. Those who lack inner 
+stability and therefore need amusement, will always find opportunity of 
+indulgence. They attract external pleasures by the emptiness of their natures. 
+Thus they lose themselves more and more, which of course has bad results.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Often a man finds himself weighing the choice between various kinds of 
+pleasures, and so long as he has not decided which kind he will choose, the 
+higher or the lower, he has no inner peace. Only when he clearly recognizes 
+that passion brings suffering, can he make up his mind to turn away from the 
+lower pleasures and to strive for the higher. Once this decision is sealed, he 
+finds true joy and peace, and inner conflict is overcome.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Dangerous elements approach even the far best of men. If a man permits 
+himself to have anything to do with them, their disintegrating influence acts 
+slowly but surely, and inevitable brings dangers in its train. But if he 
+recognizes the situation and can comprehend the danger, he knows how to 
+protect himself and remains unharmed.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"A vain nature invites diverting pleasures and must suffer accordingly (cf. the 
+six in the third place). If a man is unstable within, the pleasures of the world 
+that he does not shun have so powerful an influence that he is swept along by 
+them. Here it is no longer a question of danger, of good fortune or 
+misfortune. He has given up direction of his own life, and what becomes of 
+him depends upon chance and external influences.";
             Hexagram = 59;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"It is important that disunion should be overcome at the outset, before it has 
+become complete-that the clouds should be dispersed before they have 
+brought storm and rain. At such times when hidden divergences in temper 
+make themselves felt and lead to mutual misunderstandings we must take 
+quick and vigorous action to dissolve the misunderstandings and mutual 
+distrust.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"When an individual discovers within himself the beginnings of alienation 
+from others, of misanthropy and ill humor, he must set about dissolving 
+these obstructions. He must rouse himself inwardly, hasten to that which 
+supports him. Such support is never found in hatred, but always in a 
+moderate and just judgment of men, linked with good will. If he regains this 
+unobstructed outlook on humanity, while at the same time all saturnine ill 
+humor is dissolved, all occasion for remorse disappears.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Under certain circumstances, a man's work may become so difficult that he 
+can no longer think of himself. He must set aside all personal desires and 
+disperse whatever the self gathers about it to serve as a barrier against others. 
+Only on the basis of great renunciation can he obtain the strength for great 
+achievements. By setting his goal in a great task outside himself, he can 
+attain this standpoint.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"When we are working at a task that affects the general welfare, we must leave 
+all private friendships out of account. Only by rising above party interests can 
+we achieve something decisive. He who has the courage thus to forego what 
+is near wins what is afar. But in order to comprehend this standpoint, one 
+must have a wide view of the interrelationships of life, such as only unusual 
+men attain.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"In times of general dispersion and separation, a great idea provides a focal 
+point for the organization of recovery. Just as an illness reaches its crisis in a 
+dissolving sweat, so a great stimulating idea is a true salvation in times of 
+general deadlock. It gives the people a rallying point-a man in a ruling 
+position who can dispel misunderstandings.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The idea of the dissolving of a man's blood means the dispersion of that 
+which might lead to bloodshed and wounds, i.e., avoidance of danger. But 
+here the thought is not that a man avoids difficulties for himself alone, but 
+rather that he rescues his kin-helps them to get away before danger comes, or 
+to keep at a distance from an existing danger, or to find a way out of a danger 
+that is already upon them. In this way he does what is right.";
             Hexagram = 60;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"Often a man who would like to undertake something finds himself 
+confronted by insurmountable limitations. Then he must know where to 
+stop. If he rightly understands this and does not go beyond the limits set for 
+him, he accumulates an energy that enables him, when the proper time 
+comes, to act with great force. Discretion is of prime importance in preparing 
+the way for momentous things. Concerning this, Confucius says:
+
+Where disorder develops, words are the first steps. If the prince is not discreet, 
+he loses his servant. If the servant is not discreet he loses his life. If 
+germinating things are not handled with discretion, the perfecting of them is 
+impeded. Therefore the superior man is careful to maintain silence and does 
+not go forth.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"When the time for action has come, the moment must be quickly seized. Just 
+as water first collects in a lake without flowing out, yet is certain to find an 
+outlet when the lake is full, so it is in the life of man. It is a good thing to 
+hesitate so long as the time for action has not come, but no longer. Once the 
+obstacles to action have been removed, anxious hesitation is a mistake that is 
+bound to bring disaster, because one misses one's opportunity.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"If an individual is bent only on pleasures and enjoyment, it is easy for him to 
+lose his sense of the limits that are necessary. If he gives himself over to 
+extravagance, he will have to suffer the consequences, with accompanying 
+regret. He must not seek to lay the blame on others. Only when we realize 
+that our mistakes are of our own making will such disagreeable experiences 
+free us of errors.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Every limitation has its value, but a limitation that requires persistent effort 
+entails a cost of too much energy. When, however, the limitation is a natural 
+one (as for example, the limitation by which water flows only downhill), it 
+necessarily leads to success, for then it means a saving of energy. The energy 
+that otherwise would be consumed in a vain struggle with the object, is 
+applied wholly to the benefit of the matter in hand, and success is assured.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The limitation must be carried out in the right way if it is to be effective. If we 
+seek to impose restrictions on others only, while evading them ourselves, 
+these restrictions will always be resented and will provoke resistance. If, 
+however, a man in a leading position applies the limitation first to himself, 
+demanding little from those associated with him, and with modest means 
+manages to achieve something, good fortune is the result. Where such an 
+example occurs, it meets with emulation, so that whatever is undertaken 
+must succeed.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"If one is too severe in setting up restrictions, people will not endure them. 
+The more consistent such severity, the worse it is, for in the long run a 
+reaction is unavoidable. In the same way, the tormented body will rebel 
+against excessive asceticism. On the other hand, although ruthless severity is 
+not to be applied persistently and systematically, there may be times when it si 
+the only means of safeguarding against guilt and remorse. In such situations 
+ruthlessness toward oneself is the only means of saving one's soul, which 
+otherwise would succumb to irresolution and temptation.";
             Hexagram = 61;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"The force of inner truth depends chiefly on inner stability and preparedness. 
+From this state of mind springs the correct attitude toward the outer world. 
+But if a man should try to cultivate secret relationships of a special sort, it 
+would deprive him of his inner independence. The more reliance he places 
+on the support of others, the more uneasy and anxious he will become as to 
+whether these secret ties are really tenable. In this way inner peace and the 
+force of inner truth are lost.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"This refers to the involuntary influence of a man's inner being upon persons 
+of kindred spirit. The crane need not show itself on a high hill. It may be 
+quite hidden when it sounds its call; yet its young will hear its not, will 
+recognize it and give answer. Where there is a joyous mood, there a comrade 
+will appear to share a glass of wine.
+
+  This is the echo awakened in men through spiritual attraction. Whenever 
+a feeling is voiced with truth and frankness, whenever a deed is the clear 
+expression of sentiment, a mysterious and far-reaching influence is exerted. 
+At first it acts on those who are inwardly receptive. But the circle grows larger 
+and larger. The root of all influence lies in one's own inner being: given true 
+and vigorous expression in word and deed, its effect is great. The effect is but 
+the reflection of something that emanates from one's own heart. Any 
+deliberate intention of an effect would only destroy the possibility of 
+producing it. Confucius says about this line:
+
+The superior man abides in his room. If his words are well spoken, he meets 
+with assent at a distance of more than a thousand miles. How much more 
+then from near by! If the superior man abides in his room and his words are 
+not well spoken, he meets with contradiction at a distance of more than a 
+thousand miles. How much more then from near by! Words go forth from 
+one's own person and exert their influence on men. Deeds are born close at 
+hand and become visible far away. Words and deeds are the hinge and 
+bowspring of the superior man. As hinge and bowspring move, they bring 
+honor or disgrace. Through words and deeds the superior man moves 
+heaven and earth . Must one not, then, be cautious?";
+            WilhelmBaynesComments[Hexagram].Read3 = @"Here the source of a man's strength lies not in himself but in his relation to 
+other people. No matter how close to them he may be, if his center of gravity 
+depends on them, he is inevitably tossed to and fro between joy and sorrow. 
+Rejoicing to high heaven, then sad unto death-this is the fate of those who 
+depend upon an inner accord with other persons whom they love. Here we 
+have only the statement of the law that this is so. Whether this condition is 
+felt to be an affliction of the supreme happiness of love, is left to the 
+subjective verdict of the person concerned.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"To intensify the power of inner truth, a man must always turn to his 
+superior, from whom he can receive enlightenment as the moon receives 
+light form the sun. However, this requires a certain humility, like that of the 
+moon when it is not yet quite full. At the moment when the moon becomes 
+full and stands directly opposite the sun, it begins to wane. Just as on the one 
+hand we must be humble and reverent when face to face with the source of 
+enlightenment, so likewise must we on the other renounce factionalism 
+among men. Only be pursuing one's course like a horse that goes straight 
+ahead without looking sidewise at its mate, can one retain the inner freedom 
+that helps one onward.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"This describes the ruler who holds all elements together by the power of his 
+personality. Only when the strength of his character is so ample that he can 
+influence all who are subject to him, is he as he needs to be. The power of 
+suggestion must emanate from the ruler. It will firmly knit together and 
+unite all his adherents. Without this central force, all external unity is only 
+deception and breaks down at the decisive moment.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"The cock is dependable. It crows at dawn. But it cannot itself fly to heaven. It 
+just crows. A man may count on mere words to awaken faith. This may 
+succeed now and then, but if persisted in, it will have bad consequences.";
             Hexagram = 62;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"A bird ought to remain in the nest until it is fledged. If it tries to fly before 
+this, it invites misfortune. Extraordinary measures should be resorted to only 
+when all else fails. At first we ought to put up with traditional ways as long 
+as possible; otherwise we exhaust ourselves and our energy and still achieve 
+nothing.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Two exceptional situations are instanced here. In the temple of ancestors, 
+where alternation of generations prevails, the grandson stands on the same 
+side as the grandfather. Hence his closest relations are with the grandfather. 
+The present line designates the grandson's wife, who during the sacrifice 
+passes by the ancestor and goes toward the ancestress. This unusual behavior 
+is, however, an expression of her modesty. She ventures rather to approach 
+the ancestress, for she feels related to her by their common sex. Hence here 
+deviation from the rule is not a mistake.
+
+  Another image is that of the official who, in compliance with regulation, 
+first seeks an audience with his prince. If he is not successful in this, he does 
+not try to force anything but goes about conscientious fulfillment of his duty, 
+taking his place among the other officials. This extraordinary restraint is 
+likewise not a mistake in exceptional times. (The rule is that every official 
+should first have an audience with the prince by whom he is appointed. Here 
+the appointment is made by the minister.)";
+            WilhelmBaynesComments[Hexagram].Read3 = @"At certain times extraordinary caution is absolutely necessary. But it is just in 
+such life situations that we find upright and strong personalities who, 
+conscious of being in the right, disdain to hold themselves on guard, because 
+they consider it petty. Instead, they go their way proud and unconcerned. But 
+this self-confidence deludes them. There are dangers lurking for which they 
+are unprepared. Yet such danger is not unavoidable; one can escape it if he 
+understands that the time demands that he pay especial attention to small 
+and insignificant thing.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Hardness of character is tempered by yielding position so that no mistakes are 
+made. The situation here calls for extreme caution; one must make no 
+attempt of one's own initiative to reach the desired end. And if one were to 
+go on, endeavoring one must be on guard and not act but continue inwardly 
+to persevere.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"As a high place is pictured here, the image of a flying bird has become that of 
+flying clouds. But dense as the clouds are, they race across the sky and give 
+no rain. Similarly, in exceptional times there may be a born ruler who is 
+qualified to set the world in order, but who cannot achieve anything or confer 
+blessing on the people because he stands alone and has no helpers. Is such 
+times a man must seek out helpers with whose aid he can carry out the task. 
+But these helpers must be modestly sought out in the retirement to which 
+they have withdrawn. It is not in the fame nor their great names but their 
+genuine achievements that are important. Through such modesty the right 
+man is found, and the exceptional task is carried out in spite of all difficulties.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"If one overshoots the goal, one cannot hit it. If a bird will not come to its nest 
+but flies higher and higher, it eventually falls into the hunter's net. He who 
+in times of extraordinary salience of small things does not know how to call a 
+halt, but restlessly seeks to press on and on, draws upon himself misfortune 
+at the hands of gods and men, because he deviates from the order of nature.";
             Hexagram = 63;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"In times following a great transition, everything is pressing forward, striving 
+in the direction of development and progress. But this pressing forward at 
+the beginning is not good; it overshoots the mark and leads with certainty to 
+loss and collapse. Therefore a man of strong character does not allow himself 
+to be infected by the general intoxication but checks his course in time. He 
+may indeed not remain altogether untouched by the disastrous consequences 
+of the general pressure, but he is hit only from behind like a fox that, having 
+crossed the water, at the last minute gets its tail wet. He will not suffer any 
+real harm, because his behavior has been correct.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"When a woman drove out in her carriage, she had a curtain that hid her 
+from the glances of the curious. It was regarded as a breach of propriety to 
+drive on if this curtain was lost.  Applied to public life, this means that a man 
+who wants to achieve something is not receiving that confidence of the 
+authorities which he needs, so to speak, for his personal protection. 
+Especially in times ""after completion"" it may happen that those who have 
+come to power grow arrogant and conceited and no longer trouble 
+themselves about fostering new talent.
+
+  This as a rule results in office seeking. If a man's superiors withhold their 
+trust from him, he will seek ways and means of getting it and of drawing 
+attention to himself. We are warned against such an unworthy procedure: 
+""Do not seek it."" Do not throw yourself away on the world, but wait 
+tranquilly and develop your personal worth by your own efforts. Times 
+change. When the six stages of the hexagram have passed, the new era 
+dawns. That which is a man's own cannot be permanently lost. It comes to 
+him of its own accord. He need only be able to wait.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"""Illustrious Ancestor"" is the dynastic title of the Emperor Wu Ting of the Yin 
+dynasty. After putting his realm in order with a strong hand, he waged long 
+colonial wars for the subjection of the Huns who occupied the northern 
+borderland with constant threat of incursions.
+
+  The situation described is as follows. After times of completion, when a 
+new power has arisen and everything within the country has been set in 
+order, a period of colonial expansion almost inevitably follows. Then as a 
+rule long-drawn-out struggles must be reckoned with. For this reason, a 
+correct colonial policy is especially important. The territory won at such bitter 
+cost must not be regarded as an almshouse for people who in one way or 
+another have hade themselves impossible at home, but who are thought to 
+be quite good enough for the colonies. Such a policy ruins at the outset any 
+chance of success. This holds true in small as well as large matters, because it 
+is not only rising states that carry on a colonial policy; the urge to expand, 
+with its accompanying dangers, is part and parcel of every ambitious 
+undertaking.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"In a time of flowering culture, an occasional convulsion is bound to occur, 
+uncovering a hidden evil within society and at first causing a great sensation. 
+But since the situation is favorable on the whole, such evils can easily be 
+glossed over and concealed from the public. Then everything is forgotten and 
+peace apparently reigns complacently once more. However, to the thoughtful 
+man, such occurrences are grave omens that he does not neglect. This is the 
+only way of averting evil consequences.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"Religious attitudes are likewise influenced by the spiritual atmosphere 
+prevailing in times after completion. In divine worship the simple old forms 
+are replaced by an ever more elaborate ritual and an ever greater outward 
+display. But inner seriousness is lacking in this show of magnificence; 
+human caprice takes the place of conscientious obedience to the divine will. 
+However, while man sees what is before his eyes, God looks into the heart. 
+Therefore a simple sacrifice offered with real piety holds a greater blessing 
+than an impressive service without warmth.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Here in conclusion another warning is added. After crossing a stream, a 
+man's head can get into the water only if he is so imprudent as to turn back. 
+As long as he goes forward and does not look back, he escapes this danger. 
+But there is a fascination in standing still and looking back on a peril 
+overcome. However, such vain self-admiration brings misfortune. It leads 
+only to danger, and unless one finally resolves to go forward without 
+pausing, one falls a victim to this danger.";
             Hexagram = 64;
-            WilhelmBaynesComments[Hexagram].Read1 = @"";
-            WilhelmBaynesComments[Hexagram].Read2 = @"";
-            WilhelmBaynesComments[Hexagram].Read3 = @"";
-            WilhelmBaynesComments[Hexagram].Read4 = @"";
-            WilhelmBaynesComments[Hexagram].Read5 = @"";
-            WilhelmBaynesComments[Hexagram].Read6 = @"";
+            WilhelmBaynesComments[Hexagram].Read1 = @"In times of disorder there is a temptation to advance oneself as rapidly as 
+possible in order to accomplish something tangible. But this enthusiasm 
+leads only to failure and humiliation if the time for achievement has not yet 
+arrived. In such time it is wise to spare ourselves the opprobrium of failure 
+by holding back.";
+            WilhelmBaynesComments[Hexagram].Read2 = @"Here again the time to act has not yet come. But the patience needed is not 
+that of idle waiting without thought of the morrow. Kept up indefinitely, 
+this would not lead to any success. Instead, an individual must develop in 
+himself the strength that will enable him to go forward. He must have a 
+vehicle, as it were, to effect the crossing. But he must for the time being use 
+the brakes. Patience in the highest sense means putting brakes on strength. 
+Therefore he must not fall asleep and lose sight of the goal. If he remains 
+strong and steadfast in his resolve, all goes well in the end.";
+            WilhelmBaynesComments[Hexagram].Read3 = @"The time of transition has arrived, but one lacks the strength to complete the 
+transition. If one should attempt to force it, disaster would result, because 
+collapse would then be unavoidable. What is to be done? A new situation 
+must be created; one must engage the energies of able helpers and in this 
+fellowship take the decisive step-cross the great water. Then completion will 
+become possible.";
+            WilhelmBaynesComments[Hexagram].Read4 = @"Now it is the time of struggle. The transition must be completed. We must 
+make ourselves strong in resolution; this brings good fortune. All 
+misgivings that might arise in such grave times of struggle must be silenced. 
+It is a question of a fierce battle to break and to discipline the Devil's 
+Country, the forces of decadence. But the struggle also has its reward. Now is 
+the time to lay the foundations of power and mastery for the future.";
+            WilhelmBaynesComments[Hexagram].Read5 = @"The victory has been won. The power of steadfastness has not been routed. 
+Everything has gone well. All misgivings have been overcome. Success has 
+justified the deed. The light of a superior personality shines forth anew and 
+makes its influence felt among men who have faith in it and rally around it. 
+The new time has arrived, and with it good fortune. And just as the sun 
+shines forth in redoubled beauty after rain, or as a forest grows more freshly 
+green from charred ruins after a fire, so the new era appears all the more 
+glorious by contrast with the misery of the old.";
+            WilhelmBaynesComments[Hexagram].Read6 = @"Before completion, at the dawning of the new time, friends foregather in an 
+atmosphere of mutual trust, and the time of waiting is passed in conviviality. 
+Since the new era is hard on the threshold, there is no blame in this. But one 
+must be careful in all this to keep within proper bounds. If in his exuberance 
+a man gets drunk, he forfeits the favorableness of the situation through his 
+intemperance.";
 
 
 
