@@ -1524,7 +1524,7 @@ namespace iChing
             iChing[Hexagram].Place1ChangesToNumber = 42;
             iChing[Hexagram].Place2ChangesToNumber = 59;
             iChing[Hexagram].Place3ChangesToNumber = 53;
-            iChing[Hexagram].Place4ChangesToNumber = 9;
+            iChing[Hexagram].Place4ChangesToNumber = 12;
             iChing[Hexagram].Place5ChangesToNumber = 23;
             iChing[Hexagram].Place6ChangesToNumber = 8;
             
@@ -2371,7 +2371,7 @@ Perseverance brings humiliation.";
             iChing[Hexagram].Place2ChangesToNumber = 64;
             iChing[Hexagram].Place3ChangesToNumber = 56;
             iChing[Hexagram].Place4ChangesToNumber = 23;
-            iChing[Hexagram].Place5ChangesToNumber = 20;
+            iChing[Hexagram].Place5ChangesToNumber = 12;
             iChing[Hexagram].Place6ChangesToNumber = 16;
             
             Hexagram = 36;
@@ -3455,19 +3455,16 @@ There is talk.  No blame.";
             iChing[Hexagram].Read2 = @"Six in the second place means:
 The wild goose gradually draws near the cliff.
 Eating and drinking in peace and concord.
-Good fortune.
-";
+Good fortune.";
             iChing[Hexagram].Read3 = @"Nine in the third place means:
 The wild goose gradually draws near the plateau.
 The man goes forth and does not return.
 The woman carries a child but does not bring it forth.
 Misfortune.
-It furthers one to fight off robbers.
-";
+It furthers one to fight off robbers.";
             iChing[Hexagram].Read4 = @"Six in the fourth place means:
 The wild goose goes gradually draws near the tree.
-Perhaps it will find a flat branch.  No blame.
-";
+Perhaps it will find a flat branch.  No blame.";
             iChing[Hexagram].Read5 = @"Nine in the fifth place means:
 The wild goose gradually draws near the summit.
 For three years the woman has no child.
@@ -3586,8 +3583,7 @@ The curtain is of such fullness
 That the polestars can be seen at noon.
 Through going one meets with mistrust and hate.
 If one rouses him through truth,
-Good fortune comes.
-";
+Good fortune comes.";
             iChing[Hexagram].Read3 = @"Nine in the third place means:
 The underbrush is of such abundance
 That the small stars can be seen at noon.
@@ -3619,7 +3615,7 @@ Misfortune.";
             iChing[Hexagram].Place3ChangesToNumber = 51;
             iChing[Hexagram].Place4ChangesToNumber = 36;
             iChing[Hexagram].Place5ChangesToNumber = 49;
-            iChing[Hexagram].Place6ChangesToNumber = 63;
+            iChing[Hexagram].Place6ChangesToNumber = 30;
             
             Hexagram = 56;
             iChing[Hexagram].EngTitle = "The Wanderer";
@@ -3690,8 +3686,8 @@ Misfortune.
             iChing[Hexagram].Code = new int[]{0,1,1,0,1,1};
             iChing[Hexagram].Above = "THE GENTLE, WIND, WOOD";
             iChing[Hexagram].Below = "THE GENTLE, WIND, WOOD";
-            iChing[Hexagram].AboveSymbol = "SUN";
-            iChing[Hexagram].BelowSymbol = "SUN";
+            iChing[Hexagram].AboveSymbol = "☴";
+            iChing[Hexagram].BelowSymbol = "☴";
             iChing[Hexagram].Intro1 = @"Sun is one of the eight doubled trigrams.  It is the eldest daughter and symbolizes wind or wood; it has for its attribute gentleness, which nonetheless penetrates like the wind or like growing wood with its roots.
 
 The dark principle, in itself rigid and immovable, is dissolved by the penetrating light principle, to which it subordinates itself in gentleness.  In nature, it is the wind that disperses the gathered clouds, leaving the sky clear and serene.  In human life it is penetrating clarity of judgment that thwarts all dark hidden motives.  In the life of the community it is the powerful influence of a great personality that uncovers and breaks up those intrigues which shun the light of day.";
@@ -3784,12 +3780,12 @@ Seductive joyousness.";
             iChing[Hexagram].SquareCircle4 = "";
             iChing[Hexagram].SquareCircle5 = "○";
             iChing[Hexagram].SquareCircle6 = "⬜";
-            iChing[Hexagram].Place1ChangesToNumber = 60;
-            iChing[Hexagram].Place2ChangesToNumber = 54;
-            iChing[Hexagram].Place3ChangesToNumber = 10;
-            iChing[Hexagram].Place4ChangesToNumber = 47;
-            iChing[Hexagram].Place5ChangesToNumber = 17;
-            iChing[Hexagram].Place6ChangesToNumber = 43;
+            iChing[Hexagram].Place1ChangesToNumber = 47;
+            iChing[Hexagram].Place2ChangesToNumber = 17;
+            iChing[Hexagram].Place3ChangesToNumber = 43;
+            iChing[Hexagram].Place4ChangesToNumber = 60;
+            iChing[Hexagram].Place5ChangesToNumber = 54;
+            iChing[Hexagram].Place6ChangesToNumber = 10;
             
             Hexagram = 59;
             iChing[Hexagram].EngTitle = "Dispersion (Dissolution)";
@@ -3956,10 +3952,10 @@ Perseverance brings misfortune.";
             iChing[Hexagram].SquareCircle4 = "⬜";
             iChing[Hexagram].SquareCircle5 = "○";
             iChing[Hexagram].SquareCircle6 = "";
-            iChing[Hexagram].Place1ChangesToNumber = 60;
-            iChing[Hexagram].Place2ChangesToNumber = 54;
-            iChing[Hexagram].Place3ChangesToNumber = 10;
-            iChing[Hexagram].Place4ChangesToNumber = 9;
+            iChing[Hexagram].Place1ChangesToNumber = 59;
+            iChing[Hexagram].Place2ChangesToNumber = 42;
+            iChing[Hexagram].Place3ChangesToNumber = 9;
+            iChing[Hexagram].Place4ChangesToNumber = 10;
             iChing[Hexagram].Place5ChangesToNumber = 41;
             iChing[Hexagram].Place6ChangesToNumber = 60;
             
@@ -7063,10 +7059,6 @@ intemperance.";
             {
                 length = text.Length;
             }
-            else
-            {
-                length = text.Length;
-            }
 
             string compiledSearch = "";
 
@@ -7121,11 +7113,21 @@ intemperance.";
                     Lines += SearchLinesPortion(iChing[i].Read5, SearchEntry.Text,"5");
                     Lines += SearchLinesPortion(iChing[i].Read6, SearchEntry.Text,"6");
 
-
+                    string Comments = SearchLinesPortion(WilhelmBaynesComments[i].Read1, SearchEntry.Text, "1");
+                    Comments += SearchLinesPortion(WilhelmBaynesComments[i].Read2, SearchEntry.Text, "2");
+                    Comments += SearchLinesPortion(WilhelmBaynesComments[i].Read3, SearchEntry.Text, "3");
+                    Comments += SearchLinesPortion(WilhelmBaynesComments[i].Read4, SearchEntry.Text, "4");
+                    Comments += SearchLinesPortion(WilhelmBaynesComments[i].Read5, SearchEntry.Text, "5");
+                    Comments += SearchLinesPortion(WilhelmBaynesComments[i].Read6, SearchEntry.Text, "6");
+                    
+                    
+                    
+                    
                     bool textResult = !String.IsNullOrEmpty(MainText);
                     bool linesResult = !String.IsNullOrEmpty(Lines);
+                    bool commentsResult = !String.IsNullOrEmpty(Comments);
 
-                    if (textResult || linesResult)
+                    if (textResult || linesResult || commentsResult)
                     {
                         //Title
                         string hexResult = Convert.ToString(i) + ". " + iChing[i].EngTitle + " " + iChing[i].Hex;
@@ -7142,7 +7144,6 @@ intemperance.";
                             mainTextBox.Text = "[Text] " + MainText;
                             mainTextBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
                             SearchPanel.Children.Add(mainTextBox);
-                            SearchPanel.UpdateLayout();
                         }
 
                         if (linesResult)
@@ -7152,8 +7153,17 @@ intemperance.";
                             linesBox.Text = "[Lines] " + Lines;
                             linesBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
                             SearchPanel.Children.Add(linesBox);
-                            SearchPanel.UpdateLayout();
                         }
+                        if (commentsResult)
+                        {
+                            TextBox commentBox = new TextBox();
+                            commentBox.Tag = i;
+                            commentBox.Text = "[Comments] " + Comments;
+                            commentBox.PreviewMouseDown += new MouseButtonEventHandler(SearchItemClick);
+                            SearchPanel.Children.Add(commentBox);
+                        }
+
+                        SearchPanel.UpdateLayout();
                     }
   
 
