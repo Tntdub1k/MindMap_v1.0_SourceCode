@@ -39,7 +39,16 @@ namespace iChing
                 savedTracingPanel = (StackPanel)System.Windows.Markup.XamlReader.Parse(tracingpanel);
                 foreach (object child in savedTracingPanel.Children)
                 {
-                    TracingPanel.Children.Add(CloneFrameworkElement(child as StackPanel));
+                    if (child is StackPanel)
+                    {
+                        TracingPanel.Children.Add(CloneFrameworkElement(child as StackPanel));
+                    }
+
+                    else if (child is TextBox)
+                    {
+                        TracingPanel.Children.Add(CloneFrameworkElement(child as TextBox));
+
+                    }
 
                 }
             }
@@ -7228,10 +7237,14 @@ intemperance.";
                     break;
                 case false:
                     tracing = true;
+
+                    TracingPanel.Children.Add(new TextBox() { Name = "Title" + DateTime.Now.ToString("yymmddssffff"), Background = null, BorderBrush = null, Width = Double.NaN });
+                    
                     StackPanel newPathPanel = new StackPanel();
                     newPathPanel.Orientation = Orientation.Horizontal;
                     newPathPanel.Tag = "Map"+Convert.ToString(TracingPanel.Children.Count+1);
                     TracingPanel.Children.Add(newPathPanel);
+
                     AddEntryToTraceMap();
                     TracerBtn.Content = "Finish Tracing";
                     break;

@@ -820,10 +820,10 @@
         </TabItem>
         <TabItem Header="Map" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55" GotFocus="TabItem_GotFocus">
             <Grid Background="#FFE5E5E5">
-                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Height="598" Margin="197,65,0,0" VerticalAlignment="Top" Width="1130" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Height="598" Margin="112,65,0,0" VerticalAlignment="Top" Width="1200" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <StackPanel x:Name="TracingPanel" HorizontalAlignment="Left" Height="1430" VerticalAlignment="Top"/>
                 </ScrollViewer>
-                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="72,365,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
+                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
             </Grid>
         </TabItem>
     </TabControl>
