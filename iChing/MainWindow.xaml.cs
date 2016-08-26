@@ -149,7 +149,7 @@ namespace iChing
         {
             TitleBox.Content = currentlyShowing + ". " + iChing[currentlyShowing].ChiTitle + " / " + iChing[currentlyShowing].EngTitle;
             HexTitle.Text = iChing[currentlyShowing].Hex;
-            AboveBelowBox.Text = "above "+iChing[currentlyShowing].Above + "\nbelow " + iChing[currentlyShowing].Below;
+            AboveBelowBox.Text = iChing[currentlyShowing].Above + "\n" + iChing[currentlyShowing].Below;
             AboveBelowSymbolsBox.Text = iChing[currentlyShowing].AboveSymbol + "\n" + iChing[currentlyShowing].BelowSymbol;
             Intro1Box.Text = iChing[currentlyShowing].Intro1;
             TheJudgmentBox.Text = iChing[currentlyShowing].TheJudgment;
