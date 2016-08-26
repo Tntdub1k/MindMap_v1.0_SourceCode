@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:local="clr-namespace:iChing" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="iChing.MainWindow"
-        Title="i Ching" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="730" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Width="1343" WindowStyle="ThreeDBorderWindow" PreviewKeyDown="Window_KeyDown">
+        Title="i Ching" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="730" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Width="1343" WindowStyle="ThreeDBorderWindow" PreviewKeyDown="Window_KeyDown" SnapsToDevicePixels="True">
     <Window.Resources>
         <LinearGradientBrush x:Key="Yin" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <LinearGradientBrush.RelativeTransform>
@@ -76,7 +76,7 @@
         </LinearGradientBrush>
         <Color x:Key="border">#FFBF1111</Color>
     </Window.Resources>
-    <TabControl x:Name="TabControl1" Height="701" VerticalAlignment="Top" Margin="0,0,-6,0">
+    <TabControl x:Name="TabControl1" Height="691" VerticalAlignment="Top" Margin="0,10,-6,0">
         <TabItem Header="Info" BorderBrush="{DynamicResource Brush1}">
             <Grid Margin="10,-12,0,10" HorizontalAlignment="Left" Width="765">
                 <Grid.ColumnDefinitions>
@@ -150,8 +150,9 @@
                                 <ColumnDefinition Width="277*"/>
                                 <ColumnDefinition Width="49*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox x:Name="AboveBelowBox" TextWrapping="Wrap" Text="Above CH'IEN, / THE CREATIVE, HEAVEN &#xA;Below K'UN / THE RECEPTIVE " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" Grid.ColumnSpan="2" SelectionBrush="{DynamicResource Brush2}"/>
+                            <TextBox x:Name="AboveBelowBox" TextWrapping="Wrap" Text="Above CH'IEN, / THE CREATIVE, HEAVEN &#xA;Below K'UN / THE RECEPTIVE " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" SelectionBrush="{DynamicResource Brush2}" HorizontalAlignment="Left" Margin="54,0,0,0" Width="660" FontStyle="Italic"/>
                             <TextBox x:Name="AboveBelowSymbolsBox" TextWrapping="Wrap" Text="☰&#xA;☷" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" FontSize="20" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsReadOnly="True" HorizontalAlignment="Left" Width="102" Height="53" VerticalAlignment="Bottom" Background="{x:Null}" Margin="10,-3,0,0" IsManipulationEnabled="True" Grid.Column="1"/>
+                            <TextBox x:Name="AboveBelowBox_Copy" TextWrapping="Wrap" Text="Above&#xA;Below" VerticalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" SelectionBrush="{DynamicResource Brush2}" HorizontalAlignment="Left" FontStyle="Italic"/>
                         </Grid>
                         <TextBox x:Name="Intro1Box" TextWrapping="Wrap" Text="Textbox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
                         <Grid Margin="0,4" ScrollViewer.CanContentScroll="True">
@@ -459,9 +460,9 @@
                         <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
                     </ScrollViewer>
                 </StackPanel>
-                <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="318,24,-164,0" Grid.Row="3" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19"/>
-                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="318,0,-164,187" Grid.Row="3" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19"/>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="661,0,-535,187" Grid.Row="3" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3" Width="65"/>
+                <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="318,24,-164,0" Grid.Row="3" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" BorderBrush="{x:Null}"/>
+                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="318,0,-164,187" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="659,0,-533,187" Grid.Row="2" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3" Width="65" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
             </Grid>
         </TabItem>
         <TabItem Header="Table">
