@@ -49,7 +49,7 @@
         <System:Double x:Key="placestextoffset">4</System:Double>
         <System:Double x:Key="placestextyoffset">4</System:Double>
         <System:Double x:Key="placesSize">10</System:Double>
-        <System:Double x:Key="HexSize">18</System:Double>
+        <System:Double x:Key="HexSize">19</System:Double>
         <System:Double x:Key="WidthOfChineseName">NaN</System:Double>
         <System:Double x:Key="WidthOfChineseSymbol">94</System:Double>
         <System:Double x:Key="WidthOfCHIname">NaN</System:Double>
@@ -92,7 +92,7 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="HexBox" Grid.Column="2" HorizontalAlignment="Left" Height="410" Margin="318,71,-362,-128" Grid.Row="4" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Padding="0" RenderTransformOrigin="0.5,0.5" FontSize="275">
+                <TextBlock x:Name="HexBox" Grid.Column="2" HorizontalAlignment="Left" Height="416" Margin="311,65,-362,-131" Grid.Row="4" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Padding="0" RenderTransformOrigin="0.5,0.5" FontSize="275">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -288,7 +288,7 @@
                         <Rectangle Fill="#00000000" Height="100"/>
                     </StackPanel>
                 </ScrollViewer>
-                <StackPanel x:Name="PlacesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="470" ScrollViewer.CanContentScroll="True" Margin="343,116,-622,0" Height="237" Grid.Column="2" Grid.Row="4" Grid.RowSpan="2">
+                <StackPanel x:Name="PlacesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="480" ScrollViewer.CanContentScroll="True" Margin="333,109,-622,-12" Height="253" Grid.Column="2" Grid.Row="4" Grid.RowSpan="2">
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="768" Orientation="Horizontal" Margin="{DynamicResource PlacesThicknesss}" ScrollViewer.CanContentScroll="True">
                         <Rectangle x:Name="Place6" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" PreviewMouseDown="Place6_PreviewMouseUp" Fill="#00000000"/>
                         <TextBox x:Name="Changes6Box" TextWrapping="Wrap" Text="13. Splitting Apart" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0" Margin="0,-3,0,0" RenderTransformOrigin="0.5,0.5" MaxWidth="175" Height="28">
@@ -301,7 +301,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="Changes6BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="Changes6BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Left" BorderBrush="{x:Null}" FontFamily="Segoe Marker" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -324,7 +324,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="Changes5BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="Changes5BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Left" BorderBrush="{x:Null}" FontFamily="Segoe Marker" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -347,7 +347,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="Changes4BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="Changes4BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Left" BorderBrush="{x:Null}" FontFamily="Segoe Marker" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -370,7 +370,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="Changes3BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="Changes3BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Left" BorderBrush="{x:Null}" FontFamily="Segoe Marker" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -393,7 +393,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="Changes2BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="Changes2BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Left" BorderBrush="{x:Null}" FontFamily="Segoe Marker" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -416,7 +416,7 @@
                                 </TransformGroup>
                             </TextBox.RenderTransform>
                         </TextBox>
-                        <TextBox x:Name="Changes1BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
+                        <TextBox x:Name="Changes1BoxH" Height="{DynamicResource PlacesHeight}" TextWrapping="Wrap" Text="䷼" Width="780" HorizontalAlignment="Left" BorderBrush="{x:Null}" FontFamily="Segoe Marker" FontSize="{DynamicResource HexSize}" VerticalAlignment="Top" BorderThickness="0" Padding="0,0,0,4" Margin="0" RenderTransformOrigin="0.5,0.5">
                             <TextBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -462,7 +462,7 @@
                 </StackPanel>
                 <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="318,24,-164,0" Grid.Row="3" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" BorderBrush="{x:Null}"/>
                 <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="318,0,-164,187" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="659,0,-533,187" Grid.Row="2" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3" Width="65" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="656,0,-536,187" Grid.Row="2" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3" Width="71" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
             </Grid>
         </TabItem>
         <TabItem Header="Table">
