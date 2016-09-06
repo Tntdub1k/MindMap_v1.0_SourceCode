@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ColorBox;
 
 namespace iChing
 {
@@ -25,7 +26,6 @@ namespace iChing
         private Comments[] WilhelmBaynesComments = new Comments[65];
         private int currentlyShowing = 0;
         private bool tracing = false;
-        private int savingID = 0;
 
         public MainWindow()
         {
@@ -7011,6 +7011,16 @@ intemperance.";
             updateApplication();
         }
 
+        void TracingPathPanelRightClick(object sender, RoutedEventArgs e)
+        {
+            Brush b = new SolidColorBrush(Color.FromArgb(60,100,0,0));
+            TextBox tb = (TracingPanel.Children[TracingPanel.Children.IndexOf(sender as StackPanel) - 1] as TextBox);
+            tb.Background = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0));
+            tb.BorderBrush = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0)); 
+            
+            (sender as StackPanel).Background = b;
+        }
+
         private static int[] AllIndexesOf(string str, string substr)
         {
             if (string.IsNullOrWhiteSpace(str) ||
@@ -7243,8 +7253,10 @@ intemperance.";
                     StackPanel newPathPanel = new StackPanel();
                     newPathPanel.Orientation = Orientation.Horizontal;
                     newPathPanel.Tag = "Map"+Convert.ToString(TracingPanel.Children.Count+1);
+                    newPathPanel.Height = double.NaN;
+                    newPathPanel.Background = new SolidColorBrush(Color.FromArgb(0,0,0,0));
+                    newPathPanel.PreviewMouseRightButtonDown += new MouseButtonEventHandler(TracingPathPanelRightClick);
                     TracingPanel.Children.Add(newPathPanel);
-
                     AddEntryToTraceMap();
                     TracerBtn.Content = "Finish Tracing";
                     break;
