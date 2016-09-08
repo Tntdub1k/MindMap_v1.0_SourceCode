@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:local="clr-namespace:iChing" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="iChing.MainWindow"
-        Title="i Ching" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="730" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Width="1343" WindowStyle="ThreeDBorderWindow" PreviewKeyDown="Window_KeyDown" SnapsToDevicePixels="True">
+        Title="i Ching" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="730" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Width="1343" WindowStyle="ThreeDBorderWindow" PreviewKeyDown="Window_KeyDown" SnapsToDevicePixels="True" Icon="iconbitmap.ico">
     <Window.Resources>
         <LinearGradientBrush x:Key="Yin" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <LinearGradientBrush.RelativeTransform>
@@ -92,6 +92,7 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,96" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126" BorderBrush="{x:Null}"/>
                 <TextBlock x:Name="HexBox" Grid.Column="2" HorizontalAlignment="Left" Height="416" Margin="311,65,-362,-131" Grid.Row="4" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Padding="0" RenderTransformOrigin="0.5,0.5" FontSize="275">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
@@ -101,10 +102,10 @@
                             <TranslateTransform Y="-26"/>
                         </TransformGroup>
                     </TextBlock.RenderTransform><Run Text="䷖"/></TextBlock>
-                <Border BorderBrush="Black" BorderThickness="2,1,1,1" Margin="318,49,-533,0" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="406" Height="253">
+                <Border BorderBrush="Black" BorderThickness="2,1,1,1" Margin="318,23,-533,0" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="406" Height="253">
                     <StackPanel Orientation="Horizontal" Margin="-1,0,0,-4" HorizontalAlignment="Left" VerticalAlignment="Top">
                         <StackPanel Width="45" HorizontalAlignment="Left" VerticalAlignment="Top" IsHitTestVisible="False">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="Above ⇒&#xD;&#xA;Below ⇓" FontSize="10" Width="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="Above ⇒&#xA;Below ⇓" FontSize="10" Width="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☰" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
                             <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☳" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
                             <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☵" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
@@ -140,7 +141,7 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>
-                <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="2,0,-117,0" Grid.ColumnSpan="3" Grid.RowSpan="3" Grid.Row="3" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
+                <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="0,28,-115,0" Grid.ColumnSpan="3" Grid.RowSpan="3" Grid.Row="3" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
                     <ScrollViewer.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource border}"/>
                     </ScrollViewer.BorderBrush>
@@ -195,7 +196,7 @@
                                 <TextBox x:Name="Line1Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line1Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
                                 <TextBox x:Name="Line1BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <TextBox x:Name="ChangesTo1" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment1" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                <Border x:Name="BorderComment1" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
                                     <TextBox x:Name="Comment1" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" SelectionBrush="{x:Null}" IsHitTestVisible="False" BorderBrush="Black"/>
                                 </Border>
                             </Grid>
@@ -212,7 +213,7 @@
                                 <TextBox x:Name="Line2Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line2Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
                                 <TextBox x:Name="Line2BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <TextBox x:Name="ChangesTo2" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place2_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment2" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                <Border x:Name="BorderComment2" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
                                     <TextBox x:Name="Comment2" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
                                 </Border>
                             </Grid>
@@ -229,7 +230,7 @@
                                 <TextBox x:Name="Line3Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" IsHitTestVisible="True" IsReadOnlyCaretVisible="True" PreviewMouseDown="Line3Box_MouseDown" Focusable="False" IsTabStop="False"/>
                                 <TextBox x:Name="Line3BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <TextBox x:Name="ChangesTo3" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place3_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                <Border x:Name="BorderComment3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
                                     <TextBox x:Name="Comment3" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
                                 </Border>
                             </Grid>
@@ -246,7 +247,7 @@
                                 <TextBox x:Name="Line4Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line4Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
                                 <TextBox x:Name="Line4BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <TextBox x:Name="ChangesTo4" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place4_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment4" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                <Border x:Name="BorderComment4" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
                                     <TextBox x:Name="Comment4" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
                                 </Border>
                             </Grid>
@@ -263,7 +264,7 @@
                                 <TextBox x:Name="Line5Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line5Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
                                 <TextBox x:Name="Line5BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <TextBox x:Name="ChangesTo5" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place5_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment5" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                <Border x:Name="BorderComment5" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
                                     <TextBox x:Name="Comment5" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
                                 </Border>
                             </Grid>
@@ -436,7 +437,7 @@
                         </Label.Background>
                     </Label>
                 </StackPanel>
-                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="318,24,-535,0" Grid.Row="3" VerticalAlignment="Top" Width="408" Grid.RowSpan="3" Height="533" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="334,2,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="400" Grid.RowSpan="4" Height="532" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
                     <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,0,0" Height="25">
                         <Button Content="X" Width="24" Click="Button_Click_2" Margin="0,0,0,6">
                             <Button.Background>
@@ -454,15 +455,20 @@
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
                             </Button.Background>
                         </Button>
-                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="291" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
+                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="281" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
                     </StackPanel>
                     <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                         <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
                     </ScrollViewer>
                 </StackPanel>
-                <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="318,24,-164,0" Grid.Row="3" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" BorderBrush="{x:Null}"/>
-                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="318,0,-164,187" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="656,0,-536,187" Grid.Row="2" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Click="Button_Click_3" Width="71" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
+                <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="339,2,-185,0" Grid.Row="2" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" BorderBrush="{x:Null}" Grid.RowSpan="2"/>
+                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="297,0,-143,192" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="39" Margin="0,0,-97,0" Grid.Row="2" TextWrapping="Wrap" Text="Alternate Titles: The Creative, The Symbol of Heaven, The Creative Principle, Force, The Key, Creativity, The Originating, Creative Power, Primal Power, Yang, The Life Force, Kundalini, God the Father" VerticalAlignment="Top" Width="862" Grid.RowSpan="2" Grid.ColumnSpan="3" BorderThickness="0" FontSize="13" FontFamily="Trebuchet MS"/>
+                <Rectangle HorizontalAlignment="Left" Height="1" Margin="76,23,0,0" Grid.Row="3" VerticalAlignment="Top" Width="622" Grid.ColumnSpan="3" StrokeThickness="4">
+                    <Rectangle.Stroke>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                    </Rectangle.Stroke>
+                </Rectangle>
             </Grid>
         </TabItem>
         <TabItem Header="Table">

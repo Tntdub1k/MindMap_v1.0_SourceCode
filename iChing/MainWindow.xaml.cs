@@ -7248,11 +7248,12 @@ intemperance.";
                 case false:
                     tracing = true;
 
-                    TracingPanel.Children.Add(new TextBox() { Name = "Title" + DateTime.Now.ToString("yymmddssffff"), Background = null, BorderBrush = null, Width = Double.NaN });
+                    TracingPanel.Children.Add(new TextBox() { Name = "Title" + DateTime.Now.ToString("yymmddssffff"), Background = null, BorderBrush = null, Width = double.NaN });
                     
                     StackPanel newPathPanel = new StackPanel();
                     newPathPanel.Orientation = Orientation.Horizontal;
                     newPathPanel.Tag = "Map"+Convert.ToString(TracingPanel.Children.Count+1);
+                    newPathPanel.Width = double.NaN;
                     newPathPanel.Height = double.NaN;
                     newPathPanel.Background = new SolidColorBrush(Color.FromArgb(0,0,0,0));
                     newPathPanel.PreviewMouseRightButtonDown += new MouseButtonEventHandler(TracingPathPanelRightClick);
