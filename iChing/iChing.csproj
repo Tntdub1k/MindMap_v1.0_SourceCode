@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>iconbitmap.ico</ApplicationIcon>
+    <ApplicationIcon>iconbitmap3.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ColorBox">
@@ -120,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="iconbitmap.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconbitmap2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconbitmap3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
