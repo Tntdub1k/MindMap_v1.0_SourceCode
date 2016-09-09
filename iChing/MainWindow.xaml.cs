@@ -3648,12 +3648,7 @@ The embroidered garments of the princess
 Were not as gorgeous
 As those of the serving maid.
 The moon that is nearly full
-Brings good fortune.
-
-The sovereign I is T’ang the Completer.  This ruler decreed that the imperial princesses should be subordinated to their husbands in the same manner as other women.*   The emperor does not wait for a suitor to woo his daughter but gives her in marriage when he sees fit.  Therefore it is in accord with custom for the girl’s family to take the initiative here. 
-
-We see here a girl of aristocratic birth who marries a man of modest circumstances and understands how to adapt herself with grace to the new situation.  She is free of all vanity of outer adornment, and forgetting her rank in her marriage, takes a place below that of her husband, just as the moon, before it is quite full, does not directly face the sun.
-* Reference:   fifth line in T’ai  /  Peace  (11)  ";
+Brings good fortune.";
             iChing[Hexagram].Read6 = @"Six at the top means:
 The woman holds the basket, but there are no fruits in it.
 The man stabs the sheep, but no blood flows.
@@ -7403,7 +7398,12 @@ intemperance.";
             string tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
             System.IO.File.WriteAllText("tracingpanelsaved", tracingpanel);
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
+    }
 
 
  

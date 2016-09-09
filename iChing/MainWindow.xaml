@@ -92,7 +92,14 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,96" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126" BorderBrush="{x:Null}"/>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,96" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.Background>
+                </Button>
                 <TextBlock x:Name="HexBox" Grid.Column="2" HorizontalAlignment="Left" Height="416" Margin="311,65,-362,-131" Grid.Row="4" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Padding="0" RenderTransformOrigin="0.5,0.5" FontSize="275">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
@@ -141,7 +148,7 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>
-                <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="0,0,-115,0" Grid.ColumnSpan="3" Grid.RowSpan="3" Grid.Row="3" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
+                <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="0,5,-115,0" Grid.ColumnSpan="3" Grid.RowSpan="4" Grid.Row="2" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
                     <ScrollViewer.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource border}"/>
                     </ScrollViewer.BorderBrush>
@@ -170,11 +177,11 @@
                                 <ColumnDefinition Width="48*"/>
                                 <ColumnDefinition Width="47*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox TextWrapping="Wrap" Text="THE IMAGE" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="138" Margin="86,2,91,-2" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
+                            <TextBox TextWrapping="Wrap" Text="THE IMAGE" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="138" Margin="86,2,91,-2" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" TextChanged="TextBox_TextChanged"/>
                             <TextBox x:Name="TheImageBox" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" IsHitTestVisible="False" IsReadOnly="True" BorderBrush="{x:Null}" Background="Transparent" Foreground="{DynamicResource LinesBrushColor}" HorizontalAlignment="Left" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" Grid.ColumnSpan="2" Margin="289,0,0,0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
                         </Grid>
                         <TextBox x:Name="Intro3Box" TextWrapping="Wrap" Text="TextBox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Padding="0,2"/>
-                        <StackPanel x:Name="LinesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="665" ScrollViewer.CanContentScroll="True" Margin="0,0,0,20" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel x:Name="LinesPanel" HorizontalAlignment="Center" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Margin="147,0,10,20" RenderTransformOrigin="0.5,0.5">
                             <StackPanel.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -183,6 +190,7 @@
                                     <TranslateTransform X="-6"/>
                                 </TransformGroup>
                             </StackPanel.RenderTransform>
+                            <TextBox TextWrapping="Wrap" Text="THE LINES" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="111" Margin="0,0,567,0" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" TextChanged="TextBox_TextChanged"/>
                             <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="22*"/>
@@ -437,9 +445,9 @@
                         </Label.Background>
                     </Label>
                 </StackPanel>
-                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="334,2,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="400" Grid.RowSpan="4" Height="532" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
                     <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,0,0" Height="25">
-                        <Button Content="X" Width="24" Click="Button_Click_2" Margin="0,0,0,6">
+                        <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,5,6">
                             <Button.Background>
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
                             </Button.Background>
@@ -447,7 +455,7 @@
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                             </Button.BorderBrush>
                         </Button>
-                        <Button Content="Search" Width="45" Click="Button_Click_1" Margin="0,0,0,6">
+                        <Button Content="Search" Width="42" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
                             <Button.BorderBrush>
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                             </Button.BorderBrush>
@@ -455,15 +463,29 @@
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
                             </Button.Background>
                         </Button>
-                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="268" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
+                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="271" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
                     </StackPanel>
                     <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                         <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
                     </ScrollViewer>
                 </StackPanel>
-                <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="353,2,-199,0" Grid.Row="2" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" BorderBrush="{x:Null}" Grid.RowSpan="2"/>
-                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="311,0,-157,192" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2" BorderBrush="{x:Null}"/>
-                <TextBox x:Name="AlternateTitlesBox" HorizontalAlignment="Left" Margin="74,42,-104,0" Grid.Row="1" TextWrapping="Wrap" Text="Alternate Titles: The Creative, The Symbol of Heaven, The Creative Principle, Force, The Key, Creativity, The Originating, Creative Power, Primal Power, Yang, The Life Force, Kundalini, God the Father" VerticalAlignment="Top" Width="795" Grid.ColumnSpan="3" BorderThickness="0" FontFamily="Trebuchet MS" Background="{x:Null}"/>
+                <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="358,5,-204,0" Grid.Row="2" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" Grid.RowSpan="2">
+                    <Button.Background>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="316,0,-162,189" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2">
+                    <Button.Background>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                </Button>
+                <TextBox x:Name="AlternateTitlesBox" HorizontalAlignment="Left" Margin="74,42,-445,0" Grid.Row="1" TextWrapping="Wrap" Text="Alternate Titles: The Creative, The Symbol of Heaven, The Creative Principle, Force, The Key, Creativity, The Originating, Creative Power, Primal Power, Yang, The Life Force, Kundalini, God the Father" VerticalAlignment="Top" Width="1136" Grid.ColumnSpan="3" BorderThickness="0" Background="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontStyle="Italic" FontSize="13"/>
             </Grid>
         </TabItem>
         <TabItem Header="Table">
