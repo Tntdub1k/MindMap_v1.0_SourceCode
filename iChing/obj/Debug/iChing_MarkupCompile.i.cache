@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\
 iChing
 none
 false
 DEBUG;TRACE
-C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\App.xaml
-2-1869375559
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\App.xaml
+3-1725587573
 
-102092677064
-13-1268692138
-MainWindow.xaml;PathTemplate.xaml;
+112072058940
+13-1670917585
+MainWindow.xaml;PathStackPanelTemplate.xaml;PathTemplate.xaml;
 
-True
+False
 
