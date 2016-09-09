@@ -7403,6 +7403,32 @@ intemperance.";
         {
 
         }
+
+        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentlyShowing > 1)
+            {
+                currentlyShowing--;
+            }
+            else
+            {
+                currentlyShowing = 64;
+            }
+            updateApplication();
+        }
+
+        private void button_Click_5(object sender, RoutedEventArgs e)
+        {
+            if (currentlyShowing < 64)
+            {
+                currentlyShowing++;
+            }
+            else
+            {
+                currentlyShowing = 1;
+            }
+            updateApplication();
+        }
     }
 
 
