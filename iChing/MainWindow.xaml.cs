@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Xceed.Wpf.Toolkit;
 
 namespace iChing
 {
@@ -37,11 +37,13 @@ namespace iChing
                 StackPanel savedTracingPanel;
                 string tracingpanel = System.IO.File.ReadAllText("tracingpanelsaved");
                 savedTracingPanel = (StackPanel)System.Windows.Markup.XamlReader.Parse(tracingpanel);
+                
                 foreach (object child in savedTracingPanel.Children)
                 {
                     if (child is StackPanel)
                     {
                         TracingPanel.Children.Add(CloneFrameworkElement(child as StackPanel));
+
                     }
 
                     else if (child is TextBox)
@@ -52,7 +54,7 @@ namespace iChing
 
                 }
             }
-            catch (Exception e)
+            catch 
             {
                 //
             }
@@ -214,7 +216,7 @@ namespace iChing
                 if (iChing[currentlyShowing].Code[5] == 1) { Place6.Fill = (Brush)FindResource("Yang"); }
                 else { Place6.Fill = (Brush)FindResource("Yin"); };*/
             }
-            else { MessageBox.Show("Not yet defined"); }
+            else { System.Windows.MessageBox.Show("Not yet defined"); }
             //LinesViewer.ScrollToTop();
             //MainTextViewer.ScrollToTop();
         }
@@ -3491,8 +3493,7 @@ In its application to man, the hexagram turns upon the problem of achieving a qu
 So that he no longer feels his body.
 He goes into his courtyard
 And does not see his people.
-No blame.
-"; 
+No blame."; 
             iChing[Hexagram].Intro2 = @"True quiet means keeping still when the time has come to keep still, and going forward when the time has come to go forward.  In this way rest and movement are in agreement with the demands of the time, and thus there is light in life.
 
 The hexagram signifies the end and the beginning of all movement.  The back is named because in the back are located all the nerve fibers that mediate movement.  If the movement of these spinal nerves is brought to a standstill, the ego, with its restlessness, disappears as it were.  When a man has thus become calm, he may turn to the outside world.  He no longer sees in it the struggle and tumult of individual beings, and therefore he has that true peace of mind which is needed for understanding the great laws of the universe and for acting in harmony with them.  Whoever acts from these deep levels makes no mistakes.";
@@ -3509,8 +3510,7 @@ Continued perseverance furthers.";
             iChing[Hexagram].Read2 = @"Six in the second place means:
 Keeping his calves still.
 He cannot rescue him whom he follows.
-His heart is not glad.
-";
+His heart is not glad.";
             iChing[Hexagram].Read3 = @"Nine in the third place means:
 Keeping his hips still.
 Making his sacrum stiff.
@@ -7137,6 +7137,8 @@ intemperance.";
 
         void TracingPathPanelRightClick(object sender, RoutedEventArgs e)
         {
+            ColorPicker cp = new ColorPicker();
+            
             Brush b = new SolidColorBrush(Color.FromArgb(60,100,0,0));
             TextBox tb = (TracingPanel.Children[TracingPanel.Children.IndexOf(sender as StackPanel) - 1] as TextBox);
             tb.Background = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0));
