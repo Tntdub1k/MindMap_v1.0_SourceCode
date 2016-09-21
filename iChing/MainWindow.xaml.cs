@@ -5200,8 +5200,7 @@ far. The disappearance of the nose in the course of the bite
 signifies that indignation blots out finer sensibility. However,
 there is no great harm in this, because the penalty as such is
 just.";
-            WilhelmBaynesComments[Hexagram].Read3 = @"
-Punishment is to be carried out by someone who lacks the power and 
+            WilhelmBaynesComments[Hexagram].Read3 = @"Punishment is to be carried out by someone who lacks the power and 
 authority to do so.  Therefore the culprits do not submit.  The matter at issue 
 is an old one-as symbolized by salted game-and in dealing with it difficulties 
 arise.  This old meat is spoiled: by taking up the problem the punisher arouses 
@@ -7084,7 +7083,7 @@ intemperance.";
         private void SetToLines()
         {
             MainTextViewer.UpdateLayout();
-            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 27);
+            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 17);
 
         }
 
