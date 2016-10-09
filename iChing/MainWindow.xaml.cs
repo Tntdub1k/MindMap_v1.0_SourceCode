@@ -165,12 +165,12 @@ namespace iChing
             Line4Box.Text = iChing[currentlyShowing].Read4;
             Line5Box.Text = iChing[currentlyShowing].Read5;
             Line6Box.Text = iChing[currentlyShowing].Read6;
-            ChangesTo1.Text = "● " + iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
-            ChangesTo2.Text = "● " + iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
-            ChangesTo3.Text = "● " + iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle;
-            ChangesTo4.Text = "● " + iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle;
-            ChangesTo5.Text = "● " + iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle;
-            ChangesTo6.Text = "● " + iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle;
+            ChangesTo1.Text = "● " + iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle+" ●";
+            ChangesTo2.Text = "● " + iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle+" ●";
+            ChangesTo3.Text = "● " + iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle+" ●";
+            ChangesTo4.Text = "● " + iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle+" ●";
+            ChangesTo5.Text = "● " + iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle+" ●";
+            ChangesTo6.Text = "● " + iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle+" ●";
             
             Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
             Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
@@ -190,12 +190,33 @@ namespace iChing
             Line4BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle4;
             Line5BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle5;
             Line6BoxSquareCircle.Text = iChing[currentlyShowing].SquareCircle6;
+            Line1BoxSquareCircle_Copy.Text = iChing[currentlyShowing].SquareCircle1;
+            Line2BoxSquareCircle_Copy.Text = iChing[currentlyShowing].SquareCircle2;
+            Line3BoxSquareCircle_Copy.Text = iChing[currentlyShowing].SquareCircle3;
+            Line4BoxSquareCircle_Copy1.Text = iChing[currentlyShowing].SquareCircle4;
+            Line5BoxSquareCircle_Copy.Text = iChing[currentlyShowing].SquareCircle5;
+            Line6BoxSquareCircle_Copy.Text = iChing[currentlyShowing].SquareCircle6;
             BorderComment1.Visibility = Visibility.Collapsed;
             BorderComment2.Visibility = Visibility.Collapsed;
             BorderComment3.Visibility = Visibility.Collapsed;
             BorderComment4.Visibility = Visibility.Collapsed;
             BorderComment5.Visibility = Visibility.Collapsed;
             BorderComment6.Visibility = Visibility.Collapsed;
+
+            if (Line1BoxSquareCircle_Copy.Text == "○")
+            {
+                Changes1Box.Foreground = new SolidColorBrush(Colors.Blue);
+                Changes1BoxH.Foreground = new SolidColorBrush(Colors.Blue);
+            } else if (Line1BoxSquareCircle_Copy.Text == "⬜")
+            {
+                Changes1Box.Foreground = new SolidColorBrush(Colors.Red);
+                Changes1BoxH.Foreground = new SolidColorBrush(Colors.Red);
+            } else
+            {
+                Changes1Box.Foreground = new SolidColorBrush(Colors.Black);
+                Changes1BoxH.Foreground = new SolidColorBrush(Colors.Black);
+            }
+
             
             
             
@@ -567,8 +588,8 @@ namespace iChing
             iChing[Hexagram].Place2ChangesToTitle = "Splitting Apart ䷖";
             iChing[Hexagram].Place3ChangesToNumber = 18;
             iChing[Hexagram].Place3ChangesToTitle = "Work on what has been Spoiled (Decay) ䷑";
-            iChing[Hexagram].Place4ChangesToNumber = 29;
-            iChing[Hexagram].Place4ChangesToTitle = "The Abysmal (Water) ䷜";
+            iChing[Hexagram].Place4ChangesToNumber = 64;
+            iChing[Hexagram].Place4ChangesToTitle = "Before Completion ䷿";
             iChing[Hexagram].Place5ChangesToNumber = 59;
             iChing[Hexagram].Place5ChangesToTitle = "Dispersion (Dissolution) ䷺";
             iChing[Hexagram].Place6ChangesToNumber = 7;
@@ -7345,8 +7366,11 @@ intemperance.";
         {
             PathTemplate newPathEntry = new PathTemplate();
             newPathEntry.HexBox.Text = iChing[currentlyShowing].Hex;
+            newPathEntry.PathBar.Value = currentlyShowing;
             newPathEntry.Name = "Entry" + DateTime.Now.ToString("yymmddssffff");
-            newPathEntry.PathTemplate_Copy.Name = "PT" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.PathPanel.Name = "PT1" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.PathPanel2.Name = "PT2" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.PathBar.Name = "PB" + DateTime.Now.ToString("yymmddssffff");
             newPathEntry.HexBox.Name = "HB" + DateTime.Now.ToString("yymmddssffff");
             newPathEntry.TextBox.Name = "TB" + DateTime.Now.ToString("yymmddssffff");
             newPathEntry.TextBox.Text = iChing[currentlyShowing].EngTitle;

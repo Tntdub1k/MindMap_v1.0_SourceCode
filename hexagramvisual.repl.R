@@ -1,30 +1,30 @@
 library(rgl)
-library(future)
-x <- c(0,1,1,0)
-y <- c(0,0,1,1)
-z <- c(0,1,1,0)
+x <- c(-1,1,1,-1)
+y <- c(-1,-1,1,1)
+z <- c(-1,1,1,-1)
+reducer = .60
 
 cubes = matrix(nrow = 8 ,ncol = 5)
 i = 1
 
 attachinglinescolor = "black"
-p <- plot3d(x,y,z,box=T,axes=T)
+plot3d(x,y,z,box=false,axes=false)
 hiOuter = 1
 lowOuter = -1
 lowz = 0
 hiz = 0
 
-
-createSquare <- function( Width, Z ){
-	Low = -Width/2
-	Hi = Width/2
-	segments3d(c(Low,Hi),c(Low,Low),c(Z,Z), col= 2,lwd= 2)
-	segments3d(c(Low,Hi),c(Hi,Hi),c(Z,Z),col= 2,lwd= 2)
-	segments3d(c(Low,Low),c(Low,Hi),c(Z,Z),col= 2,lwd= 2)
-	segments3d(c(Hi,Hi),c(Low,Hi),c(Z,Z),col= 2,lwd= 2)}
+createSquare <- (Low,Hi,Z){
+	segments3d(c(Low,Hi),c(Low,Low),c(Z,Z),col=2,lwd=2)
+	segments3d(c(Low,Hi),c(Hi,Hi),c(Z,Z),col=2,lwd=2)
+	segments3d(c(Low,Low),c(Low,Hi),c(Z,Z),col=2,lwd=2)
+	segments3d(c(Hi,Hi),c(Low,Hi),c(Z,Z),col=2,lwd=2)
 }
 
-createSquare(2,0)
+createSquare(lowOuter,hiOuter,0)
+
+
+
 
 hiInner = 0.15
 lowInner = -0.15
