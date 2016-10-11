@@ -12,8 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Xceed.Wpf.Toolkit;
-
 namespace iChing
 {
     /// <summary>
@@ -21,43 +19,79 @@ namespace iChing
     /// </summary>
     public partial class MainWindow : Window
     {
-
+            
         private iChingNumber[] iChing = new iChingNumber[65];
         private Comments[] WilhelmBaynesComments = new Comments[65];
         private int currentlyShowing = 0;
         private bool tracing = false;
-
-        public MainWindow()
+        private string tracingpanel = "";
+        
+        public void deserializeTracingPanel(bool skip, int index, bool fromFile)
         {
-            InitializeComponent();
-            SetupText();
-
             try
             {
                 StackPanel savedTracingPanel;
-                string tracingpanel = System.IO.File.ReadAllText("tracingpanelsaved");
+                switch (fromFile)
+                {
+                    case true:
+                        tracingpanel = System.IO.File.ReadAllText("tracingpanelsaved");
+                        break;
+                    case false:
+                        break;
+                    default:
+                        break;
+                } 
                 savedTracingPanel = (StackPanel)System.Windows.Markup.XamlReader.Parse(tracingpanel);
-                
+                TracingPanel.Children.Clear();
+                int count = 0;
                 foreach (object child in savedTracingPanel.Children)
                 {
+
+                    if ((skip == true) && ((count == index-1) || (count == index))){
+                        count++;
+                        continue;
+                    }
+
+
+
+
                     if (child is StackPanel)
                     {
-                        TracingPanel.Children.Add(CloneFrameworkElement(child as StackPanel));
+                        StackPanel SP = (CloneFrameworkElement(child as StackPanel) as StackPanel);
+                        ContextMenu cMenu = new ContextMenu();
+
+                        MenuItem item1 = new MenuItem();
+                        item1.Header = "Delete";
+                        item1.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(item1_click);
+                        cMenu.Items.Add(item1);
+                        SP.ContextMenu = cMenu;
+                        TracingPanel.Children.Add(SP);
+                        count++;
 
                     }
 
                     else if (child is TextBox)
                     {
                         TracingPanel.Children.Add(CloneFrameworkElement(child as TextBox));
-
+                        count++;
                     }
+                    
 
                 }
             }
-            catch 
+            catch
             {
                 //
             }
+        }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            SetupText();
+            deserializeTracingPanel(false,0,true);
+
+
         }
 
     FrameworkElement CloneFrameworkElement(FrameworkElement originalElement)
@@ -171,13 +205,19 @@ namespace iChing
             ChangesTo4.Text = "● " + iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle+" ●";
             ChangesTo5.Text = "● " + iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle+" ●";
             ChangesTo6.Text = "● " + iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle+" ●";
-            
-            Changes1Box.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
-            Changes2Box.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
-            Changes3Box.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle;
-            Changes4Box.Text = iChing[currentlyShowing].Place4ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle;
-            Changes5Box.Text = iChing[currentlyShowing].Place5ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle;
-            Changes6Box.Text = iChing[currentlyShowing].Place6ChangesToNumber + ". " + iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle;
+
+            Changes1BoxNumber.Text = iChing[currentlyShowing].Place1ChangesToNumber + ". ";
+            Changes2BoxNumber.Text = iChing[currentlyShowing].Place2ChangesToNumber + ". ";
+            Changes3BoxNumber.Text = iChing[currentlyShowing].Place3ChangesToNumber + ". ";
+            Changes4BoxNumber.Text = iChing[currentlyShowing].Place4ChangesToNumber + ". ";
+            Changes5BoxNumber.Text = iChing[currentlyShowing].Place5ChangesToNumber + ". ";
+            Changes6BoxNumber.Text = iChing[currentlyShowing].Place6ChangesToNumber + ". ";
+            Changes1BoxText.Text = iChing[iChing[currentlyShowing].Place1ChangesToNumber].EngTitle;
+            Changes2BoxText.Text = iChing[iChing[currentlyShowing].Place2ChangesToNumber].EngTitle;
+            Changes3BoxText.Text = iChing[iChing[currentlyShowing].Place3ChangesToNumber].EngTitle;
+            Changes4BoxText.Text = iChing[iChing[currentlyShowing].Place4ChangesToNumber].EngTitle;
+            Changes5BoxText.Text = iChing[iChing[currentlyShowing].Place5ChangesToNumber].EngTitle;
+            Changes6BoxText.Text = iChing[iChing[currentlyShowing].Place6ChangesToNumber].EngTitle;
             Changes1BoxH.Text = iChing[iChing[currentlyShowing].Place1ChangesToNumber].Hex;
             Changes2BoxH.Text = iChing[iChing[currentlyShowing].Place2ChangesToNumber].Hex;
             Changes3BoxH.Text = iChing[iChing[currentlyShowing].Place3ChangesToNumber].Hex;
@@ -203,20 +243,64 @@ namespace iChing
             BorderComment5.Visibility = Visibility.Collapsed;
             BorderComment6.Visibility = Visibility.Collapsed;
 
-            if (Line1BoxSquareCircle_Copy.Text == "○")
-            {
-                Changes1Box.Foreground = new SolidColorBrush(Colors.Blue);
-                Changes1BoxH.Foreground = new SolidColorBrush(Colors.Blue);
-            } else if (Line1BoxSquareCircle_Copy.Text == "⬜")
-            {
-                Changes1Box.Foreground = new SolidColorBrush(Colors.Red);
-                Changes1BoxH.Foreground = new SolidColorBrush(Colors.Red);
-            } else
-            {
-                Changes1Box.Foreground = new SolidColorBrush(Colors.Black);
-                Changes1BoxH.Foreground = new SolidColorBrush(Colors.Black);
-            }
 
+            var SquareCircleTextBoxes = new List<TextBox>();
+            SquareCircleTextBoxes.Add(Line1BoxSquareCircle_Copy);
+            SquareCircleTextBoxes.Add(Line2BoxSquareCircle_Copy);
+            SquareCircleTextBoxes.Add(Line3BoxSquareCircle_Copy);
+            SquareCircleTextBoxes.Add(Line4BoxSquareCircle_Copy1);
+            SquareCircleTextBoxes.Add(Line5BoxSquareCircle_Copy);
+            SquareCircleTextBoxes.Add(Line6BoxSquareCircle_Copy);
+
+            var ChangesNumberBox = new List<TextBox>();
+            ChangesNumberBox.Add(Changes1BoxNumber);
+            ChangesNumberBox.Add(Changes2BoxNumber);
+            ChangesNumberBox.Add(Changes3BoxNumber);
+            ChangesNumberBox.Add(Changes4BoxNumber);
+            ChangesNumberBox.Add(Changes5BoxNumber);
+            ChangesNumberBox.Add(Changes6BoxNumber);
+
+            var ChangesTextBox = new List<TextBox>();
+            ChangesTextBox.Add(Changes1BoxText);
+            ChangesTextBox.Add(Changes2BoxText);
+            ChangesTextBox.Add(Changes3BoxText);
+            ChangesTextBox.Add(Changes4BoxText);
+            ChangesTextBox.Add(Changes5BoxText);
+            ChangesTextBox.Add(Changes6BoxText);
+
+
+            var ChangesHTextBox = new List<TextBox>();
+            ChangesHTextBox.Add(Changes1BoxH);
+            ChangesHTextBox.Add(Changes2BoxH);
+            ChangesHTextBox.Add(Changes3BoxH);
+            ChangesHTextBox.Add(Changes4BoxH);
+            ChangesHTextBox.Add(Changes5BoxH);
+            ChangesHTextBox.Add(Changes6BoxH);
+
+
+
+            for (int i = 0; i< SquareCircleTextBoxes.Count; i++)
+            {
+                switch (SquareCircleTextBoxes[i].Text){
+                    case "○":
+                        ChangesNumberBox[i].Foreground = new SolidColorBrush(Colors.CadetBlue);
+                        ChangesTextBox[i].Foreground = new SolidColorBrush(Colors.CadetBlue);
+                        ChangesHTextBox[i].Foreground = new SolidColorBrush(Colors.CadetBlue);
+                        break;
+                    case "⬜":
+                        ChangesNumberBox[i].Foreground = new SolidColorBrush(Colors.IndianRed);
+                        ChangesTextBox[i].Foreground = new SolidColorBrush(Colors.IndianRed);
+                        ChangesHTextBox[i].Foreground = new SolidColorBrush(Colors.IndianRed);
+                        break;
+                    default:
+                        ChangesNumberBox[i].Foreground = new SolidColorBrush(Colors.Black);
+                        ChangesTextBox[i].Foreground = new SolidColorBrush(Colors.Black);
+                        ChangesHTextBox[i].Foreground = new SolidColorBrush(Colors.Black);
+                        break;
+
+                }
+            }
+            
             
             
             
@@ -7155,11 +7239,32 @@ intemperance.";
             updateApplication();
         }
 
+        
+        private void item1_click(object sender, RoutedEventArgs e)
+        {
+
+            MenuItem mnu = sender as MenuItem;
+            StackPanel sp = null;
+            if (mnu != null)
+            {
+                sp = ((ContextMenu)mnu.Parent).PlacementTarget as StackPanel;
+            }
+
+
+            int indexToDelete = TracingPanel.Children.IndexOf(sp);
+            deserializeTracingPanel(true, indexToDelete,false);
+            tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
+
+        }
+
+
+        
+
         void TracingPathPanelRightClick(object sender, RoutedEventArgs e)
         {
-            ColorPicker cp = new ColorPicker();
             
             Brush b = new SolidColorBrush(Color.FromArgb(60,100,0,0));
+            //MessageBox.Show((TracingPanel.Children.IndexOf(sender as StackPanel)).ToString());
             TextBox tb = (TracingPanel.Children[TracingPanel.Children.IndexOf(sender as StackPanel) - 1] as TextBox);
             tb.Background = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0));
             tb.BorderBrush = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0)); 
@@ -7384,6 +7489,7 @@ intemperance.";
       
                 }
             }
+            tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -7396,9 +7502,9 @@ intemperance.";
                     break;
                 case false:
                     tracing = true;
-
+                    deserializeTracingPanel(false, 0, false);
                     TracingPanel.Children.Add(new TextBox() { Name = "Title" + DateTime.Now.ToString("yymmddssffff"), Background = null, BorderBrush = null, Width = double.NaN });
-                    
+
                     StackPanel newPathPanel = new StackPanel();
                     newPathPanel.Orientation = Orientation.Horizontal;
                     newPathPanel.Tag = "Map"+Convert.ToString(TracingPanel.Children.Count+1);
@@ -7406,8 +7512,20 @@ intemperance.";
                     newPathPanel.Height = double.NaN;
                     newPathPanel.Background = new SolidColorBrush(Color.FromArgb(0,0,0,0));
                     newPathPanel.PreviewMouseRightButtonDown += new MouseButtonEventHandler(TracingPathPanelRightClick);
+
+                    ContextMenu pMenu = new ContextMenu();
+                    MenuItem item1 = new MenuItem();
+                    item1.Header = "Delete";
+                    //item1.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(item2_click);
+                    pMenu.Items.Add(item1);
+
+
+                    newPathPanel.ContextMenu = pMenu;
+
+
                     TracingPanel.Children.Add(newPathPanel);
                     AddEntryToTraceMap();
+                    
                     TracerBtn.Content = "Finish Tracing";
                     break;
             }
@@ -7418,10 +7536,14 @@ intemperance.";
 
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        public void serializeTracingPanel()
         {
             string tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
             System.IO.File.WriteAllText("tracingpanelsaved", tracingpanel);
+        }
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            serializeTracingPanel();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -7453,6 +7575,22 @@ intemperance.";
                 currentlyShowing = 1;
             }
             updateApplication();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void MapViewer_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Item2_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.MessageBox.Show("hello");
+            throw new NotImplementedException();
         }
     }
 
