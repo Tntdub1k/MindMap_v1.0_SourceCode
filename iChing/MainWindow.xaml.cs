@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
+
+
 namespace iChing
 {
     /// <summary>
@@ -25,59 +28,21 @@ namespace iChing
         private int currentlyShowing = 0;
         private bool tracing = false;
         private string tracingpanel = "";
+        private List<TraceRoute> RouteMaps = new List<TraceRoute>(0);
+
+
+        public class TraceRoute
+        {
+            public string Title { get; set; }
+            public List<int> Hexagrams { get; set; }
+        }
         
-        public void deserializeTracingPanel(bool skip, int index, bool fromFile)
+        public void deserializeRouteMaps()
         {
             try
             {
-                StackPanel savedTracingPanel;
-                switch (fromFile)
-                {
-                    case true:
-                        tracingpanel = System.IO.File.ReadAllText("tracingpanelsaved");
-                        break;
-                    case false:
-                        break;
-                    default:
-                        break;
-                } 
-                savedTracingPanel = (StackPanel)System.Windows.Markup.XamlReader.Parse(tracingpanel);
-                TracingPanel.Children.Clear();
-                int count = 0;
-                foreach (object child in savedTracingPanel.Children)
-                {
-
-                    if ((skip == true) && ((count == index-1) || (count == index))){
-                        count++;
-                        continue;
-                    }
-
-
-
-
-                    if (child is StackPanel)
-                    {
-                        StackPanel SP = (CloneFrameworkElement(child as StackPanel) as StackPanel);
-                        ContextMenu cMenu = new ContextMenu();
-
-                        MenuItem item1 = new MenuItem();
-                        item1.Header = "Delete";
-                        item1.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(item1_click);
-                        cMenu.Items.Add(item1);
-                        SP.ContextMenu = cMenu;
-                        TracingPanel.Children.Add(SP);
-                        count++;
-
-                    }
-
-                    else if (child is TextBox)
-                    {
-                        TracingPanel.Children.Add(CloneFrameworkElement(child as TextBox));
-                        count++;
-                    }
-                    
-
-                }
+                string json = System.IO.File.ReadAllText("RouteMaps");
+                RouteMaps = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TraceRoute>>(json);
             }
             catch
             {
@@ -89,7 +54,7 @@ namespace iChing
         {
             InitializeComponent();
             SetupText();
-            deserializeTracingPanel(false,0,true);
+            deserializeRouteMaps();
 
 
         }
@@ -335,7 +300,7 @@ namespace iChing
             SetToLines();
             if (tracing == true)
             {
-                    AddEntryToTraceMap();
+                AddHexagramToCurrentRoute();
             }
         }
 
@@ -346,7 +311,7 @@ namespace iChing
             SetToLines();
             if (tracing == true)
             {
-                AddEntryToTraceMap();
+                AddHexagramToCurrentRoute();
             }
         }
 
@@ -357,7 +322,7 @@ namespace iChing
             SetToLines();
             if (tracing == true)
             {
-                AddEntryToTraceMap();
+                AddHexagramToCurrentRoute();
             }
         }
 
@@ -368,7 +333,7 @@ namespace iChing
             SetToLines();
             if (tracing == true)
             {
-                AddEntryToTraceMap();
+                AddHexagramToCurrentRoute();
             }
         }
 
@@ -379,7 +344,7 @@ namespace iChing
             SetToLines();
             if (tracing == true)
             {
-                AddEntryToTraceMap();
+                AddHexagramToCurrentRoute();
             }
         }
 
@@ -390,7 +355,7 @@ namespace iChing
             SetToLines();
             if (tracing == true)
             {
-                AddEntryToTraceMap();
+                AddHexagramToCurrentRoute();
             }
         }
 
@@ -7244,7 +7209,7 @@ intemperance.";
         private void item1_click(object sender, RoutedEventArgs e)
         {
 
-            MenuItem mnu = sender as MenuItem;
+            /*MenuItem mnu = sender as MenuItem;
             StackPanel sp = null;
             if (mnu != null)
             {
@@ -7255,7 +7220,7 @@ intemperance.";
             int indexToDelete = TracingPanel.Children.IndexOf(sp);
             deserializeTracingPanel(true, indexToDelete,false);
             tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
-
+            */
         }
 
 
@@ -7468,6 +7433,40 @@ intemperance.";
             }
         }
 
+
+        private void AddHexagramToCurrentRoute()
+        {
+            RouteMaps[RouteMaps.Count - 1].Hexagrams.Add(currentlyShowing);
+        }
+
+        //viewer, displaying only
+        private void AddHexagramToTraceMap(int hexagram)
+        {
+            PathTemplate newPathEntry = new PathTemplate();
+            newPathEntry.HexBox.Text = iChing[hexagram].Hex;
+            newPathEntry.PathBar.Value = hexagram;
+            //newPathEntry.Name = "Entry" + DateTime.Now.ToString("yymmddssffff");
+            //newPathEntry.PathPanel.Name = "PT1" + DateTime.Now.ToString("yymmddssffff");
+            //newPathEntry.PathPanel2.Name = "PT2" + DateTime.Now.ToString("yymmddssffff");
+            //newPathEntry.PathBar.Name = "PB" + DateTime.Now.ToString("yymmddssffff");
+            //newPathEntry.HexBox.Name = "HB" + DateTime.Now.ToString("yymmddssffff");
+            //newPathEntry.TextBox.Name = "TB" + DateTime.Now.ToString("yymmddssffff");
+            newPathEntry.TextBox.Text = iChing[hexagram].EngTitle;
+            foreach (object child in TracingPanel.Children)
+            {
+                if (child is StackPanel)
+                {
+                    if (Convert.ToString((child as StackPanel).Tag) == "Map" + Convert.ToString(TracingPanel.Children.Count))
+                    {
+                        (child as StackPanel).Children.Add(newPathEntry);
+                        (child as StackPanel).Children.Add(new TextBox() { Text = " ⬤ ", FontSize = 8, Height = 80, VerticalAlignment = VerticalAlignment.Top, Background = null, BorderBrush = null, VerticalContentAlignment = VerticalAlignment.Center });
+                    }
+
+                }
+            }
+        
+
+    }
         private void AddEntryToTraceMap()
         {
             PathTemplate newPathEntry = new PathTemplate();
@@ -7503,11 +7502,17 @@ intemperance.";
                     break;
                 case false:
                     tracing = true;
-                    deserializeTracingPanel(false, 0, false);
-                    TextBox tb = new TextBox();
-                    tb.Name = "Title" + DateTime.Now.ToString("yymmddssffff");
-                    tb.Background = null;
-                    tb.BorderBrush = null;
+                    TraceRoute tr = new TraceRoute();
+                    tr.Title = "";
+                    tr.Hexagrams = new List<int>(1);
+                    tr.Hexagrams.Add(currentlyShowing);
+
+                    RouteMaps.Add(tr);
+
+                    //deserializeTracingPanel(false, 0, false);
+                    //TextBox tb = new TextBox();
+                    //tb.Name = "Title" + DateTime.Now.ToString("yymmddssffff");
+                    /*tb.BorderBrush = null;
                     tb.Width = double.NaN;
                     tb.TextChanged += Tb_TextChanged;
                     TracingPanel.Children.Add(tb);
@@ -7530,8 +7535,8 @@ intemperance.";
                     newPathPanel.ContextMenu = pMenu;
 
 
-                    TracingPanel.Children.Add(newPathPanel);
-                    AddEntryToTraceMap();
+                    */
+
                     
                     TracerBtn.Content = "Finish Tracing";
                     break;
@@ -7543,9 +7548,10 @@ intemperance.";
             stringifyTracingPanel();
         }
 
+
+        //Viewer, only displays data
         private void TabItem_GotFocus(object sender, RoutedEventArgs e)
         {
-
         }
 
         public void stringifyTracingPanel()
@@ -7561,6 +7567,7 @@ intemperance.";
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             serializeTracingPanel();
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -7608,6 +7615,51 @@ intemperance.";
         {
             System.Windows.MessageBox.Show("hello");
             throw new NotImplementedException();
+        }
+
+        private void TabItem_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            TracingPanel.Children.Clear();
+            if (RouteMaps != null)
+            {
+                foreach (var route in RouteMaps)
+                {
+
+                    TextBox tb = new TextBox();
+                    tb.Text = route.Title;
+                    tb.Width = double.NaN;
+                    tb.Background = null;
+                    tb.BorderBrush = null;
+                    //tb.TextChanged += Tb_TextChanged;
+                    TracingPanel.Children.Add(tb);
+
+                    StackPanel newPathPanel = new StackPanel();
+                    newPathPanel.Orientation = Orientation.Horizontal;
+                    newPathPanel.Tag = "Map" + Convert.ToString(TracingPanel.Children.Count + 1);
+                    newPathPanel.Width = double.NaN;
+                    newPathPanel.Height = double.NaN;
+                    newPathPanel.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
+                    newPathPanel.PreviewMouseRightButtonDown += new MouseButtonEventHandler(TracingPathPanelRightClick);
+
+                    ContextMenu pMenu = new ContextMenu();
+                    MenuItem item1 = new MenuItem();
+                    item1.Header = "Delete";
+                    //item1.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(item2_click);
+                    pMenu.Items.Add(item1);
+                    newPathPanel.ContextMenu = pMenu;
+
+                    TracingPanel.Children.Add(newPathPanel);
+
+
+                    foreach (var hexagram in route.Hexagrams)
+                    {
+                        AddHexagramToTraceMap(hexagram);
+                    }
+
+
+                }
+            }
         }
     }
 

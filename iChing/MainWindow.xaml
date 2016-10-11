@@ -1023,7 +1023,7 @@
                 </ScrollViewer>
             </Grid>
         </TabItem>
-        <TabItem Header="Map" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55" GotFocus="TabItem_GotFocus">
+        <TabItem Header="Map" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55" GotFocus="TabItem_GotFocus" PreviewMouseDown="TabItem_PreviewMouseDown">
             <Grid Background="#FFE5E5E5">
                 <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="112,15,0,0" VerticalAlignment="Top" Width="1205" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="630" Initialized="MapViewer_Initialized">
                     <StackPanel x:Name="TracingPanel" HorizontalAlignment="Left" VerticalAlignment="Top"/>
