@@ -7503,7 +7503,13 @@ intemperance.";
                 case false:
                     tracing = true;
                     deserializeTracingPanel(false, 0, false);
-                    TracingPanel.Children.Add(new TextBox() { Name = "Title" + DateTime.Now.ToString("yymmddssffff"), Background = null, BorderBrush = null, Width = double.NaN });
+                    TextBox tb = new TextBox();
+                    tb.Name = "Title" + DateTime.Now.ToString("yymmddssffff");
+                    tb.Background = null;
+                    tb.BorderBrush = null;
+                    tb.Width = double.NaN;
+                    tb.TextChanged += Tb_TextChanged;
+                    TracingPanel.Children.Add(tb);
 
                     StackPanel newPathPanel = new StackPanel();
                     newPathPanel.Orientation = Orientation.Horizontal;
@@ -7531,14 +7537,24 @@ intemperance.";
             }
         }
 
+        private void Tb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            stringifyTracingPanel();
+        }
+
         private void TabItem_GotFocus(object sender, RoutedEventArgs e)
         {
 
         }
 
+        public void stringifyTracingPanel()
+        {
+            tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
+        }
+
         public void serializeTracingPanel()
         {
-            string tracingpanel = System.Windows.Markup.XamlWriter.Save(TracingPanel);
+            stringifyTracingPanel();
             System.IO.File.WriteAllText("tracingpanelsaved", tracingpanel);
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
