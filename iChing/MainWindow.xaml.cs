@@ -35,6 +35,7 @@ namespace iChing
         {
             public string Title { get; set; }
             public List<int> Hexagrams { get; set; }
+            public Color SPColor { get; set; }
         }
         
         public void deserializeRouteMaps()
@@ -7257,20 +7258,38 @@ intemperance.";
                 RouteMaps.Insert(indexToMove + 1, tempTR);
                 TabItem_Loaded(sender, e);
             }
+ 
+            
 
         }
+
+        private void item4_click(object sender, RoutedEventArgs e)
+        {
+            colorbutton.Visibility = Visibility.Visible;
+            Colorbar.Visibility = Visibility.Visible;
+            MenuItem mnu = sender as MenuItem;
+            StackPanel sp = null;
+            if (mnu != null)
+            {
+                sp = ((ContextMenu)mnu.Parent).PlacementTarget as StackPanel;
+            }
+            int index= (TracingPanel.Children.IndexOf(sp) - 1) / 2;
+            Colorbar.Tag = index;
+        }
+
 
 
         void TracingPathPanelRightClick(object sender, RoutedEventArgs e)
         {
             
-            Brush b = new SolidColorBrush(Color.FromArgb(60,100,0,0));
+          /*  Brush b = new SolidColorBrush(Color.FromArgb(60,100,0,0));
             //MessageBox.Show((TracingPanel.Children.IndexOf(sender as StackPanel)).ToString());
             TextBox tb = (TracingPanel.Children[TracingPanel.Children.IndexOf(sender as StackPanel) - 1] as TextBox);
             tb.Background = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0));
             tb.BorderBrush = new SolidColorBrush(Color.FromArgb(40, 100, 0, 0)); 
             
             (sender as StackPanel).Background = b;
+            */
         }
 
         private static int[] AllIndexesOf(string str, string substr)
@@ -7504,11 +7523,13 @@ intemperance.";
                 case true:
                     tracing = false;
                     TracerBtn.Content = "Trace";
+                    TabItem_Loaded(sender, e);
                     break;
                 case false:
                     tracing = true;
                     TraceRoute tr = new TraceRoute();
                     tr.Title = "";
+                    tr.SPColor = System.Windows.Media.Color.FromArgb(0, 0, 0, 0);
                     tr.Hexagrams = new List<int>(1);
                     tr.Hexagrams.Add(currentlyShowing);
 
@@ -7516,6 +7537,7 @@ intemperance.";
                     TracerBtn.Content = "Finish Tracing";
                     break;
             }
+            
         }
 
         private void Tb_TextChanged(object sender, TextChangedEventArgs e)
@@ -7600,8 +7622,16 @@ intemperance.";
                     tb.IsHitTestVisible = true;
                     tb.IsTabStop = true;
                     tb.Width = double.NaN;
-                    tb.Background = null;
-                    tb.BorderBrush = null;
+                    Color tbColor = new Color();
+                    if (route.SPColor.A > 40)
+                    {
+                    tbColor.A = Convert.ToByte(40);
+                    }
+                    tbColor.R = route.SPColor.R;
+                    tbColor.G = route.SPColor.G; 
+                    tbColor.B = route.SPColor.B; 
+                    tb.Background = new SolidColorBrush(tbColor);
+                    tb.BorderBrush = new SolidColorBrush(tbColor);
                     tb.TextChanged += Tb_TextChanged;
                     TracingPanel.Children.Add(tb);
 
@@ -7610,7 +7640,11 @@ intemperance.";
                     newPathPanel.Tag = "Map" + Convert.ToString(TracingPanel.Children.Count + 1);
                     newPathPanel.Width = double.NaN;
                     newPathPanel.Height = double.NaN;
-                    newPathPanel.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
+                    if (route.SPColor.A >= 40)
+                    {
+                        tbColor.A = Convert.ToByte(60);
+                    }
+                    newPathPanel.Background = new SolidColorBrush(tbColor);
                     newPathPanel.PreviewMouseRightButtonDown += new MouseButtonEventHandler(TracingPathPanelRightClick);
 
                     ContextMenu pMenu = new ContextMenu();
@@ -7626,6 +7660,11 @@ intemperance.";
                     item3.Header = "Move down";
                     item3.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(item3_click);
                     pMenu.Items.Add(item3);
+                    MenuItem item4 = new MenuItem();
+                    item4.Header = "Choose Color";
+                    item4.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(item4_click);
+                    pMenu.Items.Add(item4);
+
 
 
                     newPathPanel.ContextMenu = pMenu;
@@ -7641,6 +7680,16 @@ intemperance.";
 
                 }
             }
+        }
+
+        private void colorbutton_Click(object sender, RoutedEventArgs e)
+        {
+            colorbutton.Visibility = Visibility.Hidden;
+            Colorbar.Visibility = Visibility.Hidden;
+            Color? color = Colorbar.SelectedColor;
+            Color ColorRGBA = (Color)System.Windows.Media.ColorConverter.ConvertFromString(color.ToString());
+            RouteMaps[Convert.ToInt32(Colorbar.Tag)].SPColor = ColorRGBA;
+            TabItem_Loaded(sender, e);
         }
     }
 
