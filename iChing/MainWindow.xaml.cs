@@ -27,7 +27,6 @@ namespace iChing
         private Comments[] WilhelmBaynesComments = new Comments[65];
         private int currentlyShowing = 0;
         private bool tracing = false;
-        private string tracingpanel = "";
         private List<TraceRoute> RouteMaps = new List<TraceRoute>(0);
 
 

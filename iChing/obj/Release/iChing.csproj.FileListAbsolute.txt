@@ -38,7 +38,6 @@ C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Release\iChing.Proper
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Release\iChing.csproj.GenerateResource.Cache
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Release\iChing.exe
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Release\iChing.pdb
-C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Release\iChing.csprojResolveAssemblyReference.cache
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Release\Xceed.Wpf.AvalonDock.dll
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Release\Xceed.Wpf.AvalonDock.Themes.Aero.dll
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Release\Xceed.Wpf.AvalonDock.Themes.Metro.dll

@@ -3,9 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" IsHitTestVisible="False" d:DesignWidth="95.474" Padding="2,0,0,-20" d:DesignHeight="139.118">
-    <StackPanel x:Name="PathPanel2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
-        <ProgressBar x:Name="PathBar" Value="50" Width="9" Orientation="Vertical" Maximum="64" Minimum="1" Margin="0,9,-7,70" Height="59" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="9" MinHeight="40" Foreground="#7F065BB0" Background="#7FFFFFFF" BorderThickness="30,1,5,1">
+             mc:Ignorable="d" IsHitTestVisible="False" Padding="2,0,0,-20" d:DesignHeight="139.118" Width="92.296">
+    <StackPanel x:Name="PathPanel2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="95">
+        <ProgressBar x:Name="PathBar" Value="50" Width="8" Orientation="Vertical" Maximum="64" Minimum="1" Margin="0,9,-7,70" Height="59" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="9" MinHeight="40" Foreground="#7F065BB0" Background="#7FFFFFFF" BorderThickness="30,1,5,1" Padding="0,0,-11,0" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="6"/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
             <ProgressBar.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -19,12 +27,12 @@
                     <GradientStop Color="#7FFFFFFF" Offset="0"/>
                     <GradientStop Color="#7FFFFFFF" Offset="1"/>
                     <GradientStop Color="#7FFFFFFF" Offset="0.49"/>
-                    <GradientStop Color="#7F000000" Offset="0.5"/>
+                    <GradientStop Color="#7F878686" Offset="0.5"/>
                     <GradientStop Color="#7FFFFFFF" Offset="0.51"/>
                 </LinearGradientBrush>
             </ProgressBar.BorderBrush>
         </ProgressBar>
-        <StackPanel x:Name="PathPanel" HorizontalAlignment="Center" Margin="0,0,0,-61" ToolTip="27" PreviewMouseUp="StackPanel_PreviewMouseUp" IsHitTestVisible="False" VerticalAlignment="Top">
+        <StackPanel x:Name="PathPanel" HorizontalAlignment="Center" Margin="0,0,0,-61" ToolTip="27" PreviewMouseUp="StackPanel_PreviewMouseUp" IsHitTestVisible="False" VerticalAlignment="Top" Width="92" Height="138">
             <TextBox x:Name="HexBox" TextWrapping="Wrap" Text="䷿" FontSize="72" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" TextAlignment="Center" ScrollViewer.CanContentScroll="True" HorizontalAlignment="Center" VerticalAlignment="Top" IsReadOnly="True" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Width="85" IsHitTestVisible="False" Focusable="False" IsTabStop="False">
                 <TextBox.RenderTransform>
                     <TransformGroup>
