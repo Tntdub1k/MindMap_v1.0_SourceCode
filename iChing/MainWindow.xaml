@@ -614,7 +614,6 @@
                         </Label.Background>
                     </Label>
                 </StackPanel>
-<<<<<<< HEAD
                 <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True" RenderTransformOrigin="0.5,0.5">
                     <StackPanel.LayoutTransform>
                         <TransformGroup>
@@ -626,14 +625,6 @@
                     </StackPanel.LayoutTransform>
                     <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,4,0" Height="25">
                         <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,3,6">
-=======
-                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
-                    <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,0,0" Height="25">
-                        <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,5,6">
-<<<<<<< HEAD
->>>>>>> parent of d56f477... Minor layout additions
-=======
->>>>>>> parent of d56f477... Minor layout additions
                             <Button.Background>
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
                             </Button.Background>
@@ -641,15 +632,7 @@
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                             </Button.BorderBrush>
                         </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <Button Content="Search" Width="48" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
-=======
-                        <Button Content="Search" Width="42" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
->>>>>>> parent of d56f477... Minor layout additions
-=======
-                        <Button Content="Search" Width="42" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
->>>>>>> parent of d56f477... Minor layout additions
                             <Button.BorderBrush>
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                             </Button.BorderBrush>
@@ -657,15 +640,7 @@
                                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
                             </Button.Background>
                         </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="266" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
-=======
-                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="271" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
->>>>>>> parent of d56f477... Minor layout additions
-=======
-                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="271" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
->>>>>>> parent of d56f477... Minor layout additions
                     </StackPanel>
                     <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                         <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
@@ -679,15 +654,7 @@
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                     </Button.BorderBrush>
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="313,0,-158,188" Grid.Row="2" VerticalAlignment="Bottom" Width="36" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2">
-=======
-                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="316,0,-162,189" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2">
->>>>>>> parent of d56f477... Minor layout additions
-=======
-                <Button Content="Text" Grid.Column="2" HorizontalAlignment="Left" Margin="316,0,-162,189" Grid.Row="2" VerticalAlignment="Bottom" Width="37" Click="Button_ClickText" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="19" Grid.RowSpan="2">
->>>>>>> parent of d56f477... Minor layout additions
                     <Button.Background>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
                     </Button.Background>
