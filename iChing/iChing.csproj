@@ -176,6 +176,27 @@
   <ItemGroup>
     <Resource Include="chien[1].png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chen[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kan[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ken[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kun[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sun[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="li[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tui[1].png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

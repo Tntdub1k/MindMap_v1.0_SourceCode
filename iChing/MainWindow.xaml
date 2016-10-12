@@ -109,42 +109,250 @@
                             <TranslateTransform Y="-26"/>
                         </TransformGroup>
                     </TextBlock.RenderTransform><Run Text="䷖"/></TextBlock>
-                <Border BorderBrush="Black" BorderThickness="2,1,1,1" Margin="316,22,-531,0" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="406" Height="252">
+                <Border BorderBrush="Black" BorderThickness="1" Margin="316,22,-530,0" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="405" Height="253">
                     <StackPanel Orientation="Horizontal" Margin="-1,0,0,-4" HorizontalAlignment="Left" VerticalAlignment="Top">
                         <StackPanel Width="45" HorizontalAlignment="Left" VerticalAlignment="Top" IsHitTestVisible="False">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="Above ⇒&#xA;Below ⇓" FontSize="10" Width="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☰" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☳" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☵" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☶" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☷" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☴" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☲" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☱" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="1,0,1,1" Text="Above ⇒&#xA;Below ⇓" FontSize="9.5" Width="45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="chien[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="chen[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="kan[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="ken[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="kun[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="sun[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="li[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="tui[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="ChienPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☰" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="20" AllowDrop="False" Background="{x:Null}" IsHitTestVisible="False" Focusable="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" Margin="0" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="chien[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="ChenPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☳" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="chen[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="KanPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☵" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="kan[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="KenPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☶" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="ken[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="KunPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☷" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="kun[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="SunPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☴" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="sun[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="LiPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☲" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="li[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                         <StackPanel x:Name="TuiPanel" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBox Height="28" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="0,0,1,1" Text="☱" HorizontalAlignment="Center" Width="45" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontWeight="Bold"/>
+                            <Border BorderBrush="Black" BorderThickness="0,0,1,1" Height="28" Padding="33,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.5,0.5">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="tui[1].png" Stretch="Uniform">
+                                        <ImageBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.9" ScaleY="0.9"/>
+                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </ImageBrush.RelativeTransform>
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
                         </StackPanel>
                     </StackPanel>
                 </Border>

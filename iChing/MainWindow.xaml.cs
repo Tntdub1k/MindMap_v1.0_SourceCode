@@ -7690,6 +7690,11 @@ intemperance.";
             RouteMaps[Convert.ToInt32(Colorbar.Tag)].SPColor = ColorRGBA;
             TabItem_Loaded(sender, e);
         }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 
