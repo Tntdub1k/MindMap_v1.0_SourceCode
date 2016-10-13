@@ -877,7 +877,7 @@
                         </ScrollViewer>
                     </TabItem>
                     <TabItem x:Name="JamesDeKorneTab" Header="James De Korne" Foreground="Black" Margin="1,2,-2,-3" BorderBrush="#00ACACAC" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" PreviewMouseLeftButtonDown="JamesDeKorneTab_PreviewMouseLeftButtonDown" MouseLeftButtonDown="JamesDeKorneTab_MouseLeftButtonDown">
-                        <RichTextBox x:Name="jamesDKRTB" HorizontalAlignment="Left" Height="526" VerticalAlignment="Top" Width="878" BorderBrush="{x:Null}" IsHitTestVisible="True" VerticalScrollBarVisibility="Auto" IsDocumentEnabled="True" IsTabStop="False">
+                        <RichTextBox x:Name="jamesDKRTB" HorizontalAlignment="Left" Height="526" VerticalAlignment="Top" Width="878" BorderBrush="{x:Null}" IsHitTestVisible="True" VerticalScrollBarVisibility="Auto" IsDocumentEnabled="True" IsTabStop="False" BorderThickness="0">
                             <FlowDocument/>
                         </RichTextBox>
                     </TabItem>

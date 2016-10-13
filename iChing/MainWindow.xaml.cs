@@ -7183,8 +7183,33 @@ intemperance.";
 
         private void SetToLines()
         {
-            MainTextViewer.UpdateLayout();
-            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 17);
+            switch (JamesDeKorneTab.IsSelected)
+            {
+                case true:
+                    string keyword = "Line-1";
+                    TextRange text = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
+                    TextPointer current = text.Start.GetInsertionPosition(LogicalDirection.Forward);
+                    int i = 0;
+                    while (current != null)
+                    {
+                        string textInRun = current.GetTextInRun(LogicalDirection.Forward);
+                        if (!string.IsNullOrWhiteSpace(textInRun))
+                        {
+                            int index = textInRun.IndexOf(keyword);
+                            if (index != -1)
+                            {
+                                jamesDKRTB.ScrollToVerticalOffset(i*3);
+                            }
+                        }
+                        current = current.GetNextContextPosition(LogicalDirection.Forward);
+                        i++;
+                    }
+                    break;
+                default:
+                    MainTextViewer.UpdateLayout();
+                    MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 17);
+                    break;
+            }
 
         }
 
