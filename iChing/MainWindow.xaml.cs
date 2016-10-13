@@ -7226,29 +7226,52 @@ intemperance.";
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Left)
+            switch (e.Key)
             {
-                if (currentlyShowing > 1)
-                {
-                    currentlyShowing--;
-                }
-                else
-                {
-                    currentlyShowing = 64;
-                }
-                updateApplication();
-            }
-            if (e.Key == Key.Right)
-            {
-                if (currentlyShowing < 64)
-                {
-                    currentlyShowing++;
-                }
-                else
-                {
-                    currentlyShowing = 1;
-                }
-                updateApplication(); 
+                case Key.Left:
+                    if (currentlyShowing > 1)
+                    {
+                        currentlyShowing--;
+                    }
+                    else
+                    {
+                        currentlyShowing = 64;
+                    }
+                    updateApplication();
+                    break;
+                case Key.Right:
+                    if (currentlyShowing < 64)
+                    {
+                        currentlyShowing++;
+                    }
+                    else
+                    {
+                        currentlyShowing = 1;
+                    }
+                    updateApplication();
+                    break;
+                case Key.Up:
+                    switch (JamesDeKorneTab.IsSelected)
+                    {
+                        case true:
+                            jamesDKRTB.LineUp();
+                            break;
+                        case false:
+                            MainTextViewer.LineUp();
+                            break;
+                    }
+                    break;
+                case Key.Down:
+                    switch (JamesDeKorneTab.IsSelected)
+                    {
+                        case true:
+                            jamesDKRTB.LineDown();
+                            break;
+                        case false:
+                            MainTextViewer.LineDown();
+                            break;
+                    }
+                    break;
             }
         }
 
@@ -7805,6 +7828,17 @@ intemperance.";
         private void tabControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void tabControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            //
+        }
+
+            //
+        private void tabControl_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 
