@@ -25,6 +25,7 @@ namespace iChing
             
         private iChingNumber[] iChing = new iChingNumber[65];
         private Comments[] WilhelmBaynesComments = new Comments[65];
+        private string[] GnosticJamesDeKorneEdition = new string[65];
         private int currentlyShowing = 0;
         private bool tracing = false;
         private List<TraceRoute> RouteMaps = new List<TraceRoute>(0);
@@ -51,11 +52,26 @@ namespace iChing
             }
         }
 
+        public void deserializeGnosticJamesDeKorneEdition()
+        {
+
+            try
+            {
+                string json = System.IO.File.ReadAllText("GnosticJamesDeKorneEdition");
+                GnosticJamesDeKorneEdition = Newtonsoft.Json.JsonConvert.DeserializeObject<string[]>(json);
+            }
+            catch
+            {
+                //
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
-            SetupText();
             deserializeRouteMaps();
+           // deserializeGnosticJamesDeKorneEdition();
+            SetupText();
 
 
         }
@@ -290,6 +306,25 @@ namespace iChing
             else { System.Windows.MessageBox.Show("Not yet defined"); }
             //LinesViewer.ScrollToTop();
             //MainTextViewer.ScrollToTop();
+
+/*            switch (JamesDeKorneTab.IsSelected)
+            {
+                case true:
+                    byte[] content = Convert.FromBase64String(GnosticJamesDeKorneEdition[currentlyShowing]);
+
+                    jamesDKRTB.Document.Blocks.Clear();
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream(content);
+                    TextRange tRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
+                    string dataFormat = DataFormats.Rtf;
+                    ms.Position = 0;
+                    tRange.Load(ms, dataFormat);
+                    break;
+                case false:
+                    break;
+            }
+
+            */
+
         }
 
 
@@ -7699,7 +7734,7 @@ intemperance.";
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             TextRange tRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
             string dataFormat = DataFormats.Rtf;
@@ -7710,17 +7745,32 @@ intemperance.";
             string base64 = Convert.ToBase64String(ms.ToArray());
 
             jamesDKRTB.Document.Blocks.Clear();
-            MessageBox.Show("cleared text");
+
+            GnosticJamesDeKorneEdition[Convert.ToInt16(textBoxtemp.Text)] = base64;
+            textBoxtemp.Text = (Convert.ToInt16(textBoxtemp.Text) + 1).ToString();
 
             // Start Load
-            byte[] content = Convert.FromBase64String(base64);
+            /*      byte[] content = Convert.FromBase64String(base64);
 
 
 
-            ms.Position = 0;
-            TextRange textRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
-            textRange.Load(ms, dataFormat);
+                  ms.Position = 0;
+                  TextRange textRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
+                  textRange.Load(ms, dataFormat);
 
+          */
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(GnosticJamesDeKorneEdition);
+            System.IO.File.WriteAllText("GnosticJamesDeKorneEdition", json);
+        }
+
+        private void JamesDeKorneTab_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            updateApplication();
         }
     }
 
