@@ -70,7 +70,7 @@ namespace iChing
         {
             InitializeComponent();
             deserializeRouteMaps();
-           // deserializeGnosticJamesDeKorneEdition();
+            deserializeGnosticJamesDeKorneEdition();
             SetupText();
 
 
@@ -307,7 +307,7 @@ namespace iChing
             //LinesViewer.ScrollToTop();
             //MainTextViewer.ScrollToTop();
 
-/*            switch (JamesDeKorneTab.IsSelected)
+            switch (JamesDeKorneTab.IsSelected)
             {
                 case true:
                     byte[] content = Convert.FromBase64String(GnosticJamesDeKorneEdition[currentlyShowing]);
@@ -323,7 +323,7 @@ namespace iChing
                     break;
             }
 
-            */
+            
 
         }
 
@@ -7734,7 +7734,7 @@ intemperance.";
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            
+            /*
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             TextRange tRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
             string dataFormat = DataFormats.Rtf;
@@ -7750,7 +7750,7 @@ intemperance.";
             textBoxtemp.Text = (Convert.ToInt16(textBoxtemp.Text) + 1).ToString();
 
             // Start Load
-            /*      byte[] content = Convert.FromBase64String(base64);
+            /*     byte[] content = Convert.FromBase64String(base64);
 
 
 
