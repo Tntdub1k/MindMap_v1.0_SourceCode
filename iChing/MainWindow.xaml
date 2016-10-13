@@ -356,155 +356,6 @@
                         </StackPanel>
                     </StackPanel>
                 </Border>
-                <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="0,5,-115,0" Grid.ColumnSpan="3" Grid.RowSpan="4" Grid.Row="2" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
-                    <ScrollViewer.BorderBrush>
-                        <SolidColorBrush Color="{DynamicResource border}"/>
-                    </ScrollViewer.BorderBrush>
-                    <StackPanel x:Name="TextPanel" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.523,0.392" Width="840" ScrollViewer.CanContentScroll="True" Margin="0,0,0,10">
-                        <Grid Height="50" ScrollViewer.CanContentScroll="True">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="277*"/>
-                                <ColumnDefinition Width="49*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBox x:Name="AboveBelowBox" TextWrapping="Wrap" Text="Above CH'IEN, / THE CREATIVE, HEAVEN &#xA;Below K'UN / THE RECEPTIVE " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" SelectionBrush="{DynamicResource Brush2}" HorizontalAlignment="Left" Margin="54,0,0,0" Width="660" FontStyle="Italic"/>
-                            <TextBox x:Name="AboveBelowSymbolsBox" TextWrapping="Wrap" Text="☰&#xA;☷" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" FontSize="20" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsReadOnly="True" HorizontalAlignment="Left" Width="102" Height="53" VerticalAlignment="Bottom" Background="{x:Null}" Margin="10,-3,0,0" IsManipulationEnabled="True" Grid.Column="1"/>
-                            <TextBox x:Name="AboveBelowBox_Copy" TextWrapping="Wrap" Text="Above&#xA;Below" VerticalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" SelectionBrush="{DynamicResource Brush2}" HorizontalAlignment="Left" FontStyle="Italic"/>
-                        </Grid>
-                        <TextBox x:Name="Intro1Box" TextWrapping="Wrap" Text="Textbox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
-                        <Grid Margin="0,4" ScrollViewer.CanContentScroll="True">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="48*"/>
-                                <ColumnDefinition Width="47*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBox x:Name="TheJudgmentBox" TextWrapping="Wrap" Text="TextBox" IsHitTestVisible="False" Foreground="Black" Background="#00000000" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" Grid.ColumnSpan="2" Margin="287,0,0,0" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
-                            <TextBox TextWrapping="Wrap" Text="THE JUDGEMENT" VerticalAlignment="Top" IsReadOnly="True" IsHitTestVisible="False" Foreground="Black" Background="Transparent" BorderBrush="{x:Null}" HorizontalAlignment="Center" Height="18" Width="173" Margin="85,-1,57,0" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
-                        </Grid>
-                        <TextBox x:Name="Intro2Box" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" IsHitTestVisible="False" Background="Transparent" Foreground="Black" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Padding="0,2"/>
-                        <Grid Margin="0,4" ScrollViewer.CanContentScroll="True">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="48*"/>
-                                <ColumnDefinition Width="47*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBox TextWrapping="Wrap" Text="THE IMAGE" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="138" Margin="86,2,91,-2" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" TextChanged="TextBox_TextChanged"/>
-                            <TextBox x:Name="TheImageBox" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" IsHitTestVisible="False" IsReadOnly="True" BorderBrush="{x:Null}" Background="Transparent" Foreground="{DynamicResource LinesBrushColor}" HorizontalAlignment="Left" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" Grid.ColumnSpan="2" Margin="289,0,0,0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
-                        </Grid>
-                        <TextBox x:Name="Intro3Box" TextWrapping="Wrap" Text="TextBox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Padding="0,2"/>
-                        <StackPanel x:Name="LinesPanel" HorizontalAlignment="Center" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Margin="147,0,10,20" RenderTransformOrigin="0.5,0.5">
-                            <StackPanel.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform X="-6"/>
-                                </TransformGroup>
-                            </StackPanel.RenderTransform>
-                            <TextBox TextWrapping="Wrap" Text="THE LINES" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="111" Margin="0,0,567,0" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" TextChanged="TextBox_TextChanged"/>
-                            <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="22*"/>
-                                    <RowDefinition Height="17*"/>
-                                    <RowDefinition Height="25*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="8*"/>
-                                    <ColumnDefinition Width="185*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox x:Name="Line1Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line1Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
-                                <TextBox x:Name="Line1BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <TextBox x:Name="ChangesTo1" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment1" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
-                                    <TextBox x:Name="Comment1" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" SelectionBrush="{x:Null}" IsHitTestVisible="False" BorderBrush="Black"/>
-                                </Border>
-                            </Grid>
-                            <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="22*"/>
-                                    <RowDefinition Height="17*"/>
-                                    <RowDefinition Height="25*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="8*"/>
-                                    <ColumnDefinition Width="185*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox x:Name="Line2Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line2Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
-                                <TextBox x:Name="Line2BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <TextBox x:Name="ChangesTo2" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place2_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment2" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
-                                    <TextBox x:Name="Comment2" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
-                                </Border>
-                            </Grid>
-                            <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="22*"/>
-                                    <RowDefinition Height="17*"/>
-                                    <RowDefinition Height="25*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="8*"/>
-                                    <ColumnDefinition Width="185*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox x:Name="Line3Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" IsHitTestVisible="True" IsReadOnlyCaretVisible="True" PreviewMouseDown="Line3Box_MouseDown" Focusable="False" IsTabStop="False"/>
-                                <TextBox x:Name="Line3BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <TextBox x:Name="ChangesTo3" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place3_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
-                                    <TextBox x:Name="Comment3" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
-                                </Border>
-                            </Grid>
-                            <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="22*"/>
-                                    <RowDefinition Height="17*"/>
-                                    <RowDefinition Height="25*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="8*"/>
-                                    <ColumnDefinition Width="185*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox x:Name="Line4Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line4Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
-                                <TextBox x:Name="Line4BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <TextBox x:Name="ChangesTo4" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place4_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment4" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
-                                    <TextBox x:Name="Comment4" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
-                                </Border>
-                            </Grid>
-                            <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="22*"/>
-                                    <RowDefinition Height="17*"/>
-                                    <RowDefinition Height="25*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="8*"/>
-                                    <ColumnDefinition Width="185*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox x:Name="Line5Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line5Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
-                                <TextBox x:Name="Line5BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <TextBox x:Name="ChangesTo5" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place5_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment5" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
-                                    <TextBox x:Name="Comment5" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
-                                </Border>
-                            </Grid>
-                            <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="22*"/>
-                                    <RowDefinition Height="17*"/>
-                                    <RowDefinition Height="25*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="8*"/>
-                                    <ColumnDefinition Width="185*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox x:Name="Line6Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line6Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
-                                <TextBox x:Name="Line6BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <TextBox x:Name="ChangesTo6" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place6_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
-                                <Border x:Name="BorderComment6" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
-                                    <TextBox x:Name="Comment6" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
-                                </Border>
-                            </Grid>
-                        </StackPanel>
-                        <Rectangle Fill="#00000000" Height="100"/>
-                    </StackPanel>
-                </ScrollViewer>
                 <StackPanel x:Name="PlacesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="480" ScrollViewer.CanContentScroll="True" Margin="333,101,-622,-4" Height="253" Grid.Column="2" Grid.Row="4" Grid.RowSpan="2">
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy4" TextWrapping="Wrap" Text="(6)&#xA;" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0"/>
@@ -873,6 +724,171 @@
                 <TextBox x:Name="AlternateTitlesBox" HorizontalAlignment="Left" Margin="68,41,-445,0" Grid.Row="1" TextWrapping="Wrap" Text="Alternate Titles: The Creative, The Symbol of Heaven, The Creative Principle, Force, The Key, Creativity, The Originating, Creative Power, Primal Power, Yang, The Life Force, Kundalini, God the Father" VerticalAlignment="Top" Width="1142" Grid.ColumnSpan="3" BorderThickness="0" Background="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontStyle="Italic" FontSize="13" Height="38"/>
                 <Button x:Name="button" Content="Next" HorizontalAlignment="Left" Margin="666,21,-546,0" VerticalAlignment="Top" Width="71" Grid.Column="2" Height="41" Click="button_Click_5" Grid.RowSpan="2"/>
                 <Button x:Name="button_Copy" Content="Previous" HorizontalAlignment="Left" Margin="666,38,-546,0" VerticalAlignment="Top" Width="71" Grid.Column="2" Grid.Row="1" Height="41" Click="button_Copy_Click"/>
+                <TabControl x:Name="tabControl" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="555" Margin="-4,5,-107,0" Grid.Row="2" VerticalAlignment="Top" Width="876" TabStripPlacement="Bottom" Grid.RowSpan="4" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsSynchronizedWithCurrentItem="True" BorderBrush="{x:Null}">
+                    <TabItem Header="Wilhelm/Baynes 1967" BorderThickness="4" Foreground="#FF212121" IsSelected="True" Margin="-3,1,-2,-3" BorderBrush="#FF8595DC">
+                        <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="-2,1,-2,-2" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
+                            <ScrollViewer.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource border}"/>
+                            </ScrollViewer.BorderBrush>
+                            <StackPanel x:Name="TextPanel" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.523,0.392" Width="840" ScrollViewer.CanContentScroll="True">
+                                <Grid Height="50" ScrollViewer.CanContentScroll="True">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="277*"/>
+                                        <ColumnDefinition Width="49*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox x:Name="AboveBelowBox" TextWrapping="Wrap" Text="Above CH'IEN, / THE CREATIVE, HEAVEN &#xA;Below K'UN / THE RECEPTIVE " VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" SelectionBrush="{DynamicResource Brush2}" HorizontalAlignment="Left" Margin="54,0,0,0" Width="660" FontStyle="Italic"/>
+                                    <TextBox x:Name="AboveBelowSymbolsBox" TextWrapping="Wrap" Text="☰&#xA;☷" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" FontSize="20" Focusable="False" IsHitTestVisible="False" IsTabStop="False" IsReadOnly="True" HorizontalAlignment="Left" Width="102" Height="53" VerticalAlignment="Bottom" Background="{x:Null}" Margin="10,-3,0,0" IsManipulationEnabled="True" Grid.Column="1"/>
+                                    <TextBox x:Name="AboveBelowBox_Copy" TextWrapping="Wrap" Text="Above&#xA;Below" VerticalContentAlignment="Center" BorderBrush="{x:Null}" FontSize="14" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" IsTabStop="False" FontFamily="{DynamicResource SystemFont}" SelectionBrush="{DynamicResource Brush2}" HorizontalAlignment="Left" FontStyle="Italic"/>
+                                </Grid>
+                                <TextBox x:Name="Intro1Box" TextWrapping="Wrap" Text="Textbox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
+                                <Grid Margin="0,4" ScrollViewer.CanContentScroll="True">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="48*"/>
+                                        <ColumnDefinition Width="47*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox x:Name="TheJudgmentBox" TextWrapping="Wrap" Text="TextBox" IsHitTestVisible="False" Foreground="Black" Background="#00000000" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" Grid.ColumnSpan="2" Margin="287,0,0,0" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
+                                    <TextBox TextWrapping="Wrap" Text="THE JUDGEMENT" VerticalAlignment="Top" IsReadOnly="True" IsHitTestVisible="False" Foreground="Black" Background="Transparent" BorderBrush="{x:Null}" HorizontalAlignment="Center" Height="18" Width="173" Margin="85,-1,57,0" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
+                                </Grid>
+                                <TextBox x:Name="Intro2Box" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" IsHitTestVisible="False" Background="Transparent" Foreground="Black" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Padding="0,2"/>
+                                <Grid Margin="0,4" ScrollViewer.CanContentScroll="True">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="48*"/>
+                                        <ColumnDefinition Width="47*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox TextWrapping="Wrap" Text="THE IMAGE" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="138" Margin="86,2,91,-2" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" TextChanged="TextBox_TextChanged"/>
+                                    <TextBox x:Name="TheImageBox" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" IsHitTestVisible="False" IsReadOnly="True" BorderBrush="{x:Null}" Background="Transparent" Foreground="{DynamicResource LinesBrushColor}" HorizontalAlignment="Left" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" Grid.ColumnSpan="2" Margin="289,0,0,0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False"/>
+                                </Grid>
+                                <TextBox x:Name="Intro3Box" TextWrapping="Wrap" Text="TextBox" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" IsHitTestVisible="False" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" ScrollViewer.CanContentScroll="True" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Padding="0,2"/>
+                                <StackPanel x:Name="LinesPanel" HorizontalAlignment="Center" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Margin="147,0,10,20" RenderTransformOrigin="0.5,0.5">
+                                    <StackPanel.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform X="-6"/>
+                                        </TransformGroup>
+                                    </StackPanel.RenderTransform>
+                                    <TextBox TextWrapping="Wrap" Text="THE LINES" VerticalAlignment="Top" IsHitTestVisible="False" BorderBrush="{x:Null}" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" HorizontalAlignment="Center" Height="18" Width="111" Margin="0,0,567,0" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" FontWeight="Bold" IsReadOnly="True" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" TextChanged="TextBox_TextChanged"/>
+                                    <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="22*"/>
+                                            <RowDefinition Height="17*"/>
+                                            <RowDefinition Height="25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"/>
+                                            <ColumnDefinition Width="185*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="Line1Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line1Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
+                                        <TextBox x:Name="Line1BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBox x:Name="ChangesTo1" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
+                                        <Border x:Name="BorderComment1" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                            <TextBox x:Name="Comment1" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" SelectionBrush="{x:Null}" IsHitTestVisible="False" BorderBrush="Black"/>
+                                        </Border>
+                                    </Grid>
+                                    <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="22*"/>
+                                            <RowDefinition Height="17*"/>
+                                            <RowDefinition Height="25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"/>
+                                            <ColumnDefinition Width="185*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="Line2Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line2Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
+                                        <TextBox x:Name="Line2BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBox x:Name="ChangesTo2" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place2_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
+                                        <Border x:Name="BorderComment2" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                            <TextBox x:Name="Comment2" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
+                                        </Border>
+                                    </Grid>
+                                    <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="22*"/>
+                                            <RowDefinition Height="17*"/>
+                                            <RowDefinition Height="25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"/>
+                                            <ColumnDefinition Width="185*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="Line3Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" IsHitTestVisible="True" IsReadOnlyCaretVisible="True" PreviewMouseDown="Line3Box_MouseDown" Focusable="False" IsTabStop="False"/>
+                                        <TextBox x:Name="Line3BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBox x:Name="ChangesTo3" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place3_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
+                                        <Border x:Name="BorderComment3" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                            <TextBox x:Name="Comment3" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
+                                        </Border>
+                                    </Grid>
+                                    <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="22*"/>
+                                            <RowDefinition Height="17*"/>
+                                            <RowDefinition Height="25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"/>
+                                            <ColumnDefinition Width="185*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="Line4Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line4Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
+                                        <TextBox x:Name="Line4BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBox x:Name="ChangesTo4" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place4_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
+                                        <Border x:Name="BorderComment4" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                            <TextBox x:Name="Comment4" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
+                                        </Border>
+                                    </Grid>
+                                    <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="22*"/>
+                                            <RowDefinition Height="17*"/>
+                                            <RowDefinition Height="25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"/>
+                                            <ColumnDefinition Width="185*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="Line5Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line5Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
+                                        <TextBox x:Name="Line5BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBox x:Name="ChangesTo5" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place5_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
+                                        <Border x:Name="BorderComment5" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,7,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                            <TextBox x:Name="Comment5" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
+                                        </Border>
+                                    </Grid>
+                                    <Grid Margin="{DynamicResource placesGridsMargin}" ScrollViewer.CanContentScroll="True">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="22*"/>
+                                            <RowDefinition Height="17*"/>
+                                            <RowDefinition Height="25*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"/>
+                                            <ColumnDefinition Width="185*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="Line6Box" TextWrapping="Wrap" Text="Tb" BorderThickness="0" SelectionBrush="{DynamicResource Brush2}" IsReadOnlyCaretVisible="True" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" Grid.Column="1" FontSize="{DynamicResource TextSize}" Margin="0" IsReadOnly="True" PreviewMouseDown="Line6Box_MouseDown" IsHitTestVisible="True" Focusable="False" IsTabStop="False"/>
+                                        <TextBox x:Name="Line6BoxSquareCircle" TextWrapping="Wrap" Text="○" PreviewMouseDown="TextBox1_PreviewMouseDown" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Center" Width="14" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBox x:Name="ChangesTo6" TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Grid.Row="1" IsReadOnly="True" BorderBrush="Black" BorderThickness="0,1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place6_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="10" Margin="0" HorizontalAlignment="Left" Cursor="Hand"/>
+                                        <Border x:Name="BorderComment6" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="2" VerticalAlignment="Top" Padding="4" Visibility="Collapsed" BorderBrush="#FFBF1111">
+                                            <TextBox x:Name="Comment6" TextWrapping="Wrap" Text="TextBox" IsReadOnly="True" BorderThickness="1" Focusable="False" IsTabStop="False" AllowDrop="False" PreviewMouseDoubleClick="Place1_PreviewMouseUp" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource TextSize}" HorizontalAlignment="Left" Padding="20" Background="{x:Null}" Margin="0" BorderBrush="Black" SelectionBrush="{x:Null}" IsHitTestVisible="False"/>
+                                        </Border>
+                                    </Grid>
+                                </StackPanel>
+                                <Rectangle Fill="#00000000" Height="100"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+                    <TabItem Header="James De Korne" Foreground="Black" Margin="1,2,-2,-3" BorderBrush="#00ACACAC" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Left" VerticalContentAlignment="Top">
+                        <Grid Background="#FFE5E5E5" Margin="-2,0,0,-4">
+                            <RichTextBox x:Name="jamesDKRTB" HorizontalAlignment="Left" Height="486" VerticalAlignment="Top" Width="874">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run Text="RichTextBox"/>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="574,502,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
             </Grid>
         </TabItem>
         <TabItem Header="Table">

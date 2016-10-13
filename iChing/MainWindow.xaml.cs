@@ -39,6 +39,7 @@ namespace iChing
         
         public void deserializeRouteMaps()
         {
+          
             try
             {
                 string json = System.IO.File.ReadAllText("RouteMaps");
@@ -7693,6 +7694,32 @@ intemperance.";
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            TextRange tRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
+            string dataFormat = DataFormats.Rtf;
+            tRange.Save(ms, dataFormat);
+
+            ms.Position = 0;
+
+            string base64 = Convert.ToBase64String(ms.ToArray());
+
+            jamesDKRTB.Document.Blocks.Clear();
+            MessageBox.Show("cleared text");
+
+            // Start Load
+            byte[] content = Convert.FromBase64String(base64);
+
+
+
+            ms.Position = 0;
+            TextRange textRange = new TextRange(jamesDKRTB.Document.ContentStart, jamesDKRTB.Document.ContentEnd);
+            textRange.Load(ms, dataFormat);
 
         }
     }
