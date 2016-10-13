@@ -724,9 +724,9 @@
                 <TextBox x:Name="AlternateTitlesBox" HorizontalAlignment="Left" Margin="68,41,-445,0" Grid.Row="1" TextWrapping="Wrap" Text="Alternate Titles: The Creative, The Symbol of Heaven, The Creative Principle, Force, The Key, Creativity, The Originating, Creative Power, Primal Power, Yang, The Life Force, Kundalini, God the Father" VerticalAlignment="Top" Width="1142" Grid.ColumnSpan="3" BorderThickness="0" Background="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontStyle="Italic" FontSize="13" Height="38"/>
                 <Button x:Name="button" Content="Next" HorizontalAlignment="Left" Margin="666,21,-546,0" VerticalAlignment="Top" Width="71" Grid.Column="2" Height="41" Click="button_Click_5" Grid.RowSpan="2"/>
                 <Button x:Name="button_Copy" Content="Previous" HorizontalAlignment="Left" Margin="666,38,-546,0" VerticalAlignment="Top" Width="71" Grid.Column="2" Grid.Row="1" Height="41" Click="button_Copy_Click"/>
-                <TabControl x:Name="tabControl" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="555" Margin="-4,5,-98,0" Grid.Row="2" VerticalAlignment="Top" Width="867" TabStripPlacement="Bottom" Grid.RowSpan="4" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsSynchronizedWithCurrentItem="True" BorderBrush="{x:Null}">
+                <TabControl x:Name="tabControl" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="557" Margin="-4,3,-112,0" Grid.Row="2" VerticalAlignment="Top" Width="881" TabStripPlacement="Bottom" Grid.RowSpan="4" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsSynchronizedWithCurrentItem="True" BorderBrush="{x:Null}" PreviewMouseDown="tabControl_PreviewMouseDown">
                     <TabItem Header="Wilhelm/Baynes 1967" BorderThickness="4" Foreground="#FF212121" IsSelected="True" Margin="-3,1,-2,-3" BorderBrush="#FF8595DC">
-                        <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="-2,-1,-2,-2" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
+                        <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="4,-1,-2,-2" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
                             <ScrollViewer.BorderBrush>
                                 <SolidColorBrush Color="{DynamicResource border}"/>
                             </ScrollViewer.BorderBrush>
@@ -876,16 +876,10 @@
                             </StackPanel>
                         </ScrollViewer>
                     </TabItem>
-                    <TabItem x:Name="JamesDeKorneTab" Header="James De Korne" Foreground="Black" Margin="1,2,-2,-3" BorderBrush="#00ACACAC" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" PreviewMouseDown="JamesDeKorneTab_PreviewMouseDown">
-                        <ScrollViewer HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="850">
-                            <RichTextBox x:Name="jamesDKRTB" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="831" BorderBrush="{x:Null}">
-                                <FlowDocument>
-                                    <Paragraph>
-                                        <Run Text="RichTextBox"/>
-                                    </Paragraph>
-                                </FlowDocument>
-                            </RichTextBox>
-                        </ScrollViewer>
+                    <TabItem x:Name="JamesDeKorneTab" Header="James De Korne" Foreground="Black" Margin="1,2,-2,-3" BorderBrush="#00ACACAC" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" PreviewMouseLeftButtonDown="JamesDeKorneTab_PreviewMouseLeftButtonDown" MouseLeftButtonDown="JamesDeKorneTab_MouseLeftButtonDown">
+                        <RichTextBox x:Name="jamesDKRTB" HorizontalAlignment="Left" Height="526" VerticalAlignment="Top" Width="878" BorderBrush="{x:Null}" IsHitTestVisible="True" VerticalScrollBarVisibility="Auto" IsDocumentEnabled="True" IsTabStop="False">
+                            <FlowDocument/>
+                        </RichTextBox>
                     </TabItem>
                 </TabControl>
             </Grid>

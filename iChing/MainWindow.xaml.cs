@@ -333,7 +333,6 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place1ChangesToNumber;
             updateApplication();
-            SetToLines();
             if (tracing == true)
             {
                 AddHexagramToCurrentRoute();
@@ -344,7 +343,6 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place2ChangesToNumber;
             updateApplication();
-            SetToLines();
             if (tracing == true)
             {
                 AddHexagramToCurrentRoute();
@@ -355,7 +353,6 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place3ChangesToNumber;
             updateApplication();
-            SetToLines();
             if (tracing == true)
             {
                 AddHexagramToCurrentRoute();
@@ -366,7 +363,6 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place4ChangesToNumber;
             updateApplication();
-            SetToLines();
             if (tracing == true)
             {
                 AddHexagramToCurrentRoute();
@@ -377,7 +373,6 @@ namespace iChing
         {
             currentlyShowing = iChing[currentlyShowing].Place5ChangesToNumber;
             updateApplication();
-            SetToLines();
             if (tracing == true)
             {
                 AddHexagramToCurrentRoute();
@@ -388,7 +383,6 @@ namespace iChing
         {
            currentlyShowing = iChing[currentlyShowing].Place6ChangesToNumber;
             updateApplication();
-            SetToLines();
             if (tracing == true)
             {
                 AddHexagramToCurrentRoute();
@@ -7190,7 +7184,7 @@ intemperance.";
         private void SetToLines()
         {
             MainTextViewer.UpdateLayout();
-            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 27);
+            MainTextViewer.ScrollToVerticalOffset(Intro1Box.ActualHeight + TheJudgmentBox.ActualHeight + Intro2Box.ActualHeight + TheImageBox.ActualHeight + Intro3Box.ActualHeight + AboveBelowBox.ActualHeight + 17);
 
         }
 
@@ -7770,7 +7764,22 @@ intemperance.";
 
         private void JamesDeKorneTab_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
+
+        }
+
+        private void JamesDeKorneTab_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            JamesDeKorneTab.IsSelected = true;
             updateApplication();
+        }
+
+        private void JamesDeKorneTab_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void tabControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 
