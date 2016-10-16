@@ -92,6 +92,38 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True" RenderTransformOrigin="0.5,0.5">
+                    <StackPanel.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-39"/>
+                        </TransformGroup>
+                    </StackPanel.LayoutTransform>
+                    <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,4,0" Height="25">
+                        <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,3,6">
+                            <Button.Background>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+                            </Button.Background>
+                            <Button.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                            </Button.BorderBrush>
+                        </Button>
+                        <Button Content="Search" Width="48" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
+                            <Button.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                            </Button.BorderBrush>
+                            <Button.Background>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
+                            </Button.Background>
+                        </Button>
+                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="266" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
+                    </StackPanel>
+                    <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
+                        <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
+                    </ScrollViewer>
+                </StackPanel>
                 <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
@@ -667,43 +699,21 @@
                 </StackPanel>
                 <StackPanel Grid.ColumnSpan="3" Margin="-13,0,-637,0" Orientation="Horizontal" Grid.Row="1">
                     <TextBox x:Name="HexTitle" TextWrapping="Wrap" Text="䷖" FontSize="75" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="80" Padding="0,-11,0,0" BorderBrush="Black" Margin="0,-1,0,0"/>
-                    <Label x:Name="TitleBox" Content="6. Sung / Conflict" Foreground="Black" FontSize="30" HorizontalAlignment="Left" RenderTransformOrigin="0.544,0.196" FontFamily="{DynamicResource SystemFont}" BorderBrush="Black" BorderThickness="0,1" VerticalAlignment="Top" Width="1302" FontWeight="Bold" Height="80" Padding="10,2,5,5" Margin="0,-1,0,0">
+                    <Label x:Name="TitleBoxNum" Content="6." Foreground="Black" FontSize="30" HorizontalAlignment="Left" RenderTransformOrigin="0.544,0.196" FontFamily="{DynamicResource SystemFont}" BorderBrush="Black" BorderThickness="0,1" VerticalAlignment="Top" FontWeight="Bold" Height="80" Padding="10,2,5,5" Margin="0,-1,0,0">
                         <Label.Background>
                             <SolidColorBrush Color="{DynamicResource border}"/>
                         </Label.Background>
                     </Label>
-                </StackPanel>
-                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True" RenderTransformOrigin="0.5,0.5">
-                    <StackPanel.LayoutTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform Y="-39"/>
-                        </TransformGroup>
-                    </StackPanel.LayoutTransform>
-                    <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,4,0" Height="25">
-                        <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,3,6">
-                            <Button.Background>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
-                            </Button.Background>
-                            <Button.BorderBrush>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                            </Button.BorderBrush>
-                        </Button>
-                        <Button Content="Search" Width="48" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
-                            <Button.BorderBrush>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                            </Button.BorderBrush>
-                            <Button.Background>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
-                            </Button.Background>
-                        </Button>
-                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="266" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
-                    </StackPanel>
-                    <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
-                        <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
-                    </ScrollViewer>
+                    <Label x:Name="TitleBoxChi" Content="顏楷" Foreground="Black" FontSize="35" HorizontalAlignment="Left" RenderTransformOrigin="0.544,0.196" BorderBrush="Black" BorderThickness="0,1" VerticalAlignment="Top" FontWeight="Bold" Height="80" Padding="10,2,5,5" Margin="0,-1,0,0" FontFamily="SimSun">
+                        <Label.Background>
+                            <SolidColorBrush Color="{DynamicResource border}"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="TitleBoxText" Content="Sung / Conflict" Foreground="Black" FontSize="30" HorizontalAlignment="Left" RenderTransformOrigin="0.544,0.196" FontFamily="{DynamicResource SystemFont}" BorderBrush="Black" BorderThickness="0,1" VerticalAlignment="Top" Width="1302" FontWeight="Bold" Height="80" Padding="10,2,5,5" Margin="0,-1,0,0">
+                        <Label.Background>
+                            <SolidColorBrush Color="{DynamicResource border}"/>
+                        </Label.Background>
+                    </Label>
                 </StackPanel>
                 <Button Content="Lines" Grid.Column="2" HorizontalAlignment="Left" Margin="352,5,-198,0" Grid.Row="2" VerticalAlignment="Top" Width="37" Click="Button_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" Height="19" Grid.RowSpan="2">
                     <Button.Background>
@@ -724,8 +734,28 @@
                 <TextBox x:Name="AlternateTitlesBox" HorizontalAlignment="Left" Margin="68,41,-445,0" Grid.Row="1" TextWrapping="Wrap" Text="Alternate Titles: The Creative, The Symbol of Heaven, The Creative Principle, Force, The Key, Creativity, The Originating, Creative Power, Primal Power, Yang, The Life Force, Kundalini, God the Father" VerticalAlignment="Top" Width="1142" Grid.ColumnSpan="3" BorderThickness="0" Background="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontStyle="Italic" FontSize="13" Height="38"/>
                 <Button x:Name="button" Content="Next" HorizontalAlignment="Left" Margin="666,21,-546,0" VerticalAlignment="Top" Width="71" Grid.Column="2" Height="41" Click="button_Click_5" Grid.RowSpan="2"/>
                 <Button x:Name="button_Copy" Content="Previous" HorizontalAlignment="Left" Margin="666,38,-546,0" VerticalAlignment="Top" Width="71" Grid.Column="2" Grid.Row="1" Height="41" Click="button_Copy_Click"/>
+                <Rectangle Fill="#660000FF" HorizontalAlignment="Left" Height="19" Margin="-1,136,0,0" Grid.Row="5" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle Fill="#6600FF0C" HorizontalAlignment="Left" Height="19" Margin="125,136,0,0" Grid.Row="5" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
                 <TabControl x:Name="tabControl" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="557" Margin="-4,3,-112,0" Grid.Row="2" VerticalAlignment="Top" Width="881" TabStripPlacement="Bottom" Grid.RowSpan="4" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" IsSynchronizedWithCurrentItem="True" BorderBrush="{x:Null}" IsHitTestVisible="True" Focusable="False" PreviewKeyDown="tabControl_PreviewKeyDown">
-                    <TabItem Header="Wilhelm/Baynes 1967" BorderThickness="4" Foreground="#FF212121" IsSelected="True" Margin="-3,1,-2,-3" BorderBrush="#FF8595DC">
+                    <TabItem Header="Wilhelm/Baynes 1967" BorderThickness="4" Foreground="#FF212121" IsSelected="True" Margin="-3,3,0,-3" BorderBrush="{x:Null}" Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="131" Height="21" Padding="6,-1,6,2">
                         <ScrollViewer x:Name="MainTextViewer" IsTabStop="True" VerticalScrollBarVisibility="Auto" Margin="4,-1,-2,-2" BorderThickness="2" Padding="0,2" FontFamily="{DynamicResource SystemFont}">
                             <ScrollViewer.BorderBrush>
                                 <SolidColorBrush Color="{DynamicResource border}"/>
@@ -876,7 +906,7 @@
                             </StackPanel>
                         </ScrollViewer>
                     </TabItem>
-                    <TabItem x:Name="JamesDeKorneTab" Header="James De Korne" Foreground="Black" Margin="1,2,-2,-3" BorderBrush="#00ACACAC" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" PreviewMouseLeftButtonDown="JamesDeKorneTab_PreviewMouseLeftButtonDown" MouseLeftButtonDown="JamesDeKorneTab_MouseLeftButtonDown">
+                    <TabItem x:Name="JamesDeKorneTab" Header="James De Korne" Foreground="Black" Margin="-4,3,0,-3" BorderBrush="#00ACACAC" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" PreviewMouseLeftButtonDown="JamesDeKorneTab_PreviewMouseLeftButtonDown" MouseLeftButtonDown="JamesDeKorneTab_MouseLeftButtonDown" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Height="21" Padding="6,-1,6,2">
                         <RichTextBox x:Name="jamesDKRTB" HorizontalAlignment="Left" Height="526" VerticalAlignment="Top" Width="878" BorderBrush="{x:Null}" IsHitTestVisible="True" VerticalScrollBarVisibility="Auto" IsDocumentEnabled="True" IsTabStop="False" BorderThickness="0">
                             <FlowDocument/>
                         </RichTextBox>

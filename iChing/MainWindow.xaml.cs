@@ -31,11 +31,13 @@ namespace iChing
         private List<TraceRoute> RouteMaps = new List<TraceRoute>(0);
 
 
+
         public class TraceRoute
         {
             public string Title { get; set; }
             public List<int> Hexagrams { get; set; }
             public Color SPColor { get; set; }
+            public bool[] disabledList { get; set; }
         }
         
         public void deserializeRouteMaps()
@@ -45,6 +47,10 @@ namespace iChing
             {
                 string json = System.IO.File.ReadAllText("RouteMaps");
                 RouteMaps = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TraceRoute>>(json);
+                foreach (var route in RouteMaps)
+                {
+                    route.disabledList = route.disabledList ?? new bool[route.Hexagrams.Count];
+                }
             }
             catch
             {
@@ -165,7 +171,9 @@ namespace iChing
 
         private void updateApplication()
         {
-            TitleBox.Content = currentlyShowing + ". " +iChing[currentlyShowing].ChiSymbol + " "+ iChing[currentlyShowing].ChiTitle + " / " + iChing[currentlyShowing].EngTitle;
+            TitleBoxNum.Content = currentlyShowing + ". ";
+            TitleBoxChi.Content = iChing[currentlyShowing].ChiSymbol + " ";
+            TitleBoxText.Content = iChing[currentlyShowing].ChiTitle + " / " + iChing[currentlyShowing].EngTitle;
             HexTitle.Text = iChing[currentlyShowing].Hex;
             AlternateTitlesBox.Text = "Alternate Titles: " + iChing[currentlyShowing].AltTitles;
             AboveBelowBox.Text = iChing[currentlyShowing].Above + "\n" + iChing[currentlyShowing].Below;
@@ -7568,15 +7576,30 @@ intemperance.";
         private void AddHexagramToCurrentRoute()
         {
             RouteMaps[RouteMaps.Count - 1].Hexagrams.Add(currentlyShowing);
+
+            bool[] temparray = new bool[RouteMaps[RouteMaps.Count - 1].disabledList.Length + 1];
+            for (int i=0; i< RouteMaps[RouteMaps.Count - 1].disabledList.Length; i++)
+            {
+                temparray[i] = RouteMaps[RouteMaps.Count - 1].disabledList[i];
+            }
+            temparray[temparray.Length-1] = false;
+
+            RouteMaps[RouteMaps.Count - 1].disabledList = temparray;
+
         }
 
         //viewer, displaying only
-        private void AddHexagramToTraceMap(int hexagram)
+        private void AddHexagramToTraceMap(int hexagram, bool disabled) 
         {
             PathTemplate newPathEntry = new PathTemplate();
+            newPathEntry.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(PathTemplateClick);
             newPathEntry.HexBox.Text = iChing[hexagram].Hex;
             newPathEntry.PathBar.Value = hexagram;
             newPathEntry.TextBox.Text = iChing[hexagram].EngTitle;
+            if (disabled)
+            {
+                newPathEntry.OpacityMask = new SolidColorBrush(Color.FromArgb(40, 100, 100, 100));
+            }
             foreach (object child in TracingPanel.Children)
             {
                 if (child is StackPanel)
@@ -7584,7 +7607,7 @@ intemperance.";
                     if (Convert.ToString((child as StackPanel).Tag) == "Map" + Convert.ToString(TracingPanel.Children.Count))
                     {
                         (child as StackPanel).Children.Add(newPathEntry);
-                        (child as StackPanel).Children.Add(new TextBox() { Text = " ⬤ ", FontSize = 8, Height = 80, VerticalAlignment = VerticalAlignment.Top, Background = null, BorderBrush = null, VerticalContentAlignment = VerticalAlignment.Center, IsTabStop = false, IsHitTestVisible = false });
+                        (child as StackPanel).Children.Add(new TextBox() { Text = "⬤  ", FontSize = 10, Height = 80, VerticalAlignment = VerticalAlignment.Top, Background = null, BorderBrush = null, VerticalContentAlignment = VerticalAlignment.Center, IsTabStop = false, IsHitTestVisible = false });
                     }
 
                 }
@@ -7592,6 +7615,23 @@ intemperance.";
         
 
     }
+
+        private void PathTemplateClick(object sender, MouseButtonEventArgs e)
+        {
+            StackPanel parentPanel = ((sender as PathTemplate).Parent) as StackPanel;
+            int indexofHexagramInPanel = parentPanel.Children.IndexOf((sender as PathTemplate)) / 2;
+            int index = TracingPanel.Children.IndexOf(parentPanel) / 2;
+            switch (RouteMaps[index].disabledList[indexofHexagramInPanel])
+            {
+                case true:
+                    RouteMaps[index].disabledList[indexofHexagramInPanel] = false;
+                    break;
+                case false:
+                    RouteMaps[index].disabledList[indexofHexagramInPanel] = true;
+                    break;
+            }
+            TabItem_Loaded(sender, e);
+        }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -7608,6 +7648,7 @@ intemperance.";
                     tr.Title = "";
                     tr.SPColor = System.Windows.Media.Color.FromArgb(0, 0, 0, 0);
                     tr.Hexagrams = new List<int>(1);
+                    tr.disabledList = new bool[1];
                     tr.Hexagrams.Add(currentlyShowing);
 
                     RouteMaps.Add(tr);                   
@@ -7748,12 +7789,15 @@ intemperance.";
 
                     TracingPanel.Children.Add(newPathPanel);
 
-
-                    foreach (var hexagram in route.Hexagrams)
+                    for (int i = 0; i < route.Hexagrams.Count; i++)
+                    {
+                        AddHexagramToTraceMap(route.Hexagrams[i], route.disabledList[i]);
+                    }
+                /*    foreach (var hexagram in route.Hexagrams)
                     {
                         AddHexagramToTraceMap(hexagram);
                     }
-
+                */
 
                 }
             }

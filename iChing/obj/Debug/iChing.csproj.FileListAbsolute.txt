@@ -16,7 +16,6 @@ C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing_
 C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nick.Nick-PC\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache
-C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\PathStackPanelTemplate.baml
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\PathTemplate.baml
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\MainWindow.g.cs

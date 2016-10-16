@@ -20,6 +20,7 @@ namespace iChing
     /// </summary>
     public partial class PathTemplate : UserControl
     {
+        public bool disabled = false;
         public PathTemplate()
         {
             InitializeComponent();
@@ -29,5 +30,6 @@ namespace iChing
         {
 
         }
+        
     }
 }
