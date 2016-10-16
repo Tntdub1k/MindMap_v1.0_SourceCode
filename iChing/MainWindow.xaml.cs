@@ -7358,6 +7358,11 @@ intemperance.";
             {
                 sp = ((ContextMenu)mnu.Parent).PlacementTarget as StackPanel;
             }
+            SolidColorBrush b = sp.Background as SolidColorBrush;
+            if (b.Color.A != 0)
+            {
+            Colorbar.SelectedColor = b.Color;
+            } 
             int index= (TracingPanel.Children.IndexOf(sp) - 1) / 2;
             Colorbar.Tag = index;
         }

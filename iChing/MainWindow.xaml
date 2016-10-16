@@ -92,38 +92,6 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
-                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True" RenderTransformOrigin="0.5,0.5">
-                    <StackPanel.LayoutTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform Y="-39"/>
-                        </TransformGroup>
-                    </StackPanel.LayoutTransform>
-                    <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,4,0" Height="25">
-                        <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,3,6">
-                            <Button.Background>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
-                            </Button.Background>
-                            <Button.BorderBrush>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                            </Button.BorderBrush>
-                        </Button>
-                        <Button Content="Search" Width="48" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
-                            <Button.BorderBrush>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                            </Button.BorderBrush>
-                            <Button.Background>
-                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
-                            </Button.Background>
-                        </Button>
-                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="266" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
-                    </StackPanel>
-                    <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
-                        <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
-                    </ScrollViewer>
-                </StackPanel>
                 <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
@@ -912,6 +880,38 @@
                         </RichTextBox>
                     </TabItem>
                 </TabControl>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="333,5,-543,0" Grid.Row="2" VerticalAlignment="Top" Width="401" Grid.RowSpan="4" Height="529" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True" RenderTransformOrigin="0.5,0.5">
+                    <StackPanel.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-39"/>
+                        </TransformGroup>
+                    </StackPanel.LayoutTransform>
+                    <StackPanel VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="2,0,4,0" Height="25">
+                        <Button Content="X" Width="21" Click="Button_Click_2" Margin="0,0,3,6">
+                            <Button.Background>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+                            </Button.Background>
+                            <Button.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                            </Button.BorderBrush>
+                        </Button>
+                        <Button Content="Search" Width="48" Click="Button_Click_1" Margin="0,0,0,6" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center">
+                            <Button.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                            </Button.BorderBrush>
+                            <Button.Background>
+                                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuColorKey}}"/>
+                            </Button.Background>
+                        </Button>
+                        <TextBox x:Name="SearchEntry" TextWrapping="Wrap" Text="..." HorizontalAlignment="Center" Width="266" Margin="0,0,0,6" VerticalContentAlignment="Center" KeyUp="SearchEntry_KeyUp"/>
+                    </StackPanel>
+                    <ScrollViewer x:Name="SearchViewer" Height="505" VerticalScrollBarVisibility="Auto" Visibility="Collapsed" Background="White">
+                        <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
+                    </ScrollViewer>
+                </StackPanel>
             </Grid>
         </TabItem>
         <TabItem Header="Table">
@@ -1272,12 +1272,16 @@
         </TabItem>
         <TabItem x:Name="MapItem" Header="Map" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="55" Loaded="TabItem_Loaded">
             <Grid Background="#FFE5E5E5">
-                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="114,26,0,0" VerticalAlignment="Top" Width="1203" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="619" Initialized="MapViewer_Initialized">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="439*"/>
+                </Grid.ColumnDefinitions>
+                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="93.5,26,0,0" VerticalAlignment="Top" Width="1203" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="619" Initialized="MapViewer_Initialized" Grid.Column="1">
                     <StackPanel x:Name="TracingPanel" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 </ScrollViewer>
-                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
-                <xctk:ColorPicker x:Name="Colorbar" HorizontalAlignment="Left" Margin="114,1,0,0" VerticalAlignment="Top" Width="227" Height="23" Visibility="Hidden"/>
-                <Button x:Name="colorbutton" Content="Okay" HorizontalAlignment="Left" Margin="346,1,0,0" VerticalAlignment="Top" Width="75" Height="23" Visibility="Hidden" Click="colorbutton_Click"/>
+                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4" Grid.ColumnSpan="2"/>
+                <xctk:ColorPicker x:Name="Colorbar" HorizontalAlignment="Left" Margin="93.5,1,0,0" VerticalAlignment="Top" Width="227" Height="23" Visibility="Hidden" Grid.Column="1"/>
+                <Button x:Name="colorbutton" Content="Okay" HorizontalAlignment="Left" Margin="325.5,1,0,0" VerticalAlignment="Top" Width="75" Height="23" Visibility="Hidden" Click="colorbutton_Click" Grid.Column="1"/>
             </Grid>
         </TabItem>
     </TabControl>
