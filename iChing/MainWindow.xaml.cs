@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Reflection;
 
 
 
@@ -78,6 +79,7 @@ namespace iChing
             deserializeRouteMaps();
             deserializeGnosticJamesDeKorneEdition();
             SetupText();
+            FieldInfo[] info= TracingPanel.GetType().GetFields();
 
 
         }
@@ -120,7 +122,7 @@ namespace iChing
                     
                     TextBox HexBox = new TextBox();
                     string HexNum = Convert.ToString(HexArray[row, column]);
-                    HexBox.Text = HexNum +"  "+iChing[HexArray[row, column]].Hex;
+                    HexBox.Text = HexNum;
                     HexBox.Tag = HexNum;
                     HexBox.ToolTip = iChing[HexArray[row, column]].ChiTitle+ " ~ "+iChing[HexArray[row, column]].EngTitle;
                     HexBox.FontSize = 15;
@@ -940,8 +942,9 @@ namespace iChing
                 "And forgoes game that runs off in front.	"	+ Environment.NewLine + 
                 "The citizens need no warning.	"	+ Environment.NewLine + 
                 "Good fortune.	"	;
-            iChing[Hexagram].Read6 = "Six at the top means:	"	+ Environment.NewLine + 
-                "Misfortune.	"	;
+            iChing[Hexagram].Read6 = "Six at the top means:	"	+ Environment.NewLine +
+                "He finds no head for holding together." + Environment.NewLine +
+                "Misfortune.	";
             iChing[Hexagram].SquareCircle1 = "";
             iChing[Hexagram].SquareCircle2 = "";
             iChing[Hexagram].SquareCircle3 = "";
@@ -6211,7 +6214,7 @@ him a certain influence that can be altogether useful.. But of course there is
 also the possibility that many may gather around him not because of a feeling 
 of confidence but merely because of his influential position. This is certainly 
 to be regretted. The only means of dealing with such people is to gain their 
-confidence through steadfastness an intensified, unswerving devotion to 
+confidence through steadfastness and an intensified, unswerving devotion to 
 duty. In this way secret mistrust will gradually be overcome, and there will be 
 no occasion for regret.";
             WilhelmBaynesComments[Hexagram].Read6 = @"It may happen that an individual would like to ally himself with another, but 
@@ -7624,18 +7627,23 @@ intemperance.";
         private void PathTemplateClick(object sender, MouseButtonEventArgs e)
         {
             StackPanel parentPanel = ((sender as PathTemplate).Parent) as StackPanel;
-            int indexofHexagramInPanel = parentPanel.Children.IndexOf((sender as PathTemplate)) / 2;
-            int index = TracingPanel.Children.IndexOf(parentPanel) / 2;
-            switch (RouteMaps[index].disabledList[indexofHexagramInPanel])
+            int int1 = parentPanel.Children.IndexOf((sender as PathTemplate));
+            int indexofHexagramInPanel = int1 / 2;
+            int int2 = TracingPanel.Children.IndexOf(parentPanel);
+            if (int2 >= 0)
             {
-                case true:
-                    RouteMaps[index].disabledList[indexofHexagramInPanel] = false;
-                    break;
-                case false:
-                    RouteMaps[index].disabledList[indexofHexagramInPanel] = true;
-                    break;
+                int index = int2/ 2;
+                switch (RouteMaps[index].disabledList[indexofHexagramInPanel])
+                {
+                    case true:
+                        RouteMaps[index].disabledList[indexofHexagramInPanel] = false;
+                        break;
+                    case false:
+                        RouteMaps[index].disabledList[indexofHexagramInPanel] = true;
+                        break;
+                }
+                TabItem_Loaded(sender, e);
             }
-            TabItem_Loaded(sender, e);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -7675,6 +7683,8 @@ intemperance.";
         {
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(RouteMaps);
             System.IO.File.WriteAllText("RouteMaps", json);
+
+  
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
