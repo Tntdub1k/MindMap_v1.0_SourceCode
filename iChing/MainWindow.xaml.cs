@@ -7069,7 +7069,7 @@ must be careful in all this to keep within proper bounds. If in his exuberance
 a man gets drunk, he forfeits the favorableness of the situation through his 
 intemperance.";
 
-
+#warning Todo: Implement changes to TODO tracking
 
             //Hexagram table uses IChing data (for hexagram symbols)
             SetupTable();
