@@ -4258,7 +4258,7 @@ This means bad luck and injury.";
             iChing[Hexagram].SquareCircle6 = "";
             iChing[Hexagram].Place1ChangesToNumber = 55;
             iChing[Hexagram].Place2ChangesToNumber = 32;
-            iChing[Hexagram].Place3ChangesToNumber = 10;
+            iChing[Hexagram].Place3ChangesToNumber = 16;
             iChing[Hexagram].Place4ChangesToNumber = 15;
             iChing[Hexagram].Place5ChangesToNumber = 31;
             iChing[Hexagram].Place6ChangesToNumber = 56;
@@ -4731,16 +4731,16 @@ preferment here: the whole army, whose center he is, is honored in his
 person. ";
             WilhelmBaynesComments[Hexagram].Read3 = @"Here we have a choice of two explanations. One points to defeat because 
 someone other than the chosen leader interferes with the command; the 
-other is similar in its general meaning, but the expression, &quot;carries corpses in 
-the wagon,&quot; is interpreted differently. At burials and at sacrifices to the dead it 
+other is similar in its general meaning, but the expression, ""carries corpses in 
+the wagon"" is interpreted differently. At burials and at sacrifices to the dead it 
 was customary in China for the deceased to whom the sacrifice was made to 
-be represented by a boy of the family, who sat in the dead man&#39;s place and was 
+be represented by a boy of the family, who sat in the dead man's place and was 
 honored as his representative. On the basis of this custom the text is 
-interpreted as meaning that a &quot;corpse boy&quot; is sitting in the wagon, or, in 
+interpreted as meaning that a ""corpse boy"" is sitting in the wagon, or, in 
 other words, that authority is not being exercised by the proper leaders but has 
 been usurped by others. Perhaps the whole difficulty clears up if it is inferred 
-that there has been an error in copying. The character fan, meaning &quot;all,&quot; may 
-have been misread as shih, which means &quot;corpse.&quot; Allowing for this error, 
+that there has been an error in copying. The character fan, meaning ""all"" may 
+have been misread as shih, which means ""corpse."" Allowing for this error, 
 the meaning would be that if the multitude assumes leadership of the army 
 (rides in the wagon), misfortune will ensue.";
             WilhelmBaynesComments[Hexagram].Read4 = @"In the face of a superior enemy, with whom it would be hopeless to engage in 
@@ -5062,8 +5062,7 @@ unaffected sincerity, so that they are attached to us in sincerity and truth.
 However, benevolence alone is not sufficient at the time of POSSESSION IN 
 GREAT MEASURE. For insolence might begin to spread. Insolence must be 
 kept in bounds by dignity; then good fortune is assured.";
-            WilhelmBaynesComments[Hexagram].Read6 = @"
-In the fullness of possession and at the height of power, one remains modest 
+            WilhelmBaynesComments[Hexagram].Read6 = @"In the fullness of possession and at the height of power, one remains modest 
 and gives honor to the sage who stands outside the affairs of the world. By 
 this means one puts oneself under the beneficent influence descending form 
 heaven, and all goes well. Confucius says of this line:
@@ -5311,8 +5310,7 @@ far. The disappearance of the nose in the course of the bite
 signifies that indignation blots out finer sensibility. However,
 there is no great harm in this, because the penalty as such is
 just.";
-            WilhelmBaynesComments[Hexagram].Read3 = @"
-Punishment is to be carried out by someone who lacks the power and 
+            WilhelmBaynesComments[Hexagram].Read3 = @"Punishment is to be carried out by someone who lacks the power and 
 authority to do so.  Therefore the culprits do not submit.  The matter at issue 
 is an old one-as symbolized by salted game-and in dealing with it difficulties 
 arise.  This old meat is spoiled: by taking up the problem the punisher arouses 
@@ -6941,7 +6939,7 @@ they consider it petty. Instead, they go their way proud and unconcerned. But
 this self-confidence deludes them. There are dangers lurking for which they 
 are unprepared. Yet such danger is not unavoidable; one can escape it if he 
 understands that the time demands that he pay especial attention to small 
-and insignificant thing.";
+and insignificant things.";
             WilhelmBaynesComments[Hexagram].Read4 = @"Hardness of character is tempered by yielding position so that no mistakes are 
 made. The situation here calls for extreme caution; one must make no 
 attempt of one's own initiative to reach the desired end. And if one were to 
