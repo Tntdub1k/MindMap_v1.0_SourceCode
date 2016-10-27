@@ -1265,11 +1265,11 @@
                     <ColumnDefinition Width="7*"/>
                     <ColumnDefinition Width="439*"/>
                 </Grid.ColumnDefinitions>
-                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="93.5,26,0,0" VerticalAlignment="Top" Width="1203" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="619" Initialized="MapViewer_Initialized" Grid.Column="1">
+                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="4,29,0,0" VerticalAlignment="Top" Width="1314" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="616" Initialized="MapViewer_Initialized" Grid.ColumnSpan="2">
                     <StackPanel x:Name="TracingPanel" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 </ScrollViewer>
-                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4" Grid.ColumnSpan="2"/>
-                <xctk:ColorPicker x:Name="Colorbar" HorizontalAlignment="Left" Margin="93.5,1,0,0" VerticalAlignment="Top" Width="227" Height="23" Visibility="Hidden" Grid.Column="1"/>
+                <Button Content="Save Paths" HorizontalAlignment="Left" Margin="4,4,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4" Grid.ColumnSpan="2"/>
+                <xctk:ColorPicker x:Name="Colorbar" HorizontalAlignment="Left" Margin="63,1,0,0" VerticalAlignment="Top" Width="258" Height="23" Grid.Column="1" Visibility="Hidden"/>
                 <Button x:Name="colorbutton" Content="Okay" HorizontalAlignment="Left" Margin="325.5,1,0,0" VerticalAlignment="Top" Width="75" Height="23" Visibility="Hidden" Click="colorbutton_Click" Grid.Column="1"/>
             </Grid>
         </TabItem>
