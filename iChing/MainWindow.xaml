@@ -1265,7 +1265,7 @@
                     <ColumnDefinition Width="7*"/>
                     <ColumnDefinition Width="439*"/>
                 </Grid.ColumnDefinitions>
-                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="4,29,0,0" VerticalAlignment="Top" Width="1314" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="616" Initialized="MapViewer_Initialized" Grid.ColumnSpan="2">
+                <ScrollViewer x:Name="MapViewer" HorizontalAlignment="Left" Margin="4,29,0,0" VerticalAlignment="Top" Width="1314" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="616" Initialized="MapViewer_Initialized" Grid.ColumnSpan="2" CanContentScroll="True">
                     <StackPanel x:Name="TracingPanel" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 </ScrollViewer>
                 <Button Content="Save Paths" HorizontalAlignment="Left" Margin="4,4,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4" Grid.ColumnSpan="2"/>
