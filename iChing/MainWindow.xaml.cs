@@ -30,7 +30,8 @@ namespace iChing
         private int currentlyShowing = 0;
         private bool tracing = false;
         private List<TraceRoute> RouteMaps = new List<TraceRoute>(0);
-
+        private string LastKeyPressed = "";
+        private int LastPressedTimestamp = -1;
 
 
         public class TraceRoute
@@ -7290,6 +7291,69 @@ intemperance.";
                             break;
                     }
                     break;
+                case Key.D0:
+                case Key.D1:
+                case Key.D2:
+                case Key.D3:
+                case Key.D4:
+                case Key.D5:
+                case Key.D6:
+                case Key.D7:
+                case Key.D8:
+                case Key.D9:
+                case Key.NumPad0:
+                case Key.NumPad1:
+                case Key.NumPad2:
+                case Key.NumPad3:
+                case Key.NumPad4:
+                case Key.NumPad5:
+                case Key.NumPad6:
+                case Key.NumPad7:
+                case Key.NumPad8:
+                case Key.NumPad9:
+                    string pressedKey = e.Key.ToString();
+
+                    if (pressedKey.StartsWith("D"))
+                    {
+                        pressedKey = pressedKey.Replace("D", "");
+                        //MessageBox.Show(pressedKey);
+                    }
+
+                    else if (pressedKey.StartsWith("NumPad"))
+                    {
+                        pressedKey = pressedKey.Replace("NumPad", "");
+                        //MessageBox.Show(pressedKey);
+                    }
+
+                    if (LastPressedTimestamp != -1)
+                    {
+                        if (DateTime.Now.Second <= LastPressedTimestamp + 1)
+                        {
+                            if (LastKeyPressed != "")
+                            {
+                                int hexagramToShow = Convert.ToInt16(LastKeyPressed + pressedKey);
+                                if ((hexagramToShow <= 64) && (hexagramToShow > 0)) {
+                                    currentlyShowing = hexagramToShow;
+                                    updateApplication();
+
+                                }
+                            }
+                        }
+                        LastPressedTimestamp = -1;
+                    }
+                    else
+                    {
+                        if (pressedKey != "0")
+                        {
+                        currentlyShowing = Convert.ToInt16(pressedKey);
+                        updateApplication();
+                        }
+                        LastPressedTimestamp = DateTime.Now.Second;
+                    }
+                    LastKeyPressed = pressedKey;
+
+                    break;
+
             }
         }
 
