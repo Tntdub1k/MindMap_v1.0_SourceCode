@@ -96,6 +96,9 @@ namespace iChing
             return clonedElement;
         }
 
+        // main text code, setup table, hexagram info 
+        #region
+
 
         private void SetupTable()
         {
@@ -7083,6 +7086,8 @@ intemperance.";
 
         }
 
+        #endregion
+
         private void TextBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
 
@@ -7917,6 +7922,10 @@ intemperance.";
                     */
 
                 }
+            }
+            if (TracingPanel.Children[2] != null)
+            {
+                TracingPanel.Children[2].Focus();
             }
         }
 
