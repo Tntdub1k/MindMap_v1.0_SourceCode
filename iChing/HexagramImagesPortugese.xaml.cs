@@ -22,7 +22,7 @@ namespace iChing
     public partial class HexagramImagesPortugese : UserControl
     {
         private int _currentlyShowing;
-
+        private string path = "Hexagram Images";
         public int currentlyShowing {
             get { return _currentlyShowing; }
             set {
@@ -34,7 +34,9 @@ namespace iChing
         public void updateControl()
         {
 
-            this.image.Source =  new BitmapImage(new Uri(_currentlyShowing+".jpg", UriKind.Relative));
+            //this.image.Source =  new BitmapImage(new Uri(_currentlyShowing+".jpg", UriKind.Relative));
+            BitmapImage img = (this.FindResource(_currentlyShowing.ToString()) as BitmapImage);
+            this.image.Source = img;
             //this.UpdateLayout();
 
         }
