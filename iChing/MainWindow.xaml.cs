@@ -77,11 +77,34 @@ namespace iChing
         public MainWindow()
         {
             InitializeComponent();
+            // Add custom controls in here
+            var control = new HexagramImagesPortugese();
+            control.Opacity = 0.27;
+            HexagramGrid.Children.Add(control);
+        
             deserializeRouteMaps();
             deserializeGnosticJamesDeKorneEdition();
             SetupText();
             FieldInfo[] info = TracingPanel.GetType().GetFields();
 
+            
+
+            //Not related to above code, for downloading files from internet
+            /*
+            System.Net.WebClient Client = new System.Net.WebClient();
+            for (int i = 35; i < 65; i++)
+            {
+                try
+                {
+                    Client.DownloadFile("http://www.imagick.org.br/pagmag/I_Ching/"+i+".jpg", @"C:\Users\Nick\Documents\Software\i Ching\iChing\Hexagram Images\"+i+".jpg");
+                }
+                catch (Exception)
+                {
+                    Client.DownloadFile("http://www.imagick.org.br/pagmag/I_Ching/" + i + "a.jpg", @"C:\Users\Nick\Documents\Software\i Ching\iChing\Hexagram Images\" + i + ".jpg");
+                }
+            }
+
+            */
 
         }
 
@@ -131,6 +154,7 @@ namespace iChing
                     HexBox.Tag = HexNum;
                     HexBox.ToolTip = iChing[HexArray[row, column]].ChiTitle + " ~ " + iChing[HexArray[row, column]].EngTitle;
                     HexBox.FontSize = 15;
+                    HexBox.Background = new SolidColorBrush(Color.FromArgb(100, 254, 254, 254));
                     HexBox.IsReadOnly = true;
                     HexBox.Cursor = Cursors.Arrow;
                     HexBox.VerticalContentAlignment = System.Windows.VerticalAlignment.Center;
@@ -274,6 +298,12 @@ namespace iChing
             ChangesHTextBox.Add(Changes5BoxH);
             ChangesHTextBox.Add(Changes6BoxH);
 
+
+            var control = HexagramGrid.Children[0];
+            PropertyInfo p = HexagramGrid.Children[0].GetType().GetProperty("currentlyShowing");
+            p.SetValue(control, currentlyShowing, null);
+
+            
 
 
             for (int i = 0; i < SquareCircleTextBoxes.Count; i++)
@@ -7923,10 +7953,7 @@ intemperance.";
 
                 }
             }
-            if (TracingPanel.Children[2] != null)
-            {
-                TracingPanel.Children[2].Focus();
-            }
+
         }
 
         private void colorbutton_Click(object sender, RoutedEventArgs e)
@@ -8010,6 +8037,8 @@ intemperance.";
         {
             e.Handled = true;
         }
+
+
     }
 
 
