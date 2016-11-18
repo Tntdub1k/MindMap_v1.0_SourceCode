@@ -103,7 +103,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="HexagramImagesPortugesev1.0.xaml">
+    <Page Include="Components\HexagramImagesPortugesev1.0.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,7 +115,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HexagramImagesPortugesev1.0.xaml.cs">
+    <Compile Include="Class1.cs" />
+    <Compile Include="Components\HexagramImagesPortugesev1.0.xaml.cs">
       <DependentUpon>HexagramImagesPortugesev1.0.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -132,6 +133,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelV1_0.cs" />
     <Compile Include="PathStackPanelTemplate.xaml.cs">
       <DependentUpon>PathStackPanelTemplate.xaml</DependentUpon>
     </Compile>
@@ -155,6 +157,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DataV1.0" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
