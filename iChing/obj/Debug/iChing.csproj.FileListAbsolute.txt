@@ -53,3 +53,4 @@ C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Debug\sv\Xceed.Wpf.Av
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\HexagramImagesPortugese.g.cs
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\HexagramImagesPortugese.baml
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache

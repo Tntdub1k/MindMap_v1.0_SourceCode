@@ -18,11 +18,23 @@ namespace iChing
     /// <summary>
     /// Interaction logic for HexagramImagesPortugese.xaml
 
-     /// </summary>
+    /// </summary>
     public partial class HexagramImagesPortugese : UserControl
     {
+
         private int _currentlyShowing;
-        private string path = "Hexagram Images";
+        public static string AssemblyDirectory
+        {
+            get
+            {
+                string codeBase = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
+                UriBuilder uri = new UriBuilder(codeBase);
+                string path = Uri.UnescapeDataString(uri.Path);
+                return System.IO.Path.GetDirectoryName(path);
+            }
+        }
+
+
         public int currentlyShowing {
             get { return _currentlyShowing; }
             set {

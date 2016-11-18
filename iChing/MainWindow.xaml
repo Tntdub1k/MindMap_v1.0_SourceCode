@@ -93,15 +93,7 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126">
-                    <Button.BorderBrush>
-                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                    </Button.BorderBrush>
-                    <Button.Background>
-                        <SolidColorBrush Color="#FFF0F0F0"/>
-                    </Button.Background>
-                </Button>
-                <Grid x:Name="HexagramGrid" HorizontalAlignment="Left" Height="536" Margin="313,14,-543,0" VerticalAlignment="Top" Width="421" Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"/>
+                <Grid x:Name="HexagramGrid" HorizontalAlignment="Left" Height="548" Margin="0,3,-279,0" VerticalAlignment="Top" Width="470" Grid.Column="2" Grid.Row="2" Grid.RowSpan="4" RenderTransformOrigin="0.366,0.473"/>
                 <TextBlock x:Name="HexBox" Grid.Column="2" HorizontalAlignment="Left" Height="416" Margin="311,57,-362,-123" Grid.Row="4" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Padding="0" RenderTransformOrigin="0.5,0.5" FontSize="275">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
@@ -902,6 +894,16 @@
                         <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
                     </ScrollViewer>
                 </StackPanel>
+                <Button x:Name="ShowImageBtn" Content="Show Hexagram Image" Grid.Column="2" HorizontalAlignment="Left" Margin="379,0,-333,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="ShowImageBtn_Click" Width="145" Background="#FFF0F0F0">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Click="Button_Click_3" Width="126" Background="#FFF0F0F0">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                </Button>
             </Grid>
         </TabItem>
         <TabItem Header="Table">

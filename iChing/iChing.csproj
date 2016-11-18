@@ -103,7 +103,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="HexagramImagesPortugese.xaml">
+    <Page Include="HexagramImagesPortugesev1.0.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,8 +115,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HexagramImagesPortugese.xaml.cs">
-      <DependentUpon>HexagramImagesPortugese.xaml</DependentUpon>
+    <Compile Include="HexagramImagesPortugesev1.0.xaml.cs">
+      <DependentUpon>HexagramImagesPortugesev1.0.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

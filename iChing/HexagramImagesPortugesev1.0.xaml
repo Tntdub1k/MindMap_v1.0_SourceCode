@@ -22,7 +22,7 @@
             <BitmapImage x:Key="5" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/5.jpg"/>
             <BitmapImage x:Key="6" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/6.jpg"/>
             <BitmapImage x:Key="7" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/7.jpg"/>
-            <BitmapImage x:Key="8" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/7.jpg"/>
+            <BitmapImage x:Key="8" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/8.jpg"/>
             <BitmapImage x:Key="9" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/9.jpg"/>
             <BitmapImage x:Key="10" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/10.jpg"/>
             <BitmapImage x:Key="11" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/11.jpg"/>
@@ -32,7 +32,7 @@
             <BitmapImage x:Key="15" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/15.jpg"/>
             <BitmapImage x:Key="16" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/16.jpg"/>
             <BitmapImage x:Key="17" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/17.jpg"/>
-            <BitmapImage x:Key="18" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/17.jpg"/>
+            <BitmapImage x:Key="18" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/18.jpg"/>
             <BitmapImage x:Key="19" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/19.jpg"/>
             <BitmapImage x:Key="20" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/20.jpg"/>
             <BitmapImage x:Key="21" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/21.jpg"/>
@@ -42,7 +42,7 @@
             <BitmapImage x:Key="25" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/25.jpg"/>
             <BitmapImage x:Key="26" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/26.jpg"/>
             <BitmapImage x:Key="27" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/27.jpg"/>
-            <BitmapImage x:Key="28" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/27.jpg"/>
+            <BitmapImage x:Key="28" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/28.jpg"/>
             <BitmapImage x:Key="29" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/29.jpg"/>
             <BitmapImage x:Key="30" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/30.jpg"/>
             <BitmapImage x:Key="31" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/31.jpg"/>
@@ -52,7 +52,7 @@
             <BitmapImage x:Key="35" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/35.jpg"/>
             <BitmapImage x:Key="36" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/36.jpg"/>
             <BitmapImage x:Key="37" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/37.jpg"/>
-            <BitmapImage x:Key="38" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/37.jpg"/>
+            <BitmapImage x:Key="38" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/38.jpg"/>
             <BitmapImage x:Key="39" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/39.jpg"/>
             <BitmapImage x:Key="40" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/40.jpg"/>
             <BitmapImage x:Key="41" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/41.jpg"/>
@@ -62,7 +62,7 @@
             <BitmapImage x:Key="45" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/45.jpg"/>
             <BitmapImage x:Key="46" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/46.jpg"/>
             <BitmapImage x:Key="47" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/47.jpg"/>
-            <BitmapImage x:Key="48" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/47.jpg"/>
+            <BitmapImage x:Key="48" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/48.jpg"/>
             <BitmapImage x:Key="49" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/49.jpg"/>
             <BitmapImage x:Key="50" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/50.jpg"/>
             <BitmapImage x:Key="51" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/51.jpg"/>
@@ -72,7 +72,7 @@
             <BitmapImage x:Key="55" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/55.jpg"/>
             <BitmapImage x:Key="56" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/56.jpg"/>
             <BitmapImage x:Key="57" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/57.jpg"/>
-            <BitmapImage x:Key="58" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/57.jpg"/>
+            <BitmapImage x:Key="58" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/58.jpg"/>
             <BitmapImage x:Key="59" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/59.jpg"/>
             <BitmapImage x:Key="60" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/60.jpg"/>
             <BitmapImage x:Key="61" UriSource="C:/Users/Nick/Documents/Software/i Ching/iChing/iChing/Hexagram Images/61.jpg"/>

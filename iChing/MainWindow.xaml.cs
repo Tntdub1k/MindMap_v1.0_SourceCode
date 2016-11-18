@@ -85,7 +85,7 @@ namespace iChing
             deserializeRouteMaps();
             deserializeGnosticJamesDeKorneEdition();
             SetupText();
-            FieldInfo[] info = TracingPanel.GetType().GetFields();
+            //FieldInfo[] info = TracingPanel.GetType().GetFields();
 
             
 
@@ -8038,7 +8038,10 @@ intemperance.";
             e.Handled = true;
         }
 
-
+        private void ShowImageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            HexagramGrid.Children[0].Opacity = 1;
+        }
     }
 
 
