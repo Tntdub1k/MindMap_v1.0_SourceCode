@@ -18,6 +18,129 @@ namespace iChing
         public Comments[] WilhelmBaynesComments = new Comments[65];
         public string[] GnosticJamesDeKorneEdition = new string[65];
 
+
+        public class iChingNumber
+        {
+            public iChingNumber() { }
+
+            public iChingNumber(string engTitle, string chiTitle, string chiSymbol, string altTitles, string hex, string above, string below,
+                string aboveSymbol, string belowSymbol, string intro1, string theJudgment,
+                string intro2, string theImage, string intro3, string read1, string read2,
+                string read3, string read4, string read5, string read6, int place1ChangesToNumber,
+                int place2ChangesToNumber, int place3ChangesToNumber, int place4ChangesToNumber,
+                int place5ChangesToNumber, int place6ChangesToNumber, string place1ChangesToTitle,
+                string place2ChangesToTitle, string place3ChangesToTitle, string place4ChangesToTitle,
+                string place5ChangesToTitle, string place6ChangesToTitle, string squareCircle1,
+                string squareCircle2, string squareCircle3, string squareCircle4, string squareCircle5,
+                string squareCircle6, int[] code)
+            {
+                EngTitle = engTitle;
+                ChiTitle = chiTitle;
+                ChiSymbol = chiSymbol;
+                AltTitles = altTitles;
+                Hex = hex;
+                Above = above;
+                Below = below;
+                AboveSymbol = aboveSymbol;
+                BelowSymbol = belowSymbol;
+                Intro1 = intro1;
+                TheJudgment = theJudgment;
+                Intro2 = intro2;
+                TheImage = theImage;
+                Intro3 = intro3;
+                Read1 = read1;
+                Read2 = read2;
+                Read3 = read3;
+                Read4 = read4;
+                Read5 = read5;
+                Read6 = read6;
+                Place1ChangesToNumber = place1ChangesToNumber;
+                Place2ChangesToNumber = place2ChangesToNumber;
+                Place3ChangesToNumber = place3ChangesToNumber;
+                Place4ChangesToNumber = place4ChangesToNumber;
+                Place5ChangesToNumber = place5ChangesToNumber;
+                Place6ChangesToNumber = place6ChangesToNumber;
+                Place1ChangesToTitle = place1ChangesToTitle;
+                Place2ChangesToTitle = place2ChangesToTitle;
+                Place3ChangesToTitle = place3ChangesToTitle;
+                Place4ChangesToTitle = place4ChangesToTitle;
+                Place5ChangesToTitle = place5ChangesToTitle;
+                Place6ChangesToTitle = place6ChangesToTitle;
+                SquareCircle1 = squareCircle1;
+                SquareCircle2 = squareCircle2;
+                SquareCircle3 = squareCircle3;
+                SquareCircle4 = squareCircle4;
+                SquareCircle5 = squareCircle5;
+                SquareCircle6 = squareCircle6;
+                Code = code;
+            }
+
+
+            public string EngTitle { get; set; }
+            public string ChiTitle { get; set; }
+            public string ChiSymbol { get; set; }
+            public string Hex { get; set; }
+            public string AltTitles { get; set; }
+            public string Above { get; set; }
+            public string Below { get; set; }
+            public string AboveSymbol { get; set; }
+            public string BelowSymbol { get; set; }
+            public string Intro1 { get; set; }
+            public string TheJudgment { get; set; }
+            public string Intro2 { get; set; }
+            public string TheImage { get; set; }
+            public string Intro3 { get; set; }
+            public string Read1 { get; set; }
+            public string Read2 { get; set; }
+            public string Read3 { get; set; }
+            public string Read4 { get; set; }
+            public string Read5 { get; set; }
+            public string Read6 { get; set; }
+            public int Place1ChangesToNumber { get; set; }
+            public int Place2ChangesToNumber { get; set; }
+            public int Place3ChangesToNumber { get; set; }
+            public int Place4ChangesToNumber { get; set; }
+            public int Place5ChangesToNumber { get; set; }
+            public int Place6ChangesToNumber { get; set; }
+            public string Place1ChangesToTitle { get; set; }
+            public string Place2ChangesToTitle { get; set; }
+            public string Place3ChangesToTitle { get; set; }
+            public string Place4ChangesToTitle { get; set; }
+            public string Place5ChangesToTitle { get; set; }
+            public string Place6ChangesToTitle { get; set; }
+            public string SquareCircle1 { get; set; }
+            public string SquareCircle2 { get; set; }
+            public string SquareCircle3 { get; set; }
+            public string SquareCircle4 { get; set; }
+            public string SquareCircle5 { get; set; }
+            public string SquareCircle6 { get; set; }
+            public int[] Code { get; set; }
+        }
+
+
+        public class Comments
+        {
+            public Comments() { }
+            public Comments(string read1, string read2, string read3, string read4, string read5, string read6)
+            {
+                Read1 = read1;
+                Read2 = read2;
+                Read3 = read3;
+                Read4 = read4;
+                Read5 = read5;
+                Read6 = read6;
+            }
+
+            public string Read1 { get; set; }
+            public string Read2 { get; set; }
+            public string Read3 { get; set; }
+            public string Read4 { get; set; }
+            public string Read5 { get; set; }
+            public string Read6 { get; set; }
+
+        }
+
+
         public int[,] HexArray =  {{1,25,6,33,12,44,13,10},
                             {34,51,40,62,16,32,55,54},
                             {5,3,29,39,8,48,63,60},

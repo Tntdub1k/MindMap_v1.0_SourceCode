@@ -54,3 +54,4 @@ C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Debug\zh-Hans\Xceed.W
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Components\HexagramImagesPortugesev1.0.g.cs
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Components\HexagramImagesPortugesev1.0.baml
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\App.baml
