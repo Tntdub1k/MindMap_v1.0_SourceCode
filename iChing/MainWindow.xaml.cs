@@ -25,7 +25,7 @@ namespace iChing
     {
 
         //MVVM things begin here
-
+    
         public MainWindow()
         {
 
@@ -52,6 +52,9 @@ namespace iChing
 
         }
 
+        private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
 
+        }
     } }
 

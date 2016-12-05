@@ -102,12 +102,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControl1.cs" />
     <Compile Include="ViewModelV1_0.cs" />
     <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Components\HexagramImagesPortugesev1.0.xaml">
+    <Page Include="Components\HexagramImagesPortugeseV1_0.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,8 +120,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Components\HexagramImagesPortugesev1.0.xaml.cs">
-      <DependentUpon>HexagramImagesPortugesev1.0.xaml</DependentUpon>
+    <Compile Include="Components\HexagramImagesPortugeseV1_0.xaml.cs">
+      <DependentUpon>HexagramImagesPortugeseV1_0.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -133,6 +134,10 @@
     <Page Include="PathTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

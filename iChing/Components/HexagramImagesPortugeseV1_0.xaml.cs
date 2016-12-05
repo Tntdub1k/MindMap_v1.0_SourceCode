@@ -16,10 +16,10 @@ using System.Windows.Shapes;
 namespace iChing
 {
     /// <summary>
-    /// Interaction logic for HexagramImagesPortugese.xaml
+    /// Interaction logic for HexagramImagesPortugeseV1_0.xaml
 
     /// </summary>
-    public partial class HexagramImagesPortugese : UserControl
+    public partial class HexagramImagesPortugeseV1_0 : UserControl
     {
 
         private int _currentlyShowing;
@@ -53,7 +53,7 @@ namespace iChing
 
         }
 
-        public HexagramImagesPortugese()
+        public HexagramImagesPortugeseV1_0()
         {
             InitializeComponent();
             this.image.Stretch = Stretch.Fill;

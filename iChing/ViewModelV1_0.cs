@@ -21,9 +21,13 @@ namespace iChing
 
         private ModelV1_0 Model = new ModelV1_0();
         private MainWindow View = new MainWindow();
+
         private void AddEventHandlers()
         {
-            View.PreviewKeyDown += new KeyEventHandler(Window_KeyDown);
+
+
+
+        View.PreviewKeyDown += new KeyEventHandler(Window_KeyDown);
 
             View.Line1Box.PreviewMouseDown += new MouseButtonEventHandler(Line1Box_MouseDown);
             View.Line2Box.PreviewMouseDown += new MouseButtonEventHandler(Line2Box_MouseDown);
@@ -133,7 +137,6 @@ namespace iChing
             View.LinesButton.Click += new RoutedEventHandler(Button_Click);
         }
 
-
         private int currentlyShowing = 0;
         private bool tracing = false;
         private List<TraceRoute> RouteMaps = new List<TraceRoute>(0);
@@ -148,8 +151,8 @@ namespace iChing
 #warning Does initializecomponent wait for all the objects to be loaded/created before going on? Should maybe add a different thread and some kind of progress bar/wait until components are loaded before continuing.
 
             // Add (Initialize) our custom controls in here
-            var control = new HexagramImagesPortugese();
-            control.Opacity = 0.27;
+            var control = new HexagramImagesPortugeseV1_0();
+            control.Opacity = 1.0;
             View.HexagramGrid.Children.Add(control);
 
             SetupTable();
