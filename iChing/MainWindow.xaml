@@ -36,7 +36,7 @@
         <System:Double x:Key="SizeOfLines">25</System:Double>
         <SolidColorBrush x:Key="YellowBrush" Color="#FFECEC3B"/>
         <Thickness x:Key="PlacesThicknesss">0,0,0,11</Thickness>
-        <FontFamily x:Key="SystemFont">Lucida Sans</FontFamily>
+        <FontFamily x:Key="SystemFont">Nirmala UI</FontFamily>
         <System:Double x:Key="TextSize">13</System:Double>
         <Thickness x:Key="placesGridsMargin">0,10,0,5</Thickness>
         <SolidColorBrush x:Key="LinesBrushColor" Color="Black"/>
@@ -48,7 +48,7 @@
         <System:Double x:Key="PlacesTextSize">14</System:Double>
         <System:Double x:Key="placestextoffset">4</System:Double>
         <System:Double x:Key="placestextyoffset">4</System:Double>
-        <System:Double x:Key="placesSize">10</System:Double>
+        <System:Double x:Key="placesSize">11</System:Double>
         <System:Double x:Key="HexSize">19</System:Double>
         <System:Double x:Key="WidthOfChineseName">NaN</System:Double>
         <System:Double x:Key="WidthOfChineseSymbol">94</System:Double>
