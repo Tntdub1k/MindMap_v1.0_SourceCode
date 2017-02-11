@@ -52,6 +52,8 @@ C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Debug\ru\Xceed.Wpf.Av
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\iChing.csprojResolveAssemblyReference.cache
-C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Components\HexagramImagesPortugesev1.0.g.cs
-C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Components\HexagramImagesPortugesev1.0.baml
 C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\App.baml
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Components\HexagramImagesPortugeseV1_0.g.cs
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Components\HexagramImagesPortugeseV1_0.baml
+C:\Users\Nick\Documents\Software\i Ching\iChing\iChing\obj\Debug\Themes\Generic.baml

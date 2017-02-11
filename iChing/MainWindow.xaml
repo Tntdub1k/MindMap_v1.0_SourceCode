@@ -93,6 +93,16 @@
                     <RowDefinition Height="195*"/>
                     <RowDefinition Height="161*"/>
                 </Grid.RowDefinitions>
+                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Width="126" Background="#FFF0F0F0">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                </Button>
+                <Button x:Name="ShowImageBtn" Content="Show Hexagram Image" Grid.Column="2" HorizontalAlignment="Left" Margin="379,0,-333,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Width="145" Background="#FFF0F0F0">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                    </Button.BorderBrush>
+                </Button>
                 <TextBlock x:Name="HexBox" Grid.Column="2" HorizontalAlignment="Left" Height="416" Margin="311,57,-362,-123" Grid.Row="4" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Padding="0" RenderTransformOrigin="0.5,0.5" FontSize="275">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
@@ -352,7 +362,7 @@
                 <StackPanel x:Name="PlacesPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="480" ScrollViewer.CanContentScroll="True" Margin="333,101,-622,-4" Height="253" Grid.Column="2" Grid.Row="4" Grid.RowSpan="2">
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy4" TextWrapping="Wrap" Text="(6)&#xA;" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0" Padding="4,0,-5,0"/>
-                        <Rectangle x:Name="Place6" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" Fill="#00000000"/>
+                        <Rectangle x:Name="Place6" Width="{DynamicResource PlacesWidth}" Height="34" VerticalAlignment="Top" Margin="0,0,0,-4" Fill="#00000000"/>
                         <TextBox x:Name="Line6BoxSquareCircle_Copy" TextWrapping="Wrap" Text="○" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="0,4,0,0"/>
                         <TextBox x:Name="Changes6BoxNumber" TextWrapping="Wrap" Text="13." HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="-2,6,0,0" RenderTransformOrigin="0.5,0.5" MaxLength="14" MaxWidth="163" Height="36" Margin="0,-2,0,-4" Background="{x:Null}">
                             <TextBox.LayoutTransform>
@@ -403,7 +413,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy3" TextWrapping="Wrap" Text="(5)" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0" Padding="4,0,-5,0"/>
-                        <Rectangle x:Name="Place5" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" Fill="#00000000"/>
+                        <Rectangle x:Name="Place5" Width="{DynamicResource PlacesWidth}" Height="40" VerticalAlignment="Top" Margin="0,-6,0,-4" Fill="#00000000"/>
                         <TextBox x:Name="Line5BoxSquareCircle_Copy" TextWrapping="Wrap" Text="○" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Margin="0,4,0,0"/>
                         <TextBox x:Name="Changes5BoxNumber" TextWrapping="Wrap" Text="13." HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="-2,6,0,0" RenderTransformOrigin="0.5,0.5" MaxLength="14" MaxWidth="163" Height="36" Margin="0,-2,0,-4" Background="{x:Null}">
                             <TextBox.LayoutTransform>
@@ -454,7 +464,16 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy2" TextWrapping="Wrap" Text="(4)" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0" Padding="4,0,-5,0"/>
-                        <Rectangle x:Name="Place4" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" Fill="#00000000"/>
+                        <Rectangle x:Name="Place4" Width="{DynamicResource PlacesWidth}" Height="37" VerticalAlignment="Top" Margin="0,-6,0,-1" Fill="#00000000" RenderTransformOrigin="0.5,0.5">
+                            <Rectangle.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleX="2.042"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform X="0.553"/>
+                                </TransformGroup>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
                         <TextBox x:Name="Line4BoxSquareCircle_Copy1" TextWrapping="Wrap" Text="○" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Margin="0,4,0,0"/>
                         <TextBox x:Name="Changes4BoxNumber" TextWrapping="Wrap" Text="13." HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="-2,6,0,0" RenderTransformOrigin="0.5,0.5" MaxLength="14" MaxWidth="163" Height="36" Margin="0,-2,0,0" Background="{x:Null}">
                             <TextBox.LayoutTransform>
@@ -505,7 +524,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy5" TextWrapping="Wrap" Text="(3)" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0" Padding="4,0,-5,0"/>
-                        <Rectangle x:Name="Place3" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" Fill="#00000000"/>
+                        <Rectangle x:Name="Place3" Width="{DynamicResource PlacesWidth}" Height="43" VerticalAlignment="Top" Margin="0,-9,0,-4" Fill="#00000000"/>
                         <TextBox x:Name="Line3BoxSquareCircle_Copy" TextWrapping="Wrap" Text="○" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Margin="0,4,0,0"/>
                         <TextBox x:Name="Changes3BoxNumber" TextWrapping="Wrap" Text="13." HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="-2,6,0,0" RenderTransformOrigin="0.5,0.5" MaxLength="14" MaxWidth="163" Height="36" Margin="0,-2,0,-4" Background="{x:Null}">
                             <TextBox.LayoutTransform>
@@ -556,7 +575,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy6" TextWrapping="Wrap" Text="(2)" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0" Padding="4,0,-5,0"/>
-                        <Rectangle x:Name="Place2" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" Fill="#00000000"/>
+                        <Rectangle x:Name="Place2" Width="{DynamicResource PlacesWidth}" Height="36" VerticalAlignment="Top" Margin="0,-6,0,0" Fill="#00000000"/>
                         <TextBox x:Name="Line2BoxSquareCircle_Copy" TextWrapping="Wrap" Text="○" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Margin="0,4,0,0"/>
                         <TextBox x:Name="Changes2BoxNumber" TextWrapping="Wrap" Text="13." HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="-2,6,0,0" RenderTransformOrigin="0.5,0.5" MaxLength="14" MaxWidth="163" Height="36" Margin="0,-2,0,-4" Background="{x:Null}">
                             <TextBox.LayoutTransform>
@@ -608,7 +627,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="791" Orientation="Horizontal" Margin="-23,0,-288,11" ScrollViewer.CanContentScroll="True" Height="30">
                         <TextBox x:Name="Line4BoxSquareCircle_Copy7" TextWrapping="Wrap" Text="(1)" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,4,7,0" Padding="4,0,-5,0"/>
-                        <Rectangle x:Name="Place1" Width="{DynamicResource PlacesWidth}" Height="{DynamicResource PlacesHeight}" VerticalAlignment="Top" Margin="0" Fill="#00000000"/>
+                        <Rectangle x:Name="Place1" Width="{DynamicResource PlacesWidth}" Height="45" VerticalAlignment="Top" Margin="0,-11,0,-4" Fill="#00000000"/>
                         <TextBox x:Name="Line1BoxSquareCircle_Copy" TextWrapping="Wrap" Text="○" BorderThickness="0" SelectionBrush="#003399FF" IsInactiveSelectionHighlightEnabled="True" IsReadOnlyCaretVisible="True" Focusable="False" AllowDrop="False" Foreground="{DynamicResource LinesBrushColor}" Background="Transparent" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Margin="0,4,0,0"/>
                         <TextBox x:Name="Changes1BoxNumber" TextWrapping="Wrap" Text="13." HorizontalAlignment="Center" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" FontFamily="{DynamicResource SystemFont}" FontSize="{DynamicResource placesSize}" VerticalAlignment="Top" BorderThickness="0" Padding="-2,6,0,0" RenderTransformOrigin="0.5,0.5" MaxLength="14" MaxWidth="163" Height="36" Margin="0,-2,0,-4" Background="{x:Null}">
                             <TextBox.LayoutTransform>
@@ -894,16 +913,6 @@
                         <StackPanel x:Name="SearchPanel" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="385"/>
                     </ScrollViewer>
                 </StackPanel>
-                <Button x:Name="ShowImageBtn" Content="Show Hexagram Image" Grid.Column="2" HorizontalAlignment="Left" Margin="379,0,-333,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Width="145" Background="#FFF0F0F0">
-                    <Button.BorderBrush>
-                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                    </Button.BorderBrush>
-                </Button>
-                <Button x:Name="TracerBtn" Content="Trace" Grid.Column="2" HorizontalAlignment="Left" Margin="598,0,-533,98" Grid.Row="4" VerticalAlignment="Bottom" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="11" Padding="0" RenderTransformOrigin="0.571,1.765" Height="18" Width="126" Background="#FFF0F0F0">
-                    <Button.BorderBrush>
-                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                    </Button.BorderBrush>
-                </Button>
             </Grid>
         </TabItem>
         <TabItem Header="Table">

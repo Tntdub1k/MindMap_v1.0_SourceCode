@@ -751,6 +751,15 @@ namespace iChing
                             break;
                     }
                     break;
+                case Key.LeftShift:
+                    LastKeyPressed = e.Key.ToString();
+                    break;
+                case Key.F3:
+                    if (LastKeyPressed == "LeftShift") {
+                        View.SearchEntry.Text = "";
+                        View.SearchEntry.Focus();
+                    }
+                    break;
                 case Key.D0:
                 case Key.D1:
                 case Key.D2:
